@@ -448,3 +448,50 @@ body {
   color: #2E2D33;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%; }
+
+.home-wrap header {
+  font-family: 'Heebo', sans-serif;
+  width: 135px;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 30px 0; }
+  .home-wrap header .header-position {
+    position: fixed;
+    top: 30px;
+    bottom: 30px;
+    left: 0;
+    width: 135px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-pack: justify;
+        justify-content: space-between; }
+  .home-wrap header .logo {
+    overflow: hidden;
+    text-indent: 101%;
+    white-space: nowrap;
+    background-image: url(../img/loragil-logo-nav.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 80px;
+    padding: 0;
+    margin: 0; }
+  .home-wrap header .site-nav ul {
+    list-style: none;
+    margin: 20px 0;
+    padding: 0 20px 0 0;
+    text-align: right; }
+  .home-wrap header .site-nav li {
+    margin-bottom: 10px; }
+    .home-wrap header .site-nav li:last-child {
+      margin-bottom: 0; }
+  .home-wrap header .email-link {
+    display: block;
+    text-align: right;
+    padding-right: 20px; }
+
+.home-wrap {
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh; }
