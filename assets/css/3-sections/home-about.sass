@@ -1,3 +1,16 @@
 section.about
   height: 100vh
   @extend .home-gra
+
+  &::after
+    position: absolute
+    top: 0
+    right: 0
+    content: ""
+    height: 1000px
+    width: 538px
+    background:
+      image: url(../img/loragil-about-pic.png)
+      repeat: no-repeat
+      position: top right
+      size: contain

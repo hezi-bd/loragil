@@ -1,6 +1,7 @@
 .home-wrap
   header
     padding: 30px 0
+    z-index: 100
 
     &:hover
       .header-position
@@ -83,13 +84,15 @@
         transform: translateX(-110px)
 
         &:hover a
-          background: shade(gray, 10%)
+          background: rgba(0, 0, 0, 0.5)
           color: $orange
 
         a
           letter-spacing: 2px
           padding: 10px 0 10px 10px
           display: block
+          color: rgba(0, 0, 0, 0.8)
+          font-weight: 500
 
         &::after
           position: absolute
