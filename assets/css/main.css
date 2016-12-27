@@ -501,52 +501,267 @@ body {
   -webkit-text-size-adjust: 100%; }
 
 .home-wrap header {
-  font-family: 'Heebo', sans-serif;
-  font-weight: 300;
-  width: 135px;
-  background: rgba(0, 0, 0, 0.2);
+  width: 58px;
   padding: 30px 0; }
+  .home-wrap header:hover .header-position {
+    width: 135px;
+    right: 0;
+    transition: all 0.2s ease-in-out; }
+    .home-wrap header:hover .header-position .site-nav ul {
+      width: 135px; }
+    .home-wrap header:hover .header-position .site-nav li {
+      -webkit-transform: translateX(0px);
+              transform: translateX(0px); }
+      .home-wrap header:hover .header-position .site-nav li a {
+        transition: all 0.2s ease-in-out; }
+      .home-wrap header:hover .header-position .site-nav li::after {
+        -webkit-transform: translateX(135px);
+                transform: translateX(135px);
+        opacity: 0.5; }
+  .home-wrap header:hover .logo {
+    height: 66px;
+    max-width: 135px; }
   .home-wrap header .header-position {
     position: fixed;
-    top: 30px;
-    bottom: 30px;
-    left: 0;
-    width: 135px;
+    top: 0;
+    bottom: 0;
+    right: 16px;
+    width: 18px;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
         flex-direction: column;
     -ms-flex-pack: justify;
-        justify-content: space-between; }
+        justify-content: space-between;
+    -ms-flex-align: center;
+        align-items: center;
+    background: rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease-in-out; }
   .home-wrap header .logo {
     overflow: hidden;
     text-indent: 101%;
     white-space: nowrap;
+    color: transparent;
+    width: 58px;
     background-image: url(../img/loragil-logo-nav.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    height: 80px;
+    background-color: #200f2f;
+    height: 66px;
     padding: 0;
     margin: 0; }
   .home-wrap header .site-nav ul {
     list-style: none;
-    margin: 20px 0;
-    padding: 0 20px 0 0;
-    text-align: right; }
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    overflow: hidden;
+    width: 40px;
+    transition: all 0.2s ease-in-out;
+    height: calc(100vh - 182px);
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around; }
   .home-wrap header .site-nav li {
-    margin-bottom: 10px; }
+    margin-bottom: 10px;
+    width: 135px;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+    -webkit-transform: translateX(-110px);
+            transform: translateX(-110px); }
+    .home-wrap header .site-nav li:hover a {
+      background: #737373;
+      color: #f7921e; }
+    .home-wrap header .site-nav li a {
+      letter-spacing: 2px;
+      padding: 10px 0 10px 10px;
+      display: block; }
+    .home-wrap header .site-nav li::after {
+      position: absolute;
+      top: 7px;
+      right: -3px;
+      content: "";
+      width: 100%;
+      height: 30px;
+      display: block;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      transition: all 0.6s ease-in-out;
+      -webkit-transform: translateX(59px);
+              transform: translateX(59px);
+      opacity: 1; }
+    .home-wrap header .site-nav li:nth-child(1)::after {
+      background-image: url(../img/01abilities-logo.svg); }
+    .home-wrap header .site-nav li:nth-child(2)::after {
+      background-image: url(../img/02sites-logo.svg); }
+    .home-wrap header .site-nav li:nth-child(3)::after {
+      background-image: url(../img/03banners-logo.svg); }
+    .home-wrap header .site-nav li:nth-child(4)::after {
+      background-image: url(../img/04popup-logo.svg); }
+    .home-wrap header .site-nav li:nth-child(5)::after {
+      background-image: url(../img/05graphics-logo.svg); }
+    .home-wrap header .site-nav li:nth-child(6)::after {
+      background-image: url(../img/06clients-logo.svg); }
+    .home-wrap header .site-nav li:nth-child(7)::after {
+      background-image: url(../img/07in-short-logo.svg); }
     .home-wrap header .site-nav li:last-child {
       margin-bottom: 0; }
   .home-wrap header .email-link {
+    overflow: hidden;
+    text-indent: 101%;
+    white-space: nowrap;
     display: block;
-    text-align: right;
-    padding-right: 20px;
-    font-family: 'Heebo', sans-serif;
-    font-weight: 900;
-    font-size: 2em; }
+    content: "";
+    width: 100%;
+    height: 66px;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-image: url(../img/01abilities-logo.svg); }
+  .home-wrap header .mobile-nav-toggle {
+    display: none;
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+    -ms-flex-align: center;
+        align-items: center;
+    cursor: pointer; }
+    .home-wrap header .mobile-nav-toggle span,
+    .home-wrap header .mobile-nav-toggle span:before,
+    .home-wrap header .mobile-nav-toggle span:after {
+      display: block;
+      content: "";
+      height: 2px;
+      width: 100%;
+      background: #333;
+      position: relative;
+      transition: all 0.2s ease-in-out; }
+    .home-wrap header .mobile-nav-toggle span:before {
+      top: 15px; }
+    .home-wrap header .mobile-nav-toggle span:after {
+      top: -17px; }
+    .home-wrap header .mobile-nav-toggle.is-open span {
+      background: transparent; }
+      .home-wrap header .mobile-nav-toggle.is-open span::before, .home-wrap header .mobile-nav-toggle.is-open span::after {
+        -webkit-transform-origin: center;
+                transform-origin: center;
+        -webkit-transform: rotate(45deg);
+                transform: rotate(45deg);
+        top: 0; }
+      .home-wrap header .mobile-nav-toggle.is-open span::after {
+        -webkit-transform: rotate(-45deg);
+                transform: rotate(-45deg); }
+
+.home-wrap .mobile-nav {
+  display: none;
+  position: absolute;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 30px 0 20px;
+  -webkit-transform: translateY(calc(-100% + 90px));
+          transform: translateY(calc(-100% + 90px));
+  transition: all 0.2s ease-in-out; }
+  .home-wrap .mobile-nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none; }
+  .home-wrap .mobile-nav li {
+    text-align: center;
+    margin-bottom: 10px; }
+    .home-wrap .mobile-nav li a {
+      color: transparent; }
+
+@media (max-width: 775px) {
+  .home-wrap header {
+    background: transparent;
+    width: auto;
+    padding: 20px 0; }
+    .home-wrap header .header-position {
+      width: auto;
+      position: relative;
+      top: auto;
+      bottom: auto;
+      left: auto;
+      -ms-flex-direction: row;
+          flex-direction: row;
+      -ms-flex-align: center;
+          align-items: center; }
+    .home-wrap header .site-nav, .home-wrap header .email-link {
+      display: none; }
+    .home-wrap header .logo {
+      height: 45px; }
+    .home-wrap header .mobile-nav-toggle {
+      display: -ms-flexbox;
+      display: flex; }
+  .home-wrap .mobile-nav {
+    min-height: 40px;
+    display: block; }
+    .home-wrap .mobile-nav.is-open {
+      -webkit-transform: translateY(0);
+              transform: translateY(0); }
+      .home-wrap .mobile-nav.is-open li a {
+        color: #f7921e; } }
+
+body {
+  background-image: url(../img/loragil-bg-pattern.svg); }
 
 .home-wrap {
   display: -ms-flexbox;
   display: flex;
-  min-height: 100vh; }
+  min-height: 100vh;
+  -ms-flex-direction: row-reverse;
+      flex-direction: row-reverse;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+  font-family: 'Heebo', sans-serif; }
+  @media (max-width: 775px) {
+    .home-wrap {
+      display: block; } }
+
+.home-sections {
+  -ms-flex: 1;
+      flex: 1; }
+  .home-sections section {
+    padding: 50px 0; }
+  .home-sections .flex {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row; }
+  .home-sections .flex--center {
+    -ms-flex-pack: center;
+        justify-content: center; }
+  .home-sections .flex--space-around {
+    -ms-flex-pack: distribute;
+        justify-content: space-around; }
+  .home-sections .order-first {
+    -ms-flex-order: -1;
+        order: -1; }
+
+.col-1 {
+  max-width: 300px;
+  margin: 0 10px;
+  background: pink; }
+
+.col-2 {
+  max-width: 620px;
+  margin: 0 10px;
+  background: honeydew; }
+
+.col-50 {
+  width: 50%;
+  background: yellow; }
+
+@media (max-width: 640px) {
+  .home-sections .flex {
+    display: block; }
+  .col-1 {
+    max-width: 100%; }
+  .col-50 {
+    width: auto; } }

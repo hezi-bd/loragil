@@ -1,15 +1,24 @@
+mixin nav-content()
+  ul
+    li: a(href="#abilities") יכולות
+    li: a(href="#sites") אתרים
+    li: a(href="#banners") באנרים
+    li: a(href="#popup") פופ-אפ
+    li: a(href="#graphics") גרפיקה ואיור
+    li: a(href="#clients") לקוחות
+    li: a(href="#in-short") בקצרה
+
+
+.mobile-nav
+  +nav-content()
+
 header
   .header-position
     h1.logo Loragil-design
 
     nav.site-nav
-      ul
-        li: a(href="#abilities") יכולות
-        li: a(href="#sites") אתרים
-        li: a(href="#banners") באנרים
-        li: a(href="#popup") פופ-אפ
-        li: a(href="#graphics") גרפיקה ואיור
-        li: a(href="#clients") לקוחות
-        li: a(href="#in-short") בקצרה
+      +nav-content()
 
     a(href="mailto:info@loragil.com").email-link contact
+
+    .mobile-nav-toggle: span
