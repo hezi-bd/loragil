@@ -39,6 +39,7 @@ section.about
         weight: 100
       text-shadow: $text-shade
       margin-top: 43px
+      margin-bottom: -12px
 
     &.home-title-bold
       font:
@@ -82,12 +83,24 @@ section.about
 
   @media (max-width: 640px)
     height: 100vh
-    padding: 200px 0
+    padding: 250px 0
 
     .flex--center
       background: rgba(126, 67, 184, 0.91)
       padding: 0px 25px 5px
       box-sizing: border-box
+    h2, h4, p
+      text-align: center
+    h2.home-title
+      margin-top: 0
+      margin-bottom: -5px
+
+    h4
+      line-height: 1.2
 
     p.home-info
-      margin-bottom: 40px
+      margin-bottom: 10px
+
+    @media (max-width: 370px)
+      h2
+        font-size: 40px

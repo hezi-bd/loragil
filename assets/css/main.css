@@ -743,7 +743,8 @@ section.about {
     section.about h2.home-title {
       font-weight: 100;
       text-shadow: 0 3px 1px rgba(109, 51, 158, 0.75);
-      margin-top: 43px; }
+      margin-top: 43px;
+      margin-bottom: -12px; }
     section.about h2.home-title-bold {
       font-weight: 700;
       text-shadow: 0 9px 8px rgba(109, 51, 158, 0.75);
@@ -781,13 +782,23 @@ section.about {
 @media (max-width: 640px) {
   .home-sections section.about {
     height: 100vh;
-    padding: 200px 0; }
+    padding: 250px 0; }
     .home-sections section.about .flex--center {
       background: rgba(126, 67, 184, 0.91);
       padding: 0px 25px 5px;
       box-sizing: border-box; }
+    .home-sections section.about h2, .home-sections section.about h4, .home-sections section.about p {
+      text-align: center; }
+    .home-sections section.about h2.home-title {
+      margin-top: 0;
+      margin-bottom: -5px; }
+    .home-sections section.about h4 {
+      line-height: 1.2; }
     .home-sections section.about p.home-info {
-      margin-bottom: 40px; } }
+      margin-bottom: 10px; } }
+  @media (max-width: 640px) and (max-width: 370px) {
+    .home-sections section.about h2 {
+      font-size: 40px; } }
 
 body {
   font-family: 'Heebo', sans-serif;
@@ -852,5 +863,4 @@ body {
     width: auto; }
   .push-left {
     margin-right: 10px;
-    margin-right: 10px;
-    padding-top: 0px; } }
+    padding-top: 15px; } }
