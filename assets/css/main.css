@@ -782,7 +782,7 @@ section.about {
 @media (max-width: 640px) {
   .home-sections section.about {
     height: 100vh;
-    padding: 250px 0; }
+    padding: 230px 0; }
     .home-sections section.about .flex--center {
       background: rgba(126, 67, 184, 0.91);
       padding: 0px 25px 5px;
