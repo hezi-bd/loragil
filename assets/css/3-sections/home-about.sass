@@ -5,9 +5,6 @@ section.about
     repeat: no-repeat
     position: top right
     size: contain
-
-
-
   &::before
     position: absolute
     z-index: -1
@@ -17,4 +14,78 @@ section.about
     content: ""
     height: 100vh
     width: 100vw
+    background:
+      image: url(../img/loragil-bg-pattern2.svg)
+      position: top center
+  &::after
+    position: absolute
+    z-index: -1
+    height: 100vh
+    top: 0
+    right: 0
+    content: ""
+    height: 100vh
+    width: 100vw
     @extend .home-gra
+
+  h2
+    color: $light-orange
+    font-size: 50px
+    margin: 0
+    text-align: justify
+
+    &.home-title
+      font:
+        weight: 100
+      text-shadow: $text-shade
+      margin-top: 43px
+
+    &.home-title-bold
+      font:
+        weight: 700
+      text-shadow: 0 9px 8px rgba(109, 51, 158, 0.75)
+      letter-spacing: 0.4px
+
+  .logo-hr
+    height: 77px
+    width: 100%
+    margin:
+      top: -18px
+      bottom: -18px
+    background:
+      image: url(../img/logo-hr-line.png)
+      repeat: no-repeat
+      position: center
+      size: contain
+
+  h4
+    text-shadow: $text-shade
+    color: $light-orange
+    text-align: justify
+    letter-spacing: -0.4px
+    margin: 0
+    font:
+      size: 29.4px
+      weight: 300
+
+  p.home-info
+    color: shade($purple, 20%)
+    font-size: 18px
+    margin-top: 8px
+
+.home-sections section.about
+  @media (max-width: 1313px)
+    height: auto
+
+
+  @media (max-width: 640px)
+    height: auto
+    padding: 230px 26px 0px
+
+    .flex--center
+      background: rgba(126, 67, 184, 0.91)
+      padding: 0px 0 5px
+      box-sizing: border-box
+
+    p.home-info
+      margin-bottom: 40px

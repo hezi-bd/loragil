@@ -17,7 +17,7 @@
   //Flex Classes
   .flex
     display: flex
-    flex-direction: row-reverse
+    flex-direction: row
 
   .flex--center
     justify-content: center
@@ -32,7 +32,7 @@
 .col-1
   max-width: 300px
   margin: 0 10px
-  background: pink
+  //background: pink
 
 .col-2
   max-width: 620px
@@ -43,6 +43,9 @@
   width: 50%
   background: yellow
 
+.push-left
+  margin-right: 330px
+
 @media (max-width: 640px)
   .home-sections .flex
     display: block
@@ -52,3 +55,8 @@
 
   .col-50
     width: auto
+
+  .push-left
+    margin-right: 10px
+    margin-right: 10px
+    padding-top: 0px

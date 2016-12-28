@@ -392,68 +392,25 @@ textarea {
 @font-face {
   font-family: 'Heebo';
   font-style: normal;
+  font-weight: 700;
+  src: local("Heebo Bold"), local("Heebo-Bold"), url(https://fonts.gstatic.com/s/heebo/v2/vTMFaUgCCf1lTAPb2BL5W3YhjbSpvc47ee6xR_80Hnw.woff) format("woff"); }
+
+@font-face {
+  font-family: 'Heebo';
+  font-style: normal;
   font-weight: 900;
   src: local("Heebo Black"), local("Heebo-Black"), url(https://fonts.gstatic.com/s/heebo/v2/68I0BQEi72oESKtZsJcjznYhjbSpvc47ee6xR_80Hnw.woff) format("woff"); }
 
 /* heebo-100 - latin_hebrew */
-@font-face {
-  font-family: 'Heebo';
-  font-style: normal;
-  font-weight: 100;
-  src: url("fonts/heebo-v2-latin_hebrew-100.eot");
-  /* IE9 Compat Modes */
-  src: local("Heebo Thin"), local("Heebo-Thin"), url("fonts/heebo-v2-latin_hebrew-100.eot?#iefix") format("embedded-opentype"), url("fonts/heebo-v2-latin_hebrew-100.woff2") format("woff2"), url("fonts/heebo-v2-latin_hebrew-100.woff") format("woff"), url("fonts/heebo-v2-latin_hebrew-100.ttf") format("truetype"), url("fonts/heebo-v2-latin_hebrew-100.svg#Heebo") format("svg");
-  /* Legacy iOS */ }
-
-/* heebo-300 - latin_hebrew */
-@font-face {
-  font-family: 'Heebo';
-  font-style: normal;
-  font-weight: 300;
-  src: url("fonts/heebo-v2-latin_hebrew-300.eot");
-  /* IE9 Compat Modes */
-  src: local("Heebo Light"), local("Heebo-Light"), url("fonts/heebo-v2-latin_hebrew-300.eot?#iefix") format("embedded-opentype"), url("fonts/heebo-v2-latin_hebrew-300.woff2") format("woff2"), url("fonts/heebo-v2-latin_hebrew-300.woff") format("woff"), url("fonts/heebo-v2-latin_hebrew-300.ttf") format("truetype"), url("fonts/heebo-v2-latin_hebrew-300.svg#Heebo") format("svg");
-  /* Legacy iOS */ }
-
-/* heebo-regular - latin_hebrew */
-@font-face {
-  font-family: 'Heebo';
-  font-style: normal;
-  font-weight: 400;
-  src: url("fonts/heebo-v2-latin_hebrew-regular.eot");
-  /* IE9 Compat Modes */
-  src: local("Heebo"), local("Heebo-Regular"), url("fonts/heebo-v2-latin_hebrew-regular.eot?#iefix") format("embedded-opentype"), url("fonts/heebo-v2-latin_hebrew-regular.woff2") format("woff2"), url("fonts/heebo-v2-latin_hebrew-regular.woff") format("woff"), url("fonts/heebo-v2-latin_hebrew-regular.ttf") format("truetype"), url("fonts/heebo-v2-latin_hebrew-regular.svg#Heebo") format("svg");
-  /* Legacy iOS */ }
-
-/* heebo-500 - latin_hebrew */
-@font-face {
-  font-family: 'Heebo';
-  font-style: normal;
-  font-weight: 500;
-  src: url("fonts/heebo-v2-latin_hebrew-500.eot");
-  /* IE9 Compat Modes */
-  src: local("Heebo Medium"), local("Heebo-Medium"), url("fonts/heebo-v2-latin_hebrew-500.eot?#iefix") format("embedded-opentype"), url("fonts/heebo-v2-latin_hebrew-500.woff2") format("woff2"), url("fonts/heebo-v2-latin_hebrew-500.woff") format("woff"), url("fonts/heebo-v2-latin_hebrew-500.ttf") format("truetype"), url("fonts/heebo-v2-latin_hebrew-500.svg#Heebo") format("svg");
-  /* Legacy iOS */ }
-
-/* heebo-900 - latin_hebrew */
-@font-face {
-  font-family: 'Heebo';
-  font-style: normal;
-  font-weight: 900;
-  src: url("fonts/heebo-v2-latin_hebrew-900.eot");
-  /* IE9 Compat Modes */
-  src: local("Heebo Black"), local("Heebo-Black"), url("fonts/heebo-v2-latin_hebrew-900.eot?#iefix") format("embedded-opentype"), url("fonts/heebo-v2-latin_hebrew-900.woff2") format("woff2"), url("fonts/heebo-v2-latin_hebrew-900.woff") format("woff"), url("fonts/heebo-v2-latin_hebrew-900.ttf") format("truetype"), url("fonts/heebo-v2-latin_hebrew-900.svg#Heebo") format("svg");
-  /* Legacy iOS */ }
-
-.home-gra, section.about::before {
+.home-gra, section.about::after {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#9f60d7+0,9052cc+50,5a2e81+100 */
-  background: #9f60d7;
+  background: #492174;
   /* Old browsers */
   /* FF3.6-15 */
   /* Chrome10-25,Safari5.1-6 */
-  background: radial-gradient(ellipse at 40% 210px, rgba(158, 94, 213, 0.5) 0%, rgba(160, 96, 216, 0.9) 40%, #66368f 100%);
+  background: radial-gradient(ellipse at 41.5% 238px, rgba(158, 94, 213, 0.1) 1%, rgba(158, 94, 213, 0.9) 8%, rgba(160, 96, 216, 0.15) 38%, #492174 73%, #492174 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9f60d7', endColorstr='#5a2e81',GradientType=1 );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9657cf', endColorstr='#492174',GradientType=1 );
   /* IE6-9 fallback on horizontal gradient */ }
 
 .gigantic, .huge, .large, .bigger, .big,
@@ -626,7 +583,7 @@ body {
     .home-wrap header .site-nav li::after {
       position: absolute;
       top: 7px;
-      right: -3px;
+      right: -100px;
       content: "";
       width: 100%;
       height: 30px;
@@ -705,7 +662,7 @@ body {
   display: none;
   position: absolute;
   width: 100%;
-  background: rgba(0, 0, 0, 0.2);
+  background: transparent;
   padding: 30px 0 20px;
   -webkit-transform: translateY(calc(-100% + 90px));
           transform: translateY(calc(-100% + 90px));
@@ -723,22 +680,23 @@ body {
 @media (max-width: 775px) {
   .home-wrap header {
     background: transparent;
-    width: auto;
-    padding: 20px 0; }
+    padding: 20px 0 0; }
     .home-wrap header .header-position {
-      width: auto;
+      width: auto !important;
       position: relative;
       top: auto;
       bottom: auto;
       left: auto;
+      right: auto;
       -ms-flex-direction: row;
           flex-direction: row;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+      padding-left: 20px; }
     .home-wrap header .site-nav, .home-wrap header .email-link {
       display: none; }
     .home-wrap header .logo {
-      height: 45px; }
+      height: 60px; }
     .home-wrap header .mobile-nav-toggle {
       display: -ms-flexbox;
       display: flex; }
@@ -765,11 +723,73 @@ section.about {
     right: 0;
     content: "";
     height: 100vh;
+    width: 100vw;
+    background-image: url(../img/loragil-bg-pattern2.svg);
+    background-position: top center; }
+  section.about::after {
+    position: absolute;
+    z-index: -1;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    content: "";
+    height: 100vh;
     width: 100vw; }
+  section.about h2 {
+    color: #fbb03b;
+    font-size: 50px;
+    margin: 0;
+    text-align: justify; }
+    section.about h2.home-title {
+      font-weight: 100;
+      text-shadow: 0 3px 1px rgba(109, 51, 158, 0.75);
+      margin-top: 43px; }
+    section.about h2.home-title-bold {
+      font-weight: 700;
+      text-shadow: 0 9px 8px rgba(109, 51, 158, 0.75);
+      letter-spacing: 0.4px; }
+  section.about .logo-hr {
+    height: 77px;
+    width: 100%;
+    margin-top: -18px;
+    margin-bottom: -18px;
+    background-image: url(../img/logo-hr-line.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; }
+  section.about h4 {
+    text-shadow: 0 3px 1px rgba(109, 51, 158, 0.75);
+    color: #fbb03b;
+    text-align: justify;
+    letter-spacing: -0.4px;
+    margin: 0;
+    font-size: 29.4px;
+    font-weight: 300; }
+  section.about p.home-info {
+    color: #57297e;
+    font-size: 18px;
+    margin-top: 8px; }
+
+@media (max-width: 1313px) {
+  .home-sections section.about {
+    height: auto; } }
+
+@media (max-width: 640px) {
+  .home-sections section.about {
+    height: auto;
+    padding: 230px 26px 0px; }
+    .home-sections section.about .flex--center {
+      background: rgba(126, 67, 184, 0.91);
+      padding: 0px 0 5px;
+      box-sizing: border-box; }
+    .home-sections section.about p.home-info {
+      margin-bottom: 40px; } }
 
 body {
   font-family: 'Heebo', sans-serif;
-  background-image: url(../img/loragil-bg-pattern.svg); }
+  direction: rtl;
+  background-image: url(../img/loragil-bg-pattern.svg);
+  background-position: top center; }
 
 .home-wrap {
   display: -ms-flexbox;
@@ -791,8 +811,8 @@ body {
   .home-sections .flex {
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-direction: row-reverse;
-        flex-direction: row-reverse; }
+    -ms-flex-direction: row;
+        flex-direction: row; }
   .home-sections .flex--center {
     -ms-flex-pack: center;
         justify-content: center; }
@@ -805,8 +825,7 @@ body {
 
 .col-1 {
   max-width: 300px;
-  margin: 0 10px;
-  background: pink; }
+  margin: 0 10px; }
 
 .col-2 {
   max-width: 620px;
@@ -817,10 +836,17 @@ body {
   width: 50%;
   background: yellow; }
 
+.push-left {
+  margin-right: 330px; }
+
 @media (max-width: 640px) {
   .home-sections .flex {
     display: block; }
   .col-1 {
     max-width: 100%; }
   .col-50 {
-    width: auto; } }
+    width: auto; }
+  .push-left {
+    margin-right: 10px;
+    margin-right: 10px;
+    padding-top: 0px; } }
