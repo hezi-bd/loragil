@@ -751,9 +751,8 @@ section.about {
       letter-spacing: 0.4px; }
   section.about .logo-hr {
     height: 90px;
-    width: 300px;
-    margin-top: -18px;
-    margin-bottom: -18px;
+    width: 296px;
+    margin: -18px auto;
     background-image: url(../img/loragil-logo-hr.svg);
     background-repeat: no-repeat;
     background-position: center;
