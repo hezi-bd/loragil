@@ -772,7 +772,11 @@ section.about {
 
 @media (max-width: 1313px) {
   .home-sections section.about {
-    height: auto; } }
+    height: 1000px; } }
+
+@media (max-width: 1060px) {
+  .home-sections section.about {
+    height: 510px; } }
 
 @media (max-width: 640px) {
   .home-sections section.about {
