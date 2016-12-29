@@ -402,7 +402,7 @@ textarea {
   src: local("Heebo Black"), local("Heebo-Black"), url(https://fonts.gstatic.com/s/heebo/v2/68I0BQEi72oESKtZsJcjznYhjbSpvc47ee6xR_80Hnw.woff) format("woff"); }
 
 /* heebo-100 - latin_hebrew */
-.home-gra, section.about::after {
+.home-gra, .home-sections section.about::after {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#9f60d7+0,9052cc+50,5a2e81+100 */
   background: #492174;
   /* Old browsers */
@@ -412,6 +412,28 @@ textarea {
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9657cf', endColorstr='#492174',GradientType=1 );
   /* IE6-9 fallback on horizontal gradient */ }
+
+.abilities-gra, .home-sections section.abilities {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#9f60d7+0,9052cc+50,5a2e81+100 */
+  background: #4c2571;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at 50% -3%, #4c2571 0%, #633093 35%, #633093 38%, #492174 68%, #431f67 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c2571', endColorstr='#633093',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */ }
+
+.flame-gra, .home-sections section.abilities .rocket-box::after {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,633093+100&0.8+0,0+100 */
+  background: red;
+  /* For browsers that do not support gradients */
+  /* Safari 5.1 to 6.0 */
+  background: -webkit-repeating-linear-gradient(rgba(138, 94, 183, 0.57), rgba(255, 255, 255, 0) 4%, rgba(138, 94, 183, 0.57) 11%);
+  /* Opera 11.1 to 12.0 */
+  /* Firefox 3.6 to 15 */
+  /* Standard syntax */
+  background: repeating-linear-gradient(rgba(138, 94, 183, 0.57), rgba(255, 255, 255, 0) 4%, rgba(138, 94, 183, 0.57) 11%); }
 
 .gigantic, .huge, .large, .bigger, .big,
 h1, h2, h3, h4, h5, h6 {
@@ -709,13 +731,20 @@ body {
       .home-wrap .mobile-nav.is-open li a {
         color: #f7921e; } }
 
-section.about {
+.about-pic-cover {
+  position: absolute;
+  padding: 0;
   height: 100vh;
+  width: 50%;
   background-image: url(../img/loragil-about-pic.png);
   background-repeat: no-repeat;
   background-position: top right;
   background-size: contain; }
-  section.about::before {
+
+.home-sections section.about {
+  padding: 0;
+  height: 49.3vh; }
+  .home-sections section.about::before {
     position: absolute;
     z-index: -1;
     height: 100vh;
@@ -726,7 +755,7 @@ section.about {
     width: 100vw;
     background-image: url(../img/loragil-bg-pattern2.svg);
     background-position: top center; }
-  section.about::after {
+  .home-sections section.about::after {
     position: absolute;
     z-index: -1;
     height: 100vh;
@@ -735,29 +764,29 @@ section.about {
     content: "";
     height: 100vh;
     width: 100vw; }
-  section.about h2 {
+  .home-sections section.about h2 {
     color: #fbb03b;
     font-size: 50px;
     margin: 0;
     text-align: justify; }
-    section.about h2.home-title {
+    .home-sections section.about h2.home-title {
       font-weight: 100;
       text-shadow: 0 3px 1px rgba(109, 51, 158, 0.75);
-      margin-top: 43px;
+      margin-top: 138px;
       margin-bottom: -12px; }
-    section.about h2.home-title-bold {
+    .home-sections section.about h2.home-title-bold {
       font-weight: 700;
       text-shadow: 0 9px 8px rgba(109, 51, 158, 0.75);
       letter-spacing: 0.4px; }
-  section.about .logo-hr {
+  .home-sections section.about .logo-hr {
     height: 90px;
     width: 296px;
-    margin: -18px auto;
+    margin: -20px auto -30px;
     background-image: url(../img/loragil-logo-hr.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover; }
-  section.about h4 {
+  .home-sections section.about h4 {
     text-shadow: 0 3px 1px rgba(109, 51, 158, 0.75);
     color: #fbb03b;
     text-align: justify;
@@ -765,7 +794,7 @@ section.about {
     margin: 0;
     font-size: 29.4px;
     font-weight: 300; }
-  section.about p.home-info {
+  .home-sections section.about p.home-info {
     color: #57297e;
     font-size: 18px;
     margin-top: 8px; }
@@ -798,6 +827,77 @@ section.about {
   @media (max-width: 640px) and (max-width: 370px) {
     .home-sections section.about h2 {
       font-size: 40px; } }
+
+.home-sections section.abilities {
+  padding-top: 15px;
+  background-color: #512675;
+  position: relative;
+  height: 550px;
+  z-index: -1; }
+  .home-sections section.abilities .col-1 {
+    display: -ms-flexbox;
+    display: flex; }
+  .home-sections section.abilities .home-lead-box {
+    width: 368px;
+    display: -ms-flexbox;
+    display: flex;
+    float: left; }
+    .home-sections section.abilities .home-lead-box .home-lead {
+      color: #fbb03b;
+      letter-spacing: 32px;
+      width: 262px;
+      line-height: 1; }
+    .home-sections section.abilities .home-lead-box .orange-type {
+      margin-top: 2px;
+      color: #fbb03b; }
+    .home-sections section.abilities .home-lead-box .shade-type {
+      line-height: 0.5;
+      color: #2c143f; }
+  .home-sections section.abilities .rocket-box {
+    padding: 0 10px;
+    margin: 0 5px;
+    height: 330px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column; }
+    .home-sections section.abilities .rocket-box::after {
+      position: absolute;
+      content: "";
+      background-attachment: fixed; }
+    .home-sections section.abilities .rocket-box .rocket {
+      height: 330px;
+      background-image: url(../img/rocket.svg);
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-size: contain; }
+    .home-sections section.abilities .rocket-box h4 {
+      color: #fbb03b;
+      font-weight: 400; }
+  .home-sections section.abilities .col-first .rocket-box:nth-child(1)::after {
+    width: 39px;
+    height: 331px;
+    margin-top: 56px; }
+  .home-sections section.abilities .col-first .rocket-box:nth-child(2)::after {
+    width: 76px;
+    height: 279px;
+    margin-top: 108px; }
+  .home-sections section.abilities .col-first .rocket-box:nth-child(3)::after {
+    width: 54px;
+    height: 309px;
+    margin-top: 79px; }
+  .home-sections section.abilities .col-last .rocket-box:nth-child(1)::after {
+    width: 45px;
+    height: 331px;
+    margin-top: 56px; }
+  .home-sections section.abilities .col-last .rocket-box:nth-child(2)::after {
+    width: 98px;
+    height: 242px;
+    margin-top: 147px; }
+  .home-sections section.abilities .col-last .rocket-box:nth-child(3)::after {
+    width: 40px;
+    height: 331px;
+    margin-top: 58px; }
 
 body {
   font-family: 'Heebo', sans-serif;
@@ -846,6 +946,10 @@ body {
   margin: 0 10px;
   background: honeydew; }
 
+.col-3 {
+  width: 620px;
+  margin: 0 10px; }
+
 .col-50 {
   width: 50%;
   background: yellow; }
@@ -863,3 +967,7 @@ body {
   .push-left {
     margin-right: 10px;
     padding-top: 15px; } }
+
+.home-lead {
+  font-weight: 100;
+  font-size: 40px; }

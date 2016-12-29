@@ -1,6 +1,18 @@
-section.about
+.about-pic-cover
+  position: absolute
+  padding: 0
   height: 100vh
+  width: 50%
   background:
+    image: url(../img/loragil-about-pic.png)
+    repeat: no-repeat
+    position: top right
+    size: contain
+
+.home-sections section.about
+  padding: 0
+  height: 49.3vh
+  //background:
     image: url(../img/loragil-about-pic.png)
     repeat: no-repeat
     position: top right
@@ -38,7 +50,7 @@ section.about
       font:
         weight: 100
       text-shadow: $text-shade
-      margin-top: 43px
+      margin-top: 138px
       margin-bottom: -12px
 
     &.home-title-bold
@@ -50,7 +62,7 @@ section.about
   .logo-hr
     height: 90px
     width: 296px
-    margin: -18px auto
+    margin: -20px auto -30px
     background:
       image: url(../img/loragil-logo-hr.svg)
       repeat: no-repeat

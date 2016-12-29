@@ -1,0 +1,96 @@
+.home-sections section.abilities
+  padding-top: 15px
+  background:
+    color: $abilities-section-bg
+  position: relative
+  height: 550px
+  z-index: -1
+  @extend .abilities-gra
+
+  .col-1
+    display: flex
+
+  .home-lead-box
+    width: 368px
+    display: flex
+    //background: red
+    float: left
+
+    .home-lead
+      color: $light-orange
+      letter-spacing: 32px
+      width: 262px
+      line-height: 1
+
+    .orange-type
+      margin-top: 2px
+      color: $light-orange
+
+    .shade-type
+      line-height: 0.5
+      color: shade($purple, 60%)
+
+  .rocket-box
+    padding: 0 10px
+    margin: 0 5px
+    height: 330px
+    display: flex
+    flex-direction: column
+    &::after
+      position: absolute
+      content: ""
+      @extend .flame-gra
+      background-attachment: fixed
+
+    .rocket
+      height: 330px
+      background:
+        image: url(../img/rocket.svg)
+        repeat: no-repeat
+        position: top center
+        size: contain
+
+
+    h4
+      color: $light-orange
+      font-weight: 400
+
+  .col-first
+    .rocket-box
+      &:nth-child(1)
+        &::after
+          width: 39px
+          height: 331px
+          margin-top: 56px
+
+      &:nth-child(2)
+        &::after
+          width: 76px
+          height: 279px
+          margin-top: 108px
+
+      &:nth-child(3)
+        &::after
+          width: 54px
+          height: 309px
+          margin-top: 79px
+
+  .col-last
+    .rocket-box
+      &:nth-child(1)
+        &::after
+          width: 45px
+          height: 331px
+          margin-top: 56px
+
+      &:nth-child(2)
+        &::after
+          width: 98px
+          height: 242px
+          margin-top: 147px
+
+      &:nth-child(3)
+        &::after
+          width: 40px
+          height: 331px
+          margin-top: 58px
