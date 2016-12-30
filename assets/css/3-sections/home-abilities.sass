@@ -4,7 +4,7 @@
   background:
     color: $abilities-section-bg
   position: relative
-  height: 550px
+  height: calc(50vh - 45px)
   z-index: -1
   @extend .abilities-gra
 
@@ -80,8 +80,9 @@
 
         h4
           @extend .flame-gra1
-          height: 150px
-
+          height: 250px
+          @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm)
+            height: 190px
       &:nth-child(2)
         width: 96px
         &::before
@@ -90,7 +91,9 @@
 
         h4
           @extend .flame-gra2
-          height: 165px
+          height: 265px
+          @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm)
+            height: 205px
 
       &:nth-child(3)
         width: 75px
@@ -100,7 +103,9 @@
 
         h4
           @extend .flame-gra3
-          height: 123px
+          height: 223px
+          @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm)
+            height: 163px
 
   .col-last
     .rocket-box
@@ -112,7 +117,9 @@
 
         h4
           @extend .flame-gra4
-          height: 411px
+          height: 521px
+          @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm)
+            height: 471px
 
       &:nth-child(2)
         width: 126px
@@ -122,7 +129,9 @@
 
         h4
           @extend .flame-gra5
-          height: 160px
+          height: 250px
+          @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm)
+            height: 190px
 
       &:nth-child(3)
         width: 62px
@@ -132,4 +141,6 @@
 
         h4
           @extend .flame-gra6
-          height: 240px
+          height: 340px
+          @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm)
+            height: 280px
