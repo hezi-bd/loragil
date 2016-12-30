@@ -1,5 +1,6 @@
+
 .home-sections section.abilities
-  padding-top: 15px
+  padding: 8px 0 50px
   background:
     color: $abilities-section-bg
   position: relative
@@ -9,18 +10,28 @@
 
   .col-1
     display: flex
+    flex-direction: row
+    justify-content: space-between
+    width: 100%
 
   .home-lead-box
-    width: 368px
+    width: 400px
     display: flex
-    //background: red
     float: left
+
 
     .home-lead
       color: $light-orange
       letter-spacing: 32px
       width: 262px
       line-height: 1
+      text-align: left
+      @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm)
+          left: -32px
+          position: relative
+
+    .small-lead-box
+      margin-right: 35px
 
     .orange-type
       margin-top: 2px
@@ -31,19 +42,13 @@
       color: shade($purple, 60%)
 
   .rocket-box
-    padding: 0 10px
-    margin: 0 5px
-    height: 330px
-    display: flex
-    flex-direction: column
-    &::after
+    padding: 0
+    min-height: 440px
+
+    &::before
+      height: 330px
       position: absolute
       content: ""
-      @extend .flame-gra
-      background-attachment: fixed
-
-    .rocket
-      height: 330px
       background:
         image: url(../img/rocket.svg)
         repeat: no-repeat
@@ -54,43 +59,77 @@
     h4
       color: $light-orange
       font-weight: 400
+      text-align: center
+      display: flex
+      flex-direction: column-reverse
+      background-attachment: fixed
+      padding: 0px 11px 230px
+      position: absolute
+      bottom: 0
+      margin-bottom: 0
+      z-index: -1
+
 
   .col-first
     .rocket-box
       &:nth-child(1)
-        &::after
-          width: 39px
-          height: 331px
-          margin-top: 56px
+        width: 60px
+        &::before
+          width: 60px
+          top: 140px
+
+        h4
+          @extend .flame-gra1
+          height: 150px
 
       &:nth-child(2)
-        &::after
-          width: 76px
-          height: 279px
-          margin-top: 108px
+        width: 96px
+        &::before
+          width: 96px
+          top: 70px
+
+        h4
+          @extend .flame-gra2
+          height: 165px
 
       &:nth-child(3)
-        &::after
-          width: 54px
-          height: 309px
-          margin-top: 79px
+        width: 75px
+        &::before
+          width: 75px
+          top: 144px
+
+        h4
+          @extend .flame-gra3
+          height: 123px
 
   .col-last
     .rocket-box
       &:nth-child(1)
-        &::after
-          width: 45px
-          height: 331px
-          margin-top: 56px
+        width: 62px
+        &::before
+          top: -137px
+          width: 66px
+
+        h4
+          @extend .flame-gra4
+          height: 411px
 
       &:nth-child(2)
-        &::after
-          width: 98px
-          height: 242px
-          margin-top: 147px
+        width: 126px
+        &::before
+          width: 120px
+          top: 52px
+
+        h4
+          @extend .flame-gra5
+          height: 160px
 
       &:nth-child(3)
-        &::after
-          width: 40px
-          height: 331px
-          margin-top: 58px
+        width: 62px
+        &::before
+          width: 62px
+          top: 48px
+
+        h4
+          @extend .flame-gra6
+          height: 240px

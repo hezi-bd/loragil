@@ -408,7 +408,7 @@ textarea {
   /* Old browsers */
   /* FF3.6-15 */
   /* Chrome10-25,Safari5.1-6 */
-  background: radial-gradient(ellipse at 41.5% 238px, rgba(158, 94, 213, 0.1) 1%, rgba(158, 94, 213, 0.9) 8%, rgba(160, 96, 216, 0.15) 38%, #492174 73%, #492174 100%);
+  background: radial-gradient(ellipse at calc(50% - 155px) 25.5%, rgba(158, 94, 213, 0.1) 1%, rgba(158, 94, 213, 0.9) 8%, rgba(160, 96, 216, 0.15) 28%, rgba(73, 33, 116, 0.78) 44%, rgba(73, 33, 116, 0.94) 51%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9657cf', endColorstr='#492174',GradientType=1 );
   /* IE6-9 fallback on horizontal gradient */ }
@@ -424,7 +424,7 @@ textarea {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c2571', endColorstr='#633093',GradientType=1 );
   /* IE6-9 fallback on horizontal gradient */ }
 
-.flame-gra, .home-sections section.abilities .rocket-box::after {
+.flame-gra1, .home-sections section.abilities .col-first .rocket-box:nth-child(1) h4 {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,633093+100&0.8+0,0+100 */
   background: red;
   /* For browsers that do not support gradients */
@@ -433,7 +433,68 @@ textarea {
   /* Opera 11.1 to 12.0 */
   /* Firefox 3.6 to 15 */
   /* Standard syntax */
-  background: repeating-linear-gradient(rgba(138, 94, 183, 0.57), rgba(255, 255, 255, 0) 4%, rgba(138, 94, 183, 0.57) 11%); }
+  background: repeating-linear-gradient(rgba(138, 94, 183, 0.57), rgba(255, 255, 255, 0) 4%, rgba(138, 94, 183, 0.57) 11%);
+  background-attachment: fixed; }
+
+.flame-gra2, .home-sections section.abilities .col-first .rocket-box:nth-child(2) h4 {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,633093+100&0.8+0,0+100 */
+  background: red;
+  /* For browsers that do not support gradients */
+  /* Safari 5.1 to 6.0 */
+  background: -webkit-repeating-linear-gradient(rgba(138, 94, 183, 0.57), rgba(255, 255, 255, 0) 8%, rgba(138, 94, 183, 0.57) 15%);
+  /* Opera 11.1 to 12.0 */
+  /* Firefox 3.6 to 15 */
+  /* Standard syntax */
+  background: repeating-linear-gradient(rgba(138, 94, 183, 0.57), rgba(255, 255, 255, 0) 8%, rgba(138, 94, 183, 0.57) 15%);
+  background-attachment: fixed; }
+
+.flame-gra3, .home-sections section.abilities .col-first .rocket-box:nth-child(3) h4 {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,633093+100&0.8+0,0+100 */
+  background: red;
+  /* For browsers that do not support gradients */
+  /* Safari 5.1 to 6.0 */
+  background: -webkit-repeating-linear-gradient(rgba(138, 94, 183, 0.57), rgba(255, 255, 255, 0) 6%, rgba(138, 94, 183, 0.57) 18%);
+  /* Opera 11.1 to 12.0 */
+  /* Firefox 3.6 to 15 */
+  /* Standard syntax */
+  background: repeating-linear-gradient(rgba(138, 94, 183, 0.57), rgba(255, 255, 255, 0) 6%, rgba(138, 94, 183, 0.57) 18%);
+  background-attachment: fixed; }
+
+.flame-gra4, .home-sections section.abilities .col-last .rocket-box:nth-child(1) h4 {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,633093+100&0.8+0,0+100 */
+  background: red;
+  /* For browsers that do not support gradients */
+  /* Safari 5.1 to 6.0 */
+  background: -webkit-repeating-linear-gradient(rgba(138, 94, 183, 0.57), rgba(255, 255, 255, 0) 2%, rgba(138, 94, 183, 0.57) 22%);
+  /* Opera 11.1 to 12.0 */
+  /* Firefox 3.6 to 15 */
+  /* Standard syntax */
+  background: repeating-linear-gradient(rgba(138, 94, 183, 0.57), rgba(255, 255, 255, 0) 2%, rgba(138, 94, 183, 0.57) 22%);
+  background-attachment: fixed; }
+
+.flame-gra5, .home-sections section.abilities .col-last .rocket-box:nth-child(2) h4 {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,633093+100&0.8+0,0+100 */
+  background: red;
+  /* For browsers that do not support gradients */
+  /* Safari 5.1 to 6.0 */
+  background: -webkit-repeating-linear-gradient(rgba(138, 94, 183, 0.57), rgba(255, 255, 255, 0) 18%, rgba(138, 94, 183, 0.57) 38%);
+  /* Opera 11.1 to 12.0 */
+  /* Firefox 3.6 to 15 */
+  /* Standard syntax */
+  background: repeating-linear-gradient(rgba(138, 94, 183, 0.57), rgba(255, 255, 255, 0) 18%, rgba(138, 94, 183, 0.57) 38%);
+  background-attachment: fixed; }
+
+.flame-gra6, .home-sections section.abilities .col-last .rocket-box:nth-child(3) h4 {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,633093+100&0.8+0,0+100 */
+  background: red;
+  /* For browsers that do not support gradients */
+  /* Safari 5.1 to 6.0 */
+  background: -webkit-repeating-linear-gradient(rgba(138, 94, 183, 0.57), rgba(255, 255, 255, 0) 8%, rgba(138, 94, 183, 0.57) 30%);
+  /* Opera 11.1 to 12.0 */
+  /* Firefox 3.6 to 15 */
+  /* Standard syntax */
+  background: repeating-linear-gradient(rgba(138, 94, 183, 0.57), rgba(255, 255, 255, 0) 8%, rgba(138, 94, 183, 0.57) 30%);
+  background-attachment: fixed; }
 
 .gigantic, .huge, .large, .bigger, .big,
 h1, h2, h3, h4, h5, h6 {
@@ -740,6 +801,20 @@ body {
   background-repeat: no-repeat;
   background-position: top right;
   background-size: contain; }
+  .about-pic-cover::after {
+    height: 300px;
+    width: 100vw;
+    position: absolute;
+    bottom: -170px;
+    margin-bottom: 70px;
+    content: "";
+    background-image: url(../img/abilities-bottom.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto; }
+    @media all and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
+      .about-pic-cover::after {
+        bottom: -218px; } }
 
 .home-sections section.about {
   padding: 0;
@@ -751,18 +826,17 @@ body {
     top: 0;
     right: 0;
     content: "";
-    height: 100vh;
+    height: 49.3vh;
     width: 100vw;
     background-image: url(../img/loragil-bg-pattern2.svg);
     background-position: top center; }
   .home-sections section.about::after {
     position: absolute;
     z-index: -1;
-    height: 100vh;
+    height: 77.3vh;
     top: 0;
     right: 0;
     content: "";
-    height: 100vh;
     width: 100vw; }
   .home-sections section.about h2 {
     color: #fbb03b;
@@ -829,16 +903,21 @@ body {
       font-size: 40px; } }
 
 .home-sections section.abilities {
-  padding-top: 15px;
+  padding: 8px 0 50px;
   background-color: #512675;
   position: relative;
   height: 550px;
   z-index: -1; }
   .home-sections section.abilities .col-1 {
     display: -ms-flexbox;
-    display: flex; }
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    width: 100%; }
   .home-sections section.abilities .home-lead-box {
-    width: 368px;
+    width: 400px;
     display: -ms-flexbox;
     display: flex;
     float: left; }
@@ -846,7 +925,14 @@ body {
       color: #fbb03b;
       letter-spacing: 32px;
       width: 262px;
-      line-height: 1; }
+      line-height: 1;
+      text-align: left; }
+      @media all and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
+        .home-sections section.abilities .home-lead-box .home-lead {
+          left: -32px;
+          position: relative; } }
+    .home-sections section.abilities .home-lead-box .small-lead-box {
+      margin-right: 35px; }
     .home-sections section.abilities .home-lead-box .orange-type {
       margin-top: 2px;
       color: #fbb03b; }
@@ -854,50 +940,72 @@ body {
       line-height: 0.5;
       color: #2c143f; }
   .home-sections section.abilities .rocket-box {
-    padding: 0 10px;
-    margin: 0 5px;
-    height: 330px;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-        flex-direction: column; }
-    .home-sections section.abilities .rocket-box::after {
+    padding: 0;
+    min-height: 440px; }
+    .home-sections section.abilities .rocket-box::before {
+      height: 330px;
       position: absolute;
       content: "";
-      background-attachment: fixed; }
-    .home-sections section.abilities .rocket-box .rocket {
-      height: 330px;
       background-image: url(../img/rocket.svg);
       background-repeat: no-repeat;
       background-position: top center;
       background-size: contain; }
     .home-sections section.abilities .rocket-box h4 {
       color: #fbb03b;
-      font-weight: 400; }
-  .home-sections section.abilities .col-first .rocket-box:nth-child(1)::after {
-    width: 39px;
-    height: 331px;
-    margin-top: 56px; }
-  .home-sections section.abilities .col-first .rocket-box:nth-child(2)::after {
-    width: 76px;
-    height: 279px;
-    margin-top: 108px; }
-  .home-sections section.abilities .col-first .rocket-box:nth-child(3)::after {
-    width: 54px;
-    height: 309px;
-    margin-top: 79px; }
-  .home-sections section.abilities .col-last .rocket-box:nth-child(1)::after {
-    width: 45px;
-    height: 331px;
-    margin-top: 56px; }
-  .home-sections section.abilities .col-last .rocket-box:nth-child(2)::after {
-    width: 98px;
-    height: 242px;
-    margin-top: 147px; }
-  .home-sections section.abilities .col-last .rocket-box:nth-child(3)::after {
-    width: 40px;
-    height: 331px;
-    margin-top: 58px; }
+      font-weight: 400;
+      text-align: center;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+      background-attachment: fixed;
+      padding: 0px 11px 230px;
+      position: absolute;
+      bottom: 0;
+      margin-bottom: 0;
+      z-index: -1; }
+  .home-sections section.abilities .col-first .rocket-box:nth-child(1) {
+    width: 60px; }
+    .home-sections section.abilities .col-first .rocket-box:nth-child(1)::before {
+      width: 60px;
+      top: 140px; }
+    .home-sections section.abilities .col-first .rocket-box:nth-child(1) h4 {
+      height: 150px; }
+  .home-sections section.abilities .col-first .rocket-box:nth-child(2) {
+    width: 96px; }
+    .home-sections section.abilities .col-first .rocket-box:nth-child(2)::before {
+      width: 96px;
+      top: 70px; }
+    .home-sections section.abilities .col-first .rocket-box:nth-child(2) h4 {
+      height: 165px; }
+  .home-sections section.abilities .col-first .rocket-box:nth-child(3) {
+    width: 75px; }
+    .home-sections section.abilities .col-first .rocket-box:nth-child(3)::before {
+      width: 75px;
+      top: 144px; }
+    .home-sections section.abilities .col-first .rocket-box:nth-child(3) h4 {
+      height: 123px; }
+  .home-sections section.abilities .col-last .rocket-box:nth-child(1) {
+    width: 62px; }
+    .home-sections section.abilities .col-last .rocket-box:nth-child(1)::before {
+      top: -137px;
+      width: 66px; }
+    .home-sections section.abilities .col-last .rocket-box:nth-child(1) h4 {
+      height: 411px; }
+  .home-sections section.abilities .col-last .rocket-box:nth-child(2) {
+    width: 126px; }
+    .home-sections section.abilities .col-last .rocket-box:nth-child(2)::before {
+      width: 120px;
+      top: 52px; }
+    .home-sections section.abilities .col-last .rocket-box:nth-child(2) h4 {
+      height: 160px; }
+  .home-sections section.abilities .col-last .rocket-box:nth-child(3) {
+    width: 62px; }
+    .home-sections section.abilities .col-last .rocket-box:nth-child(3)::before {
+      width: 62px;
+      top: 48px; }
+    .home-sections section.abilities .col-last .rocket-box:nth-child(3) h4 {
+      height: 240px; }
 
 body {
   font-family: 'Heebo', sans-serif;
