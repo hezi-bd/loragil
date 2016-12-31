@@ -831,7 +831,7 @@ body {
         bottom: -150px; } }
     @media (max-width: 640px) {
       .about-pic-cover::after {
-        bottom: -720px;
+        bottom: -860px;
         z-index: 100; } }
 
 .home-sections section.about {
