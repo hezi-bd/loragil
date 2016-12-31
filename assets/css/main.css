@@ -1066,8 +1066,9 @@ section.youtube {
     padding-bottom: 248px; }
     .home-sections section.abilities .flex--center {
       display: -ms-flexbox;
-      display: flex;
-      zoom: 0.6; }
+      display: flex; }
+      .home-sections section.abilities .flex--center .col-last {
+        display: none; }
       .home-sections section.abilities .flex--center.home-lead-title {
         zoom: 1;
         padding-bottom: 90px; }
