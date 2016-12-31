@@ -905,7 +905,7 @@ body {
       height: 100vh; }
     .home-sections section.about .flex--center {
       background: rgba(126, 67, 184, 0.91);
-      padding: 0px 25px 5px;
+      padding: 0px 25px 15px;
       box-sizing: border-box; }
     .home-sections section.about h2, .home-sections section.about h4, .home-sections section.about p {
       text-align: center; }
