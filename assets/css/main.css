@@ -1073,11 +1073,18 @@ section.youtube {
       .home-sections section.abilities .flex--center .col-first {
         padding-right: 10px;
         padding-left: 5px; }
+        .home-sections section.abilities .flex--center .col-first .rocket-box:nth-child(1)::before {
+          top: 145px; }
+        .home-sections section.abilities .flex--center .col-first .rocket-box:nth-child(2)::before {
+          top: 75px; }
+        .home-sections section.abilities .flex--center .col-first .rocket-box:nth-child(3)::before {
+          top: 154px; }
       .home-sections section.abilities .flex--center .col-last {
         padding-right: 5px;
         padding-left: 10px; }
         .home-sections section.abilities .flex--center .col-last .rocket-box:nth-child(1)::before {
-          top: -91px; }
+          top: -91px;
+          width: 64px; }
         .home-sections section.abilities .flex--center .col-last .rocket-box:nth-child(1) h4 {
           height: 422px;
           top: -130px !important; } }
