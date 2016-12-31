@@ -1083,15 +1083,15 @@ section.youtube {
         padding-right: 5px;
         padding-left: 10px; }
         .home-sections section.abilities .flex--center .col-last .rocket-box:nth-child(1)::before {
-          top: -80px;
+          top: -91px;
           width: 64px; }
         .home-sections section.abilities .flex--center .col-last .rocket-box:nth-child(1) h4 {
-          height: 422px;
-          top: -130px !important; } }
+          height: 432px;
+          top: -120px !important; } }
         @media (max-width: 640px) and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
           .home-sections section.abilities .flex--center .col-last .rocket-box:nth-child(1) h4 {
-            height: 410px;
-            top: -118px !important; } }
+            height: 420px;
+            top: -128px !important; } }
 
 @media (max-width: 640px) {
         .home-sections section.abilities .flex--center .col-last .rocket-box:nth-child(2) {
