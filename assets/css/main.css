@@ -1114,7 +1114,7 @@ section.youtube {
         z-index: 10; }
         .home-sections section.abilities .flex--center.home-lead-title .home-lead {
           letter-spacing: 20px;
-          left: -26px;
+          left: -28px;
           position: relative; } }
         @media all and (max-width: 640px) and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
           .home-sections section.abilities .flex--center.home-lead-title .home-lead {
