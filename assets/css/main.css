@@ -831,7 +831,7 @@ body {
         bottom: -150px; } }
     @media (max-width: 640px) {
       .about-pic-cover::after {
-        bottom: -621px;
+        bottom: -540px;
         z-index: 100;
         background-size: 340%; } }
 
@@ -1087,6 +1087,8 @@ section.youtube {
             top: -118px !important; } }
 
 @media (max-width: 640px) {
+        .home-sections section.abilities .flex--center .col-last .rocket-box:nth-child(2) {
+          width: 120px; }
       .home-sections section.abilities .flex--center .rocket-box {
         margin: auto;
         display: -ms-flexbox;
