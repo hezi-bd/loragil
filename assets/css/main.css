@@ -1084,10 +1084,10 @@ section.youtube {
         padding-left: 10px; }
         .home-sections section.abilities .flex--center .col-last .rocket-box:nth-child(1)::before {
           top: -91px;
-          width: 64px; }
+          width: 65px; }
         .home-sections section.abilities .flex--center .col-last .rocket-box:nth-child(1) h4 {
-          height: 432px;
-          top: -120px !important; } }
+          height: 420px;
+          top: -130px !important; } }
         @media (max-width: 640px) and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
           .home-sections section.abilities .flex--center .col-last .rocket-box:nth-child(1) h4 {
             height: 420px;
