@@ -401,6 +401,9 @@ textarea {
   font-weight: 900;
   src: local("Heebo Black"), local("Heebo-Black"), url(https://fonts.gstatic.com/s/heebo/v2/68I0BQEi72oESKtZsJcjznYhjbSpvc47ee6xR_80Hnw.woff) format("woff"); }
 
+.landscape-only h1 {
+  text-shadow: 0 1px 0 #ffcb7a, 0 2px 0 #b9812a, 0 3px 0 #ab7829, 0 4px 0 #966b27, 0 5px 0 #6f4e19, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15); }
+
 /* heebo-100 - latin_hebrew */
 .home-gra, .home-sections section.about::after {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#9f60d7+0,9052cc+50,5a2e81+100 */
@@ -1141,6 +1144,19 @@ body {
   direction: rtl;
   background-image: url(../img/loragil-bg-pattern.svg);
   background-position: top center; }
+  body .landscape-only {
+    display: none; }
+  @media only screen and (min-width: 321px) and (max-device-width: 568px) and (orientation: landscape) {
+    body {
+      background-image: url(../img/loragil-bg-pattern2.svg);
+      background-position: top center; }
+      body div.home-sections {
+        display: none; }
+      body div.landscape-only {
+        display: block;
+        text-align: center; }
+        body div.landscape-only h1 {
+          color: #fbb03b; } }
 
 .home-wrap {
   display: -ms-flexbox;

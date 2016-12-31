@@ -4,3 +4,21 @@ body
   background:
     image: url(../img/loragil-bg-pattern.svg)
     position: top center
+
+  .landscape-only
+    display: none
+
+  @media only screen and (min-width : 321px) and (max-device-width : 568px) and (orientation : landscape)
+    background:
+      image: url(../img/loragil-bg-pattern2.svg)
+      position: top center
+
+    div.home-sections
+      display: none
+
+    div.landscape-only
+      display: block
+      text-align: center
+
+      h1
+        color: $light-orange

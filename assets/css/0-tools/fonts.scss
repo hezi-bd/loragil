@@ -36,6 +36,22 @@
 }
 
 
+.landscape-only h1{
+    text-shadow: 0 1px 0 #ffcb7a,
+                  0 2px 0 #b9812a,
+                  0 3px 0 #ab7829,
+                  0 4px 0 #966b27,
+                  0 5px 0 #6f4e19,
+                  0 6px 1px rgba(0, 0, 0, 0.1),
+                  0 0 5px rgba(0, 0, 0, 0.1),
+                  0 1px 3px rgba(0, 0, 0, 0.3),
+                  0 3px 5px rgba(0, 0, 0, 0.2),
+                  0 5px 10px rgba(0, 0, 0, 0.25),
+                  0 10px 10px rgba(0, 0, 0, 0.2),
+                  0 20px 20px rgba(0, 0, 0, 0.15);
+};
+
+
 
 
 /* heebo-100 - latin_hebrew */
