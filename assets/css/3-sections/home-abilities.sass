@@ -131,7 +131,7 @@ section.youtube
           height: 471px
           top: -73px
           @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm)
-            height: 448px
+            height: 300px
             top: -69px
 
       &:nth-child(2)
@@ -170,7 +170,7 @@ section.youtube
   .home-sections section.abilities
     position: relative
     z-index: 10
-    padding-bottom: 181px
+    padding-bottom: 120px
 
     .flex--center
       display: flex
@@ -183,28 +183,43 @@ section.youtube
       .col-last
         padding-right: 5px
         padding-left: 10px
-        //display: none
+
+        .rocket-box:nth-child(1)
+          &::before
+            top: -91px
+
+          h4
+            @media (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm)
+              height: 410px
+              top: -118px !important
 
       .rocket-box
         margin: auto
+        display: -ms-flexbox
         display: flex
+        -ms-flex-direction: column-reverse
         flex-direction: column
-        align-items: center
+        -ms-flex-align: center
+        justify-content: flex-end
+        margin-top: 100px
 
       .col-1 h4
         background-attachment: inherit !important
         z-index: -1
         background-size: 100%
-        //padding:
-          right: 1px
-          left: 1px
+        position: relative
         font-size: 90%
-        //margin: 20px 2% 0
-        bottom: 10px
+        top: -10px !important
 
       &.home-lead-title
         //zoom: 1
-        padding-bottom: 90px
+        padding-bottom: 0
+        z-index: 10
+
+        .home-lead
+          letter-spacing: 20px
+          @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm)
+            left: -47px
 
       &.rocket-section
         zoom: 0.65
