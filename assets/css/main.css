@@ -1077,11 +1077,14 @@ section.youtube {
         padding-right: 5px;
         padding-left: 10px; }
         .home-sections section.abilities .flex--center .col-last .rocket-box:nth-child(1)::before {
-          top: -91px; } }
-      @media (max-width: 640px) and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
+          top: -91px; }
         .home-sections section.abilities .flex--center .col-last .rocket-box:nth-child(1) h4 {
-          height: 410px;
-          top: -118px !important; } }
+          height: 422px;
+          top: -130px !important; } }
+        @media (max-width: 640px) and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
+          .home-sections section.abilities .flex--center .col-last .rocket-box:nth-child(1) h4 {
+            height: 410px;
+            top: -118px !important; } }
 
 @media (max-width: 640px) {
       .home-sections section.abilities .flex--center .rocket-box {
@@ -1093,7 +1096,12 @@ section.youtube {
         -ms-flex-align: center;
         -ms-flex-pack: end;
             justify-content: flex-end;
-        margin-top: 100px; }
+        margin-top: 120px; } }
+      @media (max-width: 640px) and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
+        .home-sections section.abilities .flex--center .rocket-box {
+          margin-top: 100px; } }
+
+@media (max-width: 640px) {
       .home-sections section.abilities .flex--center .col-1 h4 {
         background-attachment: inherit !important;
         z-index: -1;
@@ -1105,7 +1113,9 @@ section.youtube {
         padding-bottom: 0;
         z-index: 10; }
         .home-sections section.abilities .flex--center.home-lead-title .home-lead {
-          letter-spacing: 20px; } }
+          letter-spacing: 20px;
+          left: -27px;
+          position: relative; } }
         @media all and (max-width: 640px) and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
           .home-sections section.abilities .flex--center.home-lead-title .home-lead {
             left: -47px; } }
