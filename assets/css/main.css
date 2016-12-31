@@ -822,7 +822,7 @@ body {
     width: 100vw;
     position: absolute;
     z-index: 10;
-    bottom: -270px;
+    bottom: -260px;
     margin-bottom: 70px;
     content: "";
     background-image: url(../img/abilities-bottom.png);
