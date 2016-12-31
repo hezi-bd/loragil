@@ -1077,14 +1077,9 @@ section.youtube {
         padding-right: 5px;
         padding-left: 10px; }
       .home-sections section.abilities .flex--center .col-1 h4 {
-        background-attachment: fixed important;
+        background-attachment: inherit !important;
         z-index: -1;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        background-size: 100%;
-        background-attachment: fixed; }
+        background-size: 100%; }
       .home-sections section.abilities .flex--center.home-lead-title {
         padding-bottom: 90px; }
       .home-sections section.abilities .flex--center.rocket-section {
