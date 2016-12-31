@@ -1086,8 +1086,8 @@ section.youtube {
           top: -91px;
           width: 65px; }
         .home-sections section.abilities .flex--center .col-last .rocket-box:nth-child(1) h4 {
-          height: 430px;
-          top: -140px !important; } }
+          height: 440px;
+          top: -150px !important; } }
         @media (max-width: 640px) and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
           .home-sections section.abilities .flex--center .col-last .rocket-box:nth-child(1) h4 {
             height: 420px;
