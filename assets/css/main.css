@@ -1070,7 +1070,8 @@ section.youtube {
       .home-sections section.abilities .flex--center .col-last {
         display: none; }
       .home-sections section.abilities .flex--center .col-1 h4 {
-        background-attachment: initial !important; }
+        background-attachment: initial !important;
+        position: fixed; }
       .home-sections section.abilities .flex--center.home-lead-title {
         zoom: 1;
         padding-bottom: 90px; }
