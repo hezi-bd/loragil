@@ -1080,9 +1080,8 @@ section.youtube {
         background-attachment: inherit !important;
         z-index: -1;
         background-size: 100%;
-        padding-right: 5px;
-        padding-left: 5px;
-        font-size: 70%; }
+        font-size: 90%;
+        margin: 20px 2% 0; }
       .home-sections section.abilities .flex--center.home-lead-title {
         padding-bottom: 90px; }
       .home-sections section.abilities .flex--center.rocket-section {
