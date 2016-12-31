@@ -801,6 +801,9 @@ body {
   background-repeat: no-repeat;
   background-position: top right;
   background-size: contain; }
+  @media (max-width: 1530px) {
+    .about-pic-cover {
+      width: 42%; } }
   .about-pic-cover::after {
     height: 300px;
     width: 100vw;
@@ -813,6 +816,9 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: auto; }
+    @media (max-width: 1060px) {
+      .about-pic-cover::after {
+        bottom: -150px; } }
 
 .home-sections section.about {
   padding: 0;
@@ -871,13 +877,9 @@ body {
     font-size: 18px;
     margin-top: 8px; }
 
-@media (max-width: 1313px) {
-  .home-sections section.about {
-    height: 1000px; } }
-
 @media (max-width: 1060px) {
   .home-sections section.about {
-    height: 510px; } }
+    height: 43vh; } }
 
 @media (max-width: 640px) {
   .home-sections section.about {
