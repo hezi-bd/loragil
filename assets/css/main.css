@@ -1076,12 +1076,20 @@ section.youtube {
       .home-sections section.abilities .flex--center .col-last {
         padding-right: 5px;
         padding-left: 10px; }
+      .home-sections section.abilities .flex--center .rocket-box {
+        margin: auto;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+            flex-direction: column;
+        -ms-flex-align: center;
+            align-items: center; }
       .home-sections section.abilities .flex--center .col-1 h4 {
         background-attachment: inherit !important;
         z-index: -1;
         background-size: 100%;
         font-size: 90%;
-        margin: 20px 2% 0; }
+        bottom: 10px; }
       .home-sections section.abilities .flex--center.home-lead-title {
         padding-bottom: 90px; }
       .home-sections section.abilities .flex--center.rocket-section {
