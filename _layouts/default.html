@@ -15,6 +15,10 @@
 
     {{ content }}
 
+    {% if page.url == "/index.html" %}
+      <script src="{{site.baseurl}}/assets/js/functions.js"></script>
+    {% endif %}
+
   </body>
 
 </html>
