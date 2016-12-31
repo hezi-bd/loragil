@@ -928,15 +928,17 @@ section.youtube {
   position: relative; }
 
 .dust-box {
+  margin: -8px 0 -50px;
+  height: calc(100% + 58px);
+  width: 600px;
   position: absolute;
-  top: 0;
-  height: calc(100% + 100px);
-  width: 100%;
-  margin: -50px 0;
+  content: "";
   background-image: url(../img/dust.png);
-  background-position: center 0px;
   background-repeat: repeat-y;
-  background-size: 70%; }
+  background-position: center 0px;
+  background-size: contain;
+  right: calc(50vw - 300px);
+  z-index: 10; }
 
 .home-sections section.abilities {
   padding: 8px 0 50px;
@@ -1047,8 +1049,8 @@ section.youtube {
       top: -73px; }
       @media all and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
         .home-sections section.abilities .col-last .rocket-box:nth-child(1) h4 {
-          height: 300px;
-          top: -69px; } }
+          height: 455px;
+          top: -76px; } }
   .home-sections section.abilities .col-last .rocket-box:nth-child(2) {
     width: 126px; }
     .home-sections section.abilities .col-last .rocket-box:nth-child(2)::before {

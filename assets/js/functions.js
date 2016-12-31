@@ -1,14 +1,11 @@
-
-$(window).scroll(function() {
-  youtubeVidScroll();
-  //startMentoring();
-  startArticles();
+//$(function(){});
+$(window).scroll(function(){
+  dustBoxScroll();
 });
 
 
-function youtubeVidScroll() {
-
+function dustBoxScroll() {
   var wScroll = $(window).scrollTop();
 
-  $('.dust-box').css('background-position','center -'+ wScroll +'px');
-}
+  $('.dust-box').css('background-position', 'center -'+ wScroll +'px');
+};
