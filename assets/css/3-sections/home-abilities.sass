@@ -1,4 +1,8 @@
 
+section.youtube
+  z-index: 1
+  position: relative
+
 .home-sections section.abilities
   padding: 8px 0 50px
   background:
@@ -63,11 +67,12 @@
       display: flex
       flex-direction: column-reverse
       background-attachment: fixed
-      padding: 0px 11px 230px
+      padding: 0px 11px 18vh
       position: absolute
       bottom: 0
       margin-bottom: 0
       z-index: -1
+      position: absolute
 
 
   .col-first
@@ -80,9 +85,11 @@
 
         h4
           @extend .flame-gra1
-          height: 250px
+          height: 200px
+          top: 200px
           @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm)
             height: 190px
+            top: 190px
       &:nth-child(2)
         width: 96px
         &::before
@@ -91,9 +98,11 @@
 
         h4
           @extend .flame-gra2
-          height: 265px
+          height: 215px
+          top: 185px
           @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm)
-            height: 205px
+            height: 200px
+            top: 180px
 
       &:nth-child(3)
         width: 75px
@@ -103,9 +112,11 @@
 
         h4
           @extend .flame-gra3
-          height: 223px
+          height: 176px
+          top: 223px
           @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm)
-            height: 163px
+            height: 166px
+            top: 213px
 
   .col-last
     .rocket-box
@@ -117,9 +128,11 @@
 
         h4
           @extend .flame-gra4
-          height: 521px
+          height: 471px
+          top: -73px
           @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm)
-            height: 471px
+            height: 448px
+            top: -69px
 
       &:nth-child(2)
         width: 126px
@@ -129,9 +142,11 @@
 
         h4
           @extend .flame-gra5
-          height: 250px
+          height: 205px
+          top: 195px
           @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm)
             height: 190px
+            top: 190px
 
       &:nth-child(3)
         width: 62px
@@ -141,6 +156,8 @@
 
         h4
           @extend .flame-gra6
-          height: 340px
+          height: 295px
+          top: 105px
           @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm)
-            height: 280px
+            height: 270px
+            top: 110px
