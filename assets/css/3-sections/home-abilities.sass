@@ -2,10 +2,7 @@
 section.youtube
   z-index: 1
   position: relative
-.home-sections section.abilities
-  .flex.flex--center.dust-box-flex
-    @media (max-width: 640px)
-      display: none
+.flex.flex--center.dust-box-flex
 
 .dust-box
   margin: -8px 0 -50px
@@ -191,6 +188,9 @@ section.youtube
 
     .flex--center
       display: flex
+
+      &.dust-box-flex
+        display: none
       //zoom: 0.6
       .col-1
         padding: 0

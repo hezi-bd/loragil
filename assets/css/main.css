@@ -928,10 +928,6 @@ section.youtube {
   z-index: 1;
   position: relative; }
 
-@media (max-width: 640px) {
-  .home-sections section.abilities .flex.flex--center.dust-box-flex {
-    display: none; } }
-
 .dust-box {
   margin: -8px 0 -50px;
   height: calc(100% + 58px);
@@ -1089,6 +1085,8 @@ section.youtube {
     .home-sections section.abilities .flex--center {
       display: -ms-flexbox;
       display: flex; }
+      .home-sections section.abilities .flex--center.dust-box-flex {
+        display: none; }
       .home-sections section.abilities .flex--center .col-1 {
         padding: 0; }
       .home-sections section.abilities .flex--center .col-first {
