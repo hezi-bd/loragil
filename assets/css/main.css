@@ -929,7 +929,7 @@ section.youtube {
   position: relative; }
 
 @media (max-width: 640px) {
-  .flex.flex--center.dust-box-flex {
+  .home-sections section.abilities .flex.flex--center.dust-box-flex {
     display: none; } }
 
 .dust-box {
