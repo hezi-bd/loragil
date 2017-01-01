@@ -806,6 +806,7 @@ body {
   padding: 0;
   height: 100vh;
   width: 50%;
+  pointer-events: none;
   background-image: url(../img/loragil-about-pic.png);
   background-repeat: no-repeat;
   background-position: top right;
@@ -926,6 +927,10 @@ body {
 section.youtube {
   z-index: 1;
   position: relative; }
+
+@media (max-width: 640px) {
+  .flex.flex--center.dust-box-flex {
+    display: none; } }
 
 .dust-box {
   margin: -8px 0 -50px;
