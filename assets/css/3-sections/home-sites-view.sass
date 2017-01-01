@@ -1,0 +1,105 @@
+.home-sections section.sites-view
+  position: relative
+  display: flex
+  flex-direction: column
+  align-items: center
+  padding-top: 150px
+  background: rgba(230, 230, 230, 0.74)
+
+  .home-lead-title
+    position: relative
+    z-index: 10
+
+    .home-lead-box
+      width: 230px
+      text-align: -webkit-left
+
+      .switch
+        margin-left: 10px
+        margin-top: 10px
+
+    .home-lead
+      letter-spacing: 32px
+
+    .small-lead-box
+      display: flex
+      letter-spacing: 0.8px
+
+    .small-home-lead
+      margin-left: 5px
+
+    .view-hr
+      background: #b7b7b7
+      height: 15px
+      width: 2px
+      margin: 3px 7px
+
+  .hands-box
+    position: relative
+    //top: 0
+    width: 100vw
+    overflow-x: hidden
+    height: 1096px
+    top: -50px
+    //display: flex
+    //flex-direction: row
+
+    &.wide
+      transform: rotate(0deg)
+
+    &.mobile
+      transform: rotate(90deg)
+
+    .hand-box
+      width: 100%
+
+  .sites-box-frame
+    overflow: visible
+    width: 960px
+    height: 540px
+    background-color: #b7b7b7
+    margin: auto
+    margin-top: 215px
+
+  .hands-box::before
+      position: absolute
+      top: -30px
+      left: calc(50% + 250px)
+      height: 405px
+      width: 100%
+      content: ""
+      background:
+        image: url(../img/r-hand.svg)
+        repeat: no-repeat
+        size: contain
+        position: left top
+        //color: green
+
+  .hands-box::after
+      position: absolute
+      bottom: 0
+      right: calc(50% + 260px)
+      height: 519px
+      width: 100%
+      content: ""
+      background:
+        image: url(../img/l-hand.svg)
+        repeat: no-repeat
+        size: contain
+        position: right bottom
+        //color: red
+
+  //.hands-box::after
+    position: absolute
+    margin-top: 0px
+    bottom: -100%
+    right: calc(50% + 480px)
+    height: 519px
+    width: 100%
+    content: ""
+    background:
+      image: url(../img/l-hand.svg)
+      repeat: no-repeat
+      size: contain
+      position: right bottom
+      color: red
