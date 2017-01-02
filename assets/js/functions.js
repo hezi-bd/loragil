@@ -51,7 +51,7 @@ function mentoringBubbleClick() {
   $('.face').on('click',function() {
     var $this = $(this),
         faceTop = $this.position().top,
-        vertMath =  -1 * (faceTop - 230),
+        vertMath =  -1 * (faceTop - 0),
         faceLeft = $this.position().left,
         horizMath =  0 - faceLeft;
 
@@ -75,7 +75,7 @@ function mentoringBubbleClick() {
 
 $(window).scroll(function() {
   youtubeVidScroll();
-  //startMentoring();
+  startMentoring();
   startArticles();
 });
 
@@ -118,6 +118,25 @@ function startMentoring() {
 
 }
 
+function startMentoring() {
+
+  var wScroll = $(window).scrollTop();
+
+  if($('section.sites-view').offset().top - $(window).height()/2 < wScroll) {
+    if($(window).width() > 640) {
+    $('.faces').addClass('launched');
+      if(!$('.face').hasClass('has-bubble-open')){
+        setTimeout(function(){
+          $('.face:nth-child(3)').addClass('has-bubble-open');
+        }, 400);
+      }
+    } else {
+      mentoringNarrowStart();
+    }
+  }
+
+}
+
 function mentoringNarrowStart() {
   $('.faces').css({
     'top': '230px',
@@ -139,9 +158,9 @@ function mentoringWideStart() {
 
 $(window).resize(function() {
   if($(window).width() > 640){
-    //mentoringWideStart();
+    mentoringWideStart();
   } else {
-    //mentoringNarrowStart();
+    mentoringNarrowStart();
   }
 
 });
