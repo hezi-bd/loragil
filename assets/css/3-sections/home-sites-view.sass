@@ -61,6 +61,10 @@
     margin-top: 215px
     border: solid 1px $skin
     border-radius: 6px
+    background:
+      repeat: no-repeat
+      size: cover
+      position: left top
 
   .hands-box::before
       position: absolute
@@ -89,6 +93,32 @@
         size: contain
         position: right bottom
         //color: red
+
+
+ul.ul-caro
+  position: relative
+  z-index: 1
+  list-style: none
+  display: flex
+  flex-direction: row
+
+  li.caro-thumb
+    //position: absolute
+    width: 134px
+    height: 78px
+    cursor: pointer
+    background:
+      repeat: no-repeat
+    background-blend-mode: luminosity
+    opacity: 0.5
+    background: rgba(202, 197, 197, 1)
+    transition: 150ms ease-in-out
+
+    &.thumb-on
+      opacity: 1
+      background: rgba(202, 197, 197, 0)
+
+
 
 //----------------------------mentor sits section
 

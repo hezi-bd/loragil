@@ -1487,7 +1487,10 @@ section.youtube {
     margin: auto;
     margin-top: 215px;
     border: solid 1px #e8c4b5;
-    border-radius: 6px; }
+    border-radius: 6px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left top; }
   .home-sections section.sites-view .hands-box::before {
     position: absolute;
     top: -30px;
@@ -1510,6 +1513,27 @@ section.youtube {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: right bottom; }
+
+ul.ul-caro {
+  position: relative;
+  z-index: 1;
+  list-style: none;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row; }
+  ul.ul-caro li.caro-thumb {
+    width: 134px;
+    height: 78px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-blend-mode: luminosity;
+    opacity: 0.5;
+    background: #cac5c5;
+    transition: 150ms ease-in-out; }
+    ul.ul-caro li.caro-thumb.thumb-on {
+      opacity: 1;
+      background: rgba(202, 197, 197, 0); }
 
 section.sites-view {
   overflow: hidden; }
@@ -1587,6 +1611,12 @@ section.sites-view {
     left: 0px;
     box-sizing: border-box;
     margin-left: 0px; } }
+
+ul.faces.test-crou {
+  position: relative;
+  background: pink; }
+  ul.faces.test-crou li {
+    width: 134px; }
 
 section.mentoring {
   direction: ltr;

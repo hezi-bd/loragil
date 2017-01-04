@@ -33,7 +33,7 @@
             'left': '0px'
         });
 
-        $('.face:nth-child(5)').addClass('has-bubble-open')
+        $('.face:nth-child(3)').addClass('has-bubble-open')
         .siblings().removeClass('has-bubble-open');
     }
 
@@ -162,28 +162,6 @@ function timerModule (options) {
             });
         });
     }
-    function swapSiteBackground () {
-        var $caroThumb = $('.caro-thumb');
-
-        // on click
-        $caroThumb.click(function (e) {
-            var $this = $(this),
-                $container = $this.parents().siblings(".sites-box-frame");
-
-            $container.css({
-                'background-color': $(this).data('color')
-            });
-
-        // off hover
-        }, function (e) {
-            var $this = $(this),
-                $container = $this.parents().parents();
-
-            $container.css({
-                'background-color': $container.data('orig-color')
-            });
-        });
-    }
 
     $(document).ready(function () {
         // Variable definition
@@ -191,7 +169,6 @@ function timerModule (options) {
 
         // Change background (designBGStuff)
         swapDribbleBackground();
-        swapSiteBackground();
 
         // (articleTada)
         timer.attachFunction(fumbleArticle);
@@ -266,9 +243,8 @@ function timerModule (options) {
 // -----------------------------------------------------------------------------
 $(window).scroll(function() {
   youtubeVidScroll();
-  startMentoring();
-  startSiteing();
-  //startArticles();
+  //startMentoring();
+  startArticles();
 });
 
 
@@ -309,119 +285,3 @@ function startMentoring() {
   }
 
 }
-
-// carouselClick-loRagil
-// -----------------------------------------------------------------------------
-
-
-
-function startSiteing() {
-
-  var wScroll = $(window).scrollTop();
-
-  if($('section.sites-view').offset().top - $(window).height()/2 < wScroll) {
-    if($(window).width() > 640) {
-    $('.ul-caro').addClass('launched');
-      if(!$('.caro-thumb').hasClass('thumb-on')){
-        setTimeout(function(){
-          $('.caro-thumb:nth-child(1)').addClass('thumb-on');
-
-        }, 400);
-      }
-    } else {
-      mentoringNarrowStart();
-    }
-  }
-
-}
-
-
-
-
-
-
-(function ($) {
-
-    "use strict"
-
-    var $window,
-        $ulCaro,
-        $caroThumb,
-        $siteView;
-
-    function caroThumbNarrowStart() {
-        $caroThumb.css({
-          'top': '230px',
-          'left': '0px'
-        });
-
-        $caroThumb.first().addClass('thumb-on')
-        .siblings().removeClass('thumb-on');
-    }
-
-    // Not sure if this is used anywhere?
-    function caroThumbWideStart() {
-
-
-        $('.caro-thumb:nth-child(1)').addClass('thumb-on')
-        .siblings().removeClass('thumb-on');
-    }
-
-    function onThumbClick (e) {
-      $(this).parent().siblings(".sites-box-frame").css('background-image', $(this).data('cover'));
-        var $this = $(this),
-            $siblings = $this.siblings(),
-            $parent = $(this).parent();
-
-            //$bgColor = $(this).data('color');
-
-
-        if (!$this.hasClass('back-btn')) {
-            $this.addClass('thumb-on');
-            $siblings.removeClass('thumb-on');
-        };
-          // off > revert the color
-          function sitesviewTest() {
-            $('.caro-thumb').hover(function(){
-              $(this).parent().siblings().css('background-color', $(this).data('color'));
-            }, function(){
-              // off > revert the color
-              $(this).parent().parent().css('background-color', $(this).parent().parent().data('orig-color'));
-            });
-
-
-          }
-
-
-    }
-
-    function bindings () {
-        $caroThumb.on('click', onThumbClick);
-    }
-
-    $(document).ready(function () {
-        // variable definitions
-        $window = $(window);
-        $ulCaro = $('.ul-caro');
-        $caroThumb = $('.caro-thumb');
-        $siteView = $('.sites-box-frame');
-        $siteView = $('.sites-box-frame');
-
-        bindings();
-    });
-
-})(jQuery);
-
-
-//$(function() {
-  //sitesviewTest();
-
-//});
-
-
-
-
-
-
-
-// -----------------------------------------------------------------------------
