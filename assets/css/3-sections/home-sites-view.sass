@@ -3,12 +3,14 @@
   //display: flex
   //flex-direction: column
   //align-items: center
-  padding-top: 150px
+  padding-top: 0px
   background: rgba(230, 230, 230, 0.74)
 
   .home-lead-title
     position: relative
     z-index: 10
+    height: 0
+    top: 148px
 
     .home-lead-box
       width: 230px
@@ -36,12 +38,14 @@
 
   .hands-box
     position: relative
-    //top: 0
     width: 100vw
-    overflow-x: hidden
-    height: 1096px
-    top: -50px
-    margin-bottom: -300px
+    overflow: hidden
+    height: 1146px
+    //top: 58px
+    margin-bottom: -50px
+    display: flex
+    align-items: center
+    flex-direction: column
 
     &.wide
       transform: rotate(0deg)
@@ -53,12 +57,13 @@
       width: 100%
 
   .sites-box-frame
-    overflow: visible
+    +transition(all 0.4s $ease-in-out-sine)
+    overflow: auto
     width: 960px
     height: 540px
     //background-color: #b7b7b7
     margin: auto
-    margin-top: 215px
+    margin-top: 348px
     border: solid 1px $skin
     border-radius: 6px
     background:
@@ -66,41 +71,76 @@
       size: cover
       position: left top
 
+
+
   .hands-box::before
-      position: absolute
-      top: -30px
-      left: calc(50% + 250px)
-      height: 405px
-      width: 100%
-      content: ""
-      background:
-        image: url(../img/r-hand.svg)
-        repeat: no-repeat
-        size: contain
-        position: left top
-        //color: green
+    z-index: 1
+    position: absolute
+    top: 104px
+    left: calc(50% + 250px)
+    height: 405px
+    width: 100%
+    content: ""
+    background:
+      image: url(../img/r-hand.svg)
+      repeat: no-repeat
+      size: 720px
+      position: left top
+
+    +transition(all 0.4s $ease-in-out-sine)
+    transform-origin: left
+
+      //color: green
 
   .hands-box::after
-      position: absolute
-      bottom: 0
-      right: calc(50% + 260px)
-      height: 519px
-      width: 100%
-      content: ""
-      background:
-        image: url(../img/l-hand.svg)
-        repeat: no-repeat
-        size: contain
-        position: right bottom
-        //color: red
+    +transition(all 0.4s $ease-in-out-sine)
+    transform-origin: right
+    position: absolute
+    z-index: 1
+    bottom: -84px
+    right: calc(50% + 260px)
+    height: 519px
+    width: 100%
+    content: ""
+    background:
+      image: url(../img/l-hand.svg)
+      repeat: no-repeat
+      size: 697px
+      position: right bottom
+      //color: red
+
+  .sites-box-view
+    overflow: visible
+    width: 960px
+    min-height: 540px
+    position: relative
+    border-radius: 6px
+    background:
+      repeat: no-repeat
+      size: cover
+      position: center top
+
+      //color: pink
 
 
 ul.ul-caro
   position: relative
-  z-index: 1
+  z-index: 10
   list-style: none
   display: flex
   flex-direction: row
+  justify-content: space-between
+  width: 100%
+  background: $light-orange
+  margin: 0
+  padding:
+    top: 15px
+    bottom: 15px
+    left: calc(50% - 380px)
+    right: calc(50% - 380px)
+
+  box-sizing: border-box
+
 
   li.caro-thumb
     //position: absolute
@@ -110,105 +150,59 @@ ul.ul-caro
     background:
       repeat: no-repeat
     background-blend-mode: luminosity
-    opacity: 0.5
-    background: rgba(202, 197, 197, 1)
-    transition: 150ms ease-in-out
+    border-radius: 5px
+    box-shadow: 2px 2px 8px 2px #f7921e
+    box-sizing: border-box
+    opacity: 0.7
+    transition: all 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95)
 
-    &.thumb-on
+
+    &.thumb-on, &:hover
+      box-shadow:  inset 0px 3px 10px 0px rgba(50, 50, 50, 0.75)
       opacity: 1
-      background: rgba(202, 197, 197, 0)
+      transition: all 0.6s cubic-bezier(0.445, 0.05, 0.55, 0.95)
 
 
+//rotate to mobile----------------/////
 
-//----------------------------mentor sits section
+.view-wide.butt-on
+  color: $orange
+  border-bottom: solid 2px $orange
+  font-weight: 500
 
-
-section.sites-view
-  overflow: hidden
-
-  .sites-carousel
-    background: $light-orange
-    padding: 15px 0
-    margin-top: 130px
-    direction: ltr
-
-
-  .faces
-    width: 960px
-    list-style: none
-    margin: 0 auto
-    //height: calc(100% + 100px)
-    padding: 0
-    position: relative
-    //top: 800px
-    transition: all 0.3s ease-in-out
-    display: flex
-    flex-direction: row
-    justify-content: space-around
-
-    &.launched
-      top: 0px
-
-  .face
-    height: 80px
-    width: 135px
-    background:
-      size: cover
-      position: center
-    border-radius: 2px
-    //margin-bottom: 35px
-    box-shadow: 0px 4px 8px rgba(0,0,0,0.4)
-    position: relative
-    cursor: pointer
-    flex-shrink: 0
+.view-mobile.butt-on
+  color: $purple
+  border-bottom: solid 2px $purple
+  font-weight: 500
 
 
-    &.back-btn
-      background: white url(../img/back-icon.svg) center no-repeat
-      background-size: 15px 26px
-      display: none
+.home-sections section.sites-view .hands-box
+
+  &.box-rotate
+    &::before
+      transform: rotate(86deg)
+      top: -36px
+      left: calc(50% + 228px)
+      height: 823px
+      width: 744px
+      background-size: 1450px
+      +transition(all 0.2s $ease-in-out-sine)
+
+    &::after
+      transform: rotate(81deg)
+      bottom: -280px
+      right: calc(50% + 316px)
+      width: 932px
+      background-size: 1407px
+      height: 1050px
+      +transition(all 0.2s $ease-in-out-sine)
 
 
-  .bubble
-    opacity: 0
-    position: absolute
-    left: 100%
-    bottom: 50%
-    margin-left: 10px
-    width: 300px
-    background: rgba(0,0,0,0.8)
-    padding: 20px
-    border-radius: 40px 40px 40px 5px
-    border: 3px solid white
-    pointer-events: none
-    transition: all 0.2s cubic-bezier(0, 0.53, 0.34, 1.5)
-    transform: scale(0)
-    transform-origin: bottom left
-    color: white
-
-
-  .face.has-bubble-open .bubble
-    opacity: 1
-    transform: scale(1)
-
-@media (max-width: 640px)
-  section.sites-view
-
-    .faces
-      margin: 0
-      width: 115px *7
-      top: 230px
-      left: 0px
-
-    .face
-      display: inline-block
-      margin-right: 35px
-
-      &.back-btn
-        display: inline-block
-
-    .bubble
-      bottom: 100px
-      left: 0px
-      box-sizing: border-box
-      margin-left: 0px
+    .sites-box-frame
+      width: 255px
+      height: 456px
+      border-radius: 35px
+      margin-top: 370px
+      position: relative
+      z-index: 10
+      +transition(all 0.2s $ease-in-out-sine)

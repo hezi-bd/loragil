@@ -170,33 +170,14 @@ function timerModule (options) {
             var $this = $(this),
                 $container = $this.parents().siblings(".sites-box-frame");
 
-            $container.css({
-                'background-color': $(this).data('color')
-            });
-
         // off hover
         }, function (e) {
             var $this = $(this),
-                $container = $this.parents().parents();
-
-            $container.css({
-                'background-color': $container.data('orig-color')
-            });
+                $container = $this.parents();
         });
     }
 
-    $(document).ready(function () {
-        // Variable definition
-        $window = $(window);
 
-        // Change background (designBGStuff)
-        swapDribbleBackground();
-        swapSiteBackground();
-
-        // (articleTada)
-        timer.attachFunction(fumbleArticle);
-        timer.start();
-    });
 
 })(jQuery, timerModule({
     interval: 4
@@ -217,7 +198,7 @@ function timerModule (options) {
         settings = {
             scrollDuration: 300
         };
-
+//----easy scralling
     function onMobileToggleClick (e) {
         var $this = $(this),
             $navigation = $('.mobile-nav');
@@ -265,14 +246,14 @@ function timerModule (options) {
 // OLD functionality
 // -----------------------------------------------------------------------------
 $(window).scroll(function() {
-  youtubeVidScroll();
-  startMentoring();
+  dustBoxVidScroll();
+  //startMentoring();
   startSiteing();
   //startArticles();
 });
 
 
-function youtubeVidScroll() {
+function dustBoxVidScroll() {
 
   var wScroll = $(window).scrollTop();
 
@@ -324,9 +305,10 @@ function startSiteing() {
     $('.ul-caro').addClass('launched');
       if(!$('.caro-thumb').hasClass('thumb-on')){
         setTimeout(function(){
-          $('.caro-thumb:nth-child(1)').addClass('thumb-on');
+          $('.caro-thumb:nth-child(1)').addClass('thumb-on'),
+          $('.caro-thumb:nth-child(1)').parent().siblings().children().css({'background-image': $('.caro-thumb:nth-child(1)').data('cover'), 'height': $('.caro-thumb:nth-child(1)').data('height')});
 
-        }, 400);
+        }, 10);
       }
     } else {
       mentoringNarrowStart();
@@ -335,6 +317,19 @@ function startSiteing() {
 
 }
 
+//toggle screen wide & mobile loRagil---------
+
+$("#cmn-toggle-1").change(function() {
+    if(this.checked) {
+        $('.hands-box').addClass('box-rotate');
+        $('.view-wide').removeClass('butt-on');
+        $('.view-mobile').addClass('butt-on');
+    } else {
+  		$('.hands-box').removeClass('box-rotate');
+      $('.view-wide').addClass('butt-on');
+      $('.view-mobile').removeClass('butt-on');
+  	}
+});
 
 
 
@@ -368,10 +363,11 @@ function startSiteing() {
     }
 
     function onThumbClick (e) {
-      $(this).parent().siblings(".sites-box-frame").css('background-image', $(this).data('cover'));
+      $(this).parent().siblings().children().css({'background-image': $(this).data('cover'), 'height': $(this).data('height')});
         var $this = $(this),
             $siblings = $this.siblings(),
             $parent = $(this).parent();
+            //$siteView = $('.sites-box-view');
 
             //$bgColor = $(this).data('color');
 
@@ -404,8 +400,7 @@ function startSiteing() {
         $window = $(window);
         $ulCaro = $('.ul-caro');
         $caroThumb = $('.caro-thumb');
-        $siteView = $('.sites-box-frame');
-        $siteView = $('.sites-box-frame');
+        $siteView = $('.sites-box-view');
 
         bindings();
     });

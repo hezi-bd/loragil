@@ -1,0 +1,46 @@
+<ul class="ul-caro">
+{% for post in site.categories.home-carousel %}
+  <li class= "caro-thumb" style="background-image: url({{site.baseurl}}/assets/img/post-assets/post-carousel/{{post.thumb}})", data-cover='url({{site.baseurl}}/assets/img/post-assets/site-view/{{post.cover}})', data-mobileCover='url({{site.baseurl}}/assets/img/post-assets/site-view/{{post.mobile-cover}})', title='{{post.title}}', data-color='{{post.color}}', data-height='{{post.height}}', link='{{post.url}}')
+{% endfor %}
+</ul>
+
+
+------------------------
+
+
+
+section.sites-view#sites
+
+
+  .flex.flex--center.home-lead-title
+
+    .col-3
+      .home-lead-box
+        .home-lead
+          אתרים
+        .small-lead-box
+          .small-home-lead.orange-type
+            אפשרויות צפייה:
+          .view-wide.butt-on
+            דסקטופ
+          .view-hr
+          .view-mobile
+            פלאפון
+
+        .switch
+          input#cmn-toggle-1.cmn-toggle.cmn-toggle-round(type='checkbox')
+          label(for='cmn-toggle-1')
+
+
+  .hands-box
+    .sites-box-frame
+      | {% for post in site.categories.home-carousel limit:1 %}
+      .sites-box-view
+      |   {% endfor %}
+
+
+
+      ul.ul-caro
+        | {% for post in site.categories.home-carousel %}
+        li.caro-thumb(style='background-image: url({{site.baseurl}}/assets/img/post-assets/post-carousel/{{post.thumb}})', ,='', data-cover='url({{site.baseurl}}/assets/img/post-assets/site-view/{{post.cover}})', data-mobilecover='url({{site.baseurl}}/assets/img/post-assets/site-view/{{post.mobile-cover}})', title='{{post.title}}', data-color='{{post.color}}', data-height='{{post.height}}', link='{{post.url}}')
+        | {% endfor %}
