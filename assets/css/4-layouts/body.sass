@@ -8,6 +8,19 @@ body
   .landscape-only
     display: none
 
+  img
+    max-width: 100%
+    height: auto
+
+  .home-lead
+    letter-spacing: 32px
+    width: 262px
+    line-height: 1
+    text-align: left
+    @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm)
+        left: -32px
+        position: relative
+
   @media only screen and (min-width : 321px) and (max-device-width : 568px) and (orientation : landscape)
     background:
       image: url(../img/loragil-bg-pattern2.svg)

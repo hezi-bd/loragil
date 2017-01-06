@@ -284,9 +284,7 @@ function startSiteing() {
 
         }, 10);
       }
-    } else {
-      mentoringNarrowStart();
-    }
+    } 
   }
 
 }
