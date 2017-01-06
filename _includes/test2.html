@@ -1,6 +1,14 @@
 <ul class="ul-caro">
 {% for post in site.categories.home-carousel %}
-  <li class= "caro-thumb" style="background-image: url({{site.baseurl}}/assets/img/post-assets/post-carousel/{{post.thumb}})", data-cover='url({{site.baseurl}}/assets/img/post-assets/site-view/{{post.cover}})', data-mobileCover='url({{site.baseurl}}/assets/img/post-assets/site-view/{{post.mobile-cover}})', title='{{post.title}}', data-color='{{post.color}}', data-height='{{post.height}}', link='{{post.url}}')
+  <li class= "caro-thumb" style="background-image: url({{site.baseurl}}/assets/img/post-assets/post-carousel/{{post.thumb}})", data-cover='url({{site.baseurl}}/assets/img/post-assets/site-view/{{post.cover}})', data-mobileCover='url({{site.baseurl}}/assets/img/post-assets/site-view/{{post.mobile-cover}})', data-height='{{post.height}}', link='{{post.url}}')>
+    <div class="sites-box-info">
+
+      <h2 class="site-info-title">{{post.title}}</h2>
+      <p class="site-excerpt">{{post.excerpt}}</p>
+      <a class="site-link"  href="{{post.excerpt}}" target="_blank">ביקור באתר...</a>
+
+    </div>
+  </li>
 {% endfor %}
 </ul>
 
@@ -37,6 +45,8 @@ section.sites-view#sites
       | {% for post in site.categories.home-carousel limit:1 %}
       .sites-box-view
       |   {% endfor %}
+
+    .text-bg
 
 
 

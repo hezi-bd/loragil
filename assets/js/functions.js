@@ -260,36 +260,7 @@ function dustBoxVidScroll() {
   $('.dust-box').css('background-position','center -'+ wScroll +'px');
 }
 
-function startArticles(){
-  var wScroll = $(window).scrollTop();
 
-  if($('section.articles').offset().top - $(window).height()/1.2 < wScroll) {
-    $('.article-thumb').each(function(i){
-      setTimeout(function(){
-        $('.article-thumb').eq(i).addClass('is-visible');
-      }, 100 * i);
-    });
-  }
-}
-
-function startMentoring() {
-
-  var wScroll = $(window).scrollTop();
-
-  if($('section.mentoring').offset().top - $(window).height()/2 < wScroll) {
-    if($(window).width() > 640) {
-    $('.faces').addClass('launched');
-      if(!$('.face').hasClass('has-bubble-open')){
-        setTimeout(function(){
-          $('.face:nth-child(3)').addClass('has-bubble-open');
-        }, 400);
-      }
-    } else {
-      mentoringNarrowStart();
-    }
-  }
-
-}
 
 // carouselClick-loRagil
 // -----------------------------------------------------------------------------
@@ -305,6 +276,9 @@ function startSiteing() {
     $('.ul-caro').addClass('launched');
       if(!$('.caro-thumb').hasClass('thumb-on')){
         setTimeout(function(){
+
+          ///controll carousel first button at launch------------
+
           $('.caro-thumb:nth-child(1)').addClass('thumb-on'),
           $('.caro-thumb:nth-child(1)').parent().siblings().children().css({'background-image': $('.caro-thumb:nth-child(1)').data('cover'), 'height': $('.caro-thumb:nth-child(1)').data('height')});
 
@@ -354,13 +328,7 @@ $("#cmn-toggle-1").change(function() {
         .siblings().removeClass('thumb-on');
     }
 
-    // Not sure if this is used anywhere?
-    function caroThumbWideStart() {
-
-
-        $('.caro-thumb:nth-child(1)').addClass('thumb-on')
-        .siblings().removeClass('thumb-on');
-    }
+/////carousel-control--------------------------
 
     function onThumbClick (e) {
       $(this).parent().siblings().children().css({'background-image': $(this).data('cover'), 'height': $(this).data('height')});
@@ -377,16 +345,7 @@ $("#cmn-toggle-1").change(function() {
             $siblings.removeClass('thumb-on');
         };
           // off > revert the color
-          function sitesviewTest() {
-            $('.caro-thumb').hover(function(){
-              $(this).parent().siblings().css('background-color', $(this).data('color'));
-            }, function(){
-              // off > revert the color
-              $(this).parent().parent().css('background-color', $(this).parent().parent().data('orig-color'));
-            });
 
-
-          }
 
 
     }
@@ -398,24 +357,27 @@ $("#cmn-toggle-1").change(function() {
     $(document).ready(function () {
         // variable definitions
         $window = $(window);
-        $ulCaro = $('.ul-caro');
+
         $caroThumb = $('.caro-thumb');
-        $siteView = $('.sites-box-view');
 
         bindings();
     });
 
 })(jQuery);
 
-
-//$(function() {
-  //sitesviewTest();
-
+//$(function(){
+//  infosite();
 //});
 
 
+//function infosite () {
+//  $('.caro-thumb').on('click', function(){
 
+//    $(this).addClass('bobob');
+//    $('.site-info-title:after').css({'content':'bar'});
 
+//  })
+//}
 
 
 

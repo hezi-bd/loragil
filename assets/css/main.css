@@ -1442,7 +1442,14 @@ section.youtube {
 
 .home-sections section.sites-view {
   padding-top: 0px;
-  background: rgba(230, 230, 230, 0.74); }
+  background: rgba(230, 230, 230, 0.74);
+    background-border-bottom: solid 108px orange;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center; }
   .home-sections section.sites-view .home-lead-title {
     position: relative;
     z-index: 10;
@@ -1498,9 +1505,10 @@ section.youtube {
     border-radius: 6px;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: left top; }
+    background-position: left top;
+    z-index: 1; }
   .home-sections section.sites-view .hands-box::before {
-    z-index: 1;
+    z-index: 2;
     position: absolute;
     top: 104px;
     left: calc(50% + 250px);
@@ -1539,6 +1547,25 @@ section.youtube {
     background-size: cover;
     background-position: center top; }
 
+.caro-text-bg {
+  width: 960px;
+  padding: 15px 15px;
+  box-sizing: border-box;
+  background: rgba(236, 236, 236, 0.94);
+  position: absolute;
+  right: calc(50% - 480px);
+  z-index: -10;
+  height: 126px;
+  padding-top: 5px;
+  box-shadow: 0 8px 10px -10px #777;
+  border-radius: 11px;
+  border-bottom: solid 2px rgba(255, 255, 255, 0.3);
+  transition: all 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  opacity: 1;
+  height: 138px;
+  display: block;
+  bottom: 125px; }
+
 ul.ul-caro {
   position: relative;
   z-index: 10;
@@ -1572,6 +1599,37 @@ ul.ul-caro {
       box-shadow: inset 0px 3px 10px 0px rgba(50, 50, 50, 0.75);
       opacity: 1;
       transition: all 0.6s cubic-bezier(0.445, 0.05, 0.55, 0.95); }
+    ul.ul-caro li.caro-thumb.thumb-on .sites-box-info {
+      transition: all 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+      opacity: 1;
+      display: block; }
+
+.sites-box-info {
+  width: 960px;
+  padding: 15px 15px;
+  box-sizing: border-box;
+  position: absolute;
+  top: -150px;
+  right: calc(50% - 480px);
+  z-index: -10;
+  height: 126px;
+  padding-top: 5px;
+  transition: all 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  opacity: 0;
+  display: none; }
+  .sites-box-info h2 {
+    font-family: 'Heebo', sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    color: #fbb03c; }
+  .sites-box-info p {
+    padding: 0;
+    line-height: 0px; }
+  .sites-box-info a {
+    background: #707070;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: 600; }
 
 .view-wide.butt-on {
   color: #f7921e;
