@@ -75,7 +75,7 @@
       size: cover
       position: left top
 
-    z-index: 1
+
 
 
 
@@ -206,6 +206,25 @@ ul.ul-caro
   +transition(all 0.2s $ease-in-out-sine)
   opacity: 0
   display: none
+  background: rgba(236, 236, 236, 0)
+
+  .site-view-mobile
+    +transition(all 0.2s cubic-bezier(0.93,-0.01, 0.53, 1.09))
+    opacity: 0
+    display: none
+    display: block
+    width: 255px
+    height: 10px
+    border-radius: 35px
+    margin-top: 0
+    position: absolute
+    z-index: 10
+    background: rgb(233, 233, 234)
+    bottom: 386px
+    right: 350px
+    border: solid 2px #e2bfaf
+    overflow: scroll
+    +animation-delay(5s)
 
   h2
     font-family: 'Heebo', sans-serif
@@ -235,7 +254,18 @@ ul.ul-caro
   font-weight: 500
 
 
-.box-rotate ul.ul-caro
+.box-rotate
+
+  .sites-box-info
+    background: rgba(236, 236, 236, 0.9)
+
+    .site-view-mobile
+      height: 456px
+      opacity: 1
+      display: block
+      bottom: 186px
+      bottom: 186px
+      //+animation-delay(2s)
 
 .home-sections section.sites-view .hands-box
 

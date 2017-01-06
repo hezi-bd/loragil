@@ -1505,8 +1505,7 @@ section.youtube {
     border-radius: 6px;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: left top;
-    z-index: 1; }
+    background-position: left top; }
   .home-sections section.sites-view .hands-box::before {
     z-index: 2;
     position: absolute;
@@ -1616,7 +1615,26 @@ ul.ul-caro {
   padding-top: 5px;
   transition: all 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
   opacity: 0;
-  display: none; }
+  display: none;
+  background: rgba(236, 236, 236, 0); }
+  .sites-box-info .site-view-mobile {
+    transition: all 0.2s cubic-bezier(0.93, -0.01, 0.53, 1.09);
+    opacity: 0;
+    display: none;
+    display: block;
+    width: 255px;
+    height: 10px;
+    border-radius: 35px;
+    margin-top: 0;
+    position: absolute;
+    z-index: 10;
+    background: #e9e9ea;
+    bottom: 386px;
+    right: 350px;
+    border: solid 2px #e2bfaf;
+    overflow: scroll;
+    -webkit-animation-delay: 5s;
+    animation-delay: 5s; }
   .sites-box-info h2 {
     font-family: 'Heebo', sans-serif;
     font-size: 22px;
@@ -1640,6 +1658,15 @@ ul.ul-caro {
   color: #6d339e;
   border-bottom: solid 2px #6d339e;
   font-weight: 500; }
+
+.box-rotate .sites-box-info {
+  background: rgba(236, 236, 236, 0.9); }
+  .box-rotate .sites-box-info .site-view-mobile {
+    height: 456px;
+    opacity: 1;
+    display: block;
+    bottom: 186px;
+    bottom: 186px; }
 
 .home-sections section.sites-view .hands-box.box-rotate::before {
   -webkit-transform: rotate(86deg);

@@ -35,7 +35,9 @@ section.sites-view#sites
      | {% for post in site.categories.home-carousel %}
      li.caro-thumb(style='background-image: url({{site.baseurl}}/assets/img/post-assets/post-carousel/{{post.thumb}});' , data-cover='url({{site.baseurl}}/assets/img/post-assets/site-view/{{post.cover}})', data-mobilecover='url({{site.baseurl}}/assets/img/post-assets/site-view/{{post.mobile-cover}})', title='{{post.title}}', data-color='{{post.color}}', data-height='{{post.height}}', link='{{post.url}}')
        .sites-box-info
+         .site-view-mobile
+          img(src='{{site.baseurl}}/assets/img/post-assets/site-view/{{post.mobile-cover}}', alt='{{post.title}}')
          h2.site-info-title {{post.title}}
          p.site-excerpt {{post.excerpt}}
-         a.site-link(href='{{post.excerpt}}', target='_blank') ביקור באתר...
+         a.site-link(href='{{post.site-link}}', target='_blank') ביקור באתר...
      |   {% endfor %}
