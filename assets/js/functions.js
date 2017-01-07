@@ -247,9 +247,9 @@ function timerModule (options) {
 // -----------------------------------------------------------------------------
 $(window).scroll(function() {
   dustBoxVidScroll();
-  //startMentoring();
   startSiteing();
-  //startArticles();
+  //workBelt();
+  //workLoad();
 });
 
 
@@ -259,6 +259,18 @@ function dustBoxVidScroll() {
 
   $('.dust-box').css('background-position','center -'+ wScroll +'px');
 }
+
+
+//--------------------
+
+
+
+
+
+
+//-----------------------
+
+
 
 
 
@@ -284,7 +296,7 @@ function startSiteing() {
 
         }, 10);
       }
-    } 
+    }
   }
 
 }
@@ -363,20 +375,4 @@ $("#cmn-toggle-1").change(function() {
 
 })(jQuery);
 
-//$(function(){
-//  infosite();
-//});
-
-
-//function infosite () {
-//  $('.caro-thumb').on('click', function(){
-
-//    $(this).addClass('bobob');
-//    $('.site-info-title:after').css({'content':'bar'});
-
-//  })
-//}
-
-
-
-// -----------------------------------------------------------------------------
+// --------------------------000---------------------------------------------------

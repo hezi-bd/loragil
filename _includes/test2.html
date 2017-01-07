@@ -17,6 +17,51 @@
 
 
 
+//section.banners#banners
+
+
+  //.flex.flex--center.home-lead-title
+
+    //.col-2
+      //.home-lead-box
+        //.home-lead
+          //.small-logo
+          באנרים
+          //.small-logo
+        //.small-lead-box
+          //.small-home-lead.orange-type
+          //  ועכשיו נעבור לפיר-סו-מות...
+
+
+
+  //.banners-thumb-box
+    //.full-width-small-title
+      p
+        הקלקה על הבאנר הנבחר תציגו במספר גדלים שונים
+
+      .banners-gallery
+      ul.ul-banners
+        | {% for post in site.categories.home-banners-carousel %}
+          li.caro-banner-thumb(style='background-image: url({{site.baseurl}}/assets/img/post-assets/banners-carousel/{{post.thumb}});', title='{{post.title}}'
+          .banner-excerpt
+          {{post.title}}|{{post.excerpt}}
+          .banner-sizes
+      | {%endfor%}
+
+
+    .full-width-small-title
+      .small-logo-gray
+      p
+        הבאנרים נבנו בפלאש והותאמו לHTML5
+      .small-logo-gray
+
+
+
+
+------------------
+
+
+
 section.sites-view#sites
 
 
