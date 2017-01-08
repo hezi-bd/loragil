@@ -1,6 +1,7 @@
-@import "4-layouts/body";
+
 
 @import "0-tools/bourbon/_bourbon";
+@import "0-tools/lightbox/lightbox";
 @import "0-tools/normalize";
 @import "0-tools/fonts";
 @import "0-tools/animations/_animations-dir";
@@ -26,7 +27,8 @@
 @import "3-sections/home-abilities";
 @import "3-sections/home-sites-view";
 @import "3-sections/home-banners";
+@import "3-sections/home-popups";
 @import "3-sections/home-mentoring";
 
-
+@import "4-layouts/body";
 @import "4-layouts/home";

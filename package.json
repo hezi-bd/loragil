@@ -30,6 +30,7 @@
   },
   "homepage": "https://github.com/shakyShane/jekyll-gulp-sass-browser-sync",
   "dependencies": {
-    "browser-sync": "^1.9.2"
+    "browser-sync": "^1.9.2",
+    "lightbox2": "^2.9.0"
   }
 }

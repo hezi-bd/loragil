@@ -3,10 +3,14 @@
     <div class="col-2">
       <div class="home-lead-box">
         <div class="home-lead">
-          <div class="small-logo"></div>באנרים<div class="small-logo"></div>
-          <div class="small-lead-box">
-            <div class="small-home-lead orange-type">ועכשיו נעבור לפיר-סו-מות...</div>
+          <div class="small-logo"></div>
+          <div class="title-move">
+            באנרים
           </div>
+          <div class="small-logo"></div>
+        </div>
+        <div class="small-lead-box">
+          <div class="small-home-lead orange-type">ועכשיו נעבור לפיר-סו-מות...</div>
         </div>
       </div>
     </div>
@@ -19,23 +23,39 @@
 
     <div class="banners-gallery">
 
-      <ul class="ul-banners">
-
-        {% for post in site.categories.home-banners-carousel %}
-
-          <li class="caro-banner-thumb" style="background-image: url({{site.baseurl}}/assets/img/post-assets/banners-carousel/{{post.thumb}});', title='{{post.title}}">{{post.title}}</li>
-
-        {% endfor %}
-
-      </ul>
+        <ul class="tab ul-banners">
+          {% for post in site.categories.home-banners-carousel %}
+            <li>
+              <a href="javascript:void(0)" class="tablinks" onclick="openCity(event, '{{post.title}}')">
+                <img class="caro-banner-thumb" src="{{site.baseurl}}/assets/img/post-assets/banners-carousel/{{post.thumb}}" alt="{{post.title}}" />
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
 
     </div>
 
-    <div class="full-width-small-title">
+    <div class="full-width-small-title bottom">
       <div class="small-logo-gray"></div>
       <p>הבאנרים נבנו בפלאש והותאמו לHTML5</p>
       <div class="small-logo-gray"></div>
     </div>
+
+    <ul class="banner-view">
+      {% for post in site.categories.home-banners-carousel %}
+        <li>
+          <div id="{{post.title}}" class="tabcontent">
+            <h3>{{post.title}}</h3>
+            {{post.content}}
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+
+    <div class="flash-bg">
+      <iframe src="http://hezibendavid.com/flash-sack/anim02.html" height="382" width="407"></iframe>
+    </div>
+
   </div>
 
 </section>

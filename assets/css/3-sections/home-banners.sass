@@ -1,16 +1,31 @@
 .home-sections section.banners
+  background: rgba(247, 239, 255, 0.86)
+  margin-bottom: 0
+  padding-bottom: 0
+
+
+  .home-lead-box
+    display: flex
+    flex-direction: column
+    align-content: center
+    align-items: center
 
   .home-lead
-    width: 100%
+    width: 88%
     display: flex
     text-align: center
     align-items: flex-start
     color: $purple
     @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm)
         left: 0
+    .title-move
+      position: relative
+      right: -28px
+      @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm)
+        right: 0
 
   .small-logo
-    width: 62px
+    width: 92px
     background:
       image: url(../img/loragil-logo-nav.svg)
       repeat: no-repeat
@@ -21,75 +36,99 @@
     margin: 5px 10px
 
     &:last-child
-      margin-right: -25px
+      margin-right: -18px
 
   .small-lead-box
     letter-spacing: 4.2px
-    margin-right: 83px
+    //margin-right: 83px
     margin-top: -23px
+    @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm)
+      margin-right: 0
 
   .small-home-lead
     color: $orange
 
   .banners-thumb-box
 
-    .full-width-small-title
-      width: 100%
-      padding: 10px 0
-      background: $light-gray
-      margin-top: 40px
-      text-align: center
+    display: flex
+    flex-direction: column
+    align-items: center
+    min-height: 900px
+    position: relative
 
-      p
-        margin-bottom: 0
-        text-shadow: 0 1px 1px rgba(213, 213, 213, 0.75)
-        color: $lighter-gray
-        letter-spacing: 2.8px
+    .flash-bg
+      position: absolute
+      bottom: 50px
+      border-radius: 5px
+      overflow: hidden
+      left: calc(50% - 203px)
 
-    .full-width-small-title:last-child
-      display: flex
-      flex-direction: row
-      align-items: center
-      justify-content: center
+.full-width-small-title
+  width: 100%
+  padding: 10px 0
+  background: $light-gray
+  margin:
+    top: 40px
+    bottom: 20px
+  text-align: center
 
-      .small-logo-gray
-        width: 20px
-        background:
-          image: url(../img/small-logo-gray.svg)
-          repeat: no-repeat
-          position: center
-          size: contain
-        height: 18px
-        padding: 0
-        margin: 0px 10px
+  p
+    margin-bottom: 0
+    text-shadow: 0 1px 1px rgba(213, 213, 213, 0.75)
+    color: $lighter-gray
+    letter-spacing: 2.8px
 
-      p
-        color: #fff
-        font-weight: 500
-        text-shadow: 0 2px 1px #777777
-        letter-spacing: 5.2px
+.full-width-small-title.bottom
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: center
+  margin:
+    top: 25px
+    bottom: 20px
+
+  .small-logo-gray
+    width: 20px
+    background:
+      image: url(../img/small-logo-gray.svg)
+      repeat: no-repeat
+      position: center
+      size: contain
+    height: 18px
+    padding: 0
+    margin: 0px 10px
+
+  p
+    color: #fff
+    font-weight: 500
+    text-shadow: 0 2px 1px #777777
+    letter-spacing: 5.2px
 
 ul.ul-banners
-  //position: absolute
+  position: relative
   z-index: 10
   list-style: none
+  background: none
+  border: trarnsparent
+
   display: flex
   flex-direction: row
   justify-content: space-between
   flex-wrap: wrap
-  width: 100%
-  background: $light-orange
+  width: 960px
   margin: 0
   padding:
-    top: 15px
-    bottom: 15px
-    left: calc(50% - 380px)
-    right: calc(50% - 380px)
+    top: 10px
+    bottom: 0
+    //left: calc(50% - 380px)
+    //right: calc(50% - 380px)
 
   box-sizing: border-box
   bottom: 0
   right: 0
   left: 0
+  //height: 320px
+  overflow: visible
 
   @media (max-width: 800px)
     justify-content: space-around
@@ -98,140 +137,92 @@ ul.ul-banners
       margin: 10px
 
 
-  li.caro-banner-thumb
-    //position: absolute
-    width: 143px
-    height: 105px
-    background-position: center
-    background-size: cover
-    cursor: pointer
-    background:
-      repeat: no-repeat
-    background-blend-mode: luminosity
-    border-radius: 2px
-    box-shadow: 2px 2px 8px 2px #f7921e
-    box-sizing: border-box
-    opacity: 0.7
-    transition: all 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95)
 
 
-    &.thumb-on, &:hover
-      box-shadow:  inset 0px 3px 10px 0px rgba(50, 50, 50, 0.75)
-      opacity: 1
-      transition: all 0.6s cubic-bezier(0.445, 0.05, 0.55, 0.95)
+  li
+    .caro-banner-thumb
+      //position: absolute
+      width: 143px
+      height: 105px
+      background-position: center
+      background-size: cover
+      cursor: pointer
+      background:
+        repeat: no-repeat
+      background-blend-mode: luminosity
+      border-radius: 2px
+      border: solid 2px $lighter-gray
+      margin: 4px
+      box-sizing: border-box
+      opacity: 0.7
+      transition: all 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95)
 
-    &.thumb-on .sites-box-info
 
-      +transition(all 0.5s $ease-in-out-sine)
-      opacity: 1
-      display: block
+      &.thumb-on, &:hover
+        box-shadow:  inset 0px 3px 10px 0px rgba(50, 50, 50, 0.75)
+        opacity: 1
+        transition: all 0.6s cubic-bezier(0.445, 0.05, 0.55, 0.95)
+
+      &.thumb-on .sites-box-info
+
+        +transition(all 0.5s $ease-in-out-sine)
+        opacity: 1
+        display: block
+
+ul.banner-view
+  list-style: none
+  position: relative
+  z-index: 10
+  background: rgb(255, 255, 255)
+  border-radius: 5px
+  margin-bottom: 32px
+  padding-left: 10%
+  padding-right: 10%
 
 
-.sites-box-info
-  max-width: 960px
-  width: 100%
-  padding: 15px 15px
-  box-sizing: border-box
-  position: absolute
-  top: -150px
-  right: calc(50% - 480px)
-  z-index: -10
-  height: 126px
-  padding-top: 5px
-  +transition(all 0.2s $ease-in-out-sine)
-  opacity: 0
+
+/* Style the list
+//ul.tab
+  list-style-type: none
+  margin: 0
+  padding: 0
+  overflow: hidden
+  border: 1px solid #ccc
+  background-color: #f1f1f1
+
+/* Float the list items side by side
+ul.tab li
+  float: left
+
+/* Style the links inside the list items
+//ul.tab li a
+  display: inline-block
+  color: black
+  text-align: center
+  padding: 14px 16px
+  text-decoration: none
+  transition: 0.3s
+  font-size: 17px
+
+/* Change background color of links on hover
+//ul.tab li a:hover
+  background-color: #ddd
+
+/* Create an active/current tablink class
+ul.tab li a:focus, .active
+  //background-color: #ccc
+
+/* Style the tab content
+.tabcontent
   display: none
-  background: rgba(236, 236, 236, 0)
+  padding: 6px 12px
+  min-height: 366px
+  padding-bottom: 20px
+  //border: 1px solid #ccc
+  //border-top: none
 
-  @media (max-width: 1010px)
-    right: 20px
-
-  .site-view-mobile
-    +transition(all 0.2s cubic-bezier(0.93,-0.01, 0.53, 1.09))
-    opacity: 0
-    display: none
-    display: block
-    width: 255px
-    height: 10px
-    border-radius: 35px
-    margin-top: 0
-    position: absolute
-    z-index: 10
-    background: rgb(233, 233, 234)
-    bottom: 386px
-    right: 350px
-    border: solid 2px #e2bfaf
-    overflow: scroll
-    +animation-delay(5s)
-
-  h2
-    font-family: 'Heebo', sans-serif
-    font-size: 22px
-    font-weight: 400
-    color: #fbb03c
-
-  p
-    padding: 0
-    line-height: 0px
-  a
-    background: #707070
-    color: #fff
-    padding: 5px 10px
-    font-weight: 600
-
-//rotate to mobile----------------/////
-
-.view-wide.butt-on
-  color: $orange
-  border-bottom: solid 2px $orange
-  font-weight: 500
-
-.view-mobile.butt-on
-  color: $purple
-  border-bottom: solid 2px $purple
-  font-weight: 500
-
-
-.box-rotate
-
-  .sites-box-info
-    background: rgba(236, 236, 236, 0.9)
-
-    .site-view-mobile
-      height: 456px
-      opacity: 1
-      display: block
-      bottom: 186px
-      bottom: 186px
-      //+animation-delay(2s)
-
-.home-sections section.sites-view .hands-box
-
-  &.box-rotate
-    &::before
-      transform: rotate(86deg)
-      top: -36px
-      left: calc(50% + 228px)
-      height: 823px
-      width: 744px
-      background-size: 1450px
-      +transition(all 0.2s $ease-in-out-sine)
-
-    &::after
-      transform: rotate(81deg)
-      bottom: -280px
-      right: calc(50% + 316px)
-      width: 932px
-      background-size: 1407px
-      height: 1050px
-      +transition(all 0.2s $ease-in-out-sine)
-
-
-    .sites-box-frame
-      width: 255px
-      height: 456px
-      border-radius: 35px
-      margin-top: 370px
-      position: relative
-      z-index: 10
-      +transition(all 0.2s $ease-in-out-sine)
+  h3
+    text-align: center
+    color: #c5c5c7
+    font-weight: 300
+    letter-spacing: 3px

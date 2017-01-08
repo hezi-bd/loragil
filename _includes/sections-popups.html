@@ -1,0 +1,25 @@
+<section class="popups" id="popups">
+
+  <div class="full-width-small-title">
+    <p>דיוור ישיר | POPUPS</p>
+  </div>
+
+
+  <div class="flex flex--center">
+      <ul class="tab ul-banners">
+        {% for post in site.categories.home-popups %}
+          <li class="caro-banner-thumb" >
+            <a class="example-image-link" href="http://hezibendavid.com/loragil-test/assets/img/post-assets/popups/{{post.pic}}" data-lightbox="example-set" data-title="Click the right half of the image to move forward."><img class="example-image" src="http://hezibendavid.com/loragil-test/assets/img/post-assets/popups/{{post.thumb}}" alt=""/></a>
+            <p><strong>{{post.title}}</strong><br>{{post.excerpt}}</p>
+          </li>
+        {% endfor %}
+      </ul>
+
+  </div>
+
+
+
+</section>
+
+
+<script src="{{site.baseurl}}/assets/js/lightbox-plus-jquery.min.js"></script>
