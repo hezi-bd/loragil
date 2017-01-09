@@ -1,0 +1,55 @@
+.home-sections section.graphics
+  padding-top: 0
+  margin-top: 0
+  overflow: hidden
+  .home-lead-title
+    background: rgba(98, 27, 157, 0.62)
+    height: 130px
+    justify-content: center
+    align-items: center
+
+    &::before
+      content: ''
+      width: 100%
+      position: absolute
+      z-index: -1
+      right: 0
+      height: 130px
+      background:
+        image: url(../img/loragil-bg-pattern2.svg)
+        position: 0 43px
+        size: 243%
+
+
+    .home-lead-box
+      display: flex
+      flex-direction: row
+      align-items: center
+
+    .home-lead
+      letter-spacing: 5px
+      width: 110%
+      color: $light-orange
+
+      .title-move
+        position: relative
+        right: -54px
+        @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm)
+          right: -75px
+
+    .small-lead-box
+      letter-spacing: 0.7px
+      color: #fff
+      right: -22px
+      position: relative
+
+    .small-logo
+      width: 108px
+      height: 136px
+      background:
+        image: url(../img/graphic-thumb.png)
+        repeat: no-repeat
+        position: center
+        size: contain
+      padding: 0
+      margin: 5px 10px

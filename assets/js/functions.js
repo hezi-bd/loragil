@@ -279,37 +279,19 @@ function dustBoxVidScroll() {
 
 
 
-function startSiteing() {
 
-  var wScroll = $(window).scrollTop();
-
-  if($('section.sites-view').offset().top - $(window).height()/2 < wScroll) {
-    if($(window).width() > 640) {
-    $('.ul-caro').addClass('launched');
-      if(!$('.caro-thumb').hasClass('thumb-on')){
-        setTimeout(function(){
-
-          ///controll carousel first button at launch------------
-
-          $('.caro-thumb:nth-child(1)').addClass('thumb-on'),
-          $('.caro-thumb:nth-child(1)').parent().siblings().children().css({'background-image': $('.caro-thumb:nth-child(1)').data('cover'), 'height': $('.caro-thumb:nth-child(1)').data('height')});
-
-        }, 10);
-      }
-    }
-  }
-
-}
 
 //toggle screen wide & mobile loRagil---------
 
 $("#cmn-toggle-1").change(function() {
     if(this.checked) {
         $('.hands-box').addClass('box-rotate');
+        $('.ul-caro').addClass('rotate');
         $('.view-wide').removeClass('butt-on');
         $('.view-mobile').addClass('butt-on');
     } else {
   		$('.hands-box').removeClass('box-rotate');
+      $('.ul-caro').removeClass('rotate');
       $('.view-wide').addClass('butt-on');
       $('.view-mobile').removeClass('butt-on');
   	}
@@ -341,7 +323,7 @@ $("#cmn-toggle-1").change(function() {
 /////carousel-control--------------------------
 
     function onThumbClick (e) {
-      $(this).parent().siblings().children().css({'background-image': $(this).data('cover'), 'height': $(this).data('height')});
+      //$(this).parent().siblings().children().css({'background-image': $(this).data('cover'), 'height': $(this).data('height')});
         var $this = $(this),
             $siblings = $this.siblings(),
             $parent = $(this).parent();

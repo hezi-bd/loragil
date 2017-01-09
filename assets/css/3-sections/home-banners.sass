@@ -63,6 +63,13 @@
       overflow: hidden
       left: calc(50% - 203px)
 
+      @media (max-width: 410px)
+
+        max-width: 100%
+        left: 0
+
+
+
 .full-width-small-title
   width: 100%
   padding: 10px 0
@@ -115,11 +122,12 @@ ul.ul-banners
   flex-direction: row
   justify-content: space-between
   flex-wrap: wrap
-  width: 960px
+  max-width: 960px
   margin: 0
   padding:
     top: 10px
     bottom: 0
+    right: 0
     //left: calc(50% - 380px)
     //right: calc(50% - 380px)
 
@@ -130,8 +138,8 @@ ul.ul-banners
   //height: 320px
   overflow: visible
 
-  @media (max-width: 800px)
-    justify-content: space-around
+  @media (max-width: 910px)
+    justify-content: center
 
     li
       margin: 10px
