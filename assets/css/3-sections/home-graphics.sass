@@ -53,3 +53,109 @@
         size: contain
       padding: 0
       margin: 5px 10px
+
+  ul.thumb-botts-box
+    position: relative
+    max-width: 770px
+    width: 100%
+    height: 680px
+    padding:
+      top: 140px
+      bottom: 100px
+      left: 0
+      right: 0
+    list-style: none
+
+
+    &::before
+      content: ''
+      max-width: 770px
+      width: 100%
+      height: 680px
+      position: absolute
+      z-index: -1
+      background:
+        image: url(../img/loragil-logo-trans.svg)
+        position: center
+        size: contain
+        repeat: no-repeat
+
+    li
+      position: absolute
+      color: transparent
+      cursor: pointer
+      background:
+        size: initial
+        repeat: no-repeat
+
+      &:nth-child(1)
+        right: 34%
+        top: 0px
+        width: 255px
+        height: 142px
+        background:
+          image: url(../img/bott-logos.svg), url(../img/thumb-bott.png)
+          position: center top, 39% top
+          //color: pink
+
+        &:hover
+          background:
+            position: center bottom, 39% bottom
+
+
+
+
+      &:nth-child(2)
+        color: $purple
+        right: 5%
+        top: 37%
+        width: 255px
+        height: 142px
+        background:
+          image: url(../img/thumb-bott.png)
+          position: 50% top
+        text-align: center
+        line-height: 144px
+        font-size: 20px
+
+        &:hover
+          color: #fff
+          background:
+            position: 50% bottom
+
+      &:nth-child(3)
+        right: -8%
+        bottom: -5%
+        width: 255px
+        height: 150px
+        background:
+          image: url(../img/bott-adds.svg), url(../img/thumb-bott-r.png)
+          position: 43% top, 39% top
+          //color: pink
+
+        &:hover
+          background:
+            position: 43% bottom, 39% bottom
+
+      &:nth-child(4)
+        left: -10%
+        bottom: -5%
+        width: 255px
+        height: 150px
+        background:
+          image: url(../img/bott-makeup.svg), url(../img/thumb-bott-l.png)
+          position: center top, 49% top
+          //color: pink
+
+        &:hover
+          background:
+            position: center bottom, 49% bottom
+
+  ul.thumb-botts-box
+
+    .thumb-view
+      width: 300px
+      height: 300px
+      background: pink
+      position: absolute
+      z-index: -2

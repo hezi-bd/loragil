@@ -3,12 +3,13 @@
   //display: flex
   //flex-direction: column
   //align-items: center
-  padding-top: 0px
+  padding: 0px
   background: rgba(230, 230, 230, 0.74)
       border-bottom: solid 108px orange;
   display: flex
   flex-direction: column
   align-items: center
+  overflow: hidden
 
   .home-lead-title
     position: relative
@@ -61,14 +62,14 @@
     overflow: hidden
     height: 1062px
     //top: 58px
-    margin-bottom: 42px
+    //margin-bottom: 42px
     display: flex
     align-items: center
     flex-direction: column
     padding: 0 25px
     box-sizing: border-box
     @media (max-width: 800px)
-      height: 1256px
+      //height: 1256px
 
     &.wide
       transform: rotate(0deg)
@@ -118,6 +119,9 @@
     +transition(all 0.4s $ease-in-out-sine)
     transform-origin: left
 
+    @media (max-width: 900px)
+      display: none
+
       //color: green
 
   .hands-box::after
@@ -135,6 +139,9 @@
       repeat: no-repeat
       size: 697px
       position: right bottom
+
+    @media (max-width: 900px)
+      display: none
       //color: red
 
   .sites-box-view
@@ -171,7 +178,7 @@
   bottom: 125px
 
 ul.ul-caro
-  position: absolute
+  position: relative
   z-index: 10
   list-style: none
   display: flex
@@ -245,11 +252,12 @@ ul.ul-caro
   background: rgba(236, 236, 236, 0)
 
   @media (max-width: 1010px)
-    right: 20px
+    right: 28px
+    width: calc(100% - 50px)
 
   .site-view-sites
     max-width: 960px
-    width: 100%
+    //width: 100%
     height: 540px
     border-radius: 6px
     +transition(all 0.2s cubic-bezier(0.93,-0.01, 0.53, 1.09))
@@ -353,7 +361,7 @@ ul.ul-caro
         display: block
 
       @media (max-width: 1000px)
-        right: calc(50% - 149px)
+        right: calc(50% - 133px)
 
 .home-sections section.sites-view .hands-box
 

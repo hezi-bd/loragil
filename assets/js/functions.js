@@ -248,7 +248,7 @@ function timerModule (options) {
 $(window).scroll(function() {
   dustBoxVidScroll();
   startSiteing();
-  //workBelt();
+  designBGStuff();
   //workLoad();
 });
 
@@ -257,13 +257,22 @@ function dustBoxVidScroll() {
 
   var wScroll = $(window).scrollTop();
 
-  $('.dust-box').css('background-position','center -'+ wScroll +'px');
+  $('.dust-box').css('background-position','center -'+ wScroll + 'px');
 }
 
 
 //--------------------
 
+function designBGStuff() {
+  $('.thumb-bott').hover(function(){
+    $('.thumb-view').css('background-color', $(this).data('color'));
+  }, function(){
+    // off > revert the color
+    $('.thumb-view').css('background-color', $('.thumb-view').data('orig-color'));
+  });
 
+
+}
 
 
 
