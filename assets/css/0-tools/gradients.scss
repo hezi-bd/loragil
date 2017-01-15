@@ -84,3 +84,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c2571', end
     /* Standard syntax */
     background: repeating-linear-gradient($grad-flame6);
     background-attachment: fixed;}
+
+.graphics-gra{
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f6f6f8+0,ffffff+20,ffffff+80,f6f6f8+100 */
+background: rgb(246,246,248); /* Old browsers */
+background: -moz-linear-gradient($grad-graphic-box); /* FF3.6-15 */
+background: -webkit-linear-gradient($grad-graphic-box); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient($grad-graphic-box); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f6f8', endColorstr='#f6f6f8',GradientType=1 ); /* IE6-9 */
+}
+.graphics-gra2{
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+36,ffffff+100&1+0,1+36,0+100 */
+  background: rgb(246,246,248); /* Old browsers */
+  background: $grad-graphic-box2; /* FF3.6-15 */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}

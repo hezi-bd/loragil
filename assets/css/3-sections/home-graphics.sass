@@ -1,7 +1,11 @@
 .home-sections section.graphics
   padding-top: 0
+  padding-bottom: 0
   margin-top: 0
+  margin-bottom: -250px
   overflow: hidden
+  position: relative
+  z-index: 10
   .home-lead-title
     background: rgba(98, 27, 157, 0.62)
     height: 130px
@@ -19,6 +23,8 @@
         image: url(../img/loragil-bg-pattern2.svg)
         position: 0 43px
         size: 243%
+
+
 
 
     .home-lead-box
@@ -56,6 +62,7 @@
 
   ul.thumb-botts-box
     position: relative
+    z-index: 10
     max-width: 770px
     width: 100%
     height: 680px
@@ -65,6 +72,12 @@
       left: 0
       right: 0
     list-style: none
+    transition: all 0.4s ease-in-out
+    background:
+      position: center
+      image: none
+
+
 
 
     &::before
@@ -73,7 +86,7 @@
       width: 100%
       height: 680px
       position: absolute
-      z-index: -1
+      z-index: 0
       background:
         image: url(../img/loragil-logo-trans.svg)
         position: center
@@ -88,56 +101,208 @@
         size: initial
         repeat: no-repeat
 
+      .thumb-print
+        right: 0%
+        top: 0px
+        transition: all 0.2s ease-in-out
+        //position: absolute
+
+        &::before
+          position: absolute
+          filter: grayscale(1)
+          content: ''
+          opacity: 0
+          transition: all 0.4s ease-in-out
+          background-repeat: no-repeat
+          right: 0%
+          top: 0px
+
+        &::after
+          content: ''
+          position: absolute
+          background-repeat: no-repeat
+          right: 0%
+          top: 0px
+
+        a.pics-box
+          display: none
+
+          &:nth-child(1)
+            display: block
+
+
+
+      &:hover
+        .thumb-print::before
+          filter: grayscale(0)
+          opacity: 1
+          transition: all 1.2s ease-in-out
+
+        .thumb-print::after
+          background:
+            //image: url(../img/thumb-bott.png)
+            position: 52% bottom
+
       &:nth-child(1)
         right: 34%
-        top: 0px
+        top: -20px
         width: 255px
         height: 142px
         background:
-          image: url(../img/bott-logos.svg), url(../img/thumb-bott.png)
-          position: center top, 39% top
-          //color: pink
+          image: url(../img/thumb-bott.png)
+          position: 52% top
 
-        &:hover
+        .thumb-print
+          width: 255px
+          height: 142px
+
+
+        .thumb-print::before
+          width: 255px
+          height: 142px
           background:
-            position: center bottom, 39% bottom
+            image: url(../img/thumb-bott.png)
+            position: 52% bottom
 
 
+        .thumb-print::after
+          background:
+            image: url(../img/bott-logos.svg)
+            position: 52% top
+          width: 255px
+          height: 142px
 
+        a.pics-box
+          right: 19%
+          top: 125px
+
+        &:hover .thumb-print::after
+          background-position: 39% bottom
 
       &:nth-child(2)
         color: $purple
         right: 5%
         top: 37%
-        width: 255px
+        width: 250px
         height: 142px
+        font-size: 20px
         background:
           image: url(../img/thumb-bott.png)
           position: 50% top
-        text-align: center
-        line-height: 144px
-        font-size: 20px
+        transition: all 0.4s ease-in-out
+
+        .thumb-print::after
+          content: 'איור'
+          right: 42%
+          top: 56px
 
         &:hover
           color: #fff
+          top: calc(37% - 30px)
+
+        .thumb-print::before
+          width: 255px
+          height: 142px
           background:
-            position: 50% bottom
+            image: url(../img/thumb-bott.png)
+          background-position: 52% bottom
+          opacity: 0
+          top: 0px
+
+        &:hover .thumb-print::before
+          opacity: 1
+
+        &:hover .thumb-print::after
+          opacity: 1
+
+      a.pics-box
+        bottom: -14px
+        left: 22%
+        padding: 0 8px
 
       &:nth-child(3)
+        transition: all 0.4s ease-in-out
         right: -8%
-        bottom: -5%
-        width: 255px
-        height: 150px
+        bottom: -1%
+        width: 310px
+        height: 132px
         background:
-          image: url(../img/bott-adds.svg), url(../img/thumb-bott-r.png)
-          position: 43% top, 39% top
-          //color: pink
+          image: url(../img/thumb-bott-r.png)
+          position: 54% top
+
+        a.pics-box
+          bottom: -14px
+          left: 31%
 
         &:hover
+          bottom: 6px
+
+          .thumb-print
+            width: 255px
+            height: 132px
+
+
+        .thumb-print::before
+          width: 255px
+          height: 149px
           background:
-            position: 43% bottom, 39% bottom
+            image: url(../img/thumb-bott-r.png)
+            position: 34% bottom
+
+        .thumb-print::before
+
+        .thumb-print::after
+          background:
+            image: url(../img/bott-adds.svg)
+            position: 40% top
+          width: 255px
+          height: 150px
+
+        &:hover .thumb-print::after
+          background-position: 40% bottom
 
       &:nth-child(4)
+        transition: all 0.4s ease-in-out
+        left: -14%
+        bottom: -1%
+        width: 310px
+        height: 132px
+        background:
+          image: url(../img/thumb-bott-l.png)
+          position: 54% top
+
+        a.pics-box
+          bottom: -14px
+          left: 31%
+
+        &:hover
+          bottom: 7px
+
+          .thumb-print
+            width: 255px
+            height: 132px
+
+
+        .thumb-print::before
+          width: 255px
+          height: 149px
+          background:
+            image: url(../img/thumb-bott-l.png)
+            position: 34% bottom
+
+        .thumb-print::before
+
+        .thumb-print::after
+          background:
+            image: url(../img/bott-makeup.svg)
+            position: 27% top
+          width: 255px
+          height: 150px
+
+        &:hover .thumb-print::after
+          background-position: 27% bottom
+
+      &:nth-child(8)
         left: -10%
         bottom: -5%
         width: 255px
@@ -151,11 +316,47 @@
           background:
             position: center bottom, 49% bottom
 
-  ul.thumb-botts-box
 
-    .thumb-view
-      width: 300px
-      height: 300px
-      background: pink
-      position: absolute
-      z-index: -2
+
+  .graphics-box
+    @extend .graphics-gra2
+    padding-bottom: 100px
+    flex-direction: column
+    align-items: center
+
+    li.thumb-bott
+
+      a.pics-box
+        position: absolute
+        color: #fff
+        opacity: 0
+        transition: all 0.2s ease-in-out
+            text-align: center
+        transform: scaleX(0)
+        transform-origin: center
+        background: $purple
+        padding: 3px 14px
+        border-radius: 4px
+        font-size: 16px
+        line-height: 1.5em
+        text-align: center
+        @include transition-delay(0s)
+
+    li.thumb-bott:hover a.pics-box
+      opacity: 1
+      transform: scaleX(1)
+      @include transition-delay(0.3s)
+      &:hover
+        background: $orange
+        @include transition-delay(0s)
+
+
+.clients-top
+  height: 350px
+  width: 100%
+  //background: red
+  background-image: url(../img/clients-top.png)
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: top center
+  margin-top: -77px

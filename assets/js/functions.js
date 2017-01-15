@@ -1,88 +1,45 @@
-// -----------------------------------------------------------------------------
-// Mentoring component
-// Assuming ".face, .faces/or mentoring" exists somewhere on the site,
-// their functionality should be broken out of the main functionality of the
-// site. I blindly put this together because I couldn't find its useage on the
-// homepage or elsewhere on the site :( (By blind, I mean untested)
-//
-// formally mentoringBubbleClick
-// -----------------------------------------------------------------------------
-
-(function ($) {
-
-    "use strict"
-
-    var $window,
-        $face,
-        $faces;
-
-    function mentoringNarrowStart() {
-        $faces.css({
-            'top': '230px',
-            'left': '0px'
-        });
-
-        $face.first().addClass('has-bubble-open')
-        .siblings().removeClass('has-bubble-open');
-    }
-
-    // Not sure if this is used anywhere?
-    function mentoringWideStart() {
-        $faces.css({
-            'top': '0px',
-            'left': '0px'
-        });
-
-        $('.face:nth-child(5)').addClass('has-bubble-open')
-        .siblings().removeClass('has-bubble-open');
-    }
-
-    function onFaceClick (e) {
-        var $this = $(this),
-            $siblings = $this.siblings(),
-            $parent = $(this).parent(),
-
-            faceTop = $this.position().top,
-            vertMath =  -1 * (faceTop - 230),
-            faceLeft = $this.position().left,
-            horizMath =  0 - faceLeft;
-
-        if ($window.width() > 640){
-            $parent.css('top', vertMath + 'px');
-        } else {
-            if ($this.hasClass('back-btn')){
-                mentoringNarrowStart();
-            } else {
-                $parent.css('left', horizMath +'px');
-            }
-        }
-
-        if (!$this.hasClass('back-btn')) {
-            $this.addClass('has-bubble-open');
-            $siblings.removeClass('has-bubble-open');
-        }
-    }
-
-    function bindings () {
-        $face.on('click', onFaceClick);
-    }
-
-    $(document).ready(function () {
-        // variable definitions
-        $window = $(window);
-        $face = $('.face');
-        $faces = $('.faces');
-
-        bindings();
-    });
-
-})(jQuery);
+$(function() {
+  designBGStuff();
+  smoothScroll(300);
+  mobileNav();
+});
 
 
+function mobileNav() {
+  $('.mobile-nav-toggle').on('click', function(){
+    var status = $(this).hasClass('is-open');
+    if(status){ $('.mobile-nav-toggle, .mobile-nav').removeClass('is-open'); }
+    else { $('.mobile-nav-toggle, .mobile-nav').addClass('is-open'); }
+  });
+}
 
-// -----------------------------------------------------------------------------
-// Homepage
-// -----------------------------------------------------------------------------
+
+function smoothScroll (duration) {
+	$('a[href^="#"]').on('click', function(event) {
+
+	    var target = $( $(this).attr('href') );
+
+	    if( target.length ) {
+	        event.preventDefault();
+	        $('html, body').animate({
+	            scrollTop: target.offset().top
+	        }, duration);
+	    }
+	});
+}
+
+function designBGStuff() {
+  $('.thumb-bott').hover(function(){
+    $(this).parent().css('background-image', $(this).data('image'));
+  }, function(){
+    // off > revert the color
+    $(this).parent().css('background-image', $(this).parent().data('orig-image'));
+  });
+
+
+}
+
+
 
 // Deomonstrate modularity
 function timerModule (options) {
@@ -248,10 +205,8 @@ function timerModule (options) {
 $(window).scroll(function() {
   dustBoxVidScroll();
   startSiteing();
-  designBGStuff();
-  //workLoad();
+  //clientStuff();
 });
-
 
 function dustBoxVidScroll() {
 
@@ -259,35 +214,6 @@ function dustBoxVidScroll() {
 
   $('.dust-box').css('background-position','center -'+ wScroll + 'px');
 }
-
-
-//--------------------
-
-function designBGStuff() {
-  $('.thumb-bott').hover(function(){
-    $('.thumb-view').css('background-color', $(this).data('color'));
-  }, function(){
-    // off > revert the color
-    $('.thumb-view').css('background-color', $('.thumb-view').data('orig-color'));
-  });
-
-
-}
-
-
-
-
-//-----------------------
-
-
-
-
-
-// carouselClick-loRagil
-// -----------------------------------------------------------------------------
-
-
-
 
 
 //toggle screen wide & mobile loRagil---------
@@ -306,7 +232,23 @@ $("#cmn-toggle-1").change(function() {
   	}
 });
 
+function startSiteing() {
 
+  var wScroll = $(window).scrollTop();
+
+  if($('section.sites-view').offset().top - $(window).height()/2 < wScroll) {
+    if($(window).width() > 2) {
+    //$('.faces').addClass('launched');
+      if(!$('.caro-thumb').hasClass('thumb-on')){
+        setTimeout(function(){
+          $('.caro-thumb:nth-child(1)').addClass('thumb-on');
+        }, 400);
+      }
+    }
+  }
+
+
+}
 
 
 
@@ -391,3 +333,7 @@ function openCity(evt, cityName) {
     document.getElementById(cityName).style.display = "block";
     evt.currentTarget.className += " active";
 }
+
+
+
+//---------------------------------------test

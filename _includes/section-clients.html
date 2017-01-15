@@ -1,0 +1,33 @@
+<section class="clients" id="clients">
+
+
+  <div class="flex flex--center home-lead-title">
+    <div class="col-1">
+      <div class="home-lead-box">
+        <div class="home-lead">לקוחות</div>
+        <div class="small-lead-box">
+          <div class="small-home-lead orange-type">לא רק, יש גם תגובות...</div>
+        </div>
+      </div>
+      <div class="clients-logos-box">
+        <div class="client-logo-butt">
+
+        </div>
+      </div>
+      <ul class="clients-logos-box">
+        {% for post in site.categories.best-clients %}
+          <li class="client-logo-butt" style='width: {{post.width}}; '>
+            <a href="{{post.site-link}}" class="client-logo-link" target="_blank">
+              <img class="client-logo" src="{{site.baseurl}}/assets/img/clients/{{post.logo-off}}" alt="{{post.title}}" />
+              <img class="client-logo" src="{{site.baseurl}}/assets/img/clients/{{post.logo-on}}" alt="{{post.title}}" />
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="clients-hr"></div>
+    <div class="col-1">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+  </div>
+</section>
