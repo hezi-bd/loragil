@@ -2665,10 +2665,6 @@ section.clients .clients-hr {
         flex-wrap: wrap; }
     .home-sections section.clients ul.clients-logos-box li {
       margin: 15px 10px;
-      background-repeat: no-repeat;
-      background-size: auto;
-      background-position: 5px 5px;
-      width: calc(50% - 20px);
       box-sizing: border-box;
       position: relative;
       display: -ms-flexbox;
@@ -2678,10 +2674,11 @@ section.clients .clients-hr {
       -ms-flex-align: center;
           align-items: center; }
       .home-sections section.clients ul.clients-logos-box li img {
-        position: relative; }
+        position: relative;
+        top: 0;
+        right: 0; }
         .home-sections section.clients ul.clients-logos-box li img:nth-child(1) {
           position: relative;
-          top: 0;
           z-index: 0;
           opacity: 1; }
         .home-sections section.clients ul.clients-logos-box li img:nth-child(2) {
@@ -2689,7 +2686,6 @@ section.clients .clients-hr {
           -webkit-filter: grayscale(1);
                   filter: grayscale(1);
           position: absolute;
-          top: 0;
           z-index: 1;
           transition-delay: 0.2s;
           transition: all 1.5s ease-in-out; }

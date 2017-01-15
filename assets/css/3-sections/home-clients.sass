@@ -47,11 +47,6 @@ section.clients .clients-hr
 
     li
       margin: 15px 10px
-      background:
-        repeat: no-repeat
-        size: auto
-        position: 5px 5px
-      width: calc(50% - 20px)
       box-sizing: border-box
       position: relative
       display: flex
@@ -60,10 +55,11 @@ section.clients .clients-hr
 
       img
         position: relative
+        top: 0
+        right: 0
 
         &:nth-child(1)
           position: relative
-          top: 0
           z-index: 0
           opacity: 1
 
@@ -71,7 +67,6 @@ section.clients .clients-hr
           opacity: 0
           filter: grayscale(1)
           position: absolute
-          top: 0
           z-index: 1
           transition-delay: 0.2s
           transition: all 1.5s ease-in-out
