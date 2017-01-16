@@ -2322,7 +2322,8 @@ ul.tab li {
       padding: 50px 30px;
       text-align: center; }
   .home-sections section.popups ul.tab li.caro-banner-thumb {
-    opacity: 0.8; }
+    opacity: 0.8;
+    margin: 15px; }
     .home-sections section.popups ul.tab li.caro-banner-thumb a {
       background-position: center;
       background-size: cover;
