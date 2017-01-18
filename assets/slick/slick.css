@@ -1,4 +1,7 @@
 /* Slider */
+body{
+  background: pink !important;
+}
 .slick-slider
 {
     position: relative;
