@@ -1,14 +1,16 @@
 .home-wrap
-  display: flex
+  //display: flex
   min-height: 100vh
-  flex-direction: row-reverse
-  justify-content: flex-start
+  //flex-direction: row-reverse
+  //justify-content: flex-start
 
   @media (max-width: 775px)
     display: block
 
 .home-sections
-  flex: 1
+  position: relative
+  z-index: 0
+  direction: rtl
 
   section
     padding: 50px 0
@@ -81,3 +83,14 @@
   font:
     weight: 100
     size: 40px
+
+.small-logo-gray
+  width: 20px
+  background:
+    image: url(../img/small-logo-gray.svg)
+    repeat: no-repeat
+    position: center
+    size: contain
+  height: 18px
+  padding: 0
+  margin: 0px 10px

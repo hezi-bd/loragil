@@ -11,13 +11,12 @@
 @import "0-tools/gradients";
 @import "0-tools/toggle";
 @import "0-tools/fonts";
-@import "0-tools/slick";
-@import "0-tools/slick-theme";
 
 //---------------------------------------
 
 @import "more-sass";
-
+@import "4-layouts/body";
+@import "4-layouts/home";
 
 //-------------------------------------
 
@@ -33,8 +32,8 @@
 @import "3-sections/home-popups";
 @import "3-sections/home-graphics";
 @import "3-sections/home-clients";
-@import "3-sections/home-mentoring";
+@import "3-sections/home-footer";
+// @import "3-sections/home-mentoring";
+//
 
-@import "4-layouts/body";
-@import "4-layouts/home";
-@import "4-layouts/home";
+// @import "4-layouts/home";

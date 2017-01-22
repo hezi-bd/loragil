@@ -26,148 +26,70 @@
       </ul>
     </div>
     <div class="clients-hr"></div>
-    <div class="col-1">
-      <ul class="clients-comment-box">
+    <div class="col-1 col-comments">
+      <div class="one-time slider">
+
         {% for post in site.categories.comments %}
-          <li class="client-comment" >
-            <a href="{{post.site-link}}" class="comment-link" target="_blank">
+        <a href="{{post.site-link}}" class="client-logo-link" target="_blank">
+        <div>
 
-            </a>
-            {{post.content}}
-          </li>
+              <div class="client-jeneral-info">
+
+                  <div class="client-exc">{{post.excerpt}}</div>
+                  <div class="client-res-about">{{post.response-about}}</div>
+
+              </div>
+
+            <div class="client-pic-info">
+              <img src="{{ site.baseurl }}/assets/img/clients/comments/{{post.pic-name}}" alt="{{post.title}}">
+              {{post.content}}
+            </div>
+        </div>
+        </a>
         {% endfor %}
-      </ul>
 
----------------------------
+      </div>
 
-<div class="carouselbox">
-  <div class="buttons">
-    <button class="prev">
-       ◀ <span class="offscreen">Previous</span>
-    </button>
-    <button class="next">
-      <span class="offscreen">Next</span> ▶
-    </button>
-  </div>
-  <ol class="content">
-    <li><a href="http://christianheilmann.com">1</a></li>
-    <li class="current"><a href="http://status.modern.ie">2</a></li>
-    <li><a href="http://developer.mozilla.org">3</a></li>
-    <li><a href="http://imgur.com/aww/">4</a></li>
-  </ol>
-</div>
+      <div class="cta">
+        <h4>
+          מעוניינים ב:
+        </h4>
+        <div class="one-time-faster slider ">
+
+          <div>
+            אתר
+          </div>
+          <div>
+            באנר
+          </div>
+          <div>
+            לוגו
+          </div>
+          <div>
+            כרטיס ביקור
+          </div>
+          <div>
+            עיצוב גרפי
+          </div>
+
+        </div>
+        <h4 class="price">
+          ורוצים לדעת מה המחיר???<br>גם אני! בואו נצא <span>מהבועה</span> מהקופסא ונברר יחד...
+        </h4>
+        <a class="e-mail-thmb" href="mailto:info@loragil.com">@</a>
+      </div>
+      <div class="wolking-man">
+        <img src="{{ site.baseurl }}/assets/img/wolking-man.png" alt="wolking man">
+      </div>
 
 
-
------------------------
 
     </div>
   </div>
 
+  <div class="clients-bottom"></div>
+
 
 
 
 </section>
-
-
-------------------------------
-
-<section class="regular2 slider">
-  <div>
-    <img src="http://placehold.it/350x300?text=1">
-  </div>
-  <div>
-    <img src="http://placehold.it/350x300?text=2">
-  </div>
-  <div>
-    <img src="http://placehold.it/350x300?text=3">
-  </div>
-  <div>
-    <img src="http://placehold.it/350x300?text=4">
-  </div>
-  <div>
-    <img src="http://placehold.it/350x300?text=5">
-  </div>
-  <div>
-    <img src="http://placehold.it/350x300?text=6">
-  </div>
-</section>
-
-<section class="center slider">
-  <div>
-    <img src="http://placehold.it/350x300?text=1">
-  </div>
-  <div>
-    <img src="http://placehold.it/350x300?text=2">
-  </div>
-  <div>
-    <img src="http://placehold.it/350x300?text=3">
-  </div>
-  <div>
-    <img src="http://placehold.it/350x300?text=4">
-  </div>
-  <div>
-    <img src="http://placehold.it/350x300?text=5">
-  </div>
-  <div>
-    <img src="http://placehold.it/350x300?text=6">
-  </div>
-  <div>
-    <img src="http://placehold.it/350x300?text=7">
-  </div>
-  <div>
-    <img src="http://placehold.it/350x300?text=8">
-  </div>
-  <div>
-    <img src="http://placehold.it/350x300?text=9">
-  </div>
-</section>
-
-<section class="variable slider">
-  <div>
-    <img src="http://placehold.it/350x300?text=1">
-  </div>
-  <div>
-    <img src="http://placehold.it/200x300?text=2">
-  </div>
-  <div>
-    <img src="http://placehold.it/100x300?text=3">
-  </div>
-  <div>
-    <img src="http://placehold.it/200x300?text=4">
-  </div>
-  <div>
-    <img src="http://placehold.it/350x300?text=5">
-  </div>
-  <div>
-    <img src="http://placehold.it/300x300?text=6">
-  </div>
-</section>
-
-<section class="lazy slider" data-sizes="50vw">
-  <div>
-    <img data-lazy="http://placehold.it/350x300?text=1-350w" data-srcset="http://placehold.it/650x300?text=1-650w 650w, http://placehold.it/960x300?text=1-960w 960w" data-sizes="100vw">
-  </div>
-  <div>
-    <img data-lazy="http://placehold.it/350x300?text=2-350w" data-srcset="http://placehold.it/650x300?text=2-650w 650w, http://placehold.it/960x300?text=2-960w 960w" data-sizes="100vw">
-  </div>
-  <div>
-    <img data-lazy="http://placehold.it/350x300?text=3-350w"  data-srcset="http://placehold.it/650x300?text=3-650w 650w, http://placehold.it/960x300?text=3-960w 960w" data-sizes="100vw">
-  </div>
-  <div>
-    <img data-lazy="http://placehold.it/350x300?text=4-350w"  data-srcset="http://placehold.it/650x300?text=4-650w 650w, http://placehold.it/960x300?text=4-960w 960w" data-sizes="100vw">
-  </div>
-  <div>
-    <img data-lazy="http://placehold.it/350x300?text=5-350w"  data-srcset="http://placehold.it/650x300?text=5-650w 650w, http://placehold.it/960x300?text=5-960w 960w" data-sizes="100vw">
-  </div>
-  <div>
-    <!-- this slide should inherit the sizes attr from the parent slider -->
-    <img data-lazy="http://placehold.it/350x300?text=6-350w"  data-srcset="http://placehold.it/650x300?text=6-650w 650w, http://placehold.it/960x300?text=6-960w 960w">
-  </div>
-</section>
-
-<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
-<script src="{{site.baseurl}}/assets/slick/slick.js" type="text/javascript" charset="utf-8"></script>
-
-
--------------------------------
