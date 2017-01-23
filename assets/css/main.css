@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /* Preload images */
 @import url("https://fonts.googleapis.com/css?family=Quantico:400,700");
+@import url("https://fonts.googleapis.com/css?family=Heebo:100,300,400,500,700,900&subset=hebrew");
 body:after {
   content: url(../img/close.png) url(../img/loading.gif) url(../img/prev.png) url(../img/next.png);
   display: none; }
@@ -1053,42 +1054,6 @@ input.cmn-toggle-round:checked + label:before {
 
 input.cmn-toggle-round:checked + label:after {
   margin-left: 60px; }
-
-@font-face {
-  font-family: 'Heebo';
-  font-style: normal;
-  font-weight: 100;
-  src: local("Heebo Thin"), local("Heebo-Thin"), url(https://fonts.gstatic.com/s/heebo/v2/YnBfxfm7kZ06RfsmhtTEcwLUuEpTyoUstqEm5AMlJo4.woff) format("woff"); }
-
-@font-face {
-  font-family: 'Heebo';
-  font-style: normal;
-  font-weight: 300;
-  src: local("Heebo Light"), local("Heebo-Light"), url(https://fonts.gstatic.com/s/heebo/v2/-hV7AwOZ4t2MiSpqgC-XnXYhjbSpvc47ee6xR_80Hnw.woff) format("woff"); }
-
-@font-face {
-  font-family: 'Heebo';
-  font-style: normal;
-  font-weight: 400;
-  src: local("Heebo"), local("Heebo-Regular"), url(https://fonts.gstatic.com/s/heebo/v2/-fUgyj2TOjJTFNJJUefs1KCWcynf_cDxXwCLxiixG1c.woff) format("woff"); }
-
-@font-face {
-  font-family: 'Heebo';
-  font-style: normal;
-  font-weight: 500;
-  src: local("Heebo Medium"), local("Heebo-Medium"), url(https://fonts.gstatic.com/s/heebo/v2/WJ6acq-h6CBJ8p9EfJWNGHYhjbSpvc47ee6xR_80Hnw.woff) format("woff"); }
-
-@font-face {
-  font-family: 'Heebo';
-  font-style: normal;
-  font-weight: 700;
-  src: local("Heebo Bold"), local("Heebo-Bold"), url(https://fonts.gstatic.com/s/heebo/v2/vTMFaUgCCf1lTAPb2BL5W3YhjbSpvc47ee6xR_80Hnw.woff) format("woff"); }
-
-@font-face {
-  font-family: 'Heebo';
-  font-style: normal;
-  font-weight: 900;
-  src: local("Heebo Black"), local("Heebo-Black"), url(https://fonts.gstatic.com/s/heebo/v2/68I0BQEi72oESKtZsJcjznYhjbSpvc47ee6xR_80Hnw.woff) format("woff"); }
 
 .landscape-only h1 {
   color: #f7921e;
