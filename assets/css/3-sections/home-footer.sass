@@ -1,2 +1,157 @@
 section.home-footer
+  padding-bottom: 0
+  position: relative
+  z-index: -1
   background: #faaf3a
+  overflow: hidden
+  background:
+    blend-mode: multiply
+    image: url("../img/loragil-bg-pattern.svg") !important
+    attachment: fixed
+
+  .me-footer
+    position: absolute
+    height: 66vh
+    background-image: url(../img/me-footer.png)
+    background-repeat: no-repeat
+    background-position: right top
+    background-size: contain
+    width: 50%
+    max-width: 466px
+    right: 0
+    margin-top: -27px
+
+    @media (min-width: 1930px)
+      background-size: cover
+      width: 60%
+      max-width: 696px
+
+  .flex--center
+    align-items: center
+    justify-content: center
+
+  .home-lead-box
+    padding-bottom: 20px
+    .big-and-small-title
+      margin-bottom: 40px
+
+      .home-lead
+        left: 0px
+        text-align: right
+        text-shadow: 0 2px 1px rgb(148, 107, 49)
+        color: #fff
+
+        .title-move
+          letter-spacing: 11px
+          @media (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm)
+            left: -1px
+
+      .small-home-lead
+        letter-spacing: 1px
+        color: #fbc363
+        background: $purple
+        display: inline
+        padding: 0 8px
+
+    p
+      text-align: justify
+      color: $darker-yellow
+      font-size: 16px
+      text-shadow: 0 1px 1px #f8d297
+
+.col-1.footer-card
+  display: flex
+.sign-off
+  margin-top: 38px
+  background: #eba537
+  padding: 10px
+  box-sizing: border-box
+  //position: absolute
+  border-radius: 5px
+  border: 1px solid #e19e34
+  border-top: solid 2px rgba(250, 186, 58, 0.53)
+  box-shadow: 0px -20px 22px -18px rgb(200, 140, 46)
+  background:
+    blend-mode: multiply
+    image: url("../img/loragil-bg-pattern.svg") !important
+    position: top center
+    size: 29%
+    repeat: repeat
+
+  h5
+    font-size: 19px
+    font-weight: normal
+    color: #f7be64
+    background: #863993
+    display: inline
+    padding: 0px 8px
+    position: relative
+    right: -11px
+    border-right: 2px solid #6d339e
+
+.footer-logo-name
+  direction: ltr
+  display: flex
+  flex-direction: row
+  font-family: 'Quantico'
+  font-size: 45px
+  color: #8e5d1f
+  text-shadow: 0 2px 2px #fac97d
+  margin-left: -10px
+
+  svg
+    width: 78px
+    height: 81px
+    position: relative
+    top: -13px
+    margin-right: -4px
+    padding-left: 10px
+    filter: drop-shadow(0px -1px 26px rgb(253, 236, 181))
+
+.bullets
+  width: calc(100% + 22px)
+  background: #863993
+  margin-right: -11px
+  padding: 10px 0
+  text-align: center
+  color: #eba537
+  font-weight: 500
+  border: solid 1px #6e2f79
+  border-bottom: solid 1px #fac23a
+  border-right: 2px solid #6d339e
+  border-left: 2px solid #6d339e
+  letter-spacing: 1px
+
+.inner-shadow
+  box-shadow: inset 0px 31px 70px 6px rgb(225, 158, 52)
+  background: #eba537
+  background:
+    blend-mode: multiply
+    image: url("../img/loragil-bg-pattern.svg") !important
+    attachment: fixed
+
+a.flex.flex--center.mailto
+  margin-top: 50px
+  padding: 20px 0
+  font-size: 40px
+  font-weight: 100
+  text-align: center
+  letter-spacing: 8px
+  text-transform: uppercase
+  font-family: 'Quantico'
+  text-shadow: 0 1px 1px #fad395
+  color: #ac7627
+
+
+  &:hover
+    background: $purple
+    color: #eba537
+    text-shadow: 0 -1px 2px #29133b
+    background:
+      blend-mode: multiply
+      image: url("../img/loragil-bg-pattern.svg") !important
+      attachment: fixed
+
+a.flex.flex--center.face-butt
+  @extend a.flex.flex--center.mailto
+  margin-top: 0
