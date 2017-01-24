@@ -99,3 +99,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f6f8', end
   background: $grad-graphic-box2; /* FF3.6-15 */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
+.footer-bg-gra{
+  background: rgb(250,175,58); /* Old browsers */
+  background: $grad-footer;
+}

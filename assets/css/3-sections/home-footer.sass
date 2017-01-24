@@ -4,12 +4,20 @@ section.home-footer
   z-index: -1
   background: #faaf3a
   overflow: hidden
+  @extend .footer-bg-gra
   background:
-    blend-mode: multiply
-    image: url("../img/loragil-bg-pattern.svg") !important
+    image: url(../img/me-footer.png), url("../img/loragil-bg-pattern.svg"), $grad-footer
+    repeat: no-repeat, repeat
     attachment: fixed
+    size: auto
+    position: right 613px, right top, center top
 
-  .me-footer
+  @media (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm)
+    background:
+      image: url(../img/me-footer.png), url("../img/loragil-bg-pattern.svg"), $grad-footer-goog
+
+
+  .me-footer2
     position: absolute
     height: 66vh
     background-image: url(../img/me-footer.png)
@@ -63,17 +71,16 @@ section.home-footer
   display: flex
 .sign-off
   margin-top: 38px
-  background: #eba537
+  background: #863993
   padding: 10px
   box-sizing: border-box
-  //position: absolute
   border-radius: 5px
-  border: 1px solid #e19e34
-  border-top: solid 2px rgba(250, 186, 58, 0.53)
-  box-shadow: 0px -20px 22px -18px rgb(200, 140, 46)
+  border: 1px solid #7e368a
+  border-top: solid 2px #ae50bd
+  box-shadow: 0px -20px 22px -18px #411c48
   background:
     blend-mode: multiply
-    image: url("../img/loragil-bg-pattern.svg") !important
+    image: url(../img/loragil-bg-pattern.svg) !important
     position: top center
     size: 29%
     repeat: repeat
@@ -81,7 +88,7 @@ section.home-footer
   h5
     font-size: 19px
     font-weight: normal
-    color: #f7be64
+    color: #ffb917
     background: #863993
     display: inline
     padding: 0px 8px
@@ -95,8 +102,8 @@ section.home-footer
   flex-direction: row
   font-family: 'Quantico'
   font-size: 45px
-  color: #8e5d1f
-  text-shadow: 0 2px 2px #fac97d
+  color: #ed9a13
+  text-shadow: 0 2px 2px #54255c
   margin-left: -10px
 
   svg
@@ -110,11 +117,11 @@ section.home-footer
 
 .bullets
   width: calc(100% + 22px)
-  background: #863993
+  background: #ec9912
   margin-right: -11px
   padding: 10px 0
   text-align: center
-  color: #eba537
+  color: #863993
   font-weight: 500
   border: solid 1px #6e2f79
   border-bottom: solid 1px #fac23a
@@ -122,7 +129,7 @@ section.home-footer
   border-left: 2px solid #6d339e
   letter-spacing: 1px
 
-.inner-shadow
+.inner-shadow2
   box-shadow: inset 0px 31px 70px 6px rgb(225, 158, 52)
   background: #eba537
   background:
@@ -141,16 +148,25 @@ a.flex.flex--center.mailto
   font-family: 'Quantico'
   text-shadow: 0 1px 1px #fad395
   color: #ac7627
+  transition: all 0.4s ease-in-out
+  filter: alpha(opacity=0)
+  background:
+    blend-mode: multiply
+    image: url("../img/loragil-bg-pattern.svg") !important
+    attachment: fixed !important
+    position: right top !important
 
 
   &:hover
     background: $purple
     color: #eba537
     text-shadow: 0 -1px 2px #29133b
-    background:
+    filter: alpha(opacity=100)
+    //background:
       blend-mode: multiply
       image: url("../img/loragil-bg-pattern.svg") !important
       attachment: fixed
+      position: top center
 
 a.flex.flex--center.face-butt
   @extend a.flex.flex--center.mailto
