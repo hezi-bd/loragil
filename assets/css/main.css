@@ -1854,39 +1854,33 @@ section.youtube {
           top: 150px; }
         .home-sections section.abilities .flex--center .col-first .rocket-box:nth-child(1) h4 {
           height: 312px;
-          line-height: 5;
-          font-size: 24px; } }
+          line-height: 5; } }
         @media (max-width: 640px) and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
           .home-sections section.abilities .flex--center .col-first .rocket-box:nth-child(1) h4 {
             height: 292px;
-            line-height: 5;
-            font-size: 24px; } }
+            line-height: 5; } }
 
 @media (max-width: 640px) {
         .home-sections section.abilities .flex--center .col-first .rocket-box:nth-child(2)::before {
           top: 80px; }
         .home-sections section.abilities .flex--center .col-first .rocket-box:nth-child(2) h4 {
           height: 334px;
-          line-height: 5.5;
-          font-size: 22px; } }
+          line-height: 5.5; } }
         @media (max-width: 640px) and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
           .home-sections section.abilities .flex--center .col-first .rocket-box:nth-child(2) h4 {
             height: 314px;
-            line-height: 5.5;
-            font-size: 22px; } }
+            line-height: 5.5; } }
 
 @media (max-width: 640px) {
         .home-sections section.abilities .flex--center .col-first .rocket-box:nth-child(3)::before {
           top: 154px; }
         .home-sections section.abilities .flex--center .col-first .rocket-box:nth-child(3) h4 {
           height: 292px;
-          line-height: 5.3;
-          font-size: 23px; } }
+          line-height: 5.3; } }
         @media (max-width: 640px) and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
           .home-sections section.abilities .flex--center .col-first .rocket-box:nth-child(3) h4 {
             height: 272px;
-            line-height: 5.3;
-            font-size: 23px; } }
+            line-height: 5.3; } }
 
 @media (max-width: 640px) {
       .home-sections section.abilities .flex--center .col-last {
@@ -1898,14 +1892,12 @@ section.youtube {
         .home-sections section.abilities .flex--center .col-last .rocket-box:nth-child(1) h4 {
           height: 543px;
           top: -145px !important;
-          line-height: 5.4;
-          font-size: 21px; } }
+          line-height: 5.4; } }
         @media (max-width: 640px) and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
           .home-sections section.abilities .flex--center .col-last .rocket-box:nth-child(1) h4 {
             height: 523px;
             top: -126px !important;
-            line-height: 5.4;
-            font-size: 21px; } }
+            line-height: 5.4; } }
 
 @media (max-width: 640px) {
         .home-sections section.abilities .flex--center .col-last .rocket-box:nth-child(2) {
@@ -1913,26 +1905,22 @@ section.youtube {
           .home-sections section.abilities .flex--center .col-last .rocket-box:nth-child(2) h4 {
             height: 322px;
             bottom: 0;
-            font-size: 22px;
             line-height: 5.6; } }
           @media (max-width: 640px) and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
             .home-sections section.abilities .flex--center .col-last .rocket-box:nth-child(2) h4 {
               height: 322px;
               bottom: 0;
-              font-size: 22px;
               line-height: 5.6; } }
 
 @media (max-width: 640px) {
         .home-sections section.abilities .flex--center .col-last .rocket-box:nth-child(3) h4 {
           height: 413px;
           bottom: 0;
-          font-size: 22px;
           line-height: 5.9; } }
         @media (max-width: 640px) and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
           .home-sections section.abilities .flex--center .col-last .rocket-box:nth-child(3) h4 {
             height: 393px;
             bottom: 0;
-            font-size: 22px;
             line-height: 5.6; } }
 
 @media (max-width: 640px) {
