@@ -1983,6 +1983,9 @@ section.youtube {
     display: -ms-flexbox;
     display: flex;
     max-width: 100%; }
+    @media (max-width: 640px) {
+      .home-sections section.sites-view .home-lead-title {
+        top: 88px; } }
     .home-sections section.sites-view .home-lead-title .home-lead-box {
       width: 230px;
       text-align: -webkit-left; }
@@ -2023,7 +2026,7 @@ section.youtube {
     position: relative;
     width: 100vw;
     overflow: hidden;
-    height: 1062px;
+    height: 1122px;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-align: center;
@@ -2032,6 +2035,9 @@ section.youtube {
         flex-direction: column;
     padding: 0 25px;
     box-sizing: border-box; }
+    @media (max-width: 640px) {
+      .home-sections section.sites-view .hands-box {
+        height: 1020px; } }
     .home-sections section.sites-view .hands-box.wide {
       -webkit-transform: rotate(0deg);
               transform: rotate(0deg); }
@@ -2053,6 +2059,9 @@ section.youtube {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: left top; }
+    @media (max-width: 640px) {
+      .home-sections section.sites-view .sites-box-frame {
+        margin-top: 230px; } }
   .home-sections section.sites-view .hands-box::before {
     z-index: 15;
     position: absolute;
@@ -2152,6 +2161,16 @@ ul.ul-caro {
           justify-content: space-around; }
       ul.ul-caro li {
         margin: 10px; } }
+  @media (max-width: 640px) {
+    ul.ul-caro li.caro-thumb {
+      background-image: url(../img/small-logo-gray.svg) !important;
+      background-size: 24px !important;
+      width: 36px !important;
+      height: 35px !important;
+      box-shadow: 0px 0px 0px 2px #e49d2d !important;
+      background: #fbb03b; }
+      ul.ul-caro li.caro-thumb.thumb-on, ul.ul-caro li.caro-thumb:hover {
+        box-shadow: inset 0px 1px 10px 0px #815615 !important; } }
   ul.ul-caro li.caro-thumb {
     width: 114px;
     height: 70px;
@@ -2193,6 +2212,10 @@ ul.ul-caro {
     .sites-box-info {
       right: 28px;
       width: calc(100% - 50px); } }
+  @media (max-width: 640px) {
+    .sites-box-info {
+      top: -230px;
+      right: 25px; } }
   .sites-box-info .site-view-sites {
     max-width: 960px;
     height: 540px;
@@ -2248,8 +2271,7 @@ ul.ul-caro {
     font-weight: 400;
     color: #fbb03c; }
   .sites-box-info p {
-    padding: 0;
-    line-height: 0px; }
+    padding: 0; }
   .sites-box-info a {
     background: #707070;
     color: #fff;
@@ -2450,37 +2472,55 @@ ul.ul-banners {
           justify-content: center; }
       ul.ul-banners li {
         margin: 10px; } }
-  ul.ul-banners li .caro-banner-thumb {
-    width: 143px;
-    height: 105px;
-    background-position: center;
-    background-size: cover;
-    cursor: pointer;
+
+@media (max-width: 640px) {
+  .ul-banners li .tablinks {
+    background-image: url(../img/small-logo-gray.svg) !important;
+    background-size: 24px !important;
+    width: 36px !important;
+    height: 35px !important;
+    box-shadow: 0px 0px 0px 2px #e49d2d !important;
+    background: #fbb03b;
     background-repeat: no-repeat;
     background-blend-mode: luminosity;
-    border-radius: 2px;
-    border: solid 2px #7d7a7e;
-    margin: 4px;
-    box-sizing: border-box;
-    opacity: 0.7;
-    transition: all 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95); }
-    ul.ul-banners li .caro-banner-thumb .tabcontent, ul.ul-banners li .caro-banner-thumb .sites-box-info .site-view-mobile, .sites-box-info ul.ul-banners li .caro-banner-thumb .site-view-mobile {
-      background: #fff;
-      padding: 20px;
-      min-width: 410px;
-      min-height: 410px; }
-      ul.ul-banners li .caro-banner-thumb .tabcontent img, ul.ul-banners li .caro-banner-thumb .sites-box-info .site-view-mobile img, .sites-box-info ul.ul-banners li .caro-banner-thumb .site-view-mobile img {
-        margin: auto;
-        display: -ms-flexbox;
-        display: flex; }
-    ul.ul-banners li .caro-banner-thumb.thumb-on, ul.ul-banners li .caro-banner-thumb:hover {
-      box-shadow: inset 0px 3px 10px 0px rgba(50, 50, 50, 0.75);
-      opacity: 1;
-      transition: all 0.6s cubic-bezier(0.445, 0.05, 0.55, 0.95); }
-    ul.ul-banners li .caro-banner-thumb.thumb-on .sites-box-info {
-      transition: all 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-      opacity: 1;
-      display: block; }
+    background-position: center center;
+    border-radius: 5px; }
+    .ul-banners li .tablinks img {
+      display: none !important; }
+    .ul-banners li .tablinks.thumb-on, .ul-banners li .tablinks:hover {
+      box-shadow: inset 0px 1px 10px 0px #815615 !important; } }
+
+.ul-banners li .tablinks .caro-banner-thumb {
+  width: 143px;
+  height: 105px;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-blend-mode: luminosity;
+  border-radius: 2px;
+  border: solid 2px #7d7a7e;
+  margin: 4px;
+  box-sizing: border-box;
+  opacity: 0.7;
+  transition: all 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95); }
+  .ul-banners li .tablinks .caro-banner-thumb .tabcontent, .ul-banners li .tablinks .caro-banner-thumb .sites-box-info .site-view-mobile, .sites-box-info .ul-banners li .tablinks .caro-banner-thumb .site-view-mobile {
+    background: #fff;
+    padding: 20px;
+    min-width: 410px;
+    min-height: 410px; }
+    .ul-banners li .tablinks .caro-banner-thumb .tabcontent img, .ul-banners li .tablinks .caro-banner-thumb .sites-box-info .site-view-mobile img, .sites-box-info .ul-banners li .tablinks .caro-banner-thumb .site-view-mobile img {
+      margin: auto;
+      display: -ms-flexbox;
+      display: flex; }
+  .ul-banners li .tablinks .caro-banner-thumb.thumb-on, .ul-banners li .tablinks .caro-banner-thumb:hover {
+    box-shadow: inset 0px 3px 10px 0px rgba(50, 50, 50, 0.75);
+    opacity: 1;
+    transition: all 0.6s cubic-bezier(0.445, 0.05, 0.55, 0.95); }
+  .ul-banners li .tablinks .caro-banner-thumb.thumb-on .sites-box-info {
+    transition: all 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    opacity: 1;
+    display: block; }
 
 ul.banner-view {
   list-style: none;

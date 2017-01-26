@@ -18,6 +18,8 @@
     top: 148px
     display: flex
     max-width: 100%
+    @media (max-width: 640px)
+      top: 88px
 
     .home-lead-box
       width: 230px
@@ -60,7 +62,7 @@
     position: relative
     width: 100vw
     overflow: hidden
-    height: 1062px
+    height: 1122px
     //top: 58px
     //margin-bottom: 42px
     display: flex
@@ -68,8 +70,8 @@
     flex-direction: column
     padding: 0 25px
     box-sizing: border-box
-    @media (max-width: 800px)
-      //height: 1256px
+    @media (max-width: 640px)
+      height: 1020px
 
     &.wide
       transform: rotate(0deg)
@@ -96,11 +98,8 @@
       size: contain
       position: left top
 
-
-
-
-
-
+    @media (max-width: 640px)
+      margin-top: 230px
 
   .hands-box::before
     z-index: 15
@@ -208,6 +207,18 @@ ul.ul-caro
     li
       margin: 10px
 
+  @media (max-width: 640px)
+    li.caro-thumb
+      background-image: url(../img/small-logo-gray.svg) !important
+      background-size: 24px !important
+      width: 36px !important
+      height: 35px !important
+      box-shadow: 0px 0px 0px 2px #e49d2d !important
+      background: #fbb03b
+
+      &.thumb-on, &:hover
+        box-shadow:  inset 0px 1px 10px 0px #815615 !important
+
 
   li.caro-thumb
     //position: absolute
@@ -257,6 +268,9 @@ ul.ul-caro
   @media (max-width: 1010px)
     right: 28px
     width: calc(100% - 50px)
+  @media (max-width: 640px)
+    top: -230px
+    right: 25px
 
   .site-view-sites
     max-width: 960px
@@ -316,7 +330,7 @@ ul.ul-caro
 
   p
     padding: 0
-    line-height: 0px
+    //line-height: 0px
   a
     background: #707070
     color: #fff
