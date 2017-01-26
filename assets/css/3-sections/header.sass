@@ -185,6 +185,7 @@
       &.is-open span
         background: transparent
 
+
         &::before, &::after
           transform-origin: center
           transform: rotate(45deg)
@@ -201,6 +202,12 @@
     padding: 30px 0 20px
     transform: translateY(calc(-100% + 90px))
     transition: all 0.2s ease-in-out
+    z-index: 10
+    background: rgb(72, 39, 106)
+    font-size: 25px
+    opacity: 0
+    &.is-open
+      opacity: 1
 
 
 
