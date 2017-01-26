@@ -1163,15 +1163,16 @@ body {
       body .home-lead {
         left: -32px;
         position: relative; } }
-  @media only screen and (min-width: 321px) and (max-device-width: 568px) and (orientation: landscape) {
-    body {
-      background-image: url(../img/loragil-bg-pattern2.svg);
-      background-position: top center; }
-      body div.home-sections {
-        display: none; }
-      body div.landscape-only {
-        display: block;
-        text-align: center; } }
+
+@media only screen and (min-width: 321px) and (max-device-width: 568px) and (orientation: landscape) {
+  body {
+    background-image: url(../img/loragil-bg-pattern2.svg);
+    background-position: top center; }
+    body div.home-sections {
+      display: none; }
+    body div.landscape-only {
+      display: block;
+      text-align: center; } }
 
 .home-wrap {
   min-height: 100vh; }
@@ -2037,7 +2038,7 @@ section.youtube {
     box-sizing: border-box; }
     @media (max-width: 640px) {
       .home-sections section.sites-view .hands-box {
-        height: 1020px; } }
+        height: 904px; } }
     .home-sections section.sites-view .hands-box.wide {
       -webkit-transform: rotate(0deg);
               transform: rotate(0deg); }
@@ -2061,7 +2062,8 @@ section.youtube {
     background-position: left top; }
     @media (max-width: 640px) {
       .home-sections section.sites-view .sites-box-frame {
-        margin-top: 230px; } }
+        margin-top: 230px;
+        height: 457px; } }
   .home-sections section.sites-view .hands-box::before {
     z-index: 15;
     position: absolute;
@@ -2155,6 +2157,9 @@ ul.ul-caro {
   bottom: -100%;
   right: 0;
   left: 0; }
+  @media (max-width: 640px) {
+    ul.ul-caro {
+      top: -196px; } }
   @media (max-width: 800px) {
     ul.ul-caro {
       -ms-flex-pack: distribute;
@@ -2168,7 +2173,8 @@ ul.ul-caro {
       width: 36px !important;
       height: 35px !important;
       box-shadow: 0px 0px 0px 2px #e49d2d !important;
-      background: #fbb03b; }
+      background: #fbb03b;
+      background-blend-mode: multiply; }
       ul.ul-caro li.caro-thumb.thumb-on, ul.ul-caro li.caro-thumb:hover {
         box-shadow: inset 0px 1px 10px 0px #815615 !important; } }
   ul.ul-caro li.caro-thumb {
@@ -2214,7 +2220,7 @@ ul.ul-caro {
       width: calc(100% - 50px); } }
   @media (max-width: 640px) {
     .sites-box-info {
-      top: -230px;
+      top: 87px;
       right: 25px; } }
   .sites-box-info .site-view-sites {
     max-width: 960px;
@@ -2226,7 +2232,7 @@ ul.ul-caro {
     margin-top: 0;
     position: absolute;
     background: #e9e9ea;
-    bottom: 146px;
+    bottom: 233px;
     right: 0px;
     border: solid 2px #e2bfaf;
     overflow: scroll;
@@ -2237,6 +2243,9 @@ ul.ul-caro {
     opacity: 1;
     -webkit-transform-origin: center;
             transform-origin: center; }
+    @media (max-width: 640px) {
+      .sites-box-info .site-view-sites {
+        height: 476px; } }
     .sites-box-info .site-view-sites img {
       display: block;
       border-bottom-left-radius: 5px;
@@ -2301,6 +2310,10 @@ ul.ul-caro {
     bottom: 208px;
     right: 350px;
     background: #e9e9ea; }
+    @media (max-width: 640px) {
+      .rotate .sites-box-info .site-view-sites {
+        right: calc(50% - 128px);
+        bottom: 244px; } }
     .rotate .sites-box-info .site-view-sites img {
       display: none; }
   .rotate .sites-box-info .site-view-mobile {
@@ -2313,6 +2326,10 @@ ul.ul-caro {
     @media (max-width: 1000px) {
       .rotate .sites-box-info .site-view-mobile {
         right: calc(50% - 133px); } }
+    @media (max-width: 640px) {
+      .rotate .sites-box-info .site-view-mobile {
+        right: calc(50% - 128px);
+        bottom: 244px; } }
 
 .home-sections section.sites-view .hands-box.box-rotate {
   z-index: 0; }
@@ -2338,7 +2355,7 @@ ul.ul-caro {
     width: 255px;
     height: 456px;
     border-radius: 35px;
-    margin-top: 370px;
+    margin-top: 220px;
     position: relative;
     z-index: 10;
     transition: all 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95); }
