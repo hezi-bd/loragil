@@ -4,6 +4,10 @@ body
   background:
     image: url(../img/loragil-bg-pattern.svg) !important
     position: top center
+    color: rgba(255, 255, 255, 0)!important
+    blend-mode: multiply !important
+
+  +transition(all 0.4s $ease-in-out-sine)
 
   .landscape-only
     display: none
@@ -30,12 +34,18 @@ body
 @media only screen and (min-width : 321px) and (max-device-width : 568px) and (orientation : landscape)
   body
     background:
-      image: url(../img/loragil-bg-pattern2.svg)
-      position: top center
+      color: $purple !important
 
-    div.home-sections
+    .home-sections, .home-wrap .mobile-nav, header
       display: none
 
-    div.landscape-only
+    .home-wrap
+      display: flex
+      flex-direction: column
+      justify-content: center
+      padding: 20px 50px
+      direction: rtl
+
+    .landscape-only
       display: block
       text-align: center

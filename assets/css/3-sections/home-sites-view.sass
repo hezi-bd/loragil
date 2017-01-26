@@ -100,10 +100,10 @@
 
     @media (max-width: 640px)
       margin-top: 230px
-      height: 457px
+      height: 437px
 
   .hands-box::before
-    z-index: 15
+    z-index: 16
     position: absolute
     top: 104px
     left: calc(50% + 250px)
@@ -116,7 +116,7 @@
       size: 720px
       position: left top
 
-    filter: drop-shadow(0px 8px 6px rgba(183,183,183,0.9))
+    filter: drop-shadow(0px 8px 6px rgba(3, 3, 3, 0.2))
 
     +transition(all 0.4s $ease-in-out-sine)
     transform-origin: left
@@ -131,7 +131,7 @@
     transform-origin: right
     position: absolute
     z-index: 15
-    bottom: -170px
+    bottom: -111px
     right: calc(50% + 260px)
     height: 519px
     width: 100%
@@ -141,7 +141,7 @@
       repeat: no-repeat
       size: 697px
       position: right bottom
-    filter: drop-shadow(0px 8px 6px rgba(183,183,183,0.9))
+    filter: drop-shadow(0px 8px 6px rgba(3, 3, 3, 0.2))
 
     @media (max-width: 900px)
       display: none
@@ -260,10 +260,10 @@ ul.ul-caro
   padding: 15px 15px
   box-sizing: border-box
   position: absolute
-  top: -150px
+  top: -193px
   right: calc(50% - 480px)
   z-index: -10
-  height: 126px
+  height: 156px
   padding-top: 5px
   +transition(all 0.2s $ease-in-out-sine)
   opacity: 0
@@ -288,7 +288,7 @@ ul.ul-caro
     margin-top: 0
     position: absolute
     background: rgb(233, 233, 234)
-    bottom: 233px
+    bottom: 193px
     right: 0px
     border: solid 2px #e2bfaf
     overflow: scroll
@@ -298,7 +298,9 @@ ul.ul-caro
     opacity: 1
     transform-origin: center
     @media (max-width: 640px)
-      height: 476px
+      height: 457px
+      bottom: 284px
+
 
     img
       display: block
@@ -360,7 +362,7 @@ ul.ul-caro
 .rotate
 
   .sites-box-info
-    background: rgba(236, 236, 236, 0.9)
+    background: rgba(236, 236, 236, 0.8)
 
     .site-view-sites
       width: 255px
@@ -383,7 +385,7 @@ ul.ul-caro
       display: block
       height: 456px
       opacity: 1
-      bottom: 208px
+      bottom: 238px
       img
         display: block
 
@@ -392,7 +394,7 @@ ul.ul-caro
 
       @media (max-width: 640px)
         right: calc(50% - 128px)
-        bottom: 244px
+        bottom: 274px
 
 
 
@@ -401,18 +403,18 @@ ul.ul-caro
   &.box-rotate
     z-index: 0
     &::before
-      transform: rotate(86deg)
-      top: -36px
-      left: calc(50% + 228px)
-      height: 823px
+      transform: rotate(90deg)
+      top: -47px
+      left: calc(50% + 205px)
+      height: 863px
       width: 744px
       background-size: 1450px
       +transition(all 0.2s $ease-in-out-sine)
 
     &::after
-      transform: rotate(81deg)
-      bottom: -326px
-      right: calc(50% + 294px)
+      transform: rotate(85deg)
+      bottom: -276px
+      right: calc(50% + 298px)
       width: 932px
       background-size: 1407px
       height: 1050px
@@ -423,7 +425,10 @@ ul.ul-caro
       width: 255px
       height: 456px
       border-radius: 35px
-      margin-top: 220px
+      margin-top: 400px
       position: relative
       z-index: 10
       +transition(all 0.2s $ease-in-out-sine)
+
+      @media (max-width: 640px)
+        margin-top: 221px

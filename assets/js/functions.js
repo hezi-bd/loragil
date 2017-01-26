@@ -60,7 +60,7 @@ function timerModule (options) {
 
             stopTimer();
             start();
-        }, (settings.interval * 1000));
+        }, (settings.interval * 10000));
     }
 
     function stopTimer () {
