@@ -9,6 +9,9 @@ section.clients .clients-hr
     position: relative
     z-index: -1
 
+    @media (max-width: 640px)
+      display: none
+
 .home-sections section.clients
   background: rgba(249, 249, 249, 0.8)
   padding-top: 0
@@ -18,9 +21,14 @@ section.clients .clients-hr
   z-index: 0
   padding-bottom: 0
 
+  @media (max-width: 640px)
+    margin-top: 106px
+
   .col-1
     padding-top: 130px
     padding-bottom: 0
+    @media (max-width: 640px)
+      margin-bottom: 60px
   .home-lead-box
     margin-bottom: 50px
     .home-lead
@@ -32,11 +40,17 @@ section.clients .clients-hr
       text-shadow: 0 1px 0 $light-orange
       @media (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm)
         left: 2px
+      @media (max-width: 640px)
+        width: 100%
+        text-align: center
 
     .small-home-lead.orange-type
       letter-spacing: 3.5px
       color: $gray
       font-weight: 400
+      @media (max-width: 640px)
+        width: 100%
+        text-align: center
 
   ul.clients-logos-box
     list-style-type: none
@@ -47,6 +61,8 @@ section.clients .clients-hr
     flex-direction: row
     justify-content: space-around
     flex-wrap: wrap
+    @media (max-width: 640px)
+      margin-right: 0
 
     li
       margin: 20px 10px
@@ -83,6 +99,10 @@ section.clients .clients-hr
 
   .col-comments
     padding-top: 0
+    position: relative
+
+    @media (max-width: 640px)
+      margin-bottom: 0
 
     &::before
       position: absolute
@@ -97,15 +117,8 @@ section.clients .clients-hr
         size: contain
         repeat: no-repeat
 
-    // &::after
-    //   @extend .small-logo-gray
-    //   content: ''
-    //   position: absolute
-    //   top: -12px
-    //   margin-right: -3px
-    //   width: 37px
-    //   height: 34px
-    //   background-image: url(../img/small-logo-orange.svg)
+      @media (max-width: 640px)
+        margin-right: 0
 
     .client-exc
       font-size: 22px
@@ -131,11 +144,14 @@ section.clients .clients-hr
 
       .slick-prev, .slick-next
         top: 138px
-
+        @media (max-width: 640px)
+          top: 118px
 
       .slick-prev
         left: 45px
         z-index: 100
+
+
         &::before
           color: #c3892d
 
@@ -158,6 +174,9 @@ section.clients .clients-hr
         height: 314px
         justify-content: space-between
 
+        @media (max-width: 640px)
+          height: 334px
+
 
 
         .client-pic-info
@@ -165,6 +184,8 @@ section.clients .clients-hr
           flex-direction: row-reverse
           align-items: center
           margin-top: 134px
+          @media (max-width: 640px)
+            margin-top: 154px
 
           p
             direction: rtl
@@ -201,6 +222,8 @@ section.clients .clients-hr
       repeat: no-repeat
     color: #fff
     position: relative
+    @media (max-width: 640px)
+      height: 362px
 
     .one-time-faster
       margin: 0 auto
@@ -274,173 +297,9 @@ section.clients .clients-hr
   position: relative
   z-index: -1
   bottom: -52px
+  @media (max-width: 640px)
+    background:
+      position-x: 56%
 
 
 // ---------------------------------
-
-
-
-
-
-
-
-
-
-
-
-.section-clients
-  position: relative
-
-.clients-belt
-  width: 100%
-  position: relative
-
-  .client-unit
-    max-width: 750px
-    margin: 50px auto
-    position: relative
-    z-index: 1
-    display: none
-
-    &.active-client
-      +display(flex)
-      //@extend %#{$animation}
-
-    .client-face
-      min-width: 180px
-      text-align: center
-
-      img
-        max-width: 100px
-        border-radius: 50%
-
-
-      .client-name
-        display: block
-        text-transform: uppercase
-        font-weight: 400
-        letter-spacing: 1px
-
-      .client-title
-        font-style: normal
-        font-size: 12px
-        color: #999
-
-    .client-content
-      font-size: 18px
-      line-height: 36px
-      font-weight: 300
-      margin-top: -10px
-      position: relative
-
-
-
-
-// Logos
-.clients-logos
-  position: relative
-  z-index: 3
-  max-width: 750px
-  margin: 0px auto 100px
-  +display(flex)
-  +align-items(flex-end)
-  +justify-content(space-around)
-
-
-  .client-logo
-    cursor: pointer
-    margin: 0 20px 20px
-    padding-bottom: 20px
-    border-bottom: 4px solid transparent
-    opacity: 0.5
-
-    &.active-client
-      opacity: 1
-      //border-bottom: 4px solid $accent
-
-
-.client-quote-mark
-  +position(absolute, -18px null null -15px)
-  +size(60px)
-  z-index: -1
-  opacity: 0.3
-
-  path
-    //fill: $accent
-
-
-
-// Controls
-.client-controls
-  +position(absolute, 0px 0px 0px 0px)
-  z-index: 2
-
-  > div
-    +size(40px)
-    margin-top: -20px
-    cursor: pointer
-
-    path
-      //fill: $accent
-
-  .client-control-next
-    +position(absolute, 50% 10px null null)
-
-  .client-control-prev
-    +position(absolute, 50% null null 10px)
-
-// clients-mobile-nav
-.clients-mobile-nav
-  text-align: center
-  position: relative
-  z-index: 3
-  display: none
-
-  span
-    display: inline-block
-    +size(16px)
-    border-radius: 50%
-    //border: solid 2px $bgcolor
-    margin: 0px 10px
-    cursor: pointer
-
-    &.active-client
-      //border-color: $accent
-
-
-
-
-@media (max-width: 850px)
-  .clients-logos
-    +flex-wrap(wrap)
-
-  .clients-belt
-    overflow-x: hidden
-
-    .client-unit.active-client
-      display: block
-      position: relative
-      margin-left: auto
-      left: auto
-
-      .client-face
-        margin-bottom: 30px
-
-      .client-content
-        padding: 0px 30px
-        max-width: 400px
-        margin: 0px auto
-
-      .client-quote-mark
-        left: 6px
-
-  .clients-logos
-    display: none
-
-  .clients-mobile-nav
-    display: block
-
-
-@media (max-width: 600px)
-  .client-controls
-    display: none

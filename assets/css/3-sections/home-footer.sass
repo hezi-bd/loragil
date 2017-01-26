@@ -16,6 +16,9 @@ section.home-footer
     background:
       image: url(../img/me-footer.png), url("../img/loragil-bg-pattern.svg"), $grad-footer-goog
 
+  @media (max-width: 640px)
+    background-position: 140px -48px, right top, center 545px
+
 
   .me-footer2
     position: absolute
@@ -85,6 +88,10 @@ section.home-footer
     size: 29%
     repeat: repeat
 
+  @media (max-width: 640px)
+    width: 100%
+    margin-top: 0
+
   h5
     font-size: 19px
     font-weight: normal
@@ -129,13 +136,17 @@ section.home-footer
   border-left: 2px solid #6d339e
   letter-spacing: 1px
 
-.inner-shadow2
-  box-shadow: inset 0px 31px 70px 6px rgb(225, 158, 52)
-  background: #eba537
-  background:
-    blend-mode: multiply
-    image: url("../img/loragil-bg-pattern.svg") !important
-    attachment: fixed
+.inner-shadow
+  @media (max-width: 640px)
+    margin-top: 20px
+  // box-shadow: inset 0px 31px 70px 6px rgb(225, 158, 52)
+  // background: #eba537
+  // background:
+  //   blend-mode: multiply
+  //   image: url("../img/loragil-bg-pattern.svg") !important
+  //   attachment: fixed
+
+
 
 a.flex.flex--center.mailto
   margin-top: 50px
@@ -155,6 +166,13 @@ a.flex.flex--center.mailto
     image: url("../img/loragil-bg-pattern.svg") !important
     attachment: fixed !important
     position: right top !important
+
+  @media (max-width: 640px)
+    margin-top: 0px
+    font-size: 29px
+    font-weight: 600
+    letter-spacing: 2px
+    width: 100%
 
 
   &:hover
