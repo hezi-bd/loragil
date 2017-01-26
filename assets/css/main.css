@@ -2517,7 +2517,7 @@ ul.ul-banners {
     box-shadow: 0px 0px 0px 2px #e49d2d !important;
     background: #fbb03b;
     background-repeat: no-repeat;
-    background-blend-mode: luminosity;
+    background-blend-mode: multiply;
     background-position: center center;
     border-radius: 5px;
     padding: 10px 20px; }
@@ -2688,7 +2688,12 @@ ul.tab li {
     list-style: none;
     transition: all 0.4s ease-in-out;
     background-position: center;
-    background-image: none; }
+    background-image: none;
+    background-size: contain;
+    background-repeat: no-repeat; }
+    @media (max-width: 640px) {
+      .home-sections section.graphics ul.thumb-botts-box {
+        height: 610px; } }
     .home-sections section.graphics ul.thumb-botts-box::before {
       content: '';
       max-width: 770px;
@@ -2700,6 +2705,9 @@ ul.tab li {
       background-position: center;
       background-size: contain;
       background-repeat: no-repeat; }
+      @media (max-width: 640px) {
+        .home-sections section.graphics ul.thumb-botts-box::before {
+          height: 320px; } }
     .home-sections section.graphics ul.thumb-botts-box li {
       position: absolute;
       color: transparent;
@@ -2744,6 +2752,9 @@ ul.tab li {
         height: 142px;
         background-image: url(../img/thumb-bott.png);
         background-position: 52% top; }
+        @media (max-width: 640px) {
+          .home-sections section.graphics ul.thumb-botts-box li:nth-child(1) {
+            right: calc(50% - 126px); } }
         .home-sections section.graphics ul.thumb-botts-box li:nth-child(1) .thumb-print {
           width: 255px;
           height: 142px; }
@@ -2772,6 +2783,10 @@ ul.tab li {
         background-image: url(../img/thumb-bott.png);
         background-position: 50% top;
         transition: all 0.4s ease-in-out; }
+        @media (max-width: 640px) {
+          .home-sections section.graphics ul.thumb-botts-box li:nth-child(2) {
+            right: -19%;
+            top: 28%; } }
         .home-sections section.graphics ul.thumb-botts-box li:nth-child(2) .thumb-print::after {
           content: 'איור';
           right: 42%;
@@ -2802,6 +2817,11 @@ ul.tab li {
         height: 132px;
         background-image: url(../img/thumb-bott-r.png);
         background-position: 54% top; }
+        @media (max-width: 640px) {
+          .home-sections section.graphics ul.thumb-botts-box li:nth-child(3) {
+            right: -10%;
+            -webkit-transform: rotate(-6deg);
+                    transform: rotate(-6deg); } }
         .home-sections section.graphics ul.thumb-botts-box li:nth-child(3) a.pics-box {
           bottom: -14px;
           left: 31%; }
@@ -2830,6 +2850,11 @@ ul.tab li {
         height: 132px;
         background-image: url(../img/thumb-bott-l.png);
         background-position: 54% top; }
+        @media (max-width: 640px) {
+          .home-sections section.graphics ul.thumb-botts-box li:nth-child(4) {
+            left: -19%;
+            -webkit-transform: rotate(5deg);
+                    transform: rotate(5deg); } }
         .home-sections section.graphics ul.thumb-botts-box li:nth-child(4) a.pics-box {
           bottom: -14px;
           left: 31%; }

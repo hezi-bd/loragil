@@ -76,6 +76,10 @@
     background:
       position: center
       image: none
+      size: contain
+      repeat: no-repeat
+    @media (max-width: 640px)
+      height: 610px
 
 
 
@@ -92,6 +96,9 @@
         position: center
         size: contain
         repeat: no-repeat
+
+      @media (max-width: 640px)
+        height: 320px
 
     li
       position: absolute
@@ -148,6 +155,10 @@
         top: -20px
         width: 255px
         height: 142px
+
+        @media (max-width: 640px)
+          right: calc(50% - 126px)
+
         background:
           image: url(../img/thumb-bott.png)
           position: 52% top
@@ -191,6 +202,11 @@
           position: 50% top
         transition: all 0.4s ease-in-out
 
+        @media (max-width: 640px)
+          right: -19%
+          top: 28%
+
+
         .thumb-print::after
           content: 'איור'
           right: 42%
@@ -229,6 +245,10 @@
         background:
           image: url(../img/thumb-bott-r.png)
           position: 54% top
+
+        @media (max-width: 640px)
+          right: -10%
+          transform: rotate(-6deg)
 
         a.pics-box
           bottom: -14px
@@ -270,6 +290,10 @@
         background:
           image: url(../img/thumb-bott-l.png)
           position: 54% top
+
+        @media (max-width: 640px)
+          left: -19%
+          transform: rotate(5deg)
 
         a.pics-box
           bottom: -14px
