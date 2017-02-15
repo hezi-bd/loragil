@@ -1,9 +1,9 @@
 #-------------------------------
 # General Site Settings
 
-title: Artists Theme
-description: Thinker // Designer // YouTuber
-email: devtipsfordesigners@gmail.com
+title: Think Loragil | Hezi Ben-David
+description: Thinker // Designer // Loragil
+email: hezi.bd@gmail.com
 
 # NOTE: The Logo and Background image are defined in the all.sass document.
 
@@ -19,9 +19,9 @@ menu:
 # NOTE: Providing SEO information will make this website more searchable on the internet.
 
 seo:
-  description: 'Provide a description for your website to make it visible to search engines.'
-  rel-author: 'https://plus.google.com/u/0/+DevTipsForDesigners/'
-  rel-publisher: 'https://plus.google.com/u/0/+DevTipsForDesigners/'
+  description: 'website Designer, banners etc'
+  # rel-author: 'https://plus.google.com/u/0/+DevTipsForDesigners/'
+  # rel-publisher: 'https://plus.google.com/u/0/+DevTipsForDesigners/'
 
 #-------------------------------
 # Google Analytics Section
