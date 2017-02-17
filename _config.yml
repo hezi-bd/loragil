@@ -2,3 +2,13 @@ name: Hezi Ben David
 # markdown: redcarpet
 exclude: ["node_modules", "gulpfile.js", "package.json"]
 include: ['_includes/work']
+# Build settings
+
+markdown: kramdown
+permalink: pretty
+
+port: 8800
+
+sass:
+  sass_dir: assets
+  style: :nested

@@ -1,31 +1,6 @@
-<section class="banners" id="banners">
-  <div class="flex flex--center home-lead-title">
-    <div class="col-2">
-      <div class="home-lead-box">
-        <div class="home-lead">
-          <div class="small-logo"></div>
-          <div class="title-move">
-            באנרים
-          </div>
-          <div class="small-logo"></div>
-        </div>
-        <div class="small-lead-box">
-          <div class="small-home-lead orange-type">ועכשיו נעבור לפיר-סו-מות...</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="banners-thumb-box">
-    <div class="full-width-small-title">
-      <p>הקלקה על הבאנר הנבחר תציגו במספר גדלים שונים</p>
-    </div>
-
-</section>
-
 <section class="section-work">
 
-  <div class="banners-thumb-box">
+  <h3 id="work">Work</h3>
   {% for project in site.data.settings.projects %}
     <input type="radio" name="trigger" class="trigger" id="{{ project.folder }}" />
   {% endfor %}
@@ -71,11 +46,5 @@
     </div>
     </div>
 
-  </div>
-  </div>
-  <div class="full-width-small-title bottom">
-    <div class="small-logo-gray"></div>
-    <p>הבאנרים נבנו בפלאש והותאמו לHTML5</p>
-    <div class="small-logo-gray"></div>
   </div>
 </section>
