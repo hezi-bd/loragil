@@ -26,6 +26,68 @@
 <section class="section-work">
 
   <div class="banners-thumb-box">
+  {% for post in site.categories.home-banners-carousel %}
+    <input type="radio" name="trigger" class="trigger" id="{{ post.folder }}" />
+  {% endfor %}
+
+  <input type="radio" name="trigger" id="return" class="return" />
+
+  <div class="work-belt">
+
+    <div class="thumb-wrap">
+      <div class="thumb-container">
+      {% for post in site.categories.home-banners-carousel %}
+      <label for="{{ post.folder }}">
+        <div class="thumb-unit" data-url="{{ post.url }}">
+          <a href="{{ post.url }}">{{ post.title }}</a>
+          <img src="{{ site.baseurl }}/assets/img/post-assets/banners-carousel/{{post.thumb}}" alt="{{post.title}}" />
+        </div>
+        <div class="thumb-overlay">
+          <strong>{{post.title}}</strong>
+          <span>{{post.excerpt}}</span>
+        </div>
+      </label>
+      {% endfor %}
+    </div>
+    </div>
+
+    <div class="work-wrap">
+      <div class="work-container">
+      <label for="return">
+        <div class="work-return">{% include icons/icon-back.html %}</div>
+      </label>
+      <h4 class="project-title"></h4>
+      <div class="project-load"></div>
+
+      <noscript>
+        {% for post in site.categories.home-banners-carousel %}
+          <div class="noscript" id="content-{{ post.folder }}">
+            <h4 class="project-title">{{ post.title }}</h4>
+            <div class="noscript-load">
+
+            </div>
+          </div>
+        {% endfor %}
+      </noscript>
+
+    </div>
+    </div>
+
+  </div>
+  </div>
+  <div class="full-width-small-title bottom">
+    <div class="small-logo-gray"></div>
+    <p>הבאנרים נבנו בפלאש והותאמו לHTML5</p>
+    <div class="small-logo-gray"></div>
+  </div>
+</section>
+
+
+
+<!-- test- -->
+<section class="section-work">
+
+  <div class="banners-thumb-box">
   {% for project in site.data.settings.projects %}
     <input type="radio" name="trigger" class="trigger" id="{{ project.folder }}" />
   {% endfor %}
@@ -62,7 +124,7 @@
           <div class="noscript" id="content-{{ project.folder }}">
             <h4 class="project-title">{{ project.name }}</h4>
             <div class="noscript-load">
-              {% include {{project.file}} %}
+
             </div>
           </div>
         {% endfor %}

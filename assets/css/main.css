@@ -2632,16 +2632,18 @@ ul.ul-banners {
       -o-align-items: center;
       align-items: center;
       -ms-flex-align: center;
-      box-pack: distribute;
-      -moz-justify-content: space-around;
-      -ms-justify-content: space-around;
-      -o-justify-content: space-around;
-      justify-content: space-around;
-      -ms-flex-pack: distribute;
+      box-pack: center;
+      -moz-justify-content: center;
+      -ms-justify-content: center;
+      -o-justify-content: center;
+      justify-content: center;
+      -ms-flex-pack: center;
       display: box;
       display: -moz-flex;
       display: -ms-flexbox;
       display: flex;
+      -ms-flex-direction: column;
+          flex-direction: column;
       background: rgba(201, 144, 101, 0.9);
       text-align: center; }
       .thumb-container label .thumb-overlay strong {

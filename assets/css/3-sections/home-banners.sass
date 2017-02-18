@@ -229,8 +229,9 @@ ul.ul-banners
     .thumb-overlay
       +position(absolute)
       +align-items(center)
-      +justify-content(space-around)
+      +justify-content(center)
       +display(flex)
+      flex-direction: column
       background: fade-out($accent, 0.1)
       text-align: center
       @extend %animationstart_bounceOut
