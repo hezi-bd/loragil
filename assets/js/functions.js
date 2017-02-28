@@ -281,12 +281,12 @@ function workBelt() {
 
   $('.thumb-container label').click(function() {
     $('.work-belt').addClass("slided");
-    $('.work-container').show();
+    $('.work-container').show(1000);
   });
 
   $('.work-return').click(function() {
     $('.work-belt').removeClass("slided");
-    $('.work-container').hide(800);
+    $('.work-container').hide(1000);
   });
 
 }
