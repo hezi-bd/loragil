@@ -2572,7 +2572,7 @@ ul.ul-banners {
   margin-bottom: 0;
   padding-bottom: 50px !important;
   position: relative;
-  min-height: 415px; }
+  min-height: 507px; }
 
 /* Hackey-type CSS as a jQuery Alternative for when the browser does not have jQuery enabled. */
 .noscript {
@@ -2716,9 +2716,13 @@ ul.ul-banners {
     transform: translate3d(0%, 0, 0);
     transition: all, 300ms; }
     .section-work .work-belt.slided .thumb-wrap {
-      -webkit-transform: translate3d(0%, -380px, 0);
-      transform: translate3d(0%, -380px, 0);
+      -webkit-transform: translate3d(0%, -80vh, 0);
+      transform: translate3d(0%, -80vh, 0);
       height: 0; }
+      @media (max-width: 640px) {
+        .section-work .work-belt.slided .thumb-wrap {
+          -webkit-transform: translate3d(0%, -800px, 0);
+          transform: translate3d(0%, -800px, 0); } }
     .section-work .work-belt.slided .work-wrap {
       -webkit-transform: translate3d(0%, 0, 0);
       transform: translate3d(0%, 0, 0);

@@ -167,7 +167,7 @@ ul.ul-banners
   margin-bottom: 0
   padding-bottom: 50px !important
   position: relative
-  min-height: 415px
+  min-height: 507px
 
 /* Hackey-type CSS as a jQuery Alternative for when the browser does not have jQuery enabled. */
 .noscript
@@ -328,8 +328,10 @@ ul.ul-banners
       +transition(all, 300ms)
 
       .thumb-wrap
-        +transform(translate3d(0%, -380px, 0))
+        +transform(translate3d(0%, -80vh, 0))
         height: 0
+        @media (max-width: 640px)
+          +transform(translate3d(0%, -800px, 0))
 
       .work-wrap
         +transform(translate3d(0%, 0, 0))

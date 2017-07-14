@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CreateJS export from 300x200_01</title>
+
+<script src="http://code.createjs.com/easeljs-0.6.0.min.js"></script>
+<script src="http://code.createjs.com/tweenjs-0.4.0.min.js"></script>
+<script src="http://code.createjs.com/movieclip-0.6.0.min.js"></script>
+<script src="http://code.createjs.com/preloadjs-0.3.0.min.js"></script>
+<script src="300x200_01.js"></script>
+
+<script>
+var canvas, stage, exportRoot;
+
+function init() {
+	canvas = document.getElementById("canvas");
+	images = images||{};
+
+	var manifest = [
+		{src:"images/Image.png", id:"Image"},
+		{src:"images/Image_0.png", id:"Image_0"},
+		{src:"images/Image_1.png", id:"Image_1"},
+		{src:"images/Image_10.png", id:"Image_10"},
+		{src:"images/Image_11.png", id:"Image_11"},
+		{src:"images/Image_12.png", id:"Image_12"},
+		{src:"images/Image_13.png", id:"Image_13"},
+		{src:"images/Image_14.png", id:"Image_14"},
+		{src:"images/Image_15.png", id:"Image_15"},
+		{src:"images/Image_16.png", id:"Image_16"},
+		{src:"images/Image_17.png", id:"Image_17"},
+		{src:"images/Image_18.png", id:"Image_18"},
+		{src:"images/Image_19.png", id:"Image_19"},
+		{src:"images/Image_2.png", id:"Image_2"},
+		{src:"images/Image_20.png", id:"Image_20"},
+		{src:"images/Image_21.png", id:"Image_21"},
+		{src:"images/Image_22.png", id:"Image_22"},
+		{src:"images/Image_23.png", id:"Image_23"},
+		{src:"images/Image_24.png", id:"Image_24"},
+		{src:"images/Image_25.png", id:"Image_25"},
+		{src:"images/Image_26.png", id:"Image_26"},
+		{src:"images/Image_27.png", id:"Image_27"},
+		{src:"images/Image_28.png", id:"Image_28"},
+		{src:"images/Image_3.png", id:"Image_3"},
+		{src:"images/Image_4.png", id:"Image_4"},
+		{src:"images/Image_5.png", id:"Image_5"},
+		{src:"images/Image_6.png", id:"Image_6"},
+		{src:"images/Image_7.png", id:"Image_7"},
+		{src:"images/Image_8.png", id:"Image_8"},
+		{src:"images/Image_9.png", id:"Image_9"},
+		{src:"images/bord308x199.jpg", id:"bord308x199"},
+		{src:"images/hand91x135.png", id:"hand91x135"}
+	];
+
+	var loader = new createjs.LoadQueue(false);
+	loader.addEventListener("fileload", handleFileLoad);
+	loader.addEventListener("complete", handleComplete);
+	loader.loadManifest(manifest);
+}
+
+function handleFileLoad(evt) {
+	if (evt.item.type == "image") { images[evt.item.id] = evt.result; }
+}
+
+function handleComplete() {
+	exportRoot = new lib._300x200_01();
+
+	stage = new createjs.Stage(canvas);
+	stage.addChild(exportRoot);
+	stage.update();
+	stage.enableMouseOver();
+
+	createjs.Ticker.setFPS(30);
+	createjs.Ticker.addEventListener("tick", stage);
+}
+</script>
+</head>
+
+<body onload="init();" style="background-color:#fff; margin:0;">
+	<canvas id="canvas" width="300" height="200" style="background-color:#ffffff"></canvas>
+</body>
+</html>

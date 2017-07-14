@@ -37,8 +37,8 @@
       <div class="thumb-container">
       {% for banner in site.data.settings.banners %}
       <label for="{{ banner.folder }}">
-        <div class="thumb-unit" data-url="../banners/{{ banner.folder }}/">
-          <img src="../assets/img/banner/{{banner.folder}}/thumb.jpg" alt="{{ banner.name }}" />
+        <div class="thumb-unit" data-url="{{site.baseurl}}/banners/{{ banner.folder }}/">
+          <img src="{{site.baseurl}}/assets/img/banner/{{banner.folder}}/thumb.jpg" alt="{{ banner.name }}" />
         </div>
         <div class="thumb-overlay">
           <strong>{{ banner.name }}</strong>

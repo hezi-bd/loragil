@@ -38,6 +38,6 @@ banners:
 - {name: גליל מערבי, folder: 'banner07', file: 'banners/banner07.html'}
 - {name: אונ׳ בן גוריון, folder: 'banner08', file: 'banners/banner08.html'}
 - {name: אונ׳ בן גוריון, folder: 'banner09' , file: 'banners/banner09.html'}
-- {name: אונ׳ בן גוריון, folder: 'banner10', file: 'banners/banner10.html'}
-- {name: אונ׳ בן גוריון, folder: 'banner11', file: 'banners/banner11.html'}
+- {name: נמל חיפה, folder: 'banner10', file: 'banners/banner10.html'}
+- {name: תו איכות, folder: 'banner11', file: 'banners/banner11.html'}
 - {name: אונ׳ בן גוריון, folder: 'banner12', file: 'banners/banner12.html'}
