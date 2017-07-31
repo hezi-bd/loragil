@@ -43,6 +43,10 @@
 .home-sections section.about
   padding: 0
   height: 49.3vh
+  position: relative
+  display: flex
+  flex-direction: column
+  justify-content: flex-end
   //background:
     image: url(../img/loragil-about-pic.png)
     repeat: no-repeat
@@ -83,7 +87,7 @@
       font:
         weight: 100
       text-shadow: $text-shade
-      margin-top: 138px
+      //margin-top: 8vh
       margin-bottom: -12px
 
     &.home-title-bold
@@ -91,6 +95,7 @@
         weight: 700
       text-shadow: 0 9px 8px rgba(109, 51, 158, 0.75)
       letter-spacing: 0.4px
+      margin-bottom: -5px
 
   .logo-hr
     height: 90px
@@ -105,17 +110,70 @@
   h4
     text-shadow: $text-shade
     color: $light-orange
+    text-align: center
+    letter-spacing: -0.2px
+    margin: 0 auto
+    //display: inline
+    font:
+      size: 25.4px
+      weight: 300
+
+    &:nth-child(3)
+      background: #864fbd
+
+    &:nth-child(5)
+      letter-spacing: 4px
+      margin-bottom: -19px
+  .logo-type
+    font-family: 'Quantico'
+    text-shadow: $text-shade
+    color: $light-orange
     text-align: justify
     letter-spacing: -0.4px
-    margin: 0
+    margin: 10px auto 10px
     font:
-      size: 29.4px
-      weight: 300
+      size: 34px
+      weight: 700
+    &:first-letter
+      background:
+        image: url(../img/loragil-logo.svg)
+        position: 4px 0px
+        size: contain
+        repeat: no-repeat
+      color: transparent
+      text-shadow: none
+      padding: 0 18px
+      margin-left: -18px
+    span
+      font-weight: 300
+      -webkit-text-stroke: 1px shade($purple, 10%)
+      letter-spacing: -2px
+      padding-right: 4px
 
   p.home-info
     color: shade($purple, 20%)
-    font-size: 18px
+    font-size: 16px
     margin-top: 8px
+    margin-bottom: 33px
+    position: relative
+    line-height: 1.2
+    padding: 10px 15px
+    letter-spacing: -0.3px
+    //text-align: center
+
+    &:before
+      content: '{'
+      position: absolute
+      font-size: 44px
+      top: 2px
+      right: 0px
+
+    &:after
+      content: '}'
+      position: absolute
+      font-size: 44px
+      left: 0
+      top: 2px
 
 .home-sections section.about
   @media (max-width: 1313px)
