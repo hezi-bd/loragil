@@ -29,13 +29,13 @@ seo:
 # - {name: Stripes & Co, folder: 'proj-8', file: 'work/proj-8.html'}
 
 banners:
-- {name: גליל מערבי, folder: 'banner01', file: 'banners/banner01.html'}
+- {name: מכללת גליל מערבי, folder: 'banner01', file: 'banners/banner01.html'}
 - {name: Bluran3D, folder: 'banner02', file: 'banners/banner02.html'}
 - {name: טבעוני, folder: 'banner03', file: 'banners/banner03.html'}
-- {name: גליל מערבי, folder: 'banner04', file: 'banners/banner04.html'}
-- {name: גליל מערבי, folder: 'banner05', file: 'banners/banner05.html'}
-- {name: גליל מערבי, folder: 'banner06', file: 'banners/banner06.html'}
-- {name: גליל מערבי, folder: 'banner07', file: 'banners/banner07.html'}
+- {name: מכללת גליל מערבי, folder: 'banner04', file: 'banners/banner04.html'}
+- {name: מכללת גליל מערבי, folder: 'banner05', file: 'banners/banner05.html'}
+- {name: מכללת גליל מערבי, folder: 'banner06', file: 'banners/banner06.html'}
+- {name: מכללת גליל מערבי, folder: 'banner07', file: 'banners/banner07.html'}
 - {name: אונ׳ בן גוריון, folder: 'banner08', file: 'banners/banner08.html'}
 - {name: אונ׳ בן גוריון, folder: 'banner09' , file: 'banners/banner09.html'}
 - {name: נמל חיפה, folder: 'banner10', file: 'banners/banner10.html'}
