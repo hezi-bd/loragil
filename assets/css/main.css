@@ -1383,6 +1383,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%; }
 
+.loragil, section.home-footer .home-lead-box .big-and-small-title .small-home-lead, section.home-footer .home-lead-box .big-and-small-title p .loragil, section.home-footer .home-lead-box p .big-and-small-title .loragil {
+  letter-spacing: 1px;
+  color: #fbc363;
+  background: #6d339e;
+  display: inline;
+  padding: 0 8px; }
+
 .home-wrap header {
   padding: 30px 0;
   z-index: 100;
@@ -2176,7 +2183,7 @@ section.youtube {
       letter-spacing: 0.8px;
       -ms-flex-pack: distribute;
           justify-content: space-around; }
-    .home-sections section.sites-view .home-lead-title .small-home-lead {
+    .home-sections section.sites-view .home-lead-title .small-home-lead, .home-sections section.sites-view .home-lead-title section.home-footer .home-lead-box p .loragil, section.home-footer .home-lead-box p .home-sections section.sites-view .home-lead-title .loragil {
       margin-left: 5px; }
     .home-sections section.sites-view .home-lead-title .view-hr {
       background: #b7b7b7;
@@ -2571,7 +2578,7 @@ ul.ul-caro {
     @media all and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
       .home-sections section.banners .small-lead-box {
         margin-right: 0; } }
-  .home-sections section.banners .small-home-lead {
+  .home-sections section.banners .small-home-lead, .home-sections section.banners section.home-footer .home-lead-box p .loragil, section.home-footer .home-lead-box p .home-sections section.banners .loragil, .home-sections section.banners section.home-footer .home-lead-box p .big-and-small-title .small-home-lead, section.home-footer .home-lead-box p .big-and-small-title .home-sections section.banners .small-home-lead, .home-sections section.banners section.home-footer .home-lead-box .big-and-small-title p .small-home-lead, section.home-footer .home-lead-box .big-and-small-title p .home-sections section.banners .small-home-lead {
     color: #f7921e; }
   .home-sections section.banners .banners-thumb-box {
     display: -ms-flexbox;
@@ -3225,12 +3232,12 @@ section.clients .clients-hr {
         .home-sections section.clients .home-lead-box .home-lead {
           width: 100%;
           text-align: center; } }
-    .home-sections section.clients .home-lead-box .small-home-lead.orange-type {
+    .home-sections section.clients .home-lead-box .small-home-lead.orange-type, .home-sections section.clients section.home-footer .home-lead-box p .orange-type.loragil, section.home-footer .home-sections section.clients .home-lead-box p .orange-type.loragil {
       letter-spacing: 3.5px;
       color: #9e9e9f;
       font-weight: 400; }
       @media (max-width: 640px) {
-        .home-sections section.clients .home-lead-box .small-home-lead.orange-type {
+        .home-sections section.clients .home-lead-box .small-home-lead.orange-type, .home-sections section.clients section.home-footer .home-lead-box p .orange-type.loragil, section.home-footer .home-sections section.clients .home-lead-box p .orange-type.loragil {
           width: 100%;
           text-align: center; } }
   .home-sections section.clients ul.clients-logos-box {
@@ -3532,17 +3539,13 @@ section.home-footer {
           @media (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
             section.home-footer .home-lead-box .big-and-small-title .home-lead .title-move {
               left: -1px; } }
-      section.home-footer .home-lead-box .big-and-small-title .small-home-lead {
-        letter-spacing: 1px;
-        color: #fbc363;
-        background: #6d339e;
-        display: inline;
-        padding: 0 8px; }
     section.home-footer .home-lead-box p {
       text-align: justify;
       color: #77531c;
       font-size: 16px;
       text-shadow: 0 1px 1px #f8d297; }
+      section.home-footer .home-lead-box p .loragil, section.home-footer .home-lead-box p .big-and-small-title .small-home-lead, section.home-footer .home-lead-box .big-and-small-title p .small-home-lead, section.home-footer .home-lead-box .big-and-small-title p .loragil, section.home-footer .home-lead-box p .big-and-small-title .loragil {
+        text-shadow: 0 1px 1px #200f2f; }
 
 .col-1.footer-card {
   display: -ms-flexbox;

@@ -65,17 +65,17 @@ section.home-footer
             left: -1px
 
       .small-home-lead
-        letter-spacing: 1px
-        color: #fbc363
-        background: $purple
-        display: inline
-        padding: 0 8px
+        @extend .loragil
 
     p
       text-align: justify
       color: $darker-yellow
       font-size: 16px
       text-shadow: 0 1px 1px #f8d297
+
+      .loragil
+        @extend .small-home-lead
+        text-shadow: 0 1px 1px $dark-purple
 
 .col-1.footer-card
   display: flex
