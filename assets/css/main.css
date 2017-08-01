@@ -1177,6 +1177,8 @@ body {
       body .home-lead {
         left: -32px;
         position: relative; } }
+    body .home-lead .title-move {
+      position: relative; }
 
 @media only screen and (min-width: 321px) and (max-device-width: 568px) and (orientation: landscape) {
   body {
@@ -2146,14 +2148,18 @@ section.youtube {
         margin-left: 10px;
         margin-top: 10px; }
     .home-sections section.sites-view .home-lead-title .home-lead {
-      color: #6d339e; }
+      color: #6d339e;
+      position: relative;
+      right: -31px; }
       @media all and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
         .home-sections section.sites-view .home-lead-title .home-lead {
           left: 0; } }
     .home-sections section.sites-view .home-lead-title .small-lead-box {
       display: -ms-flexbox;
       display: flex;
-      letter-spacing: 0.8px; }
+      letter-spacing: 0.8px;
+      -ms-flex-pack: distribute;
+          justify-content: space-around; }
     .home-sections section.sites-view .home-lead-title .small-home-lead {
       margin-left: 5px; }
     .home-sections section.sites-view .home-lead-title .view-hr {
@@ -3448,7 +3454,15 @@ section.clients .clients-hr {
       background-position-x: 56%; } }
 
 section.home-footer {
-  padding-bottom: 0;
+  padding: 0;
+  padding-top: 0;
+  min-height: 100vh;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
   position: relative;
   z-index: -1;
   background: #faaf3a;
@@ -3495,7 +3509,8 @@ section.home-footer {
         text-shadow: 0 2px 1px #946b31;
         color: #fff; }
         section.home-footer .home-lead-box .big-and-small-title .home-lead .title-move {
-          letter-spacing: 11px; }
+          letter-spacing: 11px;
+          left: 11px; }
           @media (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
             section.home-footer .home-lead-box .big-and-small-title .home-lead .title-move {
               left: -1px; } }
@@ -3585,15 +3600,7 @@ section.home-footer {
 
 .inner-shadow {
   position: relative; }
-  .inner-shadow ::before {
-    box-shadow: 0 7px 3px 3px #d18511;
-    position: absolute;
-    height: 5px;
-    width: 100%;
-    content: '';
-    z-index: -1;
-    top: -5px; }
-  .inner-shadow ::after {
+  .inner-shadow::after {
     position: absolute;
     content: '';
     top: 20px;
