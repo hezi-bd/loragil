@@ -171,11 +171,17 @@ section.clients .clients-hr
         box-sizing: border-box
         display: flex
         flex-direction: column
-        height: 314px
+        height: 315px
         justify-content: space-between
 
+        .client-comment
+          display: flex
+          flex-direction: column
+          justify-content: space-between
+          height: 100%
+
         @media (max-width: 640px)
-          height: 334px
+          height: 315px
 
 
 
@@ -183,7 +189,7 @@ section.clients .clients-hr
           display: flex
           flex-direction: row-reverse
           align-items: center
-          margin-top: 134px
+          //margin-top: 134px
           @media (max-width: 640px)
             margin-top: 154px
 
@@ -192,6 +198,7 @@ section.clients .clients-hr
             color: #a3a2a5
             margin-right: 15px
             margin-top: 12px
+            margin-bottom: unset
             strong
               display: block
               font-size: 16px
