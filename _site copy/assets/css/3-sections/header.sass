@@ -1,0 +1,293 @@
+.home-wrap
+  header
+    padding: 30px 0
+    z-index: 100
+    direction: rtl
+    position: absolute
+
+    &:hover
+      .header-position
+        width: 135px
+        right: 0
+        transition: all 0.2s ease-in-out
+
+        .site-nav
+          ul
+            width: 135px
+
+          li
+            transform: translateX(0px)
+
+            a
+              transition: all 0.2s ease-in-out
+
+            &::after
+              transform: translateX(135px)
+              opacity: 0.5
+
+
+      .logo
+        height: 66px
+        max-width: 135px
+
+      .email-link
+        //font-size: 2em
+
+    .header-position
+      position: fixed
+      top: 0
+      bottom: 0
+      right: 16px
+      //width: 135px
+      width: 18px
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      align-items: center
+      background: rgba(0, 0, 0, 0.2)
+      transition: all 0.2s ease-in-out
+
+
+
+    .logo
+      +hide-text
+      color: transparent
+      width: 58px
+      background:
+        image: url(../img/loragil-logo-nav.svg)
+        repeat: no-repeat
+        position: center
+        size: contain
+        color: $dark-purple
+      height: 66px
+      padding: 0
+      margin: 0
+
+    .site-nav
+      ul
+        list-style: none
+        margin: 0
+        padding: 0
+        text-align: left
+        overflow: hidden
+        width: 40px
+        transition: all 0.2s ease-in-out
+        height: calc(100vh - 182px)
+        display: flex
+        flex-direction: column
+        justify-content: space-around
+
+
+      li
+        margin-bottom: 10px
+        width: 135px
+        position: relative
+        transition: all 0.2s ease-in-out
+        transform: translateX(-110px)
+
+        &:hover a
+          background: rgba(0, 0, 0, 0.5)
+          color: $orange
+
+        a
+          letter-spacing: 2px
+          padding: 10px 0 10px 10px
+          display: block
+          color: rgba(0, 0, 0, 0.8)
+          font-weight: 500
+
+        &::after
+          position: absolute
+          top: 7px
+          right: -100px
+          content: ""
+          width: 100%
+          height: 30px
+          display: block
+          background:
+            repeat: no-repeat
+            position: center
+            size: contain
+          transition: all 0.6s ease-in-out
+          transform: translateX(59px)
+          opacity: 1
+        &:nth-child(1)::after
+          top: -12px
+          right: -98px
+          height: 72px
+          background:
+            image: url('../img/01abilities-logo.svg')
+            //image: $abilities-logo
+
+        &:nth-child(2)::after
+          background:
+            image: url('../img/02sites-logo.svg')
+          height: 40px
+          right: -98px
+
+        &:nth-child(3)::after
+          background:
+            image: url(../img/03banners-logo.svg)
+          height: 40px
+          right: -98px
+
+        &:nth-child(4)::after
+          background:
+            image: url(../img/04popup-logo.svg)
+          height: 40px
+          right: -98px
+
+        &:nth-child(5)::after
+          background:
+            image: url(../img/05graphics-logo.svg)
+          height: 40px
+          right: -98px
+
+        &:nth-child(6)::after
+          background:
+            image: url(../img/06clients-logo.svg)
+          height: 40px
+          right: -98px
+
+        &:nth-child(7)::after
+          background:
+            image: url(../img/07in-short-logo.svg)
+          height: 40px
+          right: -98px
+
+        &:last-child
+          margin-bottom: 0
+
+
+    .email-link
+      +hide-text
+      font-size: 0
+      display: block
+      content: ""
+      width: 88px
+      height: 56px
+      display: block
+      background:
+        repeat: no-repeat
+        position: center
+        size: contain
+        image: url(../img/08mail-logo.svg)
+      right: -98px
+
+    .mobile-nav-toggle
+      display: none
+      width: 50px
+      height: 50px
+      margin-right: 20px
+      align-items: center
+      cursor: pointer
+
+      span,
+      span:before,
+      span:after
+        display: block
+        content: ""
+        height: 2px
+        width: 100%
+        background: #333
+        position: relative
+
+        transition: all 0.2s ease-in-out
+
+      span:before
+        top: 15px
+
+      span:after
+        top: -17px
+
+      &.is-open span
+        background: transparent
+
+
+        &::before, &::after
+          transform-origin: center
+          transform: rotate(45deg)
+          top: 0
+
+        &::after
+          transform: rotate(-45deg)
+  //mobile-nav,aha-this my s#it
+  .mobile-nav
+    display: none
+    position: absolute
+    width: 100%
+    background: rgba(0, 0, 0, 0)
+    padding: 30px 0 20px
+    transform: translateY(calc(-100% + 90px))
+    transition: all 0.2s ease-in-out
+    z-index: 10
+    background: rgb(72, 39, 106)
+    font-size: 25px
+    opacity: 0
+    &.is-open
+      opacity: 1
+
+
+
+    ul
+      padding: 0
+      margin: 0
+      list-style: none
+
+    li
+      text-align: center
+      margin-bottom: 10px
+      a
+        color: transparent
+
+
+@media (max-width: 775px)
+  .home-wrap
+    header
+      background: rgba(0, 0, 0, 0)
+      //width: auto !important
+      padding: 20px 0 0
+
+      .header-position
+        width: auto !important
+        position: relative
+        top: auto
+        bottom: auto
+        left: auto
+        right: auto
+        flex-direction: row
+        align-items: center
+        padding-left: 20px
+
+      .site-nav, .email-link
+        display: none
+
+      .logo
+        height: 60px
+
+      .mobile-nav-toggle
+        display: flex
+        &.is-open
+          span
+            &::after, &::before
+              background: $orange
+
+    .mobile-nav
+      min-height: 40px
+      display: block
+      &.is-open
+        transform: translateY(0)
+
+        li
+          a
+            color: $orange
+
+@media (max-width: 640px)
+  .home-wrap
+    header
+      padding: 0
+      z-index: 10
+      position: relative
+
+      .header-position
+        background: rgba(0, 0, 0, 0)

@@ -1,0 +1,338 @@
+.home-sections section.banners
+  background: rgba(247, 239, 255, 0.86)
+  margin-bottom: 0
+  padding-bottom: 0
+
+
+  .home-lead-box
+    display: flex
+    flex-direction: column
+    align-content: center
+    align-items: center
+
+  .home-lead
+    width: 88%
+    display: flex
+    text-align: center
+    align-items: flex-start
+    color: $purple
+    @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm)
+        left: 0
+    .title-move
+      position: relative
+      right: -28px
+      @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm)
+        right: 0
+
+  .small-logo
+    width: 92px
+    background:
+      image: url(../img/loragil-logo-nav.svg)
+      repeat: no-repeat
+      position: center
+      size: contain
+    height: 54px
+    padding: 0
+    margin: 5px 10px
+
+    &:last-child
+      margin-right: -18px
+
+  .small-lead-box
+    letter-spacing: 4.2px
+    //margin-right: 83px
+    margin-top: -23px
+    @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm)
+      margin-right: 0
+
+  .small-home-lead
+    color: $orange
+
+  .banners-thumb-box
+
+    display: flex
+    flex-direction: column
+    align-items: center
+    //min-height: 900px
+    position: relative
+
+    .flash-bg
+      position: absolute
+      bottom: 50px
+      border-radius: 5px
+      overflow: hidden
+      left: calc(50% - 203px)
+
+      @media (max-width: 410px)
+
+        max-width: 100%
+        left: 0
+
+
+
+.full-width-small-title
+  width: 100%
+  padding: 10px 0
+  background: $light-gray
+  margin:
+    top: 40px
+    bottom: 0
+  text-align: center
+
+  p
+    margin-bottom: 0
+    text-shadow: 0 1px 1px rgba(213, 213, 213, 0.75)
+    color: $lighter-gray
+    letter-spacing: 2.8px
+
+.full-width-small-title.bottom
+  direction: rtl
+  position: absolute
+  bottom: 0
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: center
+  margin:
+    top: 25px
+    bottom: 0px
+
+  line-height: 2
+
+  p
+    color: #fff
+    font-weight: 500
+    text-shadow: 0 2px 1px #777777
+    letter-spacing: 5.2px
+
+ul.ul-banners
+  position: relative
+  z-index: 10
+  list-style: none
+  background: none
+  border: trarnsparent
+
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  flex-wrap: wrap
+  max-width: 960px
+  margin: 0
+  padding:
+    top: 10px
+    bottom: 0
+    right: 0
+    //left: calc(50% - 380px)
+    //right: calc(50% - 380px)
+
+  box-sizing: border-box
+  bottom: 0
+  right: 0
+  left: 0
+  //height: 320px
+  overflow: visible
+
+
+ul.ul-banners
+  position: relative
+  z-index: 10
+  list-style: none
+  background: none
+  border: trarnsparent
+
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  flex-wrap: wrap
+  max-width: 960px
+  margin: 0
+  padding:
+    top: 10px
+    bottom: 0
+    right: 0
+    //left: calc(50% - 380px)
+    //right: calc(50% - 380px)
+
+  box-sizing: border-box
+  bottom: 0
+  right: 0
+  left: 0
+  //height: 320px
+  overflow: visible
+
+.section-work
+  overflow-x: hidden
+  direction: ltr
+  background: rgba(247, 239, 255, 0.86)
+  margin-bottom: 0
+  padding-bottom: 50px !important
+  position: relative
+  min-height: 507px
+
+/* Hackey-type CSS as a jQuery Alternative for when the browser does not have jQuery enabled. */
+.noscript
+  display: none
+
+// @each $proj in $projects
+//   ##{$proj}:checked ~ .work-belt .work-wrap .work-container noscript #content-#{$proj}
+//     display: block
+
+.return
+  display: none
+
+.trigger
+  display: none
+
+  &:checked ~ .work-belt
+    //left: -100%
+
+    .work-wrap .work-container
+      display: block
+/* End of gross / hackey CSS */
+
+.work-belt
+  width: 200%
+  position: relative
+  left: 0%
+  +transition(all, 400ms)
+
+  &.slided
+    //+transform(translate3d(-50%, 0, 0))
+
+.thumb-wrap, .work-wrap
+  width: 50%
+  float: left
+
+.thumb-container
+  display: block
+  max-width: 960px
+  margin: 0px auto
+  +clearfix
+
+  label
+    position: relative
+    display: block
+    float: right
+    width: 25%
+    cursor: pointer
+
+    .thumb-unit
+      display: block
+      overflow: hidden
+
+      img
+        display: block
+        max-width: 100%
+
+    @media screen and (max-width: 760px)
+      width: 50%
+
+    .thumb-overlay
+      +position(absolute)
+      +align-items(center)
+      +justify-content(center)
+      +display(flex)
+      flex-direction: column
+      background: fade-out($accent, 0.1)
+      text-align: center
+      @extend %animationstart_bounceOut
+
+      strong
+        display: block
+        padding: 0 9%
+        color: white
+        font:
+          weight: 300
+          size: 24px
+        text-transform: uppercase
+        line-height: 1.2
+
+    &:hover
+      z-index: 2
+
+      .thumb-overlay
+        @extend %bounceOut
+
+
+.work-container
+  max-width: 600px
+  margin: 0px auto
+  padding: 0 15px
+  box-sizing: border-box
+
+  position: relative
+  display: none
+
+  h4, noscript h4
+    color: $accent
+    font-weight: 300
+    text-transform: uppercase
+    font-size: 28px
+    line-height: 1.2
+    margin: 0 0 42px
+    // transition-delay: 200s
+
+  img
+    max-width: 100%
+    margin-bottom: 20px
+
+  .work-return
+    +size(40px)
+    cursor: pointer
+    opacity: 0.5
+    +position(absolute, -4px null null -60px)
+
+    path
+      fill: rgba(0,0,0,0.4)
+
+    &:hover
+      opacity: 1
+
+
+
+@media (max-width: 740px)
+  .work-container
+
+    .work-return
+      left: 0px
+
+    h4
+      margin-left: 60px
+
+
+.section-work
+  .work-container
+    width: 100% !important;
+  .work-belt
+    width: 100%
+    position: relative
+    //left: 0%
+    +transition(all, 200ms)
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    .thumb-wrap, .work-wrap
+      width: initial
+      float: none
+      margin: auto
+      +transition(all, 800ms)
+
+    .work-wrap
+      +transform(translate3d(0%, 200%, 0))
+      opacity: 0
+
+
+    &.slided
+      +transform(translate3d(0%, 0, 0))
+      +transition(all, 300ms)
+
+      .thumb-wrap
+        +transform(translate3d(0%, -80vh, 0))
+        height: 0
+        @media (max-width: 640px)
+          +transform(translate3d(0%, -800px, 0))
+
+      .work-wrap
+        +transform(translate3d(0%, 0, 0))
+        opacity: 1

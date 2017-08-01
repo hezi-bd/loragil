@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CreateJS export from 300x600</title>
+
+<script src="http://code.createjs.com/easeljs-0.6.0.min.js"></script>
+<script src="http://code.createjs.com/tweenjs-0.4.0.min.js"></script>
+<script src="http://code.createjs.com/movieclip-0.6.0.min.js"></script>
+<script src="http://code.createjs.com/preloadjs-0.3.0.min.js"></script>
+<script src="300x600.js"></script>
+
+<script>
+var canvas, stage, exportRoot;
+
+function init() {
+	canvas = document.getElementById("canvas");
+	images = images||{};
+
+	var manifest = [
+		{src:"images/_1.png", id:"_1"},
+		{src:"images/bg.png", id:"bg"},
+		{src:"images/loop0000.png", id:"loop0000"},
+		{src:"images/loop0001.png", id:"loop0001"},
+		{src:"images/loop0002.png", id:"loop0002"},
+		{src:"images/loop0003.png", id:"loop0003"},
+		{src:"images/loop0004.png", id:"loop0004"},
+		{src:"images/loop0005.png", id:"loop0005"},
+		{src:"images/loop0006.png", id:"loop0006"},
+		{src:"images/loop0007.png", id:"loop0007"},
+		{src:"images/loop0008.png", id:"loop0008"},
+		{src:"images/loop0009.png", id:"loop0009"},
+		{src:"images/loop0010.png", id:"loop0010"},
+		{src:"images/loop0011.png", id:"loop0011"},
+		{src:"images/loop0012.png", id:"loop0012"},
+		{src:"images/loop0013.png", id:"loop0013"},
+		{src:"images/loop0014.png", id:"loop0014"},
+		{src:"images/loop0015.png", id:"loop0015"},
+		{src:"images/loop0016.png", id:"loop0016"},
+		{src:"images/loop0017.png", id:"loop0017"},
+		{src:"images/loop0018.png", id:"loop0018"},
+		{src:"images/loop0019.png", id:"loop0019"},
+		{src:"images/loop0020.png", id:"loop0020"},
+		{src:"images/loop0021.png", id:"loop0021"},
+		{src:"images/loop0022.png", id:"loop0022"},
+		{src:"images/loop0023.png", id:"loop0023"},
+		{src:"images/loop0024.png", id:"loop0024"},
+		{src:"images/loop0025.png", id:"loop0025"},
+		{src:"images/loop0026.png", id:"loop0026"},
+		{src:"images/loop0027.png", id:"loop0027"},
+		{src:"images/loop0028.png", id:"loop0028"},
+		{src:"images/loop0029.png", id:"loop0029"},
+		{src:"images/loop0030.png", id:"loop0030"},
+		{src:"images/loop0031.png", id:"loop0031"},
+		{src:"images/loop0032.png", id:"loop0032"},
+		{src:"images/loop0033.png", id:"loop0033"},
+		{src:"images/loop0034.png", id:"loop0034"},
+		{src:"images/loop0035.png", id:"loop0035"},
+		{src:"images/loop0036.png", id:"loop0036"},
+		{src:"images/loop0037.png", id:"loop0037"},
+		{src:"images/loop0038.png", id:"loop0038"},
+		{src:"images/loop0039.png", id:"loop0039"},
+		{src:"images/loop0040.png", id:"loop0040"},
+		{src:"images/loop0041.png", id:"loop0041"},
+		{src:"images/loop0042.png", id:"loop0042"},
+		{src:"images/loop0043.png", id:"loop0043"},
+		{src:"images/loop0044.png", id:"loop0044"},
+		{src:"images/loop0045.png", id:"loop0045"},
+		{src:"images/loop0046.png", id:"loop0046"},
+		{src:"images/loop0047.png", id:"loop0047"},
+		{src:"images/loop0048.png", id:"loop0048"},
+		{src:"images/loop0049.png", id:"loop0049"},
+		{src:"images/loop0050.png", id:"loop0050"},
+		{src:"images/loop0051.png", id:"loop0051"},
+		{src:"images/loop0052.png", id:"loop0052"},
+		{src:"images/loop0053.png", id:"loop0053"},
+		{src:"images/loop0054.png", id:"loop0054"},
+		{src:"images/loop0055.png", id:"loop0055"},
+		{src:"images/loop0056.png", id:"loop0056"},
+		{src:"images/loop0057.png", id:"loop0057"},
+		{src:"images/loop0058.png", id:"loop0058"},
+		{src:"images/loop0059.png", id:"loop0059"},
+		{src:"images/loop0060.png", id:"loop0060"},
+		{src:"images/loop0061.png", id:"loop0061"},
+		{src:"images/loop0062.png", id:"loop0062"},
+		{src:"images/loop0063.png", id:"loop0063"},
+		{src:"images/loop0064.png", id:"loop0064"},
+		{src:"images/loop0065.png", id:"loop0065"},
+		{src:"images/loop0066.png", id:"loop0066"},
+		{src:"images/loop0067.png", id:"loop0067"},
+		{src:"images/loop0068.png", id:"loop0068"},
+		{src:"images/loop0069.png", id:"loop0069"},
+		{src:"images/loop0070.png", id:"loop0070"},
+		{src:"images/loop0071.png", id:"loop0071"},
+		{src:"images/loop0072.png", id:"loop0072"},
+		{src:"images/loop0073.png", id:"loop0073"},
+		{src:"images/loop0074.png", id:"loop0074"},
+		{src:"images/loop0075.png", id:"loop0075"},
+		{src:"images/loop0076.png", id:"loop0076"},
+		{src:"images/loop0077.png", id:"loop0077"},
+		{src:"images/loop0078.png", id:"loop0078"},
+		{src:"images/loop0079.png", id:"loop0079"},
+		{src:"images/loop0080.png", id:"loop0080"},
+		{src:"images/loop0081.png", id:"loop0081"},
+		{src:"images/loop0082.png", id:"loop0082"},
+		{src:"images/loop0083.png", id:"loop0083"},
+		{src:"images/loop0084.png", id:"loop0084"},
+		{src:"images/loop0085.png", id:"loop0085"},
+		{src:"images/loop0086.png", id:"loop0086"},
+		{src:"images/loop0087.png", id:"loop0087"},
+		{src:"images/loop0088.png", id:"loop0088"},
+		{src:"images/loop0089.png", id:"loop0089"},
+		{src:"images/loop0090.png", id:"loop0090"},
+		{src:"images/loop0091.png", id:"loop0091"},
+		{src:"images/loop0092.png", id:"loop0092"},
+		{src:"images/loop0093.png", id:"loop0093"},
+		{src:"images/loop0094.png", id:"loop0094"},
+		{src:"images/loop0095.png", id:"loop0095"},
+		{src:"images/loop0096.png", id:"loop0096"},
+		{src:"images/loop0097.png", id:"loop0097"},
+		{src:"images/loop0098.png", id:"loop0098"},
+		{src:"images/loop0099.png", id:"loop0099"},
+		{src:"images/sun.jpg", id:"sun"},
+		{src:"images/table.png", id:"table"}
+	];
+
+	var loader = new createjs.LoadQueue(false);
+	loader.addEventListener("fileload", handleFileLoad);
+	loader.addEventListener("complete", handleComplete);
+	loader.loadManifest(manifest);
+}
+
+function handleFileLoad(evt) {
+	if (evt.item.type == "image") { images[evt.item.id] = evt.result; }
+}
+
+function handleComplete() {
+	exportRoot = new lib._300x600();
+
+	stage = new createjs.Stage(canvas);
+	stage.addChild(exportRoot);
+	stage.update();
+
+	createjs.Ticker.setFPS(30);
+	createjs.Ticker.addEventListener("tick", stage);
+}
+</script>
+</head>
+
+<body onload="init();" style="background-color:#fff; margin:0;">
+	<canvas id="canvas" width="300" height="600" style="background-color:#ffffff"></canvas>
+</body>
+</html>

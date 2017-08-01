@@ -1,0 +1,99 @@
+.home-wrap
+  //display: flex
+  min-height: 100vh
+  //flex-direction: row-reverse
+  //justify-content: flex-start
+
+  @media (max-width: 775px)
+    display: block
+
+.home-sections
+  position: relative
+  z-index: 0
+  direction: rtl
+
+  section
+    padding: 50px 0
+
+
+  //Flex Classes
+  .flex
+    display: flex
+    flex-direction: row
+
+  .flex--center
+    justify-content: center
+
+  .flex--space-around
+    justify-content: space-around
+
+  .order-first
+    order: -1
+
+//columns
+.col-1
+  max-width: 300px
+  margin: 0 10px
+  //background: pink
+
+.col-2
+  max-width: 620px
+  margin: 0 10px
+  //background: honeydew
+
+.col-3
+  width: 620px
+  margin: 0 10px
+
+.col-50
+  width: 50%
+  background: yellow
+
+.push-left
+  margin-right: 330px
+
+.push-right
+  margin-left: 330px
+
+@media (max-width: 640px)
+  .home-sections .flex
+    display: block
+    position: relative
+
+  .col-1
+    max-width: 100%
+    margin: 0
+    padding: 0 15px
+    box-sizing: border-box
+
+  .col-50
+    width: auto
+
+  .push-left
+    margin-right: 10px
+    padding-top: 15px
+
+  .col-3
+    max-width: 100%
+    margin: 0
+    padding: 0 15px
+    box-sizing: border-box
+
+
+//Typography
+
+.home-lead
+  font:
+    weight: 100
+    size: 40px
+
+.small-logo-gray
+  width: 20px
+  background:
+    image: url(../img/small-logo-gray.svg)
+    repeat: no-repeat
+    position: center
+    size: contain
+  height: 18px
+  padding: 0
+  margin: 0px 10px

@@ -1,0 +1,434 @@
+.home-sections section.sites-view
+  //position: relative
+  //display: flex
+  //flex-direction: column
+  //align-items: center
+  padding: 0px
+  background: rgba(230, 230, 230, 0.74)
+      border-bottom: solid 108px orange;
+  display: flex
+  flex-direction: column
+  align-items: center
+  overflow: hidden
+
+  .home-lead-title
+    position: relative
+    z-index: 10
+    height: 0
+    top: 148px
+    display: flex
+    max-width: 100%
+    @media (max-width: 640px)
+      top: 88px
+
+    .home-lead-box
+      width: 230px
+      text-align: -webkit-left
+
+      @media (max-width: 640px)
+        width: 88%
+        display: flex
+        flex-direction: column
+        align-content: flex-start
+        flex-wrap: wrap
+
+        .home-lead
+          @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm)
+            left: -32px !important
+
+      .switch
+        margin-left: 10px
+        margin-top: 10px
+
+    .home-lead
+      color: $purple
+      @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm)
+          left: 0
+
+    .small-lead-box
+      display: flex
+      letter-spacing: 0.8px
+
+    .small-home-lead
+      margin-left: 5px
+
+    .view-hr
+      background: #b7b7b7
+      height: 15px
+      width: 2px
+      margin: 3px 6px
+
+  .hands-box
+    position: relative
+    width: 100vw
+    overflow: hidden
+    height: 1122px
+    //top: 58px
+    //margin-bottom: 42px
+    display: flex
+    align-items: center
+    flex-direction: column
+    padding: 0 25px
+    box-sizing: border-box
+    @media (max-width: 640px)
+      height: 904px
+
+    &.wide
+      transform: rotate(0deg)
+
+    &.mobile
+      transform: rotate(90deg)
+
+    .hand-box
+      width: 100%
+
+  .sites-box-frame
+    +transition(all 0.4s $ease-in-out-sine)
+    overflow: auto
+    max-width: 960px
+    width: 100%
+    height: 540px
+    //background-color: #b7b7b7
+    margin: auto
+    margin-top: 352px
+    border: solid 1px $skin
+    border-radius: 6px
+    background:
+      repeat: no-repeat
+      size: contain
+      position: left top
+
+    @media (max-width: 640px)
+      margin-top: 230px
+      height: 437px
+
+  .hands-box::before
+    z-index: 16
+    position: absolute
+    top: 104px
+    left: calc(50% + 250px)
+    height: 405px
+    width: 100%
+    content: ""
+    background:
+      image: url(../img/r-hand.svg)
+      repeat: no-repeat
+      size: 720px
+      position: left top
+
+    filter: drop-shadow(0px 8px 6px rgba(3, 3, 3, 0.2))
+
+    +transition(all 0.4s $ease-in-out-sine)
+    transform-origin: left
+
+    @media (max-width: 900px)
+      display: none
+
+      //color: green
+
+  .hands-box::after
+    +transition(all 0.4s $ease-in-out-sine)
+    transform-origin: right
+    position: absolute
+    z-index: 15
+    bottom: -111px
+    right: calc(50% + 260px)
+    height: 519px
+    width: 100%
+    content: ""
+    background:
+      image: url(../img/l-hand.svg)
+      repeat: no-repeat
+      size: 697px
+      position: right bottom
+    filter: drop-shadow(0px 8px 6px rgba(3, 3, 3, 0.2))
+
+    @media (max-width: 900px)
+      display: none
+      //color: red
+
+  .sites-box-view
+    overflow: visible
+    max-width: 960px
+    width: 100%
+    min-height: 540px
+    position: relative
+    border-radius: 6px
+    background:
+      repeat: no-repeat
+      size: contain
+      position: center top
+
+      //color: pink
+
+.caro-text-bg
+  max-width: 960px
+  padding: 15px 15px
+  box-sizing: border-box
+  background: rgba(236, 236, 236, 0.94)
+  position: absolute
+  right: calc(50% - 480px)
+  z-index: -10
+  height: 126px
+  padding-top: 5px
+  box-shadow: 0 8px 10px -10px #777
+  border-radius: 11px
+  border-bottom: solid 2px rgba(255, 255, 255, 0.3)
+  +transition(all 0.2s $ease-in-out-sine)
+  opacity: 1
+  height: 138px
+  display: block
+  bottom: 125px
+
+ul.ul-caro
+  position: relative
+  z-index: 10
+  list-style: none
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  flex-wrap: wrap
+  width: 100%
+  background: $light-orange
+  margin: 0
+  padding:
+    top: 15px
+    bottom: 15px
+    left: calc(50% - 380px)
+    right: calc(50% - 380px)
+
+  box-sizing: border-box
+  bottom: -100%
+  right: 0
+  left: 0
+
+  @media (max-width: 640px)
+    top: -196px
+
+  @media (max-width: 800px)
+    justify-content: space-around
+
+    li
+      margin: 10px
+
+  @media (max-width: 640px)
+    li.caro-thumb
+      background-image: url(../img/small-logo-gray.svg) !important
+      background-size: 24px !important
+      width: 36px !important
+      height: 35px !important
+      box-shadow: 0px 0px 0px 2px #e49d2d !important
+      background: #fbb03b
+      background-blend-mode: multiply
+
+      &.thumb-on, &:hover
+        box-shadow:  inset 0px 1px 10px 0px #815615 !important
+
+
+  li.caro-thumb
+    //position: absolute
+    width: 114px
+    height: 70px
+    background-position: center
+    background-size: cover
+    cursor: pointer
+    background:
+      repeat: no-repeat
+    background-blend-mode: luminosity
+    border-radius: 5px
+    box-shadow: 2px 2px 8px 2px #f7921e
+    box-sizing: border-box
+    opacity: 0.7
+    transition: all 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95)
+
+
+    &.thumb-on, &:hover
+      box-shadow:  inset 0px 3px 10px 0px rgba(50, 50, 50, 0.75)
+      opacity: 1
+      transition: all 0.6s cubic-bezier(0.445, 0.05, 0.55, 0.95)
+
+    &.thumb-on .sites-box-info
+
+      +transition(all 0.5s $ease-in-out-sine)
+      opacity: 1
+      display: block
+
+
+.sites-box-info
+  max-width: 960px
+  width: 100%
+  padding: 15px 15px
+  box-sizing: border-box
+  position: absolute
+  top: -193px
+  right: calc(50% - 480px)
+  z-index: -10
+  height: 156px
+  padding-top: 5px
+  +transition(all 0.2s $ease-in-out-sine)
+  opacity: 0
+  display: none
+  background: rgba(236, 236, 236, 0)
+
+  @media (max-width: 1010px)
+    right: 28px
+    width: calc(100% - 50px)
+  @media (max-width: 640px)
+    top: 87px
+    right: 25px
+
+  .site-view-sites
+    max-width: 960px
+    //width: 100%
+    height: 540px
+    border-radius: 6px
+    +transition(all 0.2s cubic-bezier(0.93,-0.01, 0.53, 1.09))
+    opacity: 1
+    display: block
+    margin-top: 0
+    position: absolute
+    background: rgb(233, 233, 234)
+    bottom: 193px
+    right: 0px
+    border: solid 2px #e2bfaf
+    overflow: scroll
+    +animation-delay(5s)
+    z-index: 0
+    background: #d2b2a5
+    opacity: 1
+    transform-origin: center
+    @media (max-width: 640px)
+      height: 457px
+      bottom: 284px
+
+
+    img
+      display: block
+      border-bottom-left-radius: 5px
+      border-bottom-right-radius: 5px
+
+  .site-view-mobile
+    +transition(all 0.2s cubic-bezier(0.93,-0.01, 0.53, 1.09))
+    @extend .tabcontent
+    opacity: 0
+    width: 255px
+    height: 10px
+    border-radius: 35px
+    margin-top: 0
+    position: absolute
+    z-index: 10
+    background: rgb(233, 233, 234)
+    bottom: 386px
+    right: 350px
+    border: solid 2px #e2bfaf
+    overflow: scroll
+    +animation-delay(5s)
+    background: #d2b2a5
+    transform-origin: center
+    padding: 0 !important
+    img
+      border-bottom-left-radius: 40px
+      border-bottom-right-radius: 40px
+      display: none
+
+  h2
+    font-family: 'Heebo', sans-serif
+    font-size: 22px
+    font-weight: 400
+    color: #fbb03c
+
+  p
+    padding: 0
+    //line-height: 0px
+  a
+    background: #707070
+    color: #fff
+    padding: 5px 10px
+    font-weight: 600
+
+//rotate to mobile----------------/////
+
+.view-wide.butt-on
+  color: $orange
+  border-bottom: solid 2px $orange
+  font-weight: 500
+
+.view-mobile.butt-on
+  color: $purple
+  border-bottom: solid 2px $purple
+  font-weight: 500
+
+
+.rotate
+
+  .sites-box-info
+    background: rgba(236, 236, 236, 0.8)
+
+    .site-view-sites
+      width: 255px
+      height: 456px
+      border-radius: 35px
+      margin-top: 0
+      z-index: 10
+      +transition(all 0.2s $ease-in-out-sine)
+      opacity: 0
+      bottom: 208px
+      right: 350px
+      background: #e9e9ea
+      @media (max-width: 640px)
+        right: calc(50% - 128px)
+        bottom: 244px
+      img
+        display: none
+
+    .site-view-mobile
+      display: block
+      height: 456px
+      opacity: 1
+      bottom: 238px
+      img
+        display: block
+
+      @media (max-width: 1000px)
+        right: calc(50% - 133px)
+
+      @media (max-width: 640px)
+        right: calc(50% - 128px)
+        bottom: 274px
+
+
+
+.home-sections section.sites-view .hands-box
+
+  &.box-rotate
+    z-index: 0
+    &::before
+      transform: rotate(90deg)
+      top: -47px
+      left: calc(50% + 205px)
+      height: 863px
+      width: 744px
+      background-size: 1450px
+      +transition(all 0.2s $ease-in-out-sine)
+
+    &::after
+      transform: rotate(85deg)
+      bottom: -276px
+      right: calc(50% + 298px)
+      width: 932px
+      background-size: 1407px
+      height: 1050px
+      +transition(all 0.2s $ease-in-out-sine)
+
+
+    .sites-box-frame
+      width: 255px
+      height: 456px
+      border-radius: 35px
+      margin-top: 400px
+      position: relative
+      z-index: 10
+      +transition(all 0.2s $ease-in-out-sine)
+
+      @media (max-width: 640px)
+        margin-top: 221px

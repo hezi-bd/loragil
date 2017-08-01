@@ -1,0 +1,345 @@
+
+section.youtube
+  z-index: 1
+  position: relative
+.flex.flex--center.dust-box-flex
+
+.dust-box
+  margin: -8px 0 -50px
+  height: calc(100% + 58px)
+  width: 600px
+  position: absolute
+  content: ""
+  background-image: url(../img/dust.png)
+  background-repeat: repeat-y
+  background-position: center 0px
+  background-size: contain
+  right: calc(50vw - 300px)
+  z-index: 10
+
+.home-sections section.abilities
+  padding: 8px 0 50px
+  background:
+    color: $abilities-section-bg
+  position: relative
+  height: calc(50vh - 45px)
+  z-index: -1
+  display: flex
+  flex-direction: column
+  align-items: center
+  @extend .abilities-gra
+
+  .home-lead-title
+    position: absolute
+    top: 0
+    right: 0
+    left: 0
+
+  .rocket-section
+    //flex-wrap: wrap
+    width: 100%
+    position: absolute
+    top: 0
+    right: 0
+    left: 0
+    z-index: -1
+
+  .col-1
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    width: 100%
+
+  .home-lead-box
+    width: 400px
+    display: flex
+    float: left
+
+
+    .home-lead
+      color: $light-orange
+
+    .small-lead-box
+      margin-right: 35px
+
+    .orange-type
+      margin-top: 2px
+      color: $light-orange
+
+    .shade-type
+      line-height: 0.5
+      color: shade($purple, 60%)
+
+  .rocket-box
+    min-height: calc(50vh - 45px)
+
+    &::before
+      height: 330px
+      position: absolute
+      margin-right: -2px
+      content: ""
+      background:
+        image: url(../img/rocket.svg)
+        repeat: no-repeat
+        position: top center
+        size: contain
+
+
+    h4
+      color: $light-orange
+      font-weight: 400
+      text-align: center
+      display: flex
+      flex-direction: column-reverse
+      background-attachment: fixed
+      padding: 0px 11px 18vh
+      position: absolute
+      bottom: 0
+      margin-bottom: 0
+      z-index: -1
+      position: absolute
+
+
+  .col-first
+    .rocket-box
+      &:nth-child(1)
+        width: 99px
+        &::before
+          width: 99px
+          top: -20px
+
+        h4
+          @extend .flame-gra1
+          height: 253px
+          //bottom: 0px
+          line-height: 0
+          @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm)
+            height: 223px
+            //bottom: 0px
+            //line-height: 0
+      &:nth-child(2)
+        width: 75px
+        &::before
+          width: 78px
+          top: 0
+
+        h4
+          @extend .flame-gra2
+          height: 262px
+          bottom: 0
+          line-height: 0
+          @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm)
+            height: 232px
+            bottom: 0
+            line-height: 0
+
+      &:nth-child(3)
+        width: 60px
+        margin-left: 12px
+        &::before
+          width: 60px
+          top: -25px
+
+        h4
+          @extend .flame-gra3
+          height: 402px
+          bottom: 0
+          line-height: 0
+          @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm)
+            height: 281px
+            bottom: 0
+
+  .col-last
+    .rocket-box
+      &:nth-child(1)
+        width: 62px
+        &::before
+          top: -137px
+          width: 66px
+
+        h4
+          @extend .flame-gra4
+          height: 694px
+          bottom: 0
+          line-height: 0
+          @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm)
+            height: 654px
+            bottom: 0
+
+      &:nth-child(2)
+        width: 126px
+        &::before
+          width: 120px
+          top: 52px
+
+        h4
+          @extend .flame-gra5
+          height: 432px
+          bottom: 0
+          line-height: 0
+          @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm)
+            height: 392px
+            bottom: 0
+
+      &:nth-child(3)
+        width: 62px
+        &::before
+          width: 62px
+          top: 48px
+
+        h4
+          @extend .flame-gra6
+          height: 513px
+          bottom: 0
+          line-height: 0
+          @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm)
+            height: 473px
+            bottom: 0
+
+
+
+
+
+@media (max-width: 640px)
+  .home-sections section.abilities
+    z-index: 10
+    height: calc(50vh + 55px)
+
+    .flex--center
+      display: flex
+
+      &.dust-box-flex
+        display: none
+      //zoom: 0.6
+      .col-1
+        padding: 0
+      .col-first
+        padding-right: 10px
+        padding-left: 5px
+
+        .rocket-box
+          &:nth-child(1)
+            &::before
+              top: 150px
+
+            h4
+              height: 312px
+              line-height: 5
+              //font-size: 24px
+              @media (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm)
+                height: 292px
+                line-height: 5
+                //font-size: 24px
+
+          &:nth-child(2)
+            &::before
+              top: 80px
+
+            h4
+              height: 334px
+              line-height: 5.5
+              //font-size: 22px
+              @media (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm)
+                height: 314px
+                line-height: 5.5
+                //font-size: 22px
+
+          &:nth-child(3)
+            &::before
+              top: 154px
+
+            h4
+              height: 292px
+              line-height: 5.3
+              //font-size: 23px
+              @media (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm)
+                height: 272px
+                line-height: 5.3
+                //font-size: 23px
+
+      .col-last
+        padding-right: 5px
+        padding-left: 10px
+
+        .rocket-box
+          &:nth-child(1)
+            &::before
+              top: -91px
+              width: 65px
+
+            h4
+              height: 543px
+              top: -145px !important
+              line-height: 5.4
+              //font-size: 21px
+              @media (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm)
+                height: 523px
+                top: -126px !important
+                line-height: 5.4
+                //font-size: 21px
+
+          &:nth-child(2)
+            width: 120px
+            h4
+              height: 322px
+              bottom: 0
+              //font-size: 22px
+              line-height: 5.6
+              @media (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm)
+                height: 322px
+                bottom: 0
+                //font-size: 22px
+                line-height: 5.6
+
+          &:nth-child(3)
+            h4
+              height: 413px
+              bottom: 0
+              //font-size: 22px
+              line-height: 5.9
+              @media (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm)
+                height: 393px
+                bottom: 0
+                //font-size: 22px
+                line-height: 5.6
+
+
+
+      .rocket-box
+        margin: auto
+        display: -ms-flexbox
+        display: flex
+        -ms-flex-direction: column-reverse
+        flex-direction: column
+        -ms-flex-align: center
+        justify-content: flex-end
+        margin-top: 120px
+        @media (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm)
+          margin-top: 100px
+
+      .col-1 h4
+        background-attachment: inherit !important
+        z-index: -1
+        background-size: 100%
+        position: relative
+        font-size: 90%
+        top: -10px !important
+
+      &.home-lead-title
+        //zoom: 1
+        padding-bottom: 0
+        z-index: 10
+
+        .home-lead
+          letter-spacing: 20px
+          left: -29px
+          top: -4px
+          position: relative
+          @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm)
+            left: -47px
+
+      &.rocket-section
+        zoom: 0.65
+
+      .home-lead-box
+        zoom: 0.9

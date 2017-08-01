@@ -1,0 +1,204 @@
+.about-pic-cover
+  position: absolute
+  padding: 0
+  height: 100vh
+  width: 50%
+  right: 0
+  pointer-events: none
+  @media (max-width: 1530px)
+    width: 42%
+
+  @media (max-width: 640px)
+    width: 92%
+    top: -66px
+
+  background:
+    image: url(../img/loragil-about-pic.png)
+    repeat: no-repeat
+    position: top right
+    size: contain
+
+  &::after
+    height: 300px
+    width: 100vw
+    position: absolute
+    z-index: 10
+    bottom: -200px
+    @media (max-width: 1060px)
+      bottom: -150px
+
+    @media (max-width: 640px)
+      bottom: -620px
+      z-index: 100
+      background-size: 340%
+    margin-bottom: 70px
+    content: ""
+    background:
+      image: url(../img/abilities-bottom.png)
+      repeat: no-repeat
+      position: center
+      size: auto
+
+
+.home-sections section.about
+  padding: 0
+  height: 49.3vh
+  position: relative
+  display: flex
+  flex-direction: column
+  justify-content: flex-end
+  //background:
+    image: url(../img/loragil-about-pic.png)
+    repeat: no-repeat
+    position: top right
+    size: contain
+  &::before
+    position: absolute
+    z-index: -1
+    height: 100vh
+    top: 0
+    right: 0
+    content: ""
+    height: 49.3vh
+    width: 100vw
+    background:
+      image: url(../img/loragil-bg-pattern2.svg)
+      position: top center
+
+    @media (max-width: 640px)
+      top: -70px
+  &::after
+    position: absolute
+    z-index: -1
+    height: 77.3vh
+    top: 0
+    right: 0
+    content: ""
+    width: 100vw
+    @extend .home-gra
+
+  h2
+    color: $light-orange
+    font-size: 50px
+    margin: 0
+    text-align: justify
+
+    &.home-title
+      font:
+        weight: 100
+      text-shadow: $text-shade
+      //margin-top: 8vh
+      margin-bottom: -12px
+
+    &.home-title-bold
+      font:
+        weight: 700
+      text-shadow: 0 9px 8px rgba(109, 51, 158, 0.75)
+      letter-spacing: 0.4px
+
+  .logo-hr
+    height: 90px
+    width: 296px
+    margin: -20px auto -30px
+    background:
+      image: url(../img/loragil-logo-hr.svg)
+      repeat: no-repeat
+      position: center
+      size: cover
+
+  h4
+    text-shadow: $text-shade
+    color: $light-orange
+    text-align: justify
+    letter-spacing: -0.4px
+    margin: 0
+    //display: inline
+    font:
+      size: 25.4px
+      weight: 300
+
+    &:nth-child(3)
+      background: #864fbd
+  .logo-type
+    font-family: 'Quantico'
+    text-shadow: $text-shade
+    color: $light-orange
+    text-align: justify
+    letter-spacing: -0.4px
+    margin: 0
+    font:
+      size: 34px
+      weight: 700
+    &:first-letter
+      background:
+        image: url(../img/loragil-logo.svg)
+        position: 4px 0px
+        size: contain
+        repeat: no-repeat
+      color: transparent
+      text-shadow: none
+      padding: 0 18px
+      margin-left: -18px
+    span
+      font-weight: 300
+      -webkit-text-stroke: 1px shade($purple, 10%)
+      letter-spacing: -2px
+
+  p.home-info
+    color: shade($purple, 20%)
+    font-size: 16px
+    margin-top: 8px
+    margin-bottom: 33px
+    position: relative
+    line-height: 1.2
+    padding: 10px 15px
+    letter-spacing: -0.3px
+    //text-align: center
+
+    &:before
+      content: '{'
+      position: absolute
+      font-size: 44px
+      top: 2px
+      right: 0px
+
+    &:after
+      content: '}'
+      position: absolute
+      font-size: 44px
+      left: 0
+      top: 2px
+
+.home-sections section.about
+  @media (max-width: 1313px)
+    //height: 49.3vh
+
+  @media (max-width: 1060px)
+    height: 43vh
+
+  @media (max-width: 640px)
+    height: calc(100vh - 80px)
+    padding: 158px 0 0
+    margin-bottom: 14px
+    &::after
+      height: 100vh
+
+    .flex--center
+      background: rgba(126, 67, 184, 0.91)
+      padding: 0px 25px 15px
+      box-sizing: border-box
+    h2, h4, p
+      text-align: center
+    h2.home-title
+      margin-top: 0
+      margin-bottom: -5px
+
+    h4
+      line-height: 1.2
+
+    p.home-info
+      margin-bottom: 10px
+
+    @media (max-width: 370px)
+      h2
+        font-size: 40px

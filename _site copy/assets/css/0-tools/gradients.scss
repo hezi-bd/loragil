@@ -1,0 +1,105 @@
+.home-gra{      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#9f60d7+0,9052cc+50,5a2e81+100 */
+background: #492174; /* Old browsers */
+background: -moz-radial-gradient($grad-about); /* FF3.6-15 */
+background: -webkit-radial-gradient($grad-about); /* Chrome10-25,Safari5.1-6 */
+background: radial-gradient($grad-about); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9657cf', endColorstr='#492174',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+.abilities-gra{      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#9f60d7+0,9052cc+50,5a2e81+100 */
+background: #4c2571; /* Old browsers */
+background: -moz-radial-gradient(ellipse at 50% -3%, #4c2571 0%, #633093 35%, #633093 38%, #492174 68%, #431f67 100%); /* FF3.6-15 */
+background: -webkit-radial-gradient(ellipse at 50% -3%, #4c2571 0%, #633093 35%, #633093 38%, #492174 68%, #431f67 100%); /* Chrome10-25,Safari5.1-6 */
+background: radial-gradient(ellipse at 50% -3%, #4c2571 0%, #633093 35%, #633093 38%, #492174 68%, #431f67 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c2571', endColorstr='#633093',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.flame-gra1{/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,633093+100&0.8+0,0+100 */
+  background: red; /* For browsers that do not support gradients */
+    /* Safari 5.1 to 6.0 */
+    background: -webkit-repeating-linear-gradient($grad-flame1);
+    /* Opera 11.1 to 12.0 */
+    background: -o-repeating-linear-gradient($grad-flame1);
+    /* Firefox 3.6 to 15 */
+    background: -moz-repeating-linear-gradient($grad-flame1);
+    /* Standard syntax */
+    background: repeating-linear-gradient($grad-flame1);
+    background-attachment: fixed;}
+
+.flame-gra2{/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,633093+100&0.8+0,0+100 */
+  background: red; /* For browsers that do not support gradients */
+    /* Safari 5.1 to 6.0 */
+    background: -webkit-repeating-linear-gradient($grad-flame2);
+    /* Opera 11.1 to 12.0 */
+    background: -o-repeating-linear-gradient($grad-flame2);
+    /* Firefox 3.6 to 15 */
+    background: -moz-repeating-linear-gradient($grad-flame2);
+    /* Standard syntax */
+    background: repeating-linear-gradient($grad-flame2);
+    background-attachment: fixed;}
+
+.flame-gra3{/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,633093+100&0.8+0,0+100 */
+  background: red; /* For browsers that do not support gradients */
+    /* Safari 5.1 to 6.0 */
+    background: -webkit-repeating-linear-gradient($grad-flame3);
+    /* Opera 11.1 to 12.0 */
+    background: -o-repeating-linear-gradient($grad-flame3);
+    /* Firefox 3.6 to 15 */
+    background: -moz-repeating-linear-gradient($grad-flame3);
+    /* Standard syntax */
+    background: repeating-linear-gradient($grad-flame3);
+    background-attachment: fixed;}
+
+.flame-gra4{/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,633093+100&0.8+0,0+100 */
+  background: red; /* For browsers that do not support gradients */
+    /* Safari 5.1 to 6.0 */
+    background: -webkit-repeating-linear-gradient($grad-flame4);
+    /* Opera 11.1 to 12.0 */
+    background: -o-repeating-linear-gradient($grad-flame4);
+    /* Firefox 3.6 to 15 */
+    background: -moz-repeating-linear-gradient($grad-flame4);
+    /* Standard syntax */
+    background: repeating-linear-gradient($grad-flame4);
+    background-attachment: fixed;}
+
+.flame-gra5{/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,633093+100&0.8+0,0+100 */
+  background: red; /* For browsers that do not support gradients */
+    /* Safari 5.1 to 6.0 */
+    background: -webkit-repeating-linear-gradient($grad-flame5);
+    /* Opera 11.1 to 12.0 */
+    background: -o-repeating-linear-gradient($grad-flame5);
+    /* Firefox 3.6 to 15 */
+    background: -moz-repeating-linear-gradient($grad-flame5);
+    /* Standard syntax */
+    background: repeating-linear-gradient($grad-flame5);
+    background-attachment: fixed;}
+
+.flame-gra6{/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,633093+100&0.8+0,0+100 */
+  background: red; /* For browsers that do not support gradients */
+    /* Safari 5.1 to 6.0 */
+    background: -webkit-repeating-linear-gradient($grad-flame6);
+    /* Opera 11.1 to 12.0 */
+    background: -o-repeating-linear-gradient($grad-flame6);
+    /* Firefox 3.6 to 15 */
+    background: -moz-repeating-linear-gradient($grad-flame6);
+    /* Standard syntax */
+    background: repeating-linear-gradient($grad-flame6);
+    background-attachment: fixed;}
+
+.graphics-gra{
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f6f6f8+0,ffffff+20,ffffff+80,f6f6f8+100 */
+background: rgb(246,246,248); /* Old browsers */
+background: -moz-linear-gradient($grad-graphic-box); /* FF3.6-15 */
+background: -webkit-linear-gradient($grad-graphic-box); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient($grad-graphic-box); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f6f8', endColorstr='#f6f6f8',GradientType=1 ); /* IE6-9 */
+}
+.graphics-gra2{
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+36,ffffff+100&1+0,1+36,0+100 */
+  background: rgb(246,246,248); /* Old browsers */
+  background: $grad-graphic-box2; /* FF3.6-15 */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+.footer-bg-gra{
+  background: rgb(250,175,58); /* Old browsers */
+  background: $grad-footer;
+}
