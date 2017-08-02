@@ -1,9 +1,10 @@
 .home-sections section.graphics
+  height: 100vh
   padding-top: 0
   padding-bottom: 0
   margin-top: 0
-  margin-bottom: -250px
-  overflow: hidden
+  margin-bottom: -80px
+  overflow: visible
   position: relative
   z-index: 10
   .home-lead-title
@@ -61,23 +62,29 @@
       margin: 5px 10px
 
   ul.thumb-botts-box
+    height: 100%
+    margin: 0 auto
+    background:
+      image: none
+      position: center 20px
+      size: contain
+      repeat: no-repeat
+      blend-mode: multiply
+    mix-blend-mode: multiply
+
     position: relative
     z-index: 10
     max-width: 770px
     width: 100%
-    height: 920px
-    padding:
+    //height: 920px
+    //padding:
       top: 140px
       bottom: 100px
       left: 0
       right: 0
     list-style: none
     transition: all 0.4s ease-in-out
-    background:
-      position: center
-      image: none
-      size: contain
-      repeat: no-repeat
+    padding-right: 0
     @media (max-width: 640px)
       height: 610px
 
@@ -88,7 +95,9 @@
       content: ''
       max-width: 770px
       width: 100%
-      height: 680px
+      height: calc(100vh - 300px)
+      top: 110px
+      //height: 680px
       position: absolute
       z-index: 0
       background:
@@ -96,6 +105,28 @@
         position: center
         size: contain
         repeat: no-repeat
+
+      @media (max-width: 640px)
+        height: 320px
+
+    &::after
+      content: ''
+      max-width: 770px
+      width: 100%
+      height: calc(100vh - 110px)
+      top: 0px
+      position: absolute
+      z-index: -40
+      background-image: url(../img/loragil-bg-pattern.svg)
+      background-position: center
+      background-size: contain
+      background-repeat: no-repeat
+      background-color: white
+      background-blend-mode: multiply
+      mix-blend-mode: multiply
+      background-attachment: fixed
+      border-radius: 55%
+      box-shadow: inset 0px 0px 170px 180px #ffffff, 0px 0px 50px 10px rgba(255, 255, 255, 0.83)
 
       @media (max-width: 640px)
         height: 320px
@@ -152,7 +183,7 @@
 
       &:nth-child(1)
         right: 34%
-        top: -20px
+        top: -14px
         width: 255px
         height: 142px
 
@@ -185,15 +216,18 @@
 
         a.pics-box
           right: 19%
-          top: 125px
+          top: 130px
+          padding-bottom: 27px
 
         &:hover .thumb-print::after
           background-position: 39% bottom
 
       &:nth-child(2)
         color: $purple
-        right: 5%
-        top: 37%
+        right: 9%
+        @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm)
+          right: 11%
+        top: 27vh
         width: 250px
         height: 142px
         font-size: 20px
@@ -214,7 +248,10 @@
 
         &:hover
           color: #fff
-          top: calc(37% - 30px)
+          top: calc(27vh + 18px)
+          right: calc(9% + 10px)
+          @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm)
+            right: calc(11% + 10px)
 
         .thumb-print::before
           width: 255px
@@ -343,7 +380,12 @@
 
 
   .graphics-box
-    @extend .graphics-gra2
+    height: calc(100vh - 130px)
+    display: flow-root
+    margin-top: 100px
+    @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm)
+      margin-top: 0
+    //@extend .graphics-gra2
     flex-direction: column
     align-items: center
 
@@ -384,4 +426,9 @@
     repeat: no-repeat
     position-y: top
     position-x: 50%
-  margin-top: -77px
+  margin-top: -160px
+
+.lightbox
+  .lb-nav
+    a.lb-prev, a.lb-next
+      opacity: 0.5
