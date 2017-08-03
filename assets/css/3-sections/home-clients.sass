@@ -22,7 +22,7 @@ section.clients .clients-hr
   padding-bottom: 0
 
   @media (max-width: 640px)
-    margin-top: 106px
+    margin-top: 150px
 
   .col-1
     padding-top: 130px
@@ -142,6 +142,10 @@ section.clients .clients-hr
       //padding-right: 40px
       box-sizing: border-box
 
+      .slick-list.draggable
+        @media (max-width: 640px)
+          height: 100% !important
+
       .slick-prev, .slick-next
         top: 138px
         @media (max-width: 640px)
@@ -181,7 +185,7 @@ section.clients .clients-hr
           height: 100%
 
         @media (max-width: 640px)
-          height: 315px
+          height: 340px
 
 
 
@@ -191,7 +195,7 @@ section.clients .clients-hr
           align-items: center
           //margin-top: 134px
           @media (max-width: 640px)
-            margin-top: 154px
+            //margin-top: 154px
 
           p
             direction: rtl

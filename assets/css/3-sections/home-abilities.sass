@@ -105,6 +105,9 @@ section.youtube
       margin-bottom: 0
       z-index: -1
       position: absolute
+      border:
+        top-right-radius: 30%
+        top-left-radius: 30%
 
 
   .col-first
@@ -204,54 +207,84 @@ section.youtube
 
     .flex--center
       display: flex
+      flex-direction: row
+      flex-wrap: wrap
 
       &.dust-box-flex
         display: none
       //zoom: 0.6
       .col-1
-        padding: 0
+        padding: 0 !important
+        width: 50%
+
+        .rocket-box
+          margin: 0 0 !important
+          transform: scale(0.73)
+          width: 33.333%
+          right: 0 !important
+
+          h4
+            line-height: 6
+            top: -60px !important
+            @media (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm)
+              line-height: 5
+              top: -30px !important
+
       .col-first
         padding-right: 10px
         padding-left: 5px
 
         .rocket-box
+
           &:nth-child(1)
             &::before
-              top: 150px
+              top: 80px
+              width: 70px
+              @media (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm)
+                top: 103px
+                width: 65px
 
             h4
               height: 312px
-              line-height: 5
+              //line-height: 5
               //font-size: 24px
               @media (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm)
                 height: 292px
-                line-height: 5
+                //line-height: 5
                 //font-size: 24px
 
           &:nth-child(2)
             &::before
-              top: 80px
+              top: 100px
+              width: 70px
+              @media (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm)
+                top: 120px
+                width: 65px
 
             h4
-              height: 334px
-              line-height: 5.5
+              height: 274px
+              //line-height: 5.5
               //font-size: 22px
               @media (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm)
-                height: 314px
-                line-height: 5.5
+                height: 300px
+                //line-height: 5.5
                 //font-size: 22px
 
           &:nth-child(3)
             &::before
-              top: 154px
+              top: 144px
+              width: 72px
+              @media (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm)
+                top: 149px
+                width: 63px
 
             h4
-              height: 292px
-              line-height: 5.3
+              height: 222px
+              //line-height: 5.3
               //font-size: 23px
               @media (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm)
                 height: 272px
-                line-height: 5.3
+                //line-height: 5.3
                 //font-size: 23px
 
       .col-last
@@ -261,44 +294,62 @@ section.youtube
         .rocket-box
           &:nth-child(1)
             &::before
-              top: -91px
-              width: 65px
+              top: -143px
+              width: 60px
+              @media (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm)
+                top: -116px
+                width: 51px
 
             h4
-              height: 543px
-              top: -145px !important
-              line-height: 5.4
+              height: 513px
+              //top: 0 !important
+              //line-height: 5.4
               //font-size: 21px
               @media (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm)
-                height: 523px
-                top: -126px !important
-                line-height: 5.4
+                height: 500px
+                //top: 0 !important
+                //line-height: 5.4
                 //font-size: 21px
 
           &:nth-child(2)
             width: 120px
-            h4
-              height: 322px
-              bottom: 0
-              //font-size: 22px
-              line-height: 5.6
+            &::before
+              top: 71px
+              width: 95px
               @media (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm)
-                height: 322px
-                bottom: 0
+                top: 71px
+                width: 89px
+            h4
+              height: 242px
+              bottom: 0
+              top: 0
+              //font-size: 22px
+              //line-height: 5.6
+              @media (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm)
+                height: 272px
+                //bottom: 0
+                //top: 0
                 //font-size: 22px
-                line-height: 5.6
+                //line-height: 5.6
 
           &:nth-child(3)
+            //width: 120px
+            &::before
+              top: 58px
+              width: 56px
+              @media (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm)
+                top: 57px
+                width: 56px
             h4
-              height: 413px
+              height: 320px
               bottom: 0
               //font-size: 22px
-              line-height: 5.9
+              //line-height: 5.9
               @media (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm)
                 height: 393px
                 bottom: 0
                 //font-size: 22px
-                line-height: 5.6
+                //line-height: 5.6
 
 
 
@@ -329,14 +380,15 @@ section.youtube
 
         .home-lead
           letter-spacing: 20px
-          left: -29px
-          top: -4px
+          left: -24px
+          top: 0px
           position: relative
           @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm)
-            left: -47px
+            left: -42px
+            letter-spacing: 12px
 
       &.rocket-section
-        zoom: 0.65
+        //zoom: 0.65
 
       .home-lead-box
-        zoom: 0.9
+        //zoom: 0.9
