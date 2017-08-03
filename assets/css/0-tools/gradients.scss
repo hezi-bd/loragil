@@ -103,3 +103,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f6f8', end
   background: rgb(250,175,58); /* Old browsers */
   background: $grad-footer;
 }
+.test-body::before{
+  @extend .body-back-bg;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 0;
+  content: '';
+  background-blend-mode: multiply;
+
+}

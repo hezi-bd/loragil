@@ -900,6 +900,12 @@ textarea {
 .icon-vine:before {
   content: "\e60a"; }
 
+.body-back-bg, .test-body::before {
+  background: #4e2877;
+  background: linear-gradient(to bottom, #4e2877 -40%, #68359e 10%, #ffffff 28%, #ffffff 79%, #bd7a28 92%, #996321 130%);
+  -webkit-filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_honey_flower_approx', endcolorstr='$color_kumera_approx',gradienttype=0 );
+          filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_honey_flower_approx', endcolorstr='$color_kumera_approx',gradienttype=0 ); }
+
 .home-gra, .home-sections section.about::after {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#9f60d7+0,9052cc+50,5a2e81+100 */
   background: #492174;
@@ -1018,6 +1024,14 @@ textarea {
   background: #faaf3a;
   /* Old browsers */
   background: linear-gradient(to bottom, #e79418 0%, #ef9c10 63%, #f4ab33 63%, #bc7928 100%); }
+
+.test-body::before {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 0;
+  content: '';
+  background-blend-mode: multiply; }
 
 .cmn-toggle {
   position: absolute;
@@ -3045,8 +3059,8 @@ ul.ul-banners {
           background-position: 39% bottom; }
       .home-sections section.graphics ul.thumb-botts-box li:nth-child(2) {
         color: #6d339e;
-        right: 9%;
-        top: 27vh;
+        right: 5%;
+        top: 28vh;
         width: 250px;
         height: 142px;
         font-size: 20px;
@@ -3067,7 +3081,7 @@ ul.ul-banners {
         .home-sections section.graphics ul.thumb-botts-box li:nth-child(2):hover {
           color: #fff;
           top: calc(27vh + 18px);
-          right: calc(9% + 10px); }
+          right: calc(5% + 10px); }
           @media all and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
             .home-sections section.graphics ul.thumb-botts-box li:nth-child(2):hover {
               right: calc(11% + 10px); } }
