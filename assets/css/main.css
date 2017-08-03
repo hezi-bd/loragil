@@ -2033,6 +2033,8 @@ section.youtube {
           flex-wrap: wrap; }
       .home-sections section.abilities .flex--center.dust-box-flex {
         display: none; }
+      .home-sections section.abilities .flex--center .col-3 {
+        overflow: hidden; }
       .home-sections section.abilities .flex--center .col-1 {
         padding: 0 !important;
         width: 50%; }
@@ -3618,7 +3620,10 @@ section.home-footer {
       background-image: url(../img/me-footer.png), url("../img/loragil-bg-pattern.svg"), linear-gradient(to bottom, #e79418 0%, #ef9c10 62%, #f4ab33 62%, #bc7928 100%); } }
   @media (max-width: 640px) {
     section.home-footer {
-      background-position: 140px 532px, right top, center 1189px; } }
+      background-position: 140px top, right top, center 1189px; } }
+  @media (max-width: 640px) and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
+    section.home-footer {
+      background-position: 10px top, right top, center 1189px; } }
   section.home-footer .me-footer2 {
     position: absolute;
     height: 66vh;
@@ -3750,6 +3755,10 @@ section.home-footer {
     background-attachment: fixed !important;
     background-position: right top !important;
     background-repeat: no-repeat !important; }
+    @media (max-width: 640px) {
+      .inner-shadow::after {
+        background-image: transparent !important;
+        background-attachment: inherit; } }
   .inner-shadow .cta {
     margin: 0;
     display: -ms-flexbox;
@@ -3783,7 +3792,7 @@ a.flex.flex--center.mailto, a.flex.flex--center.face-butt {
   text-transform: uppercase;
   font-family: 'Quantico';
   text-shadow: 0 1px 1px #fad395;
-  color: #ac7627;
+  color: #6d339e;
   transition: all 0.4s ease-in-out;
   filter: alpha(opacity=100);
   background-blend-mode: normal;
@@ -3806,3 +3815,8 @@ a.flex.flex--center.mailto, a.flex.flex--center.face-butt {
 
 a.flex.flex--center.face-butt {
   margin-top: 0; }
+
+@media (max-width: 640px) {
+  #footer .inner-shadow::after, #footer a.flex.flex--center.mailto, #footer a.flex.flex--center.face-butt, #footer a.flex.flex--center.face-butt {
+    background-image: none !important;
+    background-attachment: inherit; } }

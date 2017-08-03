@@ -23,7 +23,9 @@ section.home-footer
 
   @media (max-width: 640px)
     //background-position: 140px -48px, right top, center 545px
-    background-position: 140px 532px, right top, center 1189px
+    background-position: 140px top, right top, center 1189px
+    @media (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm)
+      background-position: 10px top, right top, center 1189px
 
 
   .me-footer2
@@ -179,6 +181,12 @@ section.home-footer
       position: right top !important
       repeat: no-repeat !important
 
+    @media (max-width: 640px)
+      background-image: transparent !important
+      background-attachment: inherit
+
+
+
   .cta
     margin: 0
     display: flex
@@ -212,7 +220,7 @@ a.flex.flex--center.mailto
   text-transform: uppercase
   font-family: 'Quantico'
   text-shadow: 0 1px 1px #fad395
-  color: #ac7627
+  color: $purple
   transition: all 0.4s ease-in-out
   filter: alpha(opacity=100)
   background:
@@ -244,3 +252,10 @@ a.flex.flex--center.mailto
 a.flex.flex--center.face-butt
   @extend a.flex.flex--center.mailto
   margin-top: 0
+
+@media (max-width: 640px)
+  #footer
+    .inner-shadow::after, a.flex.flex--center.mailto, a.flex.flex--center.face-butt
+
+      background-image: none !important
+      background-attachment: inherit
