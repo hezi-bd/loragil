@@ -3361,7 +3361,8 @@ section.clients .clients-hr {
     padding-bottom: 0; }
     @media (max-width: 640px) {
       .home-sections section.clients .col-1 {
-        margin-bottom: 0; } }
+        margin-bottom: 0;
+        overflow-x: hidden; } }
   .home-sections section.clients .home-lead-box {
     margin-bottom: 50px; }
     .home-sections section.clients .home-lead-box .home-lead {
