@@ -34,6 +34,9 @@ section.youtube
     top: 0
     right: 0
     left: 0
+    background: rgba(94, 45, 141, 0.77)
+    border-bottom: solid 1px rgba(85, 40, 131, 0.5)
+    box-shadow: 0 7px 3px -1px rgba(61, 27, 93, 0.4)
 
   .rocket-section
     //flex-wrap: wrap
@@ -57,8 +60,12 @@ section.youtube
 
 
     .home-lead
+      position: relative
       color: $light-orange
-
+      letter-spacing: 25px
+      left: -20px
+      @media (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm)
+        left: -44px
     .small-lead-box
       margin-right: 35px
 
@@ -74,7 +81,7 @@ section.youtube
     min-height: calc(50vh - 45px)
 
     &::before
-      height: 330px
+      height: 42vh
       position: absolute
       margin-right: -2px
       content: ""
@@ -98,25 +105,27 @@ section.youtube
       margin-bottom: 0
       z-index: -1
       position: absolute
+      border:
+        top-right-radius: 30%
+        top-left-radius: 30%
 
 
   .col-first
+    position: relative
+    z-index: 10
     .rocket-box
       &:nth-child(1)
         width: 99px
         &::before
           width: 99px
-          top: -20px
+          top: -3vh
 
         h4
           @extend .flame-gra1
-          height: 253px
+          height: 31vh
           //bottom: 0px
           line-height: 0
-          @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm)
-            height: 223px
-            //bottom: 0px
-            //line-height: 0
+
       &:nth-child(2)
         width: 75px
         &::before
@@ -125,77 +134,68 @@ section.youtube
 
         h4
           @extend .flame-gra2
-          height: 262px
+          height: 32vh
           bottom: 0
           line-height: 0
-          @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm)
-            height: 232px
-            bottom: 0
-            line-height: 0
 
       &:nth-child(3)
         width: 60px
         margin-left: 12px
         &::before
-          width: 60px
-          top: -25px
+          width: 62px
+          top: -3vh
 
         h4
           @extend .flame-gra3
-          height: 402px
+          height: 37vh
           bottom: 0
           line-height: 0
-          @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm)
-            height: 281px
-            bottom: 0
 
   .col-last
     .rocket-box
       &:nth-child(1)
         width: 62px
         &::before
-          top: -137px
-          width: 66px
+          top: -49vh
+          width: 70px
 
         h4
           @extend .flame-gra4
-          height: 694px
+          height: calc(100vh - 150px)
           bottom: 0
           line-height: 0
           @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm)
-            height: 654px
+            height: calc(100vh - 150px)
             bottom: 0
 
       &:nth-child(2)
-        width: 126px
+        width: 164px
         &::before
-          width: 120px
-          top: 52px
+          width: 121px
+          top: -9vh
 
         h4
           @extend .flame-gra5
-          height: 432px
+          height: 33vh
           bottom: 0
           line-height: 0
-          @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm)
-            height: 392px
-            bottom: 0
+
 
       &:nth-child(3)
         width: 62px
+        right: -20px
+        position: relative
         &::before
-          width: 62px
-          top: 48px
+          width: 78px
+          top: -19vh
+          @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm)
+            top: -20vh
 
         h4
           @extend .flame-gra6
-          height: 513px
+          height: 50vh
           bottom: 0
           line-height: 0
-          @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm)
-            height: 473px
-            bottom: 0
-
 
 
 
@@ -207,54 +207,82 @@ section.youtube
 
     .flex--center
       display: flex
+      flex-direction: row
+      flex-wrap: wrap
 
       &.dust-box-flex
         display: none
       //zoom: 0.6
       .col-1
-        padding: 0
+        padding: 0 !important
+        width: 50%
+
+        .rocket-box
+          margin: 0 0 !important
+          transform: scale(0.73)
+          width: 33.333%
+          right: 0 !important
+
+          h4
+            line-height: 8
+            top: -60px !important
+            @media (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm)
+              line-height: 5
+              top: -30px !important
+
       .col-first
         padding-right: 10px
         padding-left: 5px
 
         .rocket-box
+
           &:nth-child(1)
             &::before
-              top: 150px
+              top: 80px
+              width: 999px
+              @media (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm)
+                top: 103px
+                width: 65px
 
             h4
               height: 312px
-              line-height: 5
+              //line-height: 5
               //font-size: 24px
               @media (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm)
                 height: 292px
-                line-height: 5
+                //line-height: 5
                 //font-size: 24px
 
           &:nth-child(2)
             &::before
-              top: 80px
+              top: 120px
+              width: 65px
+              @media (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm)
+                top: 120px
+                width: 65px
 
             h4
               height: 334px
-              line-height: 5.5
+              //line-height: 5.5
               //font-size: 22px
               @media (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm)
-                height: 314px
-                line-height: 5.5
+                height: 300px
+                //line-height: 5.5
                 //font-size: 22px
 
           &:nth-child(3)
             &::before
               top: 154px
+              @media (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm)
+                top: 154px
 
             h4
               height: 292px
-              line-height: 5.3
+              //line-height: 5.3
               //font-size: 23px
               @media (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm)
                 height: 272px
-                line-height: 5.3
+                //line-height: 5.3
                 //font-size: 23px
 
       .col-last
@@ -264,44 +292,62 @@ section.youtube
         .rocket-box
           &:nth-child(1)
             &::before
-              top: -91px
-              width: 65px
+              top: -43px
+              width: 51px
+              @media (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm)
+                top: -43px
+                width: 51px
 
             h4
               height: 543px
-              top: -145px !important
-              line-height: 5.4
+              //top: 0 !important
+              //line-height: 5.4
               //font-size: 21px
               @media (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm)
                 height: 523px
-                top: -126px !important
-                line-height: 5.4
+                //top: 0 !important
+                //line-height: 5.4
                 //font-size: 21px
 
           &:nth-child(2)
             width: 120px
-            h4
-              height: 322px
-              bottom: 0
-              //font-size: 22px
-              line-height: 5.6
+            &::before
+              top: 71px
+              width: 89px
               @media (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm)
-                height: 322px
-                bottom: 0
+                top: 71px
+                width: 89px
+            h4
+              height: 272px
+              bottom: 0
+              top: 0
+              //font-size: 22px
+              //line-height: 5.6
+              @media (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm)
+                height: 272px
+                //bottom: 0
+                //top: 0
                 //font-size: 22px
-                line-height: 5.6
+                //line-height: 5.6
 
           &:nth-child(3)
+            //width: 120px
+            &::before
+              top: 57px
+              width: 56px
+              @media (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm)
+                top: 57px
+                width: 56px
             h4
               height: 413px
               bottom: 0
               //font-size: 22px
-              line-height: 5.9
+              //line-height: 5.9
               @media (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm)
                 height: 393px
                 bottom: 0
                 //font-size: 22px
-                line-height: 5.6
+                //line-height: 5.6
 
 
 
@@ -339,7 +385,7 @@ section.youtube
             left: -47px
 
       &.rocket-section
-        zoom: 0.65
+        //zoom: 0.65
 
       .home-lead-box
-        zoom: 0.9
+        //zoom: 0.9

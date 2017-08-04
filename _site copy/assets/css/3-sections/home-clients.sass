@@ -22,7 +22,7 @@ section.clients .clients-hr
   padding-bottom: 0
 
   @media (max-width: 640px)
-    margin-top: 106px
+    margin-top: 150px
 
   .col-1
     padding-top: 130px
@@ -142,6 +142,10 @@ section.clients .clients-hr
       //padding-right: 40px
       box-sizing: border-box
 
+      .slick-list.draggable
+        @media (max-width: 640px)
+          height: 100% !important
+
       .slick-prev, .slick-next
         top: 138px
         @media (max-width: 640px)
@@ -171,11 +175,17 @@ section.clients .clients-hr
         box-sizing: border-box
         display: flex
         flex-direction: column
-        height: 314px
+        height: 315px
         justify-content: space-between
 
+        .client-comment
+          display: flex
+          flex-direction: column
+          justify-content: space-between
+          height: 100%
+
         @media (max-width: 640px)
-          height: 334px
+          height: 340px
 
 
 
@@ -183,15 +193,16 @@ section.clients .clients-hr
           display: flex
           flex-direction: row-reverse
           align-items: center
-          margin-top: 134px
+          //margin-top: 134px
           @media (max-width: 640px)
-            margin-top: 154px
+            //margin-top: 154px
 
           p
             direction: rtl
             color: #a3a2a5
             margin-right: 15px
             margin-top: 12px
+            margin-bottom: unset
             strong
               display: block
               font-size: 16px

@@ -77,6 +77,9 @@
     width: 100vw
     @extend .home-gra
 
+  .col-1.push-right
+    padding: 0
+
   h2
     color: $light-orange
     font-size: 50px
@@ -95,6 +98,7 @@
         weight: 700
       text-shadow: 0 9px 8px rgba(109, 51, 158, 0.75)
       letter-spacing: 0.4px
+      margin-bottom: -5px
 
   .logo-hr
     height: 90px
@@ -109,9 +113,9 @@
   h4
     text-shadow: $text-shade
     color: $light-orange
-    text-align: justify
-    letter-spacing: -0.4px
-    margin: 0
+    text-align: center
+    letter-spacing: -0.2px
+    margin: 0 auto
     //display: inline
     font:
       size: 25.4px
@@ -119,16 +123,25 @@
 
     &:nth-child(3)
       background: #864fbd
+
+    &:nth-child(5)
+      letter-spacing: 4px
+      margin-bottom: -19px
   .logo-type
     font-family: 'Quantico'
     text-shadow: $text-shade
     color: $light-orange
     text-align: justify
     letter-spacing: -0.4px
-    margin: 0
+    margin: 10px auto 6px
     font:
-      size: 34px
+      size: 36px
       weight: 700
+
+    @media (max-width: 640px)
+      font-size: 35px
+      text-align: center
+      letter-spacing: 1px
     &:first-letter
       background:
         image: url(../img/loragil-logo.svg)
@@ -139,33 +152,38 @@
       text-shadow: none
       padding: 0 18px
       margin-left: -18px
+
+      @media (max-width: 640px)
+        padding: 0 18px
+        margin-left: -7px
     span
       font-weight: 300
       -webkit-text-stroke: 1px shade($purple, 10%)
       letter-spacing: -2px
+      padding-right: 4px
 
   p.home-info
     color: shade($purple, 20%)
     font-size: 16px
-    margin-top: 8px
-    margin-bottom: 33px
+    margin-top: 10px
+    margin-bottom: 27px
     position: relative
     line-height: 1.2
     padding: 10px 15px
     letter-spacing: -0.3px
-    //text-align: center
+    text-align: center
 
     &:before
       content: '{'
       position: absolute
-      font-size: 44px
+      font-size: 60px
       top: 2px
       right: 0px
 
     &:after
       content: '}'
       position: absolute
-      font-size: 44px
+      font-size: 60px
       left: 0
       top: 2px
 
@@ -179,7 +197,7 @@
   @media (max-width: 640px)
     height: calc(100vh - 80px)
     padding: 158px 0 0
-    margin-bottom: 14px
+    margin-bottom: 0
     &::after
       height: 100vh
 
@@ -198,6 +216,21 @@
 
     p.home-info
       margin-bottom: 10px
+      font-size: 22px
+      padding: 20px
+
+      &:before, &:after
+        font-size: 118px
+        top: 2px
+        font-weight: 300
+        text-shadow: 0 1px 2px tint($purple, 30%)
+
+      &:before
+        right: -10px
+
+      &:after
+        left: -10px
+
 
     @media (max-width: 370px)
       h2
