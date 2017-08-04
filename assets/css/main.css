@@ -3030,11 +3030,17 @@ ul.ul-banners {
     padding-right: 0; }
     @media (max-width: 640px) {
       .home-sections section.graphics ul.thumb-botts-box {
-        height: 500px;
-        max-width: 300px;
+        height: 700px;
+        max-width: 400px;
         overflow: hidden;
         box-sizing: border-box;
-        margin: 0 auto 30px; } }
+        margin: 0 auto 40px;
+        background-size: 90%;
+        background-position: center 50px; } }
+  @media all and (max-width: 640px) and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
+    .home-sections section.graphics ul.thumb-botts-box {
+      background-position: center 50px;
+      background-size: contain; } }
     .home-sections section.graphics ul.thumb-botts-box::before {
       content: '';
       max-width: 770px;
@@ -3165,6 +3171,10 @@ ul.ul-banners {
           @media all and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
             .home-sections section.graphics ul.thumb-botts-box li:nth-child(2):hover {
               right: calc(11% + 10px); } }
+          @media (max-width: 640px) {
+            .home-sections section.graphics ul.thumb-botts-box li:nth-child(2):hover {
+              top: calc(27vh - 90px);
+              right: -19%; } }
         .home-sections section.graphics ul.thumb-botts-box li:nth-child(2) .thumb-print::before {
           width: 255px;
           height: 142px;

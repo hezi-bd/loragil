@@ -86,12 +86,17 @@
     transition: all 0.4s ease-in-out
     padding-right: 0
     @media (max-width: 640px)
-      height: 500px
-      max-width: 300px
+      height: 700px
+      max-width: 400px
       overflow: hidden
       box-sizing: border-box
-      margin: 0 auto 30px
+      margin: 0 auto 40px
+      background-size: 90%
+      background-position: center 50px
 
+      @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm)
+        background-position: center 50px
+        background-size: contain
 
 
 
@@ -256,6 +261,9 @@
           right: calc(5% + 10px)
           @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm)
             right: calc(11% + 10px)
+          @media (max-width: 640px)
+            top: calc(27vh - 90px)
+            right: -19%
 
         .thumb-print::before
           width: 255px
