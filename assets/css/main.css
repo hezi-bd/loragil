@@ -3313,6 +3313,9 @@ ul.ul-banners {
   background-position-y: top;
   background-position-x: 50%;
   margin-top: -160px; }
+  @media (max-width: 640px) {
+    .clients-top {
+      background-size: cover; } }
 
 .lightbox .lb-nav a.lb-prev, .lightbox .lb-nav a.lb-next {
   opacity: 0.5; }
@@ -3341,7 +3344,7 @@ section.clients .clients-hr {
   padding-bottom: 0; }
   @media (max-width: 640px) {
     .home-sections section.clients {
-      margin-top: 150px; } }
+      margin-top: 200px; } }
   .home-sections section.clients .col-1 {
     padding-top: 130px;
     padding-bottom: 0; }
