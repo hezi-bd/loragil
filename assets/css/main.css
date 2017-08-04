@@ -3326,7 +3326,7 @@ ul.ul-banners {
     .clients-top {
       height: 150px;
       margin-top: -60px;
-      background-size: cover; } }
+      background-size: 92%; } }
 
 .lightbox .lb-nav a.lb-prev, .lightbox .lb-nav a.lb-next {
   opacity: 0.5; }
