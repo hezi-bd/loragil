@@ -298,9 +298,10 @@
 
         .mobile-nav-toggle
           position: absolute
-          top: 6px
+          top: -56px
           left: 15px
-
+          @media (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm)
+            top: 6px
         //a.email-link
           position: fixed
           bottom: 0px
