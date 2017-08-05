@@ -28,7 +28,9 @@
       bottom: -150px
 
     @media (max-width: 640px)
-      bottom: -620px
+      @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm)
+        bottom: -620px
+      bottom: -600px
       z-index: 100
       background-size: 340%
     margin-bottom: 70px

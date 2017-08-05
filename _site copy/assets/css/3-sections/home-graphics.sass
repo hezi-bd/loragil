@@ -86,8 +86,17 @@
     transition: all 0.4s ease-in-out
     padding-right: 0
     @media (max-width: 640px)
-      height: 610px
+      height: 700px
+      max-width: 400px
+      overflow: hidden
+      box-sizing: border-box
+      margin: 0 auto 40px
+      background-size: contain
+      background-position: center 50px
 
+      @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm)
+        background-position: center 50px
+        background-size: contain
 
 
 
@@ -238,7 +247,10 @@
 
         @media (max-width: 640px)
           right: -19%
-          top: 28%
+          top: 26%
+          @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm)
+            right: -19%
+            top: 28%
 
 
         .thumb-print::after
@@ -252,6 +264,9 @@
           right: calc(5% + 10px)
           @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm)
             right: calc(11% + 10px)
+          @media (max-width: 640px)
+            top: calc(27vh - 90px)
+            right: -19%
 
         .thumb-print::before
           width: 255px
@@ -394,8 +409,10 @@
       overflow-x: hidden
       display: flex
       height: calc(100vh + 30px)
+      margin-top: 0
 
     li.thumb-bott
+      -webkit-tap-highlight-color: rgba(251, 176, 59, 0) !important
 
       a.pics-box
         position: absolute
@@ -414,11 +431,12 @@
         @include transition-delay(0s)
 
     li.thumb-bott:hover a.pics-box
+
       opacity: 1
       transform: scaleX(1)
       @include transition-delay(0.3s)
       &:hover
-        background: $orange
+        //background: $orange
         @include transition-delay(0s)
 
 
@@ -433,6 +451,11 @@
     position-y: top
     position-x: 50%
   margin-top: -160px
+  @media (max-width: 640px)
+    height: 110px
+    margin-top: -60px
+    background:
+      size: cover
 
 .lightbox
   .lb-nav
