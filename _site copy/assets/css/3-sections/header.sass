@@ -291,3 +291,44 @@
 
       .header-position
         background: rgba(0, 0, 0, 0)
+
+        .home-wrap header .logo
+
+
+
+
+
+  .home-wrap header nav.site-nav
+    display: flex !important
+    flex-direction: column
+    height: calc(100vh +10px)
+    position: fixed
+    z-index: 100
+    background: rgba(255, 255, 255, 0.39)
+    top: -5px
+    flex-wrap: wrap
+    justify-content: center
+    width: 8px
+    //If you use compass, instead of the line below you could use + box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: inset 2px 0 7px 2px rgba(59, 28, 88, 0.36)
+    ul
+      flex-wrap: wrap
+      justify-content: center !important
+      align-items: center
+      width: 8px !important
+
+
+      li
+        //background: rgb(225, 41, 41)
+        //If you use compass, instead of the line below you could use + transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: translateX(0px) !important
+        margin-bottom: 0 !important
+        height: 14.28%
+        background: rgba(186, 186, 186, 0.29)
+        display: flex
+        flex-direction: column
+        &:nth-child(odd)
+          background: rgba(159, 159, 159, 0.57)
+        a
+          font-size: 0
+          height: 100%

@@ -1443,6 +1443,15 @@ body {
         align-items: center;
     background: rgba(0, 0, 0, 0.2);
     transition: all 0.2s ease-in-out; }
+    @media (min-width: 641px) and (max-width: 768px) {
+      .home-wrap header .header-position {
+        padding-left: 0px !important;
+        padding-top: 7px;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important; }
+        .home-wrap header .header-position .mobile-nav-toggle {
+          margin-left: 4px;
+          margin: 10px; } }
   .home-wrap header .logo {
     overflow: hidden;
     text-indent: 101%;
@@ -1707,20 +1716,35 @@ body {
   position: absolute;
   padding: 0;
   height: 100vh;
-  width: 50%;
+  width: 27vw;
   right: 0;
   pointer-events: none;
   background-image: url(../img/loragil-about-pic.png);
   background-repeat: no-repeat;
   background-position: top right;
   background-size: contain; }
-  @media (max-width: 1530px) {
-    .about-pic-cover {
-      width: 42%; } }
   @media (max-width: 640px) {
     .about-pic-cover {
       width: 92%;
       top: -66px; } }
+  @media (min-width: 641px) and (max-width: 768px) {
+    .about-pic-cover {
+      width: 25vw;
+      background-position: top right;
+      height: 43vh;
+      background-size: 20vh;
+      -webkit-transform: scaleX(-1);
+              transform: scaleX(-1);
+      left: 0;
+      right: auto; }
+      .about-pic-cover::after {
+        bottom: -79vh !important; } }
+  @media (min-width: 769px) and (max-width: 1280px) {
+    .about-pic-cover {
+      width: 25vw; } }
+  @media (min-width: 1281px) and (max-width: 1530px) {
+    .about-pic-cover {
+      width: 27vw; } }
   .about-pic-cover::after {
     height: 300px;
     width: 100vw;
@@ -2293,10 +2317,13 @@ section.youtube {
           -ms-flex-line-pack: start;
               align-content: flex-start;
           -ms-flex-wrap: wrap;
-              flex-wrap: wrap; } }
-  @media all and (max-width: 640px) and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
-    .home-sections section.sites-view .home-lead-title .home-lead-box .home-lead {
-      left: -32px !important; } }
+              flex-wrap: wrap; }
+          .home-sections section.sites-view .home-lead-title .home-lead-box .home-lead {
+            left: -2px;
+            letter-spacing: 30px; } }
+    @media all and (max-width: 640px) and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
+      .home-sections section.sites-view .home-lead-title .home-lead-box .home-lead {
+        left: -32px !important; } }
       .home-sections section.sites-view .home-lead-title .home-lead-box .switch {
         margin-left: 10px;
         margin-top: 10px; }
