@@ -215,6 +215,7 @@
   .mobile-nav
     display: none
     position: absolute
+    top: 0
     width: 100%
     background: rgba(0, 0, 0, 0)
     padding: 30px 0 20px
@@ -292,7 +293,24 @@
       .header-position
         background: rgba(0, 0, 0, 0)
 
-        .home-wrap header .logo
+        a.logo-btn
+          position: fixed
+          top: 0
+
+        .mobile-nav-toggle
+          position: absolute
+          top: -56px
+          left: 15px
+          @media (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm)
+            top: 6px
+        //a.email-link
+          position: fixed
+          bottom: 0px
+          right: 0px
+          width: 8px
+          background: #b07928
+          background-image: none
+          display: block
 
 
 
@@ -301,11 +319,11 @@
   .home-wrap header nav.site-nav
     display: flex !important
     flex-direction: column
-    height: calc(100vh +10px)
+    height: calc(100vh - 60px)
     position: fixed
     z-index: 100
     background: rgba(255, 255, 255, 0.39)
-    top: -5px
+    top: 60px
     flex-wrap: wrap
     justify-content: center
     width: 8px
@@ -316,6 +334,7 @@
       justify-content: center !important
       align-items: center
       width: 8px !important
+      height: 100%
 
 
       li
