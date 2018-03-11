@@ -1,75 +1,64 @@
 <section class="banners" id="banners">
   <div class="flex flex--center home-lead-title">
-    <div class="col-2">
       <div class="home-lead-box">
-        <div class="home-lead">
-          <div class="small-logo"></div>
-          <div class="title-move">
-            באנרים
-          </div>
-          <div class="small-logo"></div>
-        </div>
-        <div class="small-lead-box">
-          <div class="small-home-lead orange-type">ועכשיו נעבור לפר-סו-מות...</div>
+        <div class="home-lead anim-title-bg">
+          <span></span>ANIMATION<span></span>
         </div>
       </div>
-    </div>
   </div>
 
   <div class="banners-thumb-box">
-    <div class="full-width-small-title">
-      <p>הקלקה על הבאנר הנבחר תציגו במספר גדלים שונים</p>
-    </div>
 
-</section>
 
-<section class="section-work">
+    <section class="section-work">
 
-  {% for banner in site.data.settings.banners %}
-    <input type="radio" name="trigger" class="trigger" id="{{ banner.folder }}" />
-  {% endfor %}
-
-  <input type="radio" name="trigger" id="return" class="return" />
-
-  <div class="work-belt">
-
-    <div class="thumb-wrap">
-      <div class="thumb-container">
       {% for banner in site.data.settings.banners %}
-      <label for="{{ banner.folder }}">
-        <div class="thumb-unit" data-url="{{site.baseurl}}/banners/{{ banner.folder }}/">
-          <img src="{{site.baseurl}}/assets/img/banner/{{banner.folder}}/thumb.jpg" alt="{{ banner.name }}" />
-        </div>
-        <div class="thumb-overlay">
-          <strong>{{ banner.name }}</strong>
-        </div>
-      </label>
+        <input type="radio" name="trigger" class="trigger" id="{{ banner.folder }}" />
       {% endfor %}
-    </div>
-    </div>
 
-    <div class="work-wrap">
-      <div class="work-container">
-      <label for="return">
-        <div class="work-return">{% include icons/icon-back.html %}</div>
-      </label>
-      <h4 class="project-title"></h4>
-      <div class="project-load"></div>
+      <input type="radio" name="trigger" id="return" class="return" />
 
-      <noscript>
-        {% for banner in site.data.settings.banners %}
-          <div class="noscript" id="content-{{ banner.folder }}">
-            <h4 class="project-title">{{ banner.name }}</h4>
-            <div class="noscript-load">
-              {% include {{banner.file}} %}
+      <div class="work-belt">
+
+        <div class="thumb-wrap">
+          <div class="thumb-container">
+          {% for banner in site.data.settings.banners %}
+          <label for="{{ banner.folder }}">
+            <div class="thumb-unit" data-url="{{site.baseurl}}/banners/{{ banner.folder }}/">
+              <img src="{{site.baseurl}}/assets/img/banner/{{banner.folder}}/thumb.jpg" alt="{{ banner.name }}" />
             </div>
-          </div>
-        {% endfor %}
-      </noscript>
+            <div class="thumb-overlay">
+              <strong>{{ banner.name }}</strong>
+            </div>
+          </label>
+          {% endfor %}
+        </div>
+        </div>
 
-    </div>
-    </div>
+        <div class="work-wrap">
+          <div class="work-container">
+          <label for="return">
+            <div class="work-return">{% include icons/icon-back.html %}</div>
+          </label>
+          <h4 class="project-title"></h4>
+          <div class="project-load"></div>
 
-  </div>
+          <noscript>
+            {% for banner in site.data.settings.banners %}
+              <div class="noscript" id="content-{{ banner.folder }}">
+                <h4 class="project-title">{{ banner.name }}</h4>
+                <div class="noscript-load">
+                  {% include {{banner.file}} %}
+                </div>
+              </div>
+            {% endfor %}
+          </noscript>
+
+        </div>
+        </div>
+
+      </div>
+
+    </section>
 
 </section>

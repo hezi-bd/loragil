@@ -1,0 +1,429 @@
+/* Preload images */
+section.my-sites-view
+  height: 100vh
+  width: 100%
+  overflow: hidden
+  position: relative
+  z-index: -2
+  @media (max-width:640px)
+    padding-top: 0
+
+  .col-1
+    max-width: 264px
+    z-index: 100
+    background: #fff
+    //position: absolute
+    //right: calc(50% - 392px)
+    box-shadow: 0 10px 30px 0 rgba(71, 32, 112, 0.11), 0 5px 16px 0 rgba(0, 0, 0, 0.07), 0px 30px 34px -20px rgba(0, 0, 0, 0.09)
+    border-radius: 0 0 16px 16px
+    border-bottom: solid 3px #b7b5b5
+    padding: 45px 5px 15px 20px
+    margin: -70px 0 0 0
+
+    @media (max-width:640px)
+      margin-top: 0
+      padding: 20px 0 0 0
+      max-width: 100% !important
+      width: 100%
+      border-radius: 0
+      display: flex
+      //justify-content: space-around
+      align-items: center
+
+      &>*
+        padding: 10px
+        flex: 1 1 33.3%
+
+        &:first-child
+          border-right: solid 1px #d0cdcd
+          box-shadow: inset -1px 0 0px 0px #e8dcdc, inset -2px 0 0px 0px #dcd9d9
+          text-align: center
+        &:last-child
+          justify-content: center !important
+
+
+
+
+  .col-full
+    position: absolute
+    max-width: 100%
+    top: 50px
+    background: transparent
+
+    @media (max-width:640px)
+
+      .slider-sites-nav .slick-list
+        margin-top: 98px
+
+
+  .slider-sites-nav
+    //width: 620px
+    margin: -98px auto 40px
+    padding-left: 9px
+
+    .slick-dots
+
+      bottom: -33px
+
+    .slick-track
+      box-shadow: 0 0 2px 4px #e5e5e5, 0 0 2px 4px #9f9e9e
+      background: rgba(255, 255, 255, 0.63)
+
+    .slick-list
+      overflow: initial
+    .slick-slide
+      margin: 0 0
+      filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0)) grayscale(0.3) saturate(0.2) opacity(0.4) blur(2px)
+      +transition(filter 0.3s $ease-in-out-quint)
+      z-index: 0 !important
+
+      &.slick-current.slick-center
+        filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.53)) grayscale(0) saturate(1) opacity(1) blur(0)
+        z-index: 100 !important
+        transform: scale(1.2) translateY(-2px)
+        +transition(filter 0.2s $ease-out-quint)
+
+
+  .site-pre
+    width: 960px
+    max-width: 960px
+    width: 100% !important
+    margin: -10px auto 0 !important
+
+    @media (min-width:641px) and (max-width: 1000px)
+      max-width: 620px
+
+    @media (max-width:640px)
+      padding: 40px 20px 0
+      margin-top: 65px !important
+
+
+    .site-pre-box
+      width: 100%
+      height: calc(100vh - 344px) !important
+      overflow: scroll
+      overflow-x: hidden
+      overflow-y: scroll
+      border-radius: 6px
+      border: solid 1px $orange
+      position: relative
+      margin: auto
+      display: flex
+      justify-content: center
+      +transition(all 0.3s $ease-in-out-sine)
+
+      .butt-on
+        opacity: 1
+        border-bottom: none
+        margin-bottom: -8px
+      .view-wide
+        position: absolute
+        display: block
+        opacity: 1
+        z-index: 10
+        width: 100%
+        height: calc(100vh - 344px) !important
+        overflow-y: scroll
+        filter: blur(0px)
+        +transition(all 0.3s $ease-in-out-sine)
+      .view-mobile
+        position: absolute
+        display: block
+        opacity: 0
+        z-index: 1
+        width: 100%
+        height: calc(100vh - 344px) !important
+        overflow-y: scroll
+        filter: blur(10px)
+        +transition(all 0.3s $ease-in-out-sine)
+
+
+    .sites-box-info
+      display: block
+      opacity: 1
+      top: auto
+      padding-left: 150px
+      margin-top: 15px
+      background: rgba(247, 247, 247, 0.46)
+      @media (min-width:641px) and (max-width: 1000px)
+        max-width: 620px
+        padding-left: 145px
+        right: 0
+
+      h2
+        margin-bottom: 0
+
+      p.site-excerpt
+        color: shade($gray, 20%)
+
+    a.site-link.sites-box-info
+      @media (max-width:640px)
+        transform: translateX(0) !important
+        &:hover
+          transform: translateX(0) !important
+      &:hover i.fas.fa-link
+        opacity: 1
+        transform: translateX(-64px)
+        @media (max-width:640px)
+          transform: translateX(-55px)
+      & i.fas.fa-link
+        position: absolute
+        font-size: 30px
+        padding: 20px
+        color: $light-orange
+        transform: translateX(-80px)
+        opacity: 0
+        transition: all 0.8s cubic-bezier(0.445, 0.05, 0.55, 0.95)
+        margin-top: 5px
+        @media (max-width:640px)
+          transform: translateX(-45px)
+      &:hover
+        transition: all 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95)
+        transform: translateX(40px)
+
+        @media (min-width:641px) and (max-width: 1000px)
+          transform: translateX(0px)
+          max-width: 570px
+
+
+
+  .site-pre img
+    width: 100%
+    margin: auto
+
+  .slider-sites-for.box-rotate
+    .site-pre-box
+      width: 255px
+      border-radius: 28px
+      +transition(all 0.4s $ease-in-out-sine)
+
+      .view-wide
+        border-radius: 28px
+        width: 255px
+        opacity: 0
+        z-index: 1
+        filter: blur(10px)
+        +transition(all 0.4s $ease-in-out-sine)
+      .view-mobile
+        border-radius: 28px
+        opacity: 1
+        z-index: 10
+        filter: blur(0px)
+        +transition(all 0.4s $ease-in-out-sine)
+
+    @media (min-width:641px) and (max-width: 1000px)
+      .site-pre, .sites-box-info
+        max-width: 100% !important
+
+
+  .slick-track
+    display: flex
+
+  // ------------------start hands-------------------
+  .home-lead-title
+    position: relative
+    z-index: 10
+    //height: 0
+    //top: 148px
+    display: flex
+    width: 100%
+    max-width: 960px
+    margin: auto
+    justify-content: flex-start
+    @media (min-width:641px) and (max-width: 1000px)
+      padding-left: 34px
+    @media (max-width: 640px)
+      top: 0
+
+    .home-lead-box
+      width: 230px
+      text-align: -webkit-left
+
+      @media (max-width: 640px)
+        width: 88%
+        display: flex
+        flex-direction: column
+        align-content: flex-start
+        flex-wrap: wrap
+
+        .home-lead
+          left: -2px
+          letter-spacing: 30px
+          @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm)
+            left: -32px !important
+
+    .home-lead
+      color: $purple
+      position: relative
+      letter-spacing: 4.2px
+
+
+    .small-lead-box
+      display: flex
+      letter-spacing: 0.8px
+      justify-content: flex-start
+      flex-wrap: wrap
+      margin-top: 5px
+
+      .small-home-lead.orange-type
+        font-weight: bold
+        @media (max-width:500px)
+          flex: 1 1 100%
+          text-align: center
+
+
+
+      .switch
+        flex: 1 1 100%
+        display: flex
+        justify-content: flex-end
+        margin-right: 28px
+        margin-top: 10px
+        @media (min-width: 480px) and (max-width: 640px)
+          margin-right: initial !important
+          justify-content: center
+          right: -50px
+          position: relative
+
+        @media (max-width:500px)
+          margin: 20px auto 0 !important
+          justify-content: center
+
+    .small-home-lead
+      margin-right: 5px
+
+    .view-hr
+      background: #b7b7b7
+      height: 15px
+      width: 2px
+      margin: 3px 6px
+
+  .hands-box
+    position: absolute
+    width: 100vw
+    overflow: hidden
+    //height: calc(100vh + 38px)
+    height: calc(100vh + 0)
+    //top: 58px
+    margin-top: -190px
+    display: flex
+    align-items: center
+    flex-direction: column
+    padding: 0 25px
+    box-sizing: border-box
+    @media (max-width: 640px)
+      height: 904px
+
+    &.wide
+      transform: rotate(0deg)
+
+    &.mobile
+      transform: rotate(90deg)
+
+    .hand-box
+      width: 100%
+
+  .sites-box-frame
+    +transition(all 0.4s $ease-in-out-sine)
+    overflow: auto
+    max-width: 960px
+    width: 100%
+    height: 100vh !important
+    margin: auto
+    margin-top: 248px
+    // border: solid 1px $skin
+    // border-radius: 6px
+    background:
+      repeat: no-repeat
+      size: contain
+      position: left top
+
+    @media (max-width: 640px)
+      margin-top: 230px
+      height: 437px
+
+  .hands-box::before
+    z-index: 16
+    position: absolute
+    top: 4px
+    left: calc(50% + 252px)
+    height: 405px
+    width: 100%
+    content: ""
+    background:
+      image: url(../img/r-hand.svg)
+      repeat: no-repeat
+      size: 720px
+      position: left top
+
+    filter: drop-shadow(0px 8px 6px rgba(3, 3, 3, 0.2))
+
+    +transition(all 0.4s $ease-in-out-sine)
+    transform-origin: left
+
+    @media (min-width:641px) and (max-width: 1000px)
+      left: calc(50% + 80px)
+
+    @media (max-width: 640px)
+      display: none
+
+      //color: green
+
+  .hands-box::after
+    +transition(all 0.4s $ease-in-out-sine)
+    transform-origin: right
+    position: absolute
+    z-index: 15
+    //bottom: -217px
+    top: calc(100vh - 270px)
+    right: calc(50% + 260px)
+    height: 519px
+    width: 100%
+    content: ""
+    background:
+      image: url(../img/l-hand.svg)
+      repeat: no-repeat
+      size: 697px
+      position: right bottom
+    filter: drop-shadow(0px 8px 6px rgba(3, 3, 3, 0.2))
+
+    @media (min-width:641px) and (max-width: 1000px)
+      right: calc(50% + 85px)
+
+    @media (max-width: 640px)
+      display: none
+
+  .hands-box
+
+    &.box-rotate
+      z-index: 0
+      &::before
+        transform: rotate(90deg)
+        top: -174px
+        left: calc(50% + 205px)
+        height: 863px
+        width: 744px
+        background-size: 1450px
+        +transition(all 0.2s $ease-in-out-sine)
+
+      &::after
+        transform: rotate(85deg)
+        top: 214px
+        right: calc(50% + 303px)
+        width: 932px
+        background-size: 1407px
+        height: 1050px
+        +transition(all 0.2s $ease-in-out-sine)
+
+
+      .sites-box-frame
+        width: 255px
+        height: 456px
+        border-radius: 35px
+        margin-top: 400px
+        position: relative
+        z-index: 10
+        +transition(all 0.2s $ease-in-out-sine)
+
+        @media (max-width: 640px)
+          margin-top: 221px

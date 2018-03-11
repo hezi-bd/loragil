@@ -29,6 +29,7 @@
 @import "3-sections/home-about";
 @import "3-sections/home-abilities";
 @import "3-sections/home-sites-view";
+@import "3-sections/my-sites-view";
 @import "3-sections/home-banners";
 @import "3-sections/home-popups";
 @import "3-sections/home-graphics";
@@ -38,4 +39,12 @@
 // @import "3-sections/home-mentoring";
 //
 
-// @import "4-layouts/home";
+// @import "4-layouts/home";\
+
+
+.mask-svg img {
+  -webkit-clip-path: url(#mask);
+  clip-path: url(#mask);
+
+  height: 300px;
+}

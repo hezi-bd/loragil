@@ -2,12 +2,15 @@
   position: absolute
   padding: 0
   height: 100vh
-  width: 27vw
+  width: 30vw
   right: 0
   pointer-events: none
+  filter: drop-shadow(92px -18px 32px #200f2f)
+  overflow: hidden
   @media (max-width: 640px)
     width: 92%
     top: -66px
+    overflow: hidden
   @media (min-width: 641px) and (max-width: 768px)
     width: 25vw
     background-position: top right
@@ -16,12 +19,32 @@
     transform: scaleX(-1)
     left: 0
     right: auto
+    filter: drop-shadow(62px -18px 32px #200f2f)
     &::after
       bottom: -79vh !important
-  @media (min-width:769px) and (max-width: 1280px)
-    width: 25vw
-  @media (min-width:1281px) and (max-width: 1530px)
-    width: 27vw
+
+  @media (min-width:769px) and (max-width: 1000px)
+
+    width: 37vw
+    right: -35px
+
+  // @media (min-width:871px) and (max-width: 1000px)
+  //   overflow: hidden
+  //   border-radius: 50%
+  //   width: 0
+  //   height: 0
+  //   padding: 10vh
+  //   background-position: top center
+  //   right: 57px
+  //   background-size: cover
+  //   background-color: $orange
+  //   top: 13px
+  //   border-bottom: solid 1px $purple
+  //   border-top: solid 1px shade($purple, 20%)
+  //   filter: drop-shadow(92px -18px 32px rgba(32, 15, 47, 0))
+  @media (min-width:1001px) and (max-width: 1100px)
+    width: 36vw
+
 
 
 
@@ -49,19 +72,19 @@
     margin-bottom: 70px
     content: ""
     background:
-      image: url(../img/abilities-bottom.png)
+      // image: url(../img/abilities-bottom.png)
       repeat: no-repeat
       position: center
       size: auto
 
 
 .home-sections section.about
-  padding: 0
+  padding: 11px 0
   height: 49.3vh
   position: relative
   display: flex
   flex-direction: column
-  justify-content: flex-end
+  justify-content: flex-start
   //background:
     image: url(../img/loragil-about-pic.png)
     repeat: no-repeat
@@ -78,11 +101,12 @@
     width: 100vw
     background:
       image: url(../img/loragil-bg-pattern2.svg)
-      position: top center
+      position: -21.7vw -24.2vh
+      attachment: fixed
 
     @media (max-width: 640px)
       top: -70px
-  &::after
+  //&::after
     position: absolute
     z-index: -1
     height: 77.3vh
@@ -92,12 +116,76 @@
     width: 100vw
     @extend .home-gra
 
-  .col-1.push-right
+  .flex.flex--center
+    // background: rgba(255, 255, 255, 0.2)
+    // padding: 20px
+    // backdrop-filter: blur(5px)
+
+  .col-1.push-right.logo-title
     padding: 0
+    position: relative
+    //z-index: -1
+    display: flex
+    flex-direction: column
+    height: 36vh
+    justify-content: center
+    //padding-top: 10px
+
+    @media (max-width: 1340px)
+      margin-left: 278px
+      //max-width: 260px
+      margin-top: -18px
+
+      h2
+        font-size: 49px
+        &.home-title-bold
+          font-size: 47px
+          letter-spacing: 1px
+          margin-bottom: -5px
+
+      .logo-type
+        font-size: 32px
+        letter-spacing: -0.4px
+
+      h4.my-name
+        letter-spacing: 1px
+        margin-top: -9px
+        font-size: 17px
+
+
+
+    @media (max-width: 1170px)
+      margin-left: 253px
+
+      h2
+        font-size: 45px
+        &.home-title-bold
+          font-size: 44px
+
+      .logo-type
+        font-size: 30px
+      h4.my-name
+        letter-spacing: 0.5px
+
+    @media (min-width:1001px) and (max-width: 1100px)
+      margin-top: -60px
+      margin-left: 0px
+      margin-right: -50px
+
+    @media (min-width:769px) and (max-width: 1000px)
+      margin-top: -53px
+      margin-left: 0px
+      margin-right: -50px
+
+
+
+
+
+
 
   h2
     color: $light-orange
-    font-size: 50px
+    font-size: 52px
     margin: 0
     text-align: justify
 
@@ -106,13 +194,21 @@
         weight: 100
       text-shadow: $text-shade
       //margin-top: 8vh
-      margin-bottom: -12px
+      margin-bottom: -11px
+      letter-spacing: 1.5px
+      font:
+        family: 'Cabin Sketch', cursive
+        size: 54px
 
     &.home-title-bold
+      letter-spacing: 1px
+      margin-bottom: -5px
+      text-transform: uppercase
       font:
         weight: 700
+        family: 'Quantico'
+
       text-shadow: 0 9px 8px rgba(109, 51, 158, 0.75)
-      letter-spacing: 0.4px
       margin-bottom: -5px
 
   .logo-hr
@@ -136,21 +232,28 @@
       size: 25.4px
       weight: 300
 
-    &:nth-child(3)
-      background: #864fbd
+    &.title-bullets
+      //background: #864fbd
+      color: #4b2563
+      text-shadow: 0 1px 1px #ab69ea
 
-    &:nth-child(5)
-      letter-spacing: 4px
-      margin-bottom: -19px
+    &.my-name
+      letter-spacing: 0.3px
+      margin-top: -10px
+      font-size: 20px
+      font-weight: 500
+      justify-content: space-evenly
+      margin-left: -10px
+
   .logo-type
     font-family: 'Quantico'
     text-shadow: $text-shade
     color: $light-orange
     text-align: justify
-    letter-spacing: -0.4px
-    margin: 10px auto 6px
+    //letter-spacing: -0.4px
+    margin: 10px auto 0
     font:
-      size: 36px
+      size: 35px
       weight: 700
 
     @media (max-width: 640px)
@@ -166,14 +269,14 @@
       color: transparent
       text-shadow: none
       padding: 0 18px
-      margin-left: -18px
+      margin-left: -16px
 
       @media (max-width: 640px)
         padding: 0 18px
         margin-left: -7px
     span
-      font-weight: 300
-      -webkit-text-stroke: 1px shade($purple, 10%)
+      //font-weight: 300
+      //-webkit-text-stroke: 1px shade($purple, 10%)
       letter-spacing: -2px
       padding-right: 4px
 
@@ -203,26 +306,64 @@
       top: 2px
 
 .home-sections section.about
-  @media (max-width: 1313px)
-    //height: 49.3vh
 
-  @media (max-width: 1060px)
-    height: 43vh
+  @media (max-width: 840px) and (min-width: 769px)
+    //padding: 30vh 0 0
+
+    .flex--center
+
+      .logo-type-etc
+            transform: translate(0px, 0px) !important
+
+  @media (max-width: 768px) and (min-width: 641px)
+    .flex--center
+      justify-content: center
+
+      .col-1.push-right.logo-title
+        justify-content: center
+        margin-left: 250px
+
 
   @media (max-width: 640px)
-    height: calc(100vh - 80px)
-    padding: 158px 0 0
+    height: calc(66.6vh - 68px)
+    padding: 0
+    padding-top: calc(33.3vh - 68px)
     margin-bottom: 0
     margin-top: 68px
-    @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm)
-      margin-top: 62px
+    // @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm)
+    //   margin-top: 62px
     &::after
       height: 100vh
 
     .flex--center
-      background: rgba(126, 67, 184, 0.91)
-      padding: 0px 25px 15px
-      box-sizing: border-box
+      .col-1.push-right.logo-title
+        width: 100%
+        margin: 0
+        transform: none !important
+        height: 33.3vh
+        &>*
+          z-index: 10
+        &::before
+          position: absolute
+          background: $purple
+          mix-blend-mode: multiply
+          width: 100%
+          height: 100%
+          content: ''
+          z-index: 0
+          //padding: 0px 0 15px 430px
+          box-sizing: border-box
+          //justify-content: flex-start
+
+        .my-name
+          background: #fec463
+          max-width: 300px
+          margin: 0 auto !important
+          padding: 5px 5px
+          box-shadow: 0 2px 3px #333
+          border-top: 1px solid shade($orange, 30%)
+
+
     h2, h4, p
       text-align: center
     h2.home-title
@@ -253,3 +394,15 @@
     @media (max-width: 370px)
       h2
         font-size: 40px
+
+  @media (min-width:769px) and (max-width: 940px)
+    height: 62vh
+    margin-bottom: 3px
+
+
+
+    &::before
+      height: 52.3vh
+
+  @media (min-width:870x) and (max-width: 110px)
+    height: 41vh

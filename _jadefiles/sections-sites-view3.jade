@@ -1,0 +1,62 @@
+section.my-sites-view#sites
+
+  .flex.flex--center.home-lead-title
+
+    .col-1
+      .home-lead Websites
+      .small-lead-box
+        .small-home-lead.orange-type View Options:
+        .view-wide.butt-on Desktop
+        .view-hr
+        .view-mobile Mobile
+
+        .switch
+          input#cmn-toggle-1.cmn-toggle.cmn-toggle-round(type='checkbox')
+          label(for='cmn-toggle-1')
+          
+    .col-full
+      .slider-sites-nav
+        | {% for post in site.categories.home-carousel %}
+        img.nav-thumb(src='{{site.baseurl}}/assets/img/post-assets/post-carousel/{{post.thumb}}', alt='{{post.title}}')
+        |   {% endfor %}
+
+
+          
+  //- .col-xxx
+  //-   .slider-sites-nav
+  //-     | {% for post in site.categories.home-carousel %}
+  //-     .nav-thumb(style='background-image: url({{site.baseurl}}/assets/img/post-assets/post-carousel/{{post.thumb}});' , data-cover='url({{site.baseurl}}/assets/img/post-assets/site-view/{{post.cover}})', data-mobilecover='url({{site.baseurl}}/assets/img/post-assets/site-view/{{post.mobile-cover}})', title='{{post.title}}', data-color='{{post.color}}', data-height='{{post.height}}', link='{{post.url}}')
+  //-     |   {% endfor %}
+  //- 
+  //-   .slider-sites-for
+  //- 
+  //-     | {% for post in site.categories.home-carousel %}
+  //-     .nav-thumb2(style='background-image: url({{site.baseurl}}/assets/img/post-assets/site-view/{{post.cover}});' , data-cover='url({{site.baseurl}}/assets/img/post-assets/site-view/{{post.cover}})', data-mobilecover='url({{site.baseurl}}/assets/img/post-assets/site-view/{{post.mobile-cover}})', title='{{post.title}}', data-color='{{post.color}}', data-height='{{post.height}}', link='{{post.url}}')
+  //-     |   {% endfor %}
+      
+  .hands-box
+    .sites-box-frame  
+      
+  .col-xxx
+    //- .slider-sites-nav
+    //-   | {% for post in site.categories.home-carousel %}
+    //-   img.nav-thumb(src='{{site.baseurl}}/assets/img/post-assets/post-carousel/{{post.thumb}}', alt='{{post.title}}')
+    //-   |   {% endfor %}
+        
+    .slider-sites-for
+
+      | {% for post in site.categories.home-carousel %}
+      .site-pre
+        .site-pre-box-frame
+          .site-pre-box
+            .view-wide
+              img.nav-thumb2.butt-on(src='{{site.baseurl}}/assets/img/post-assets/site-view/{{post.cover}}', alt='{{post.title}}')
+            .view-mobile
+              img.nav-thumb2(src='{{site.baseurl}}/assets/img/post-assets/site-view/{{post.mobile-cover}}', alt='{{post.title}}')
+        a.site-link.sites-box-info(href='{{post.site-link}}', target='_blank')
+          i.fas.fa-link
+          h2.site-info-title {{post.title}}
+          p.site-excerpt {{post.excerpt}}
+      |   {% endfor %}
+
+    

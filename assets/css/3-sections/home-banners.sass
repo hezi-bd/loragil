@@ -1,7 +1,33 @@
 .home-sections section.banners
+  overflow: hidden
   background: rgba(247, 239, 255, 0.86)
+
   margin-bottom: 0
   padding-bottom: 0
+  //border-top: 4px #eaeaea solid
+  box-shadow: 0 -3px 17px -7px #814dab
+  min-height: 100vh
+  display: flex
+  flex-direction: column
+  justify-content: space-around
+  position: relative
+  padding: 0
+  @media (max-width: 760px)
+    padding: 50px 0
+
+  .home-lead-title
+    z-index: 10
+    position: absolute
+    top: 0
+    width: 100%
+    flex-direction: column
+    align-items: center
+    //background: shade($purple, 45%)
+    background: linear-gradient(#8351b6, rgba(161, 104, 198, 0.98) 3.78%, #8f31de 3.78%, #1f0f2e 93.7%, #6a329a 94.96%)
+    height: 130px
+    @media (max-width: 640px)
+      display: flex
+      //padding-bottom: 120px
 
 
   .home-lead-box
@@ -11,32 +37,110 @@
     align-items: center
 
   .home-lead
-    width: 88%
+    width: 100%
     display: flex
     text-align: center
     align-items: flex-start
-    color: $purple
-    @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm)
-        left: 0
-    .title-move
-      position: relative
-      right: -28px
-      @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm)
-        right: 0
+    color: $orange
+    mix-blend-mode: normal
 
+    &.anim-title-bg
+      align-items: center !important
+      span
+        padding: 50px
+        position: relative
+        &:first-child
+          margin-right: 20px
+          &::after
+            background-image: url(../img/svg/svg-logo-anim-purple.svg)
+            background-repeat: no-repeat
+            background-position: center
+            padding: 50px
+            mix-blend-mode: color-dodge
+            position: absolute
+            top: 0
+            right: 0
+            content: ''
+          &::before
+            right: 0
+
+
+        &:last-child
+          margin-left: 20px
+          &::after
+            background-image: url(../img/svg/svg-logo-anim-purple-back.svg)
+            background-repeat: no-repeat
+            background-position: center
+            padding: 50px
+            mix-blend-mode: color-dodge
+            position: absolute
+            top: 0
+            left: 0
+            content: ''
+
+          &::before
+            left: 0
+
+
+        &::before
+          z-index: -1
+          background-image: url(../img/svg/loragil-logo-trans.svg)
+          background-repeat: no-repeat
+          background-position: center
+          padding: 50px
+          position: absolute
+          top: 0
+          content: ''
+          filter:  blur(3px) drop-shadow(rgb(105, 25, 173) 0px 3px 25px) drop-shadow(rgb(0, 0, 0) 0px 0px 3px)
+
+    &.anim-title-bg
+      @media (max-width: 470px)
+        justify-content: center
+        text-shadow:  rgb(74, 32, 110) 0px -3px 6px, rgb(74, 32, 110) 0px -2px 2px, rgb(74, 32, 110) 0px 0px 2px
+        filter: drop-shadow(0 0 3px #2f1447)
+        span
+          position: absolute
+          margin: 0 !important
+          mix-blend-mode: normal
+          z-index: 10
+          filter: drop-shadow(0 0 0px rgba(0, 0, 0, 0))
+
+          &:first-child
+            z-index: -1
+
+            &::after
+              mix-blend-mode: color-dodge
+
+            &::before
+              //display: none
+
+          &:last-child
+            z-index: -1
+
+            &::after
+              mix-blend-mode: hue
+
+            &::before
+              display: none
   .small-logo
-    width: 92px
+    width: 70px
     background:
-      image: url(../img/loragil-logo-nav.svg)
+      image: url(../_includes/animations-title.html)
       repeat: no-repeat
       position: center
       size: contain
+      //color: pink
     height: 54px
     padding: 0
-    margin: 5px 10px
+    margin: -5px 10px
 
     &:last-child
       margin-right: -18px
+
+  .small-logo-purple
+    @extend .small-logo
+    background:
+      image: url(../img/svg-logo-anim.svg)
 
   .small-lead-box
     letter-spacing: 4.5px
@@ -49,12 +153,19 @@
     color: $orange
 
   .banners-thumb-box
-
+    margin-top: 130px
     display: flex
     flex-direction: column
     align-items: center
     //min-height: 900px
     position: relative
+    z-index: 1
+
+    @media (max-width: 640px)
+      margin-top: 100px
+
+    .thumb-wrap
+      box-shadow: 0 0 115px 15px rgba(51, 51, 51, 0.23)
 
     .flash-bg
       position: absolute
@@ -72,8 +183,9 @@
 
 .full-width-small-title
   width: 100%
-  padding: 10px 0
-  background: $light-gray
+  padding: 2px 0
+  background:
+    color: #e1d6ea
   margin:
     top: 40px
     bottom: 0
@@ -161,13 +273,14 @@ ul.ul-banners
   overflow: visible
 
 .section-work
-  overflow-x: hidden
-  direction: ltr
-  background: rgba(247, 239, 255, 0.86)
+  //overflow-x: hidden
+  //direction: ltr
+  //background: rgba(247, 239, 255, 0.86)
   margin-bottom: 0
   padding-bottom: 50px !important
   position: relative
   min-height: 507px
+  overflow: visible
 
 /* Hackey-type CSS as a jQuery Alternative for when the browser does not have jQuery enabled. */
 .noscript

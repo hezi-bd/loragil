@@ -1,0 +1,41 @@
+<svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="100%" height="100%" viewBox="113.5 126.5 253 227" style="enable-background:new 113.5 126.5 253 227;"
+	 xml:space="preserve">
+	 <defs>
+	 	<style>
+	 	.st0 {
+	 stroke-dasharray: 1000;
+	 stroke-dashoffset: 10000;
+	 animation: dash 4s linear alternate infinite;
+	 }
+	 .st2 {
+	stroke-dasharray: 1000;
+	stroke-dashoffset: 1000;
+	animation: dash-inner 5s linear alternate infinite;
+	}
+
+	 @keyframes dash {
+	 from {
+	 stroke-dashoffset: 1000;
+	 }
+	 to {
+	 stroke-dashoffset: -900;
+	 }
+	 }
+
+	 @keyframes dash-inner {
+	 from {
+	 stroke-dashoffset: -1000;
+	 }
+	 to {
+	 stroke-dashoffset: 1000;
+	 }
+	 }
+	 </style>
+
+	 </defs>
+<path id="logo" class="st0" fill="#FFFFFF" stroke="#000000" stroke-width="4" stroke-miterlimit="10" d="M279.189,134h-79.266l-80.035,158.145L146.861,346h185.965l27.286-53.852L332.827,239h-53.271
+	l26.791-52.562L279.189,134L279.189,134z"/>
+<polyline id="inner-logo" class="st0" fill="#FFFFFF" stroke="#000000" stroke-width="4" stroke-miterlimit="10" points="270.171,147.948 288.48,183.369 265.379,229.077 252.489,255 280.589,255
+	324.505,255 343.002,290.8 324.366,328 155.5,328 137.589,289.98 209.041,148.48 270.171,147.948 "/>
+</svg>

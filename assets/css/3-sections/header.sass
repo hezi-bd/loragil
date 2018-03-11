@@ -2,28 +2,45 @@
   header
     padding: 30px 0
     z-index: 100
-    direction: rtl
+    //direction: rtl
     position: absolute
+    mix-blend-mode: luminosity
+    .header-position
+      transition-delay: 1.5s
+      .site-nav
+        ul
+          li
+            a
+              transition: all 0.6s ease-in-out
+              transform: translateX(-120%)
+              opacity: 0
+              transition: all 0.1s ease-in-out
 
     &:hover
+      mix-blend-mode: normal
       .header-position
         width: 135px
-        right: 0
-        transition: all 0.2s ease-in-out
+        left: 0px
+        transition: all 0.3s ease-in-out
+        transition-delay: 0.3s
+        background: #200f2f
 
         .site-nav
           ul
             width: 135px
 
           li
-            transform: translateX(0px)
+            //transform: translateX(0px)
 
             a
-              transition: all 0.2s ease-in-out
+              transition: all 0.6s cubic-bezier(0.4, -0.45, 0.07, 1.01)
+              transform: translateX(100%)
+              opacity: 1
 
-            &::after
-              transform: translateX(135px)
+            &::before
+              transform: translateX(-135px)
               opacity: 0.5
+              transition-delay: 0s
 
 
       .logo
@@ -37,24 +54,42 @@
       position: fixed
       top: 0
       bottom: 0
-      right: 16px
+      left: 16px
       //width: 135px
       width: 18px
       display: flex
       flex-direction: column
       justify-content: space-between
       align-items: center
-      background: rgba(0, 0, 0, 0.2)
+      background: #a2a0a0
       transition: all 0.2s ease-in-out
 
       @media (min-width: 641px) and (max-width: 768px)
+        background: #a2a0a0
         padding-left: 0px !important
-        padding-top: 7px
+        padding-top: 0
         flex-direction: column !important
 
         .mobile-nav-toggle
           margin-left: 4px
           margin: 10px
+
+      @media (max-width: 640px)
+        background: #a2a0a0
+        padding-left: 0px !important
+        padding-top: 0
+        flex-direction: column !important
+        top: 112px !important
+
+        .mobile-nav-toggle
+          margin: 10px
+          height: 50px
+          // margin-left: 4px
+          // margin: 10px
+
+    &:hover .header-position
+      @media (max-width: 640px)
+        right: inherit
 
 
 
@@ -92,77 +127,59 @@
         width: 135px
         position: relative
         transition: all 0.2s ease-in-out
-        transform: translateX(-110px)
+        transform: translateX(-100%)
+        text-align: center
+
 
         &:hover a
           background: rgba(0, 0, 0, 0.5)
-          color: $orange
+
 
         a
           letter-spacing: 2px
           padding: 10px 0 10px 10px
           display: block
-          color: rgba(0, 0, 0, 0.8)
+          color: $orange
           font-weight: 500
+          padding: 0
+          line-height: 3
 
-        &::after
+        &::before
           position: absolute
-          top: 7px
-          right: -100px
+          top: 0
           content: ""
-          width: 100%
-          height: 30px
+          +size(40px)
           display: block
           background:
             repeat: no-repeat
             position: center
             size: contain
           transition: all 0.6s ease-in-out
-          transform: translateX(59px)
+          transform: translateX(135px)
           opacity: 1
-        &:nth-child(1)::after
-          top: -12px
-          right: -98px
-          height: 72px
+        &:nth-child(1)::before
           background:
-            image: url('../img/01abilities-logo.svg')
-            //image: $abilities-logo
+            image: url(../img/02sites-logo.svg)
 
-        &:nth-child(2)::after
-          background:
-            image: url('../img/02sites-logo.svg')
-          height: 40px
-          right: -98px
-
-        &:nth-child(3)::after
+        &:nth-child(2)::before
           background:
             image: url(../img/03banners-logo.svg)
-          height: 40px
-          right: -98px
 
-        &:nth-child(4)::after
-          background:
-            image: url(../img/04popup-logo.svg)
-          height: 40px
-          right: -98px
-
-        &:nth-child(5)::after
+        &:nth-child(3)::before
           background:
             image: url(../img/05graphics-logo.svg)
-          height: 40px
-          right: -98px
 
-        &:nth-child(6)::after
+        &:nth-child(4)::before
           background:
             image: url(../img/06clients-logo.svg)
-          height: 40px
-          right: -98px
 
-        &:nth-child(7)::after
+        &:nth-child(5)::before
           background:
             image: url(../img/07in-short-logo.svg)
-          height: 40px
-          right: -98px
+
+        // &:nth-child(6)::before
+        //   background:
+        //     image: url(../img/07in-short-logo.svg)
 
         &:last-child
           margin-bottom: 0
@@ -223,7 +240,7 @@
   //mobile-nav,aha-this my s#it
   .mobile-nav
     display: none
-    position: absolute
+    position: fixed
     top: 0
     width: 100%
     background: rgba(0, 0, 0, 0)
@@ -231,7 +248,7 @@
     transform: translateY(calc(-100% + 90px))
     transition: all 0.2s ease-in-out
     z-index: 10
-    background: rgb(72, 39, 106)
+    background: rgba(72, 39, 106, 0.96)
     font-size: 25px
     opacity: 0
     &.is-open
@@ -255,12 +272,12 @@
   .home-wrap
     header
       background: rgba(0, 0, 0, 0)
-      //width: auto !important
+      mix-blend-mode: luminosity
       padding: 20px 0 0
 
       .header-position
         width: auto !important
-        position: relative
+        position: fixed
         top: auto
         bottom: auto
         left: auto
@@ -268,8 +285,10 @@
         flex-direction: row
         align-items: center
         padding-left: 20px
+        border: solid 1px #3d1943
+        border-right: none
 
-      .site-nav, .email-link
+      .site-nav, .email-link, .logo-btn
         display: none
 
       .logo
@@ -277,10 +296,11 @@
 
       .mobile-nav-toggle
         display: flex
+        height: 74px
         &.is-open
           span
             &::after, &::before
-              background: $orange
+              background: shade($purple, 70%)
 
     .mobile-nav
       min-height: 40px
@@ -292,26 +312,38 @@
           a
             color: $orange
 
+@media (max-width: 768px) and (min-width: 641px)
+  .home-wrap header
+    right: 70px
+    &:hover .header-position
+      right: 0
+      left: inherit !important
+
+    .mobile-nav-toggle
+      height: 50px
+
 @media (max-width: 640px)
   .home-wrap
     header
-      padding: 0
       z-index: 10
-      position: relative
+      direction: ltr
+      left: 0
+      right: auto
 
       .header-position
-        background: rgba(0, 0, 0, 0)
+        border-right: solid 1px #3d1943
+        border-left: none
 
         a.logo-btn
           position: fixed
           top: 0
 
         .mobile-nav-toggle
-          position: absolute
-          top: -56px
-          left: 15px
-          @media (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm)
-            top: 6px
+          //.mobile-nav-toggleposition: absolute
+          // top: -56px
+          // left: 15px
+          // @media (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm)
+          //   top: 6px
         //a.email-link
           position: fixed
           bottom: 0px
@@ -325,38 +357,38 @@
 
 
 
-  .home-wrap header nav.site-nav
-    display: flex !important
-    flex-direction: column
-    height: calc(100vh - 60px)
-    position: fixed
-    z-index: 100
-    background: rgba(255, 255, 255, 0.39)
-    top: 60px
-    flex-wrap: wrap
-    justify-content: center
-    width: 8px
-    //If you use compass, instead of the line below you could use + box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-    box-shadow: inset 2px 0 7px 2px rgba(59, 28, 88, 0.36)
-    ul
-      flex-wrap: wrap
-      justify-content: center !important
-      align-items: center
-      width: 8px !important
-      height: 100%
-
-
-      li
-        //background: rgb(225, 41, 41)
-        //If you use compass, instead of the line below you could use + transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-        transform: translateX(0px) !important
-        margin-bottom: 0 !important
-        height: 14.28%
-        background: rgba(186, 186, 186, 0.29)
-        display: flex
-        flex-direction: column
-        &:nth-child(odd)
-          background: rgba(159, 159, 159, 0.57)
-        a
-          font-size: 0
-          height: 100%
+  // .home-wrap header nav.site-nav
+  //   display: flex !important
+  //   flex-direction: column
+  //   height: calc(100vh - 60px)
+  //   position: fixed
+  //   z-index: 100
+  //   background: rgba(255, 255, 255, 0.39)
+  //   top: 60px
+  //   flex-wrap: wrap
+  //   justify-content: center
+  //   width: 8px
+  //   //If you use compass, instead of the line below you could use + box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+  //   box-shadow: inset 2px 0 7px 2px rgba(59, 28, 88, 0.36)
+  //   ul
+  //     flex-wrap: wrap
+  //     justify-content: center !important
+  //     align-items: center
+  //     width: 8px !important
+  //     height: 100%
+  //
+  //
+  //     li
+  //       //background: rgb(225, 41, 41)
+  //       //If you use compass, instead of the line below you could use + transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+  //       transform: translateX(0px) !important
+  //       margin-bottom: 0 !important
+  //       height: 14.28%
+  //       background: rgba(186, 186, 186, 0.29)
+  //       display: flex
+  //       flex-direction: column
+  //       &:nth-child(odd)
+  //         background: rgba(159, 159, 159, 0.57)
+  //       a
+  //         font-size: 0
+  //         height: 100%

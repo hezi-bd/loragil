@@ -1,0 +1,98 @@
+<svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="100%" height="100%" viewBox="0 0 480 480" style="enable-background:new 0 0 480 480;" xml:space="preserve">
+	 <defs>
+		<style>
+	 .st1 {
+	stroke-dasharray: 250;
+	stroke-dashoffset: 250;
+	animation: logo-frame 3.5s linear forwards infinite;
+	}
+	 .st01 {
+	 stroke-dasharray: 25;
+	 stroke-dashoffset: 25;
+	 animation: logo-frame 3.5s linear forwards infinite;
+	}
+
+	 .st2 {
+	stroke-dasharray: 400;
+	stroke-dashoffset: 400;
+	animation: logo-inline 5.5s linear forwards infinite;
+	}
+
+	.st3 {
+ stroke-dasharray: 100;
+ stroke-dashoffset: 100;
+ animation: logo-in 5s linear forwards infinite;
+ }
+
+ @keyframes logo-frame2 {
+  from {
+    stroke-dasharray: 0 1000; /* zero-length stroke,
+                                 1000-length gap */
+  }
+  to {
+    stroke-dasharray: 1000 0;/* 1000-length stroke,
+                                 zero-length gap */
+  }
+}
+
+	 @keyframes logo-frame {
+	 from {
+	 stroke-dashoffset: 1000;
+	 }
+	 to {
+	 stroke-dashoffset: 0;
+	 }
+	 }
+
+	 @keyframes logo-frame-back {
+	 from {
+	 stroke-dashoffset: 0;
+	 }
+	 to {
+	 stroke-dashoffset: 500;
+	 }
+	 }
+
+	 @keyframes logo-inline {
+	 from {
+	 stroke-dashoffset: 0;
+	 }
+	 to {
+	 stroke-dashoffset: 3000;
+	 }
+	 }
+
+	 @keyframes logo-in {
+	 from {
+	 stroke-dashoffset: 1000;
+	 }
+	 to {
+	 stroke-dashoffset: 0;
+	 }
+	 }
+	 </style>
+
+	 </defs>
+
+	 <path id="logo-frame" class="st1" fill="#fbb03b" stroke="#fbb03b" stroke-width="10" stroke-miterlimit="10" d="M314.351,38.894H163.965L12.119,338.932l51.174,102.175h352.819l51.769-102.17l-51.767-100.833
+	 	H315.047l50.829-99.723L314.351,38.894L314.351,38.894z"/>
+	 <path id="logo-frame2" class="st01" fill="rgba(251, 176, 59, 0.7)" stroke="rgba(109, 51, 158, 0.5)" stroke-width="4" stroke-miterlimit="10" d="M314.351,38.894H163.965L12.119,338.932l51.174,102.175h352.819l51.769-102.17l-51.767-100.833
+	 	H315.047l50.829-99.723L314.351,38.894L314.351,38.894z"/>
+
+
+<path id="logo-inline" class="st2" fill="#FFFFFF" stroke="#6d339e" stroke-width="4" stroke-miterlimit="10" d="M405.676,420.801H72.78l-38.764-82.285L174.523,60.262l128.218-1.116l39.906,77.204
+	l-46.133,91.281l-17.24,34.672h126.58l40.224,77.851L405.676,420.801z"/>
+<polyline id="logo-in" class="st3" fill="#FFFFFF" stroke="rgba(251, 176, 59, 0.5)" stroke-width="4" stroke-miterlimit="10" points="263.334,271.334 269.002,260.501 287.59,223.12 331.417,136.401 296.681,69.199
+	180.703,70.209 45.142,338.668 79.123,410.801 399.501,410.801 434.858,340.224 399.766,272.303 263.134,272.303 251.966,272.303
+	278.665,218.609 320.187,136.453 290.62,79.252 186.883,80.156 56.268,338.82 85.466,400.801 393.326,400.801 423.639,340.294
+	393.677,282.303 246.993,282.303 235.825,282.303 269.74,214.099 308.956,136.504 284.56,89.306 193.063,90.103 67.394,338.973
+	91.81,390.801 387.151,390.801 412.419,340.364 387.588,292.303 230.853,292.303 219.685,292.303 260.815,209.588 297.726,136.555
+	278.499,99.359 199.244,100.049 78.52,339.125 98.153,380.801 380.977,380.801 401.199,340.435 381.499,302.303 214.712,302.303
+	203.545,302.303 251.891,205.077 286.495,136.606 272.438,109.412 205.424,109.996 89.646,339.277 104.496,370.801 374.802,370.801
+	389.979,340.504 375.409,312.303 198.571,312.303 187.403,312.303 242.966,200.566 275.265,136.658 266.378,119.465
+	211.604,119.942 100.771,339.43 110.839,360.801 368.627,360.801 378.76,340.574 369.32,322.303 182.431,322.303 171.263,322.303
+	234.041,196.056 264.034,136.709 260.317,129.519 217.784,129.889 111.897,339.582 117.183,350.801 362.452,350.801 367.54,340.644
+	363.23,332.303 166.29,332.303 155.122,332.303 225.116,191.545 251.37,139.597 223.964,139.836 123.023,339.734 123.526,340.801
+	364.896,340.801 "/>
+</svg>

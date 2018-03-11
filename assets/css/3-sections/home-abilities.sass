@@ -18,16 +18,86 @@ section.youtube
   z-index: 10
 
 .home-sections section.abilities
-  padding: 8px 0 50px
+  padding: 0
   background:
     color: $abilities-section-bg
   position: relative
-  height: calc(50vh - 45px)
+
   z-index: -1
   display: flex
   flex-direction: column
   align-items: center
+  //justify-content: flex-end
   @extend .abilities-gra
+
+  .logo-mobile
+    display: none
+
+  @media (min-width:769px) and (max-width: 940px)
+    background: radial-gradient(ellipse at 50% -3%, rgba(76, 37, 113, 1) 0%, rgba(99, 48, 147, 0.95) 35%, rgba(99, 48, 147, 0.9) 38%, rgba(73, 33, 116, 0.95) 68%, rgba(67, 31, 103, 0.95) 100%);
+    z-index: 0
+  &.intro
+    height: 79px
+    margin-top: -10vh
+    margin-bottom: -80px
+    z-index: 20
+    background: none
+
+    @media (max-width: 640px)
+      margin: 0
+      height: 33.3vh
+      padding: 0
+      background-color: shade($purple, 30%)
+      mix-blend-mode: multiply
+      justify-content: space-between
+      align-items: center
+
+
+      &::before
+        position: absolute
+        background: $purple
+        mix-blend-mode: darken
+        width: 100%
+        height: 100%
+        content: ''
+        z-index: 0
+
+      .col-3.logo-big-box
+        top: -4px
+        left: 6px
+        max-width: 190px
+        height: auto
+
+        .logo-box
+          height: auto !important
+          display: none
+          &.logo-mobile
+            display: block
+            left: -14px
+            &.logo-top img
+              top: 4px
+            &.logo-bottom img
+              top: 7px
+          //transform: translateX(0) !important
+
+      .col-1.push-right.cta-frame
+        top: -45px !important
+        width: 100% !important
+        padding: 0 160px
+        right: initial
+
+        .cta.sites-cta
+          clip-path: none
+
+  &.preview
+    box-shadow: 0 5px 9px -1px rgba(15, 7, 23, 0.48), 0 19px 18px -10px rgba(34, 16, 42, 0.45)
+    border-bottom: solid 5px #8045be
+    // align-items: center
+    // padding: 0
+
+    .slick-dotted.slick-slider
+      margin-top: -70px
+
 
   .home-lead-title
     position: absolute
@@ -85,11 +155,11 @@ section.youtube
       position: absolute
       margin-right: -2px
       content: ""
-      background:
-        image: url(../img/rocket.svg)
-        repeat: no-repeat
-        position: top center
-        size: contain
+      // background:
+      //   image: url(../img/rocket.svg)
+      //   repeat: no-repeat
+      //   position: top center
+      //   size: contain
 
 
     h4
@@ -120,7 +190,7 @@ section.youtube
           width: 99px
           top: -3vh
 
-        h4
+        // h4
           @extend .flame-gra1
           height: 31vh
           //bottom: 0px
@@ -132,7 +202,7 @@ section.youtube
           width: 78px
           top: 0
 
-        h4
+        // h4
           @extend .flame-gra2
           height: 32vh
           bottom: 0
@@ -145,7 +215,7 @@ section.youtube
           width: 62px
           top: -3vh
 
-        h4
+        // h4
           @extend .flame-gra3
           height: 37vh
           bottom: 0
@@ -156,12 +226,18 @@ section.youtube
       &:nth-child(1)
         width: 62px
         &::before
-          top: -49vh
+          top: 0
           width: 70px
+          //background:
+            image: url(../img/rocket.svg)
+            repeat: no-repeat
+            position: top center
+            size: contain
 
         h4
-          @extend .flame-gra4
+          //@extend .flame-gra4
           height: calc(100vh - 150px)
+          width: 62px
           bottom: 0
           line-height: 0
           @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm)
@@ -174,7 +250,7 @@ section.youtube
           width: 121px
           top: -9vh
 
-        h4
+        // h4
           @extend .flame-gra5
           height: 33vh
           bottom: 0
@@ -191,19 +267,34 @@ section.youtube
           @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm)
             top: -20vh
 
-        h4
+        // h4
           @extend .flame-gra6
           height: 50vh
           bottom: 0
           line-height: 0
 
 
+@media (max-width: 1100px)
+  .home-sections section.abilities
+    align-items: flex-start
+    padding-left: 100px
+
+@media (max-width: 768px) and (min-width: 641px)
+  .home-sections section.abilities
+    align-items: center
+    padding: 0
+
+    .col-1.push-right.cta-frame
+      right: 38px !important
 
 
 @media (max-width: 640px)
   .home-sections section.abilities
     z-index: 10
-    height: calc(50vh + 55px)
+    height: calc(50vh + 20px)
+    padding: 0
+    align-items: center
+    overflow: hidden
 
     .flex--center
       display: flex
@@ -395,3 +486,204 @@ section.youtube
 
       .home-lead-box
         //zoom: 0.9
+
+
+
+.home-sections section.abilities
+  .site-pre
+    position: relative
+
+  .col-3.logo-big-box
+
+    margin: 0
+    position: relative
+    display: flex
+    height: -webkit-fill-available
+    flex-direction: row
+    top: -217px
+    left: 20px
+
+    .logo-big-box-pre
+      max-width: 327px
+      margin: 0
+      position: relative
+      left: 0
+      z-index: 1000
+
+      // &::before
+      //   content: ''
+      //   width: 100%
+      //   max-width: 460px
+      //   top: -253px
+      //   margin: 0
+      //   height: 100%
+      //   position: absolute
+      //   z-index: 0
+      //   filter: drop-shadow(-8px 16px 30px rgba(39, 17, 62, 0.79)) drop-shadow(-8px -7px 12px rgba(39, 17, 62, 0.79)) brightness(110%) opacity(96%)
+      //   background:
+      //     image: url(../img/loragil-logo.svg)
+      //     position: 40px center
+      //     size: contain
+      //     repeat: no-repeat
+
+        @media (max-width: 640px)
+          height: 320px
+
+      .logo-box
+        +size(100%)
+        position: absolute
+        //position: relative
+        transform: translate(0px, 0%)
+        img
+          width: 100%
+
+        &.logo-top
+          //position: relative
+          z-index: 10
+          img
+            filter: $about-logo-shadow
+            top: 2px
+            position: relative
+            right: -7px
+
+        &.logo-bottom
+          //filter: $about-logo-shadow
+          img
+            transform: translateY(1px)
+            //filter: $about-logo-shadow
+            //bottom: 10px
+            //position: relative
+            z-index: 0
+            top: 5px
+            position: relative
+            right: -6px
+
+      .logo-bottom
+
+.site-pre
+  perspective: 114vh
+  padding-top: 70px
+  @media (max-width: 640px)
+    padding-top: 0
+  .site-pic, .slick-list.draggable
+    width: 80vw
+    max-width: 620px
+    height: 60vh !important
+    display: flex
+    flex-direction: column
+    .site-pre .site-pic
+
+
+
+  .site-pic
+    transform: rotateX(43deg)
+    .site-pic-box, .slick-track>*
+      +size(100%)
+      //overflow: hidden
+      box-shadow: inset 0 -2px 2px rgba(251, 176, 59, 0.24), 0 16px 14px -4px #301831
+      border-bottom: 5px solid rgba(50, 23, 78, 0.43)
+
+      //transform: rotateX(43deg) rotateZ(180deg)
+      //box-shadow: inset 0 5px 0px rgba(51, 51, 51, 0.5), 0 -17px 20px -4px #301831
+      background:
+        //attachment: fixed
+        position: center 0
+        //position-y: 0
+        //position-y: bottom
+        //size: 620px
+        size: 100%
+        repeat-x: no-repeat
+        repeat-y: repeat
+
+      &.no-shade
+        box-shadow: inset 0 0 0 rgba(251, 176, 59, 0), 0 0 0 0 rgba(48, 24, 49, 0) !important
+        border-bottom: none !important
+
+      &.img-cover
+        background-size: auto !important
+        background-position: center center !important
+        background-repeat: no-repeat
+
+      img.site-pic-roll
+        position: relative
+
+.home-sections section.abilities
+  .slick-prev:before, .slick-next:before
+    opacity: 1
+    color: $orange
+    text-shadow: 0 3px 1px $dark-purple
+  .slick-track
+    //display: flex
+    height: calc(60vh + 11px)
+    padding-bottom: 30px
+
+
+// ---------cta------------
+
+.home-sections section.abilities
+
+  .cta
+    //If you use compass, instead of the line below you could use + transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: rotateX(49deg)
+    height: 104px
+    &.contact-cta
+      flex: 1 1
+      flex-wrap: wrap
+      display: flex
+
+    &.sites-cta
+      flex: 2 1
+      clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%)
+
+    &.gallery-cta
+      flex: 2 2
+
+
+      a
+        padding: 10px 5px 10px 15px
+
+    a
+      display: flex
+      height: 100%
+      width: 100%
+      background: #fec463
+      padding: 10px
+      margin: 0
+      align-items: center
+      text-align: center
+      justify-content: center
+      font-weight: 500
+      font-size: 18px
+      line-height: 1.2
+      box-shadow: inset 0 -2px 2px rgba(251, 176, 59, 0.24), 0 2px 2px -4px #301831
+      border-bottom: 5px solid rgba(50, 23, 78, 0.43)
+      @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm)
+        border-bottom: 4px solid rgba(50, 23, 78, 0.43)
+      @include transition(all 100ms $ease-in-circ)
+      &.contact-cta-btn
+        +hide-text
+        font-size: 0
+        content: ""
+        background:
+          repeat: no-repeat
+          position: center
+          size: contain
+          image: url(../img/08mail-logo.svg)
+          color: #200f2f
+
+      &:hover
+        border-bottom: 2px solid rgba(50, 23, 78, 0.43)
+
+
+.home-sections section.abilities .col-1.push-right.cta-frame
+  flex-wrap: wrap
+  //If you use compass, instead of the line below you could use + perspective($p)
+  perspective: 41vh
+  width: 200px
+  position: relative
+  top: -53px
+  width: 211px
+  right: 38px
+
+  @media (max-width: 1100px)
+    right: 4px

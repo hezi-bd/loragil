@@ -3,31 +3,38 @@ section.sites-view#sites
 
   .flex.flex--center.home-lead-title
 
-    .col-3
+    .col-1
       .home-lead-box
         .home-lead
-          אתרים
+          Websites
         .small-lead-box
           .small-home-lead.orange-type
-            אפשרויות צפייה:
+            View Options:
           .view-wide.butt-on
-            דסקטופ
+            Desktop
           .view-hr
           .view-mobile
-            מובייל
+            Mobile
 
         .switch
           input#cmn-toggle-1.cmn-toggle.cmn-toggle-round(type='checkbox')
           label(for='cmn-toggle-1')
+          
+  .col-x
+    .sites-nav-caro
+      | {% for post in site.categories.home-carousel %}
+      .nav-thumb(style='background-image: url({{site.baseurl}}/assets/img/post-assets/post-carousel/{{post.thumb}});' , data-cover='url({{site.baseurl}}/assets/img/post-assets/site-view/{{post.cover}})', data-mobilecover='url({{site.baseurl}}/assets/img/post-assets/site-view/{{post.mobile-cover}})', title='{{post.title}}', data-color='{{post.color}}', data-height='{{post.height}}', link='{{post.url}}')
+      |   {% endfor %}
+        
+  .sites-show
+    .sites-show-caro
+      | {% for post in site.categories.home-carousel %}
+      .show-site(style='background-image: url({{site.baseurl}}/assets/img/post-assets/site-view/{{post.cover}});' , data-cover='url({{site.baseurl}}/assets/img/post-assets/site-view/{{post.cover}})', data-mobilecover='url({{site.baseurl}}/assets/img/post-assets/site-view/{{post.mobile-cover}})', title='{{post.title}}', data-color='{{post.color}}', data-height='{{post.height}}', link='{{post.url}}')
+      |   {% endfor %}
 
 
   .hands-box
     .sites-box-frame
-
-
-
-
-
 
   ul.ul-caro
    | {% for post in site.categories.home-carousel %}

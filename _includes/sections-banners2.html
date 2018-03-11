@@ -1,0 +1,50 @@
+<section class="section-work">
+<h1>xxx</h1>
+  {% for banner in site.data.settings.banners %}
+    <input type="radio" name="trigger" class="trigger" id="{{ banner.folder }}" />
+  {% endfor %}
+
+  <input type="radio" name="trigger" id="return" class="return" />
+
+  <div class="work-belt">
+
+    <div class="thumb-wrap">
+      <div class="thumb-container">
+      {% for banner in site.data.settings.banners %}
+      <label for="{{ banner.folder }}">
+        <div class="thumb-unit" data-url="{{site.baseurl}}/banners/{{ banner.folder }}/">
+          <img src="{{site.baseurl}}/assets/img/banner/{{banner.folder}}/thumb.jpg" alt="{{ banner.name }}" />
+        </div>
+        <div class="thumb-overlay">
+          <strong>{{ banner.name }}</strong>
+        </div>
+      </label>
+      {% endfor %}
+    </div>
+    </div>
+
+    <div class="work-wrap">
+      <div class="work-container">
+      <label for="return">
+        <div class="work-return">{% include icons/icon-back.html %}</div>
+      </label>
+      <h4 class="project-title"></h4>
+      <div class="project-load"></div>
+
+      <noscript>
+        {% for banner in site.data.settings.banners %}
+          <div class="noscript" id="content-{{ banner.folder }}">
+            <h4 class="project-title">{{ banner.name }}</h4>
+            <div class="noscript-load">
+              {% include {{banner.file}} %}
+            </div>
+          </div>
+        {% endfor %}
+      </noscript>
+
+    </div>
+    </div>
+
+  </div>
+
+</section>

@@ -5,11 +5,12 @@
   //align-items: center
   padding: 0px
   background: rgba(230, 230, 230, 0.74)
-      border-bottom: solid 108px orange;
+      border-bottom: solid 108px orange
   display: flex
   flex-direction: column
   align-items: center
   overflow: hidden
+  position: relative
 
   .home-lead-title
     position: relative
@@ -55,7 +56,7 @@
       justify-content: space-around
 
     .small-home-lead
-      margin-left: 5px
+      margin-right: 5px
 
     .view-hr
       background: #b7b7b7
@@ -275,9 +276,9 @@ ul.ul-caro
   display: none
   background: rgba(236, 236, 236, 0)
 
-  @media (max-width: 1010px)
-    right: 28px
-    width: calc(100% - 50px)
+  // @media (max-width: 1010px)
+  //   right: 28px
+  //   width: calc(100% - 50px)
   @media (max-width: 640px)
     top: 87px
     right: 25px
@@ -340,7 +341,7 @@ ul.ul-caro
     font-family: 'Heebo', sans-serif
     font-size: 22px
     font-weight: 400
-    color: #fbb03c
+    color: $light-orange
 
   p
     padding: 0
@@ -437,3 +438,57 @@ ul.ul-caro
 
       @media (max-width: 640px)
         margin-top: 221px
+
+// ----------------slick-carousel---------------------
+.home-sections section.sites-view2
+  .col-xxx
+    background: pink
+    width: 450px
+
+  .nav-thumb
+    height: 30px
+
+  .nav-thumb2
+    height: 300px
+  .sites-nav-caro
+    //display: flex
+    //flex-wrap: wrap
+    .nav-thumb
+      +size(80px)
+      background:
+        repeat: no-repeat
+        size: cover
+        position: center
+
+  .sites-show-caro
+    .nav-thumb
+      width: 960px
+      height: 540px
+      overflow: scroll
+      background:
+        repeat: no-repeat
+        size: cover
+        position: center
+        color: pink
+
+
+
+
+//----new carousel -----------------------------------
+
+.slider-sites-nav2
+  .slick-slide
+    +size(100px)
+    background-size: auto
+    background-position: center
+    background-repeat: no-repeat
+
+.slider-sites-for
+  height: 800px
+  .slick-slide
+    height: 800px
+    background-size: auto
+    background-position: center
+    background-repeat: no-repeat
+    overflow-Y: scroll
+    overflow-x: hidden
