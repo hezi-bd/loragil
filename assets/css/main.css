@@ -3464,6 +3464,9 @@ section.my-sites-view {
       .home-sections section.banners .home-lead-title {
         display: -ms-flexbox;
         display: flex; } }
+    @media (max-width: 470px) {
+      .home-sections section.banners .home-lead-title {
+        height: 160px; } }
   .home-sections section.banners .home-lead-box {
     display: -ms-flexbox;
     display: flex;
@@ -3546,7 +3549,8 @@ section.my-sites-view {
             .home-sections section.banners .home-lead.anim-title-bg span:first-child::after {
               mix-blend-mode: color-dodge; }
           .home-sections section.banners .home-lead.anim-title-bg span:last-child {
-            z-index: -1; }
+            z-index: -1;
+            display: none; }
             .home-sections section.banners .home-lead.anim-title-bg span:last-child::after {
               mix-blend-mode: hue; }
             .home-sections section.banners .home-lead.anim-title-bg span:last-child::before {
