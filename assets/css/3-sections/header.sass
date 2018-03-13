@@ -329,16 +329,34 @@
       direction: ltr
       left: 0
       right: auto
+      filter: drop-shadow(0 -2px 8px rgba(0, 0, 0, 0.7))
 
       .header-position
         border-right: solid 1px #3d1943
         border-left: none
+        top: inherit !important
+        bottom: -10px !important
+        left: calc(50% - 36px)!important
+        clip-path: polygon(30% 0%, 70% 0%, 100% 100%, 0% 100%)
+        filter: drop-shadow(1px 1px 1px #333)
+        box-shadow: inset 1px 1px 1px 1px #444
 
         a.logo-btn
           position: fixed
           top: 0
 
         .mobile-nav-toggle
+          margin: 10px
+          height: 22px
+          clip-path: polygon(30% 0%, 70% 0%, 100% 100%, 0% 100%)
+          margin-bottom: 17px
+
+          span
+            &:before
+              top: 10px
+
+            &:after
+              top: -12px
           //.mobile-nav-toggleposition: absolute
           // top: -56px
           // left: 15px
