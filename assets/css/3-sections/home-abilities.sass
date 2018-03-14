@@ -45,11 +45,11 @@ section.youtube
 
     @media (max-width: 640px)
       margin: 0
-      height: 33.3vh
+      height: 38.3vh
       padding: 0
       background-color: shade($purple, 30%)
       mix-blend-mode: multiply
-      justify-content: space-between
+      justify-content: flex-start
       align-items: center
 
 
@@ -81,10 +81,11 @@ section.youtube
           //transform: translateX(0) !important
 
       .col-1.push-right.cta-frame
-        top: -15px !important
+        top: 0 !important
         width: 100% !important
         padding: 0 50px
         right: initial
+        margin-top: -10px
 
         .cta.sites-cta
           clip-path: none
@@ -561,7 +562,10 @@ section.youtube
             position: relative
             right: -6px
 
-      .logo-bottom
+        @media (max-width: 640px)
+          position: relative
+
+
 
 .site-pre
   perspective: 114vh
@@ -603,9 +607,10 @@ section.youtube
         border-bottom: none !important
 
       &.img-cover
-        background-size: auto !important
+        background-size: 100% !important
         background-position: center center !important
         background-repeat: no-repeat
+        background-color: #fff
 
       img.site-pic-roll
         position: relative

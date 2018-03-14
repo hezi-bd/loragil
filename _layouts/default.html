@@ -137,8 +137,17 @@
         fade: true,
         asNavFor: '.slider-sites-nav'
       });
-      $('.slider-sites-nav').slick({
+      $('.wide-sites-nav').slick({
         slidesToShow: 7,
+        slidesToScroll: 1,
+        asNavFor: '.slider-sites-for',
+        dots: true,
+        centerMode: true,
+        focusOnSelect: true
+      });
+
+      $('.mobile-sites-nav').slick({
+        slidesToShow: 3,
         slidesToScroll: 1,
         asNavFor: '.slider-sites-for',
         dots: true,

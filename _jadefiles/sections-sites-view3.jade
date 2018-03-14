@@ -15,10 +15,16 @@ section.my-sites-view#sites
           label(for='cmn-toggle-1')
           
     .col-full
-      .slider-sites-nav
+      .slider-sites-nav.wide-sites-nav
         | {% for post in site.categories.home-carousel %}
         img.nav-thumb(src='{{site.baseurl}}/assets/img/post-assets/post-carousel/{{post.thumb}}', alt='{{post.title}}')
         |   {% endfor %}
+        
+      .slider-sites-nav.mobile-sites-nav
+        | {% for post in site.categories.home-carousel %}
+        img.nav-thumb(src='{{site.baseurl}}/assets/img/post-assets/post-carousel/{{post.thumb}}', alt='{{post.title}}')
+        |   {% endfor %}
+
 
 
           
