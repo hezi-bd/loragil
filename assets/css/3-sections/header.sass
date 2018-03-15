@@ -241,12 +241,13 @@
   .mobile-nav
     display: none
     position: fixed
-    top: 0
+    bottom: -88%
+    top: inherit
     width: 100%
     background: rgba(0, 0, 0, 0)
-    padding: 30px 0 20px
-    transform: translateY(calc(-100% + 90px))
-    transition: all 0.2s ease-in-out
+    padding: 30px 0 40px
+    //transform: translateY(calc(-100% + 90px))
+    transition: all 0.4s cubic-bezier(0.62, -0.37, 0.26, 1.28)
     z-index: 10
     background: rgba(72, 39, 106, 0.96)
     font-size: 25px
@@ -306,7 +307,7 @@
       min-height: 40px
       display: block
       &.is-open
-        transform: translateY(0)
+        bottom: 0
 
         li
           a
@@ -348,7 +349,7 @@
         .mobile-nav-toggle
           margin: 10px
           height: 22px
-          clip-path: polygon(30% 0%, 70% 0%, 100% 100%, 0% 100%)
+          clip-path: polygon(30% 0%, 70% 0%, 90% 100%, 10% 100%)
           margin-bottom: 17px
 
           span

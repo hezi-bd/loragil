@@ -157,6 +157,8 @@ section.my-sites-view
         overflow-y: scroll
         filter: blur(10px)
         +transition(all 0.3s $ease-in-out-sine)
+        @media (max-width:640px)
+          height: 64vh !important
 
 
     .sites-box-info
@@ -191,9 +193,10 @@ section.my-sites-view
         opacity: 1
         transform: translateX(-64px)
         @media (max-width:640px)
-          transform: translateX(-55px)
+          //transform: translateX(-55px)
           opacity: 1
-          transform: translateX(0)
+          transform: translateX(-45px)
+          color: $purple
       & i.fas.fa-link
         position: absolute
         font-size: 30px
@@ -218,6 +221,14 @@ section.my-sites-view
 
     &.site-pre-box
       height: 33vh !important
+
+  @media (max-width: 640px)
+    .box-rotate
+      .site-pre-box
+        height: 64vh !important
+        
+      a.site-link.sites-box-info
+        opacity: 0
 
 
 
@@ -244,6 +255,9 @@ section.my-sites-view
         z-index: 10
         filter: blur(0px)
         +transition(all 0.4s $ease-in-out-sine)
+
+      .sites-box-info
+        opacity: 0
 
     @media (min-width:641px) and (max-width: 1000px)
       .site-pre, .sites-box-info
@@ -344,7 +358,7 @@ section.my-sites-view
     flex-direction: column
     padding: 0 25px
     box-sizing: border-box
-    z-index: 1
+    //z-index: 1
     @media (max-width: 640px)
       height: 904px
 

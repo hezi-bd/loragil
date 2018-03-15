@@ -83,6 +83,10 @@ section.home-footer
         .title-move
           letter-spacing: 11px
           text-align: center
+          padding-top: 20px
+
+          @media (max-width: 640px)
+            letter-spacing: 8px
 
       .small-home-lead
         @extend .loragil
@@ -285,6 +289,8 @@ a.flex.flex--center.mailto
 a.flex.flex--center.face-butt
   @extend a.flex.flex--center.mailto
   margin-top: 0
+  @media (max-width: 640px)
+    padding-bottom: 48px
 
 @media (max-width: 640px)
   #footer
