@@ -5520,7 +5520,6 @@ section.home-footer {
         .inner-shadow .cta h3 {
           margin: -40px auto -70px; } }
     .inner-shadow .cta span {
-      zoom: 5.5;
       text-align: center;
       position: relative;
       -webkit-animation: MoveUpDown 2s cubic-bezier(0.68, -0.15, 0.32, 1.08) infinite;
@@ -5528,7 +5527,8 @@ section.home-footer {
       -webkit-animation-delay: 1s;
       z-index: 0;
       margin-top: -5px;
-      color: #6d339e; }
+      color: #6d339e;
+      font-size: 90px; }
 
 a.flex.flex--center.mailto, a.flex.flex--center.face-butt {
   margin-top: 0;
