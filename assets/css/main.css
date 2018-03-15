@@ -4392,7 +4392,7 @@ ul.ul-banners {
         display: -ms-flexbox;
         display: flex;
         height: calc(100vh + 30px);
-        margin-top: 0;
+        margin-top: -10px;
         padding: 0 20px; } }
     .home-sections section.graphics .graphics-box li.thumb-bott {
       -webkit-tap-highlight-color: rgba(251, 176, 59, 0) !important; }
