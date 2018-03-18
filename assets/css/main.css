@@ -4617,6 +4617,9 @@ ul.ul-banners {
     -ms-flex-align: center;
         align-items: center;
     transition: all 0.8s cubic-bezier(0.445, 0.05, 0.55, 0.95); }
+    @media (max-width: 640px) {
+      .big-logo-left-view-shade.graphics-box-butt a.pics-box.thumb-bott-title::after {
+        font-size: 0; } }
   .big-logo-left-view-shade:hover.graphics-box-butt a.pics-box.thumb-bott-title::after {
     font-size: 33px;
     transition: all 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95); }
@@ -4667,6 +4670,9 @@ ul.ul-banners {
           align-items: center;
       line-height: 1.2;
       transition: all 0.6s cubic-bezier(0.445, 0.05, 0.55, 0.95); }
+      @media (max-width: 640px) {
+        .big-logo-center-shade.graphics-box-butt a.pics-box.thumb-bott-title::after {
+          content: ''; } }
   .big-logo-center-shade:hover.graphics-box-butt a.pics-box.thumb-bott-title::after {
     font-size: 33px;
     transition: all 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95); }
@@ -4714,9 +4720,7 @@ ul.ul-banners {
   @media (max-width: 640px) {
     .big-logo-right-top-reflect.graphics-box-butt {
       margin-top: 44%;
-      right: 10.4%;
-      -webkit-filter: brightness(1.3) saturate(0.2) opacity(0.6);
-              filter: brightness(1.3) saturate(0.2) opacity(0.6); }
+      right: 10.4%; }
       .big-logo-right-top-reflect.graphics-box-butt .thumb-print {
         top: -1%;
         left: 15%;
@@ -4798,8 +4802,6 @@ ul.ul-banners {
   @media (max-width: 640px) {
     .big-logo-right-bottom-shade {
       mix-blend-mode: multiply;
-      -webkit-filter: opacity(0.5) blur(0.1px);
-              filter: opacity(0.5) blur(0.1px);
       padding: 10.58% 38.8%;
       -webkit-clip-path: none;
               clip-path: none;
@@ -4875,7 +4877,8 @@ ul.ul-banners {
     @media (max-width: 640px) {
       .graphics-box-butt .thumb-bott a.pics-box.thumb-bott-title {
         -webkit-filter: blur(0);
-                filter: blur(0); } }
+                filter: blur(0);
+        font-size: 0 !important; } }
 
 .graphics-box-butt:hover .thumb-bott {
   opacity: 1;
