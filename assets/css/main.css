@@ -1415,6 +1415,16 @@ body {
     border: solid 6px #fff;
     box-shadow: 0 0 30px 9px rgba(25, 25, 25, 0.6), 0 0 10px 0px rgba(25, 25, 25, 0.9); }
 
+@media (max-width: 640px) {
+  .thumb-print {
+    -webkit-clip-path: url(#clipping);
+            clip-path: url(#clipping);
+    background-color: #6d339e;
+    background-attachment: fixed;
+    mix-blend-mode: color-dodge;
+    position: relative;
+    padding: 100%; } }
+
 .home-wrap header {
   padding: 30px 0;
   z-index: 100;
@@ -4700,6 +4710,15 @@ ul.ul-banners {
           transform: rotateX(9.6deg) rotateZ(0deg) skewX(25deg) translateY(0%);
   opacity: 1;
   overflow: hidden; }
+  @media (max-width: 640px) {
+    .big-logo-right-top-reflect.graphics-box-butt {
+      margin-top: 44%;
+      right: 6.4%;
+      -webkit-filter: drop-shadow(0 0px 17px #f7921e) opacity(0.5);
+              filter: drop-shadow(0 0px 17px #f7921e) opacity(0.5); }
+      .big-logo-right-top-reflect.graphics-box-butt .thumb-print {
+        top: -55%;
+        left: -15%; } }
   .big-logo-right-top-reflect.graphics-box-butt a.pics-box.thumb-bott-title::after {
     position: absolute;
     content: "🤡 👻 👺";
@@ -4716,6 +4735,11 @@ ul.ul-banners {
         align-items: center;
     line-height: 1.2;
     transition: all 0.6s cubic-bezier(0.445, 0.05, 0.55, 0.95); }
+    @media (max-width: 640px) {
+      .big-logo-right-top-reflect.graphics-box-butt a.pics-box.thumb-bott-title::after {
+        -webkit-filter: blur(0);
+                filter: blur(0);
+        display: none; } }
   .big-logo-right-top-reflect:hover.graphics-box-butt a.pics-box.thumb-bott-title::after {
     font-size: 33px;
     transition: all 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95); }
@@ -4744,12 +4768,24 @@ ul.ul-banners {
     position: absolute;
     top: 0;
     left: 0; }
+  .big-logo-right-bottom::before {
+    background-image: url(../img/thumb-butt.png);
+    background-position: center top;
+    background-size: contain;
+    background-repeat: no-repeat;
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10; }
 
 .big-logo-right-bottom-shade {
   content: '';
-  padding: 10.58% 22.8%;
+  padding: 13.1% 22.8%;
   margin-top: 65.8%;
-  right: 6.1%;
+  right: 4.1%;
   position: absolute;
   -webkit-clip-path: polygon(0.3% 0%, 100% 0%, 100% 100%, 0% 100%);
           clip-path: polygon(0.3% 0%, 100% 0%, 100% 100%, 0% 100%);
@@ -4757,6 +4793,18 @@ ul.ul-banners {
           transform: rotateX(2.2deg) rotateZ(0deg) skewX(-28.5deg) translateY(0%);
   opacity: 1;
   overflow: hidden; }
+  @media (max-width: 640px) {
+    .big-logo-right-bottom-shade {
+      mix-blend-mode: hard-light;
+      -webkit-filter: drop-shadow(0 0px 17px #f7921e) opacity(0.9);
+              filter: drop-shadow(0 0px 17px #f7921e) opacity(0.9);
+      padding: 10.58% 22.8%;
+      -webkit-clip-path: none;
+              clip-path: none;
+      right: 6%; } }
+  .big-logo-right-bottom-shade.graphics-box-butt .thumb-print {
+    top: -40%;
+    left: -15%; }
   .big-logo-right-bottom-shade.graphics-box-butt a.pics-box.thumb-bott-title::after {
     position: absolute;
     content: 'Business Cards & Logos';
@@ -4772,9 +4820,18 @@ ul.ul-banners {
     line-height: 1.2;
     width: 90%;
     transition: all 0.6s cubic-bezier(0.445, 0.05, 0.55, 0.95); }
+    @media (max-width: 640px) {
+      .big-logo-right-bottom-shade.graphics-box-butt a.pics-box.thumb-bott-title::after {
+        content: ''; } }
   .big-logo-right-bottom-shade:hover.graphics-box-butt a.pics-box.thumb-bott-title::after {
     font-size: 33px;
     transition: all 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95); }
+
+@media (max-width: 640px) {
+  .graphics-box-butt {
+    mix-blend-mode: hard-light;
+    -webkit-filter: drop-shadow(0 0px 17px #f7921e) opacity(0.9);
+            filter: drop-shadow(0 0px 17px #f7921e) opacity(0.9); } }
 
 .graphics-box-butt .thumb-bott {
   overflow: hidden;
@@ -4787,6 +4844,17 @@ ul.ul-banners {
   top: 0;
   right: 0;
   transition: all 0.8s cubic-bezier(0.445, 0.05, 0.55, 0.95); }
+  @media (max-width: 640px) {
+    .graphics-box-butt .thumb-bott {
+      opacity: 1;
+      background: transparent;
+      box-shadow: none;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-align: center;
+          align-items: center;
+      -ms-flex-pack: center;
+          justify-content: center; } }
   .graphics-box-butt .thumb-bott a.pics-box {
     display: none; }
   .graphics-box-butt .thumb-bott a.pics-box.thumb-bott-title {
@@ -4802,10 +4870,14 @@ ul.ul-banners {
         justify-content: center;
     font-size: 28px !important;
     color: #fff;
-    opacity: 0;
+    opacity: 1;
     -webkit-filter: blur(10px);
             filter: blur(10px);
     transition: all 0.8s cubic-bezier(0.445, 0.05, 0.55, 0.95); }
+    @media (max-width: 640px) {
+      .graphics-box-butt .thumb-bott a.pics-box.thumb-bott-title {
+        -webkit-filter: blur(0);
+                filter: blur(0); } }
 
 .graphics-box-butt:hover .thumb-bott {
   opacity: 1;

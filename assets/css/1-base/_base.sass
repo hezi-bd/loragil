@@ -115,3 +115,12 @@ body
   img
     border: solid 6px #fff
     box-shadow: 0 0 30px 9px rgba(25, 25, 25, 0.6), 0 0 10px 0px rgba(25, 25, 25, 0.9)
+
+.thumb-print
+  @media (max-width: 640px)
+    clip-path: url(#clipping)
+    background-color: $purple
+    background-attachment: fixed
+    mix-blend-mode: color-dodge
+    position: relative
+    padding: 100%
