@@ -1,3 +1,4 @@
+
 .home-sections section.graphics
   height: 100vh
   padding-top: 0
@@ -833,6 +834,9 @@
   transform: rotateX(9.6deg) rotateZ(0deg) skewX(25deg) translateY(0%)
   opacity: 1
 
+  @media (max-width: 640px)
+    background-size: cover
+
   &::after
     background: linear-gradient(rgba(255, 255, 255, 0.56), rgba(0, 0, 0, 0) 60%, rgba(14, 6, 23, 0.93))
     content: ''
@@ -857,12 +861,13 @@
 
     @media (max-width: 640px)
       margin-top: 44%
-      right: 6.4%
-      filter: drop-shadow(0 0px 17px #f7921e) opacity(0.5)
+      right: 10.4%
+      filter: brightness(1.3) saturate(0.2) opacity(0.6)
 
       .thumb-print
-        top: -55%
-        left: -15%
+        top: -1%
+        left: 15%
+        background-size: 43px
 
     a.pics-box.thumb-bott-title
       &::after
@@ -947,16 +952,17 @@
   opacity: 1
   overflow: hidden
   @media (max-width: 640px)
-    mix-blend-mode: hard-light
-    filter: drop-shadow(0 0px 17px $orange) opacity(0.9)
-    padding: 10.58% 22.8%
+    mix-blend-mode: multiply
+    filter: opacity(0.5) blur(0.1px)
+    padding: 10.58% 38.8%
     clip-path: none
-    right: 6%
+    right: -11%
   &.graphics-box-butt
 
     .thumb-print
-      top: -40%
-      left: -15%
+      //padding-top: 40%
+      //margin-top: 5%
+      // left: -15%
 
     a.pics-box.thumb-bott-title
       &::after
@@ -987,8 +993,9 @@
 
 .graphics-box-butt
   @media (max-width: 640px)
-    mix-blend-mode: hard-light
-    filter: drop-shadow(0 0px 17px #f7921e) opacity(0.9)
+    //mix-blend-mode: hard-light
+    //filter: drop-shadow(0 0px 17px #f7921e) opacity(0.9)
+    overflow: visible
   .thumb-bott
     overflow: hidden
     +size(100%)
@@ -1006,6 +1013,7 @@
       display: flex
       align-items: center
       justify-content: center
+      overflow: visible
 
 
 
