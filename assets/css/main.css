@@ -3387,8 +3387,7 @@ section.my-sites-view {
               mix-blend-mode: multiply; }
             section.my-sites-view .home-lead-title .small-lead-box .switch .switch-icons {
               display: block;
-              position: absolute;
-              z-index: -1; }
+              position: absolute; }
               section.my-sites-view .home-lead-title .small-lead-box .switch .switch-icons i {
                 color: rgba(0, 0, 0, 0.6);
                 text-align: center;
