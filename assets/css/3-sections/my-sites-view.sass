@@ -341,11 +341,16 @@ section.my-sites-view
           margin: 5px auto 10px !important
           justify-content: center
 
+          label
+            z-index: 10
+            mix-blend-mode: multiply
+
           .switch-icons
             display: block
             position: absolute
+            z-index: -1
             i
-              color: rgba(0, 0, 0, 0.32)
+              color: rgba(0, 0, 0, 0.6)
               text-align: center
               font-size: 20px
               line-height: 1.6
@@ -355,13 +360,19 @@ section.my-sites-view
               +transition(all 0.3s $ease-in-out-sine)
             .fa-desktop
               opacity: 1
+              transform: translateX(0)
+
+            .fa-mobile-alt
+              transform: translateX(-100%)
 
             &.rotate
               .fa-desktop
                 opacity: 0
+                transform: translateX(100%)
 
               .fa-mobile-alt
                 opacity: 1
+                transform: translateX(0)
 
 
 

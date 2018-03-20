@@ -3382,11 +3382,15 @@ section.my-sites-view {
             margin: 5px auto 10px !important;
             -ms-flex-pack: center;
                 justify-content: center; }
+            section.my-sites-view .home-lead-title .small-lead-box .switch label {
+              z-index: 10;
+              mix-blend-mode: multiply; }
             section.my-sites-view .home-lead-title .small-lead-box .switch .switch-icons {
               display: block;
-              position: absolute; }
+              position: absolute;
+              z-index: -1; }
               section.my-sites-view .home-lead-title .small-lead-box .switch .switch-icons i {
-                color: rgba(0, 0, 0, 0.32);
+                color: rgba(0, 0, 0, 0.6);
                 text-align: center;
                 font-size: 20px;
                 line-height: 1.6;
@@ -3395,11 +3399,20 @@ section.my-sites-view {
                 z-index: 0;
                 transition: all 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95); }
               section.my-sites-view .home-lead-title .small-lead-box .switch .switch-icons .fa-desktop {
-                opacity: 1; }
+                opacity: 1;
+                -webkit-transform: translateX(0);
+                        transform: translateX(0); }
+              section.my-sites-view .home-lead-title .small-lead-box .switch .switch-icons .fa-mobile-alt {
+                -webkit-transform: translateX(-100%);
+                        transform: translateX(-100%); }
               section.my-sites-view .home-lead-title .small-lead-box .switch .switch-icons.rotate .fa-desktop {
-                opacity: 0; }
+                opacity: 0;
+                -webkit-transform: translateX(100%);
+                        transform: translateX(100%); }
               section.my-sites-view .home-lead-title .small-lead-box .switch .switch-icons.rotate .fa-mobile-alt {
-                opacity: 1; } }
+                opacity: 1;
+                -webkit-transform: translateX(0);
+                        transform: translateX(0); } }
     section.my-sites-view .home-lead-title .small-home-lead, section.my-sites-view .home-lead-title section.home-footer .home-lead-box p .loragil, section.home-footer .home-lead-box p section.my-sites-view .home-lead-title .loragil, section.my-sites-view .home-lead-title section.home-footer .home-lead-box p .big-and-small-title .small-home-lead, section.home-footer .home-lead-box p .big-and-small-title section.my-sites-view .home-lead-title .small-home-lead, section.my-sites-view .home-lead-title section.home-footer .home-lead-box .big-and-small-title p .small-home-lead, section.home-footer .home-lead-box .big-and-small-title p section.my-sites-view .home-lead-title .small-home-lead {
       margin-right: 5px; }
     section.my-sites-view .home-lead-title .view-hr {
