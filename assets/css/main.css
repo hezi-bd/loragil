@@ -3401,18 +3401,22 @@ section.my-sites-view {
               section.my-sites-view .home-lead-title .small-lead-box .switch .switch-icons .fa-desktop {
                 opacity: 1;
                 -webkit-transform: translateX(0);
-                        transform: translateX(0); }
+                        transform: translateX(0);
+                transition-delay: 0.25s; }
               section.my-sites-view .home-lead-title .small-lead-box .switch .switch-icons .fa-mobile-alt {
                 -webkit-transform: translateX(-100%);
-                        transform: translateX(-100%); }
+                        transform: translateX(-100%);
+                transition-delay: 0s; }
               section.my-sites-view .home-lead-title .small-lead-box .switch .switch-icons.rotate .fa-desktop {
                 opacity: 0;
                 -webkit-transform: translateX(100%);
-                        transform: translateX(100%); }
+                        transform: translateX(100%);
+                transition-delay: 0s; }
               section.my-sites-view .home-lead-title .small-lead-box .switch .switch-icons.rotate .fa-mobile-alt {
                 opacity: 1;
                 -webkit-transform: translateX(0);
-                        transform: translateX(0); } }
+                        transform: translateX(0);
+                transition-delay: 0.25s; } }
     section.my-sites-view .home-lead-title .small-home-lead, section.my-sites-view .home-lead-title section.home-footer .home-lead-box p .loragil, section.home-footer .home-lead-box p section.my-sites-view .home-lead-title .loragil, section.my-sites-view .home-lead-title section.home-footer .home-lead-box p .big-and-small-title .small-home-lead, section.home-footer .home-lead-box p .big-and-small-title section.my-sites-view .home-lead-title .small-home-lead, section.my-sites-view .home-lead-title section.home-footer .home-lead-box .big-and-small-title p .small-home-lead, section.home-footer .home-lead-box .big-and-small-title p section.my-sites-view .home-lead-title .small-home-lead {
       margin-right: 5px; }
     section.my-sites-view .home-lead-title .view-hr {
