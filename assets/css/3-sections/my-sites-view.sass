@@ -107,6 +107,7 @@ section.my-sites-view
     width: 100% !important
     margin: -10px auto 0 !important
     .hand-point-box
+      display: none
       position: absolute
       width: 0
       height: 50px
@@ -116,9 +117,7 @@ section.my-sites-view
       opacity: 0.5
       top: 10px
     i.fa-hand-point-up
-      display: none
       position: relative
-
       font-size: 25px
       bottom: calc(-100% + 50px)
       mix-blend-mode: difference
@@ -135,9 +134,9 @@ section.my-sites-view
       margin-top: 45px !important
 
     @media (max-width:640px)
-      i.fas.fa-hand-point-up
+      .hand-point-box
         display: block
-        &:before
+        .fa-hand-point-up:before
           position: relative
           animation: MoveUpDownSmall 2s cubic-bezier(0.57, 0.13, 0.45, 0.84) infinite
 

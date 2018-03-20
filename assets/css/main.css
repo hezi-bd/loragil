@@ -3173,6 +3173,7 @@ section.my-sites-view {
     width: 100% !important;
     margin: -10px auto 0 !important; }
     section.my-sites-view .site-pre .hand-point-box {
+      display: none;
       position: absolute;
       width: 0;
       height: 50px;
@@ -3182,7 +3183,6 @@ section.my-sites-view {
       opacity: 0.5;
       top: 10px; }
     section.my-sites-view .site-pre i.fa-hand-point-up {
-      display: none;
       position: relative;
       font-size: 25px;
       bottom: calc(-100% + 50px);
@@ -3198,9 +3198,9 @@ section.my-sites-view {
         padding: 0 20px 0;
         margin-top: 45px !important; } }
     @media (max-width: 640px) {
-      section.my-sites-view .site-pre i.fas.fa-hand-point-up {
+      section.my-sites-view .site-pre .hand-point-box {
         display: block; }
-        section.my-sites-view .site-pre i.fas.fa-hand-point-up:before {
+        section.my-sites-view .site-pre .hand-point-box .fa-hand-point-up:before {
           position: relative;
           -webkit-animation: MoveUpDownSmall 2s cubic-bezier(0.57, 0.13, 0.45, 0.84) infinite;
                   animation: MoveUpDownSmall 2s cubic-bezier(0.57, 0.13, 0.45, 0.84) infinite; } }
