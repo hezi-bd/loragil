@@ -301,7 +301,13 @@
         &.is-open
           span
             &::after, &::before
-              background: shade($purple, 70%)
+              background: tint($purple, 95%)
+
+            // &::after
+            //   top: -3px
+            //
+            // &::before
+            //   top: 0px
 
     .mobile-nav
       min-height: 40px
@@ -358,6 +364,19 @@
 
             &:after
               top: -12px
+
+          .mobile-nav-toggle
+            display: flex
+            height: 74px
+
+          &.is-open
+            span
+
+              &::after
+                top: -3px
+
+              &::before
+                top: 0px
           //.mobile-nav-toggleposition: absolute
           // top: -56px
           // left: 15px

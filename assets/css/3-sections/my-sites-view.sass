@@ -106,6 +106,16 @@ section.my-sites-view
     max-width: 960px
     width: 100% !important
     margin: -10px auto 0 !important
+    i.fa-hand-point-up
+      display: none
+      position: relative
+      z-index: 10000
+      left: calc(50% - 20px)
+      font-size: 25px
+      bottom: calc(-100% + 50px)
+      mix-blend-mode: difference
+      opacity: 0.5
+      color: $orange
 
     @media (min-width:801px) and (max-width: 1000px)
       max-width: 620px
@@ -113,6 +123,13 @@ section.my-sites-view
     @media (max-width:800px)
       padding: 0 20px 0
       margin-top: 45px !important
+
+    @media (max-width:640px)
+      i.fas.fa-hand-point-up
+        display: block
+        &:before
+          position: relative
+          animation: MoveUpDownSmall 2s cubic-bezier(0.57, 0.13, 0.45, 0.84) infinite
 
 
     .site-pre-box

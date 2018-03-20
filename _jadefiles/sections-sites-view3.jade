@@ -57,7 +57,9 @@ section.my-sites-view#sites
       | {% for post in site.categories.home-carousel %}
       .site-pre
         .site-pre-box-frame
+          
           .site-pre-box
+            i.fas.fa-hand-point-up
             .view-wide
               img.nav-thumb2.butt-on(src='{{site.baseurl}}/assets/img/post-assets/site-view/{{post.cover}}', alt='{{post.title}}')
             .view-mobile
@@ -67,5 +69,7 @@ section.my-sites-view#sites
           h2.site-info-title {{post.title}}
           p.site-excerpt {{post.excerpt}}
       |   {% endfor %}
+      
+      
 
     
