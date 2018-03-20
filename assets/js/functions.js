@@ -443,12 +443,14 @@ $("#cmn-toggle-1").change(function() {
         $('.hands-box').addClass('box-rotate');
         $('.slider-sites-for').addClass('box-rotate');
         $('.ul-caro').addClass('rotate');
+        $('.switch-icons').addClass('rotate');
         $('.view-wide').removeClass('butt-on');
         $('.view-mobile').addClass('butt-on');
     } else {
   		$('.hands-box').removeClass('box-rotate');
       $('.slider-sites-for').removeClass('box-rotate');
       $('.ul-caro').removeClass('rotate');
+      $('.switch-icons').removeClass('rotate');
       $('.view-wide').addClass('butt-on');
       $('.view-mobile').removeClass('butt-on');
   	}
