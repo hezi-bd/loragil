@@ -22,7 +22,7 @@ section.my-sites-view
 
     @media (max-width:800px)
       margin-top: 0
-      padding: 20px 0 0 0
+      padding: 0 0 0 0
       max-width: 100% !important
       width: 100%
       border-radius: 0
@@ -183,9 +183,10 @@ section.my-sites-view
         overflow-y: scroll
         filter: blur(10px)
         +transition(all 0.3s $ease-in-out-sine)
-        display: none
+        //display: none
         @media (max-width:640px)
           height: 64vh !important
+          margin-bottom: -110px
 
 
     .sites-box-info
@@ -295,6 +296,14 @@ section.my-sites-view
 
   .slick-track
     display: flex
+
+    .site-pre.slick-slide:nth-child(2)
+      .view-wide
+        .nav-thumb2
+          background-image: url(https://dl.dropboxusercontent.com/s/ilbwg0m9tw4cbee/blog-bg2.jpg?dl=0) !important
+          background-attachment:  fixed
+          background-size: cover
+          background-position: center bottom
 
   // ------------------start hands-------------------
   .home-lead-title

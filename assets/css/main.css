@@ -2300,7 +2300,8 @@ section.youtube {
     padding: 0;
     -ms-flex-align: center;
         align-items: center;
-    overflow: hidden; }
+    overflow: hidden;
+    margin-bottom: 10px; }
     .home-sections section.abilities .flex--center {
       display: -ms-flexbox;
       display: flex;
@@ -3105,7 +3106,7 @@ section.my-sites-view {
     @media (max-width: 800px) {
       section.my-sites-view .col-1 {
         margin-top: 0;
-        padding: 20px 0 0 0;
+        padding: 0 0 0 0;
         max-width: 100% !important;
         width: 100%;
         border-radius: 0;
@@ -3251,11 +3252,11 @@ section.my-sites-view {
         overflow-y: scroll;
         -webkit-filter: blur(10px);
                 filter: blur(10px);
-        transition: all 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-        display: none; }
+        transition: all 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95); }
         @media (max-width: 640px) {
           section.my-sites-view .site-pre .site-pre-box .view-mobile {
-            height: 64vh !important; } }
+            height: 64vh !important;
+            margin-bottom: -110px; } }
     section.my-sites-view .site-pre .sites-box-info {
       display: block;
       opacity: 1;
@@ -3359,6 +3360,11 @@ section.my-sites-view {
   section.my-sites-view .slick-track {
     display: -ms-flexbox;
     display: flex; }
+    section.my-sites-view .slick-track .site-pre.slick-slide:nth-child(2) .view-wide .nav-thumb2 {
+      background-image: url(https://dl.dropboxusercontent.com/s/ilbwg0m9tw4cbee/blog-bg2.jpg?dl=0) !important;
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center bottom; }
   section.my-sites-view .home-lead-title {
     position: relative;
     z-index: 10;

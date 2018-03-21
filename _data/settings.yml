@@ -15,29 +15,16 @@ email: hezi.bd@gmail.com
 seo:
   description: 'website Designer, banners etc'
 
-
-# Work Section
-
-# projects:
-# - {name: TYPO International Design Talks, folder: 'proj-1', file: 'work/proj-1.html'}
-# - {name: City-IN website concept, folder: 'proj-2', file: 'work/proj-2.html'}
-# - {name: Crispy Icons, folder: 'proj-3', file: 'work/proj-3.html'}
-# - {name: Flat Mobile UI/UX Concept, folder: 'proj-4', file: 'work/proj-4.html'}
-# - {name: Fresh It Up, folder: 'proj-5', file: 'work/proj-5.html'}
-# - {name: Timeline Page, folder: 'proj-6', file: 'work/proj-6.html'}
-# - {name: Weather Dashboard, folder: 'proj-7', file: 'work/proj-7.html'}
-# - {name: Stripes & Co, folder: 'proj-8', file: 'work/proj-8.html'}
-
 banners:
-- {name: מכללת גליל מערבי, folder: 'banner01', file: 'banners/banner01.html'}
+- {name: Western Galilee College, folder: 'banner01', file: 'banners/banner01.html'}
 - {name: Bluran3D, folder: 'banner02', file: 'banners/banner02.html'}
-- {name: טבעוני, folder: 'banner03', file: 'banners/banner03.html'}
-- {name: מכללת גליל מערבי, folder: 'banner04', file: 'banners/banner04.html'}
-- {name: מכללת גליל מערבי, folder: 'banner05', file: 'banners/banner05.html'}
-- {name: מכללת גליל מערבי, folder: 'banner06', file: 'banners/banner06.html'}
-- {name: מכללת גליל מערבי, folder: 'banner07', file: 'banners/banner07.html'}
-- {name: אונ׳ בן גוריון, folder: 'banner08', file: 'banners/banner08.html'}
-- {name: אונ׳ בן גוריון, folder: 'banner09' , file: 'banners/banner09.html'}
-- {name: נמל חיפה, folder: 'banner10', file: 'banners/banner10.html'}
-- {name: תו איכות, folder: 'banner11', file: 'banners/banner11.html'}
-- {name: אונ׳ בן גוריון, folder: 'banner12', file: 'banners/banner12.html'}
+- {name: Tivoni, folder: 'banner03', file: 'banners/banner03.html'}
+- {name: Western Galilee College, folder: 'banner04', file: 'banners/banner04.html'}
+- {name: Western Galilee College, folder: 'banner05', file: 'banners/banner05.html'}
+- {name: Western Galilee College, folder: 'banner06', file: 'banners/banner06.html'}
+- {name: Western Galilee College, folder: 'banner07', file: 'banners/banner07.html'}
+- {name: Ben Gurion University, folder: 'banner08', file: 'banners/banner08.html'}
+- {name: Ben Gurion University, folder: 'banner09' , file: 'banners/banner09.html'}
+- {name: Port of Haifa, folder: 'banner10', file: 'banners/banner10.html'}
+- {name: Quality Mark, folder: 'banner11', file: 'banners/banner11.html'}
+- {name: Ben Gurion University, folder: 'banner12', file: 'banners/banner12.html'}
