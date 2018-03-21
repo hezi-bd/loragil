@@ -114,7 +114,7 @@ section.my-sites-view
       overflow: visible
       z-index: 10000
       left: calc(100% - 45px)
-      opacity: 0.8
+      opacity: 1
       top: 10px
     i.fa-hand-point-up
       position: relative
@@ -124,7 +124,8 @@ section.my-sites-view
 
       color: $orange
       height: 0
-      background: pink
+      //text-shadow: 0 0 3px #fff
+      //filter: drop-shadow(0 0 1px rgba(255, 200, 137, 0.66))
 
     @media (min-width:801px) and (max-width: 1000px)
       max-width: 620px
@@ -138,7 +139,7 @@ section.my-sites-view
         display: block
         .fa-hand-point-up:before
           position: relative
-          animation: MoveUpDownSmall 2s cubic-bezier(0.57, 0.13, 0.45, 0.84) infinite
+          animation: MoveUpDownSmall 3s cubic-bezier(0.5, 0.34, 0.04, 1) infinite
 
 
     .site-pre-box

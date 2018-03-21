@@ -1308,19 +1308,25 @@ body {
 
 @-webkit-keyframes MoveUpDownSmall {
   0% {
-    bottom: -2px; }
+    bottom: -2px;
+    color: #f7921e; }
   50% {
-    bottom: -10px; }
+    bottom: -35px;
+    color: rgba(39, 17, 62, 0.79); }
   100% {
-    bottom: -2px; } }
+    bottom: -2px;
+    color: #f7921e; } }
 
 @keyframes MoveUpDownSmall {
   0% {
-    bottom: -2px; }
+    bottom: -2px;
+    color: #f7921e; }
   50% {
-    bottom: -10px; }
+    bottom: -35px;
+    color: rgba(39, 17, 62, 0.79); }
   100% {
-    bottom: -2px; } }
+    bottom: -2px;
+    color: #f7921e; } }
 
 .gigantic, .huge, .large, .bigger, .big,
 h1, h2, h3, h4, h5, h6 {
@@ -3180,7 +3186,7 @@ section.my-sites-view {
       overflow: visible;
       z-index: 10000;
       left: calc(100% - 45px);
-      opacity: 0.8;
+      opacity: 1;
       top: 10px; }
     section.my-sites-view .site-pre i.fa-hand-point-up {
       position: relative;
@@ -3188,8 +3194,7 @@ section.my-sites-view {
       bottom: calc(-100% + 50px);
       mix-blend-mode: difference;
       color: #f7921e;
-      height: 0;
-      background: pink; }
+      height: 0; }
     @media (min-width: 801px) and (max-width: 1000px) {
       section.my-sites-view .site-pre {
         max-width: 620px; } }
@@ -3202,8 +3207,8 @@ section.my-sites-view {
         display: block; }
         section.my-sites-view .site-pre .hand-point-box .fa-hand-point-up:before {
           position: relative;
-          -webkit-animation: MoveUpDownSmall 2s cubic-bezier(0.57, 0.13, 0.45, 0.84) infinite;
-                  animation: MoveUpDownSmall 2s cubic-bezier(0.57, 0.13, 0.45, 0.84) infinite; } }
+          -webkit-animation: MoveUpDownSmall 3s cubic-bezier(0.5, 0.34, 0.04, 1) infinite;
+                  animation: MoveUpDownSmall 3s cubic-bezier(0.5, 0.34, 0.04, 1) infinite; } }
     section.my-sites-view .site-pre .site-pre-box {
       width: 100%;
       height: calc(100vh - 344px) !important;
