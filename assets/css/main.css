@@ -3146,7 +3146,8 @@ section.my-sites-view {
       display: none; }
       @media (max-width: 800px) {
         section.my-sites-view .slider-sites-nav.mobile-sites-nav {
-          display: inherit; } }
+          display: inherit;
+          padding: 0; } }
     section.my-sites-view .slider-sites-nav.wide-sites-nav {
       display: inherit; }
       @media (max-width: 800px) {
@@ -3263,8 +3264,7 @@ section.my-sites-view {
         transition: all 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95); }
         @media (max-width: 640px) {
           section.my-sites-view .site-pre .site-pre-box .view-mobile {
-            height: 64vh !important;
-            margin-bottom: 20px; } }
+            height: 62vh !important; } }
     section.my-sites-view .site-pre .sites-box-info {
       display: block;
       opacity: 1;
@@ -3333,7 +3333,7 @@ section.my-sites-view {
       height: 33vh !important; }
   @media (max-width: 640px) {
     section.my-sites-view .box-rotate .site-pre-box {
-      height: 64vh !important; }
+      height: 62vh !important; }
     section.my-sites-view .box-rotate a.site-link.sites-box-info {
       opacity: 0; } }
   section.my-sites-view .site-pre img {
