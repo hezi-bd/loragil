@@ -99,6 +99,9 @@ section.my-sites-view
         z-index: 100 !important
         transform: scale(1.2) translateY(-2px)
         +transition(filter 0.2s $ease-out-quint)
+        @media (max-width:640px)
+          transform: scale(1.2) translateY(4px)
+
 
 
   .site-pre
@@ -158,6 +161,7 @@ section.my-sites-view
 
       @media (max-width:640px)
         height: 30vh !important
+        overflow: hidden
 
 
       .butt-on
@@ -174,6 +178,8 @@ section.my-sites-view
         overflow-y: scroll
         filter: blur(0px)
         +transition(all 0.3s $ease-in-out-sine)
+        @media (max-width:640px)
+          height: 30vh !important
       .view-mobile
         position: absolute
         opacity: 0
@@ -186,7 +192,7 @@ section.my-sites-view
         //display: none
         @media (max-width:640px)
           height: 64vh !important
-          margin-bottom: -110px
+          margin-bottom: 20px
 
 
     .sites-box-info
