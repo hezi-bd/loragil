@@ -28,31 +28,17 @@
     width: 37vw
     right: -35px
 
-  // @media (min-width:871px) and (max-width: 1000px)
-  //   overflow: hidden
-  //   border-radius: 50%
-  //   width: 0
-  //   height: 0
-  //   padding: 10vh
-  //   background-position: top center
-  //   right: 57px
-  //   background-size: cover
-  //   background-color: $orange
-  //   top: 13px
-  //   border-bottom: solid 1px $purple
-  //   border-top: solid 1px shade($purple, 20%)
-  //   filter: drop-shadow(92px -18px 32px rgba(32, 15, 47, 0))
   @media (min-width:1001px) and (max-width: 1100px)
     width: 36vw
-
-
-
 
   background:
     image: url(../img/loragil-about-pic.png)
     repeat: no-repeat
     position: top right
     size: contain
+
+  @media (max-width: 640px)
+    //background-image: url(../img/loragil-about-pic-mobile.png)
 
   &::after
     height: 300px
@@ -72,7 +58,6 @@
     margin-bottom: 70px
     content: ""
     background:
-      // image: url(../img/abilities-bottom.png)
       repeat: no-repeat
       position: center
       size: auto
@@ -85,11 +70,6 @@
   display: flex
   flex-direction: column
   justify-content: flex-start
-  //background:
-    image: url(../img/loragil-about-pic.png)
-    repeat: no-repeat
-    position: top right
-    size: contain
   &::before
     position: absolute
     z-index: -1
@@ -106,30 +86,14 @@
 
     @media (max-width: 640px)
       top: -70px
-  //&::after
-    position: absolute
-    z-index: -1
-    height: 77.3vh
-    top: 0
-    right: 0
-    content: ""
-    width: 100vw
-    @extend .home-gra
-
-  .flex.flex--center
-    // background: rgba(255, 255, 255, 0.2)
-    // padding: 20px
-    // backdrop-filter: blur(5px)
 
   .col-1.push-right.logo-title
     padding: 0
     position: relative
-    //z-index: -1
     display: flex
     flex-direction: column
     height: 36vh
     justify-content: center
-    //padding-top: 10px
 
     @media (max-width: 1340px)
       margin-left: 278px

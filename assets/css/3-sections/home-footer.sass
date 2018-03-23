@@ -27,27 +27,6 @@ section.home-footer
     @media (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm)
       background-position: 0 top, right top, center 1189px
 
-  // &::after
-  //   position: absolute
-  //   content: ''
-  //   top: 20px
-  //   width: 25vw
-  //   height: 100vh
-  //   z-index: -1
-  //   filter: alpha(opacity=50)
-  //   right: 0
-  //   background:
-  //     blend-mode: normal
-  //     image: url(../img/me-footer.png) !important
-  //     attachment: fixed !important
-  //     position: 120% top !important
-  //     repeat: no-repeat !important
-  //
-  //   @media (max-width: 640px)
-  //     background-image: transparent !important
-  //     background-attachment: inherit
-
-
   .me-footer2
     position: absolute
     height: 66vh
@@ -187,18 +166,6 @@ section.home-footer
 
   @media (max-width: 640px)
     margin-top: 20px
-  //&::before
-    box-shadow: 0 7px 3px 3px #d18511
-    position: absolute
-    height: 5px
-    width: 100%
-    content: ''
-    z-index: -1
-    top: -5px
-
-
-
-
 
   .cta
     margin: 0
@@ -234,7 +201,6 @@ section.home-footer
 
 
     span
-      //zoom: 5.5
       text-align: center
       position: relative
       animation: MoveUpDown 2s cubic-bezier(0.82, 0.08, 0.15, 0.96) infinite
@@ -243,7 +209,6 @@ section.home-footer
       margin-top: -5px
       color: $purple
       font-size: 90px
-      //+size(30px)
 
 a.flex.flex--center.mailto
   margin-top: 0
@@ -262,7 +227,6 @@ a.flex.flex--center.mailto
 
   background:
     blend-mode: normal
-    //image: url(../img/me-footer.png),url("../img/loragil-bg-pattern.svg") !important
     attachment: fixed !important
     position: right top, right top !important
     repeat: no-repeat, repeat !important
@@ -281,11 +245,6 @@ a.flex.flex--center.mailto
     text-shadow: 0 -1px 2px #29133b
     filter: alpha(opacity=100)
     mix-blend-mode: multiply
-    //background:
-      blend-mode: multiply
-      image: url("../img/loragil-bg-pattern.svg") !important
-      attachment: fixed
-      position: top center
 
 a.flex.flex--center.face-butt
   @extend a.flex.flex--center.mailto

@@ -1,22 +1,3 @@
-
-section.youtube
-  z-index: 1
-  position: relative
-.flex.flex--center.dust-box-flex
-
-.dust-box
-  margin: -8px 0 -50px
-  height: calc(100% + 58px)
-  width: 600px
-  position: absolute
-  content: ""
-  background-image: url(../img/dust.png)
-  background-repeat: repeat-y
-  background-position: center 0px
-  background-size: contain
-  right: calc(50vw - 300px)
-  z-index: 10
-
 .home-sections section.abilities
   padding: 0
   background:
@@ -78,7 +59,6 @@ section.youtube
               top: 4px
             &.logo-bottom img
               top: 7px
-          //transform: translateX(0) !important
 
       .col-1.push-right.cta-frame
         top: 0 !important
@@ -96,8 +76,6 @@ section.youtube
   &.preview
     box-shadow: 0 5px 9px -1px rgba(15, 7, 23, 0.48), 0 19px 18px -10px rgba(34, 16, 42, 0.45)
     border-bottom: solid 5px #8045be
-    // align-items: center
-    // padding: 0
 
     .slick-dotted.slick-slider
       margin-top: -70px
@@ -151,20 +129,6 @@ section.youtube
       line-height: 0.5
       color: shade($purple, 60%)
 
-  .rocket-box
-    min-height: calc(50vh - 45px)
-
-    &::before
-      height: 42vh
-      position: absolute
-      margin-right: -2px
-      content: ""
-      // background:
-      //   image: url(../img/rocket.svg)
-      //   repeat: no-repeat
-      //   position: top center
-      //   size: contain
-
 
     h4
       color: $light-orange
@@ -182,100 +146,6 @@ section.youtube
       border:
         top-right-radius: 30%
         top-left-radius: 30%
-
-
-  .col-first
-    position: relative
-    z-index: 10
-    .rocket-box
-      &:nth-child(1)
-        width: 99px
-        &::before
-          width: 99px
-          top: -3vh
-
-        // h4
-          @extend .flame-gra1
-          height: 31vh
-          //bottom: 0px
-          line-height: 0
-
-      &:nth-child(2)
-        width: 75px
-        &::before
-          width: 78px
-          top: 0
-
-        // h4
-          @extend .flame-gra2
-          height: 32vh
-          bottom: 0
-          line-height: 0
-
-      &:nth-child(3)
-        width: 60px
-        margin-left: 12px
-        &::before
-          width: 62px
-          top: -3vh
-
-        // h4
-          @extend .flame-gra3
-          height: 37vh
-          bottom: 0
-          line-height: 0
-
-  .col-last
-    .rocket-box
-      &:nth-child(1)
-        width: 62px
-        &::before
-          top: 0
-          width: 70px
-          //background:
-            image: url(../img/rocket.svg)
-            repeat: no-repeat
-            position: top center
-            size: contain
-
-        h4
-          //@extend .flame-gra4
-          height: calc(100vh - 150px)
-          width: 62px
-          bottom: 0
-          line-height: 0
-          @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm)
-            height: calc(100vh - 150px)
-            bottom: 0
-
-      &:nth-child(2)
-        width: 164px
-        &::before
-          width: 121px
-          top: -9vh
-
-        // h4
-          @extend .flame-gra5
-          height: 33vh
-          bottom: 0
-          line-height: 0
-
-
-      &:nth-child(3)
-        width: 62px
-        right: -20px
-        position: relative
-        &::before
-          width: 78px
-          top: -19vh
-          @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm)
-            top: -20vh
-
-        // h4
-          @extend .flame-gra6
-          height: 50vh
-          bottom: 0
-          line-height: 0
 
 
 @media (max-width: 1100px)
@@ -306,163 +176,11 @@ section.youtube
       flex-direction: row
       flex-wrap: wrap
 
-      &.dust-box-flex
-        display: none
-      //zoom: 0.6
-
       .col-3
         overflow: hidden
       .col-1
         padding: 0 !important
         width: 50%
-
-        .rocket-box
-          margin: 0 0 !important
-          transform: scale(0.73)
-          width: 33.333%
-          right: 0 !important
-
-          h4
-            line-height: 6
-            top: -60px !important
-            @media (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm)
-              line-height: 5
-              top: -30px !important
-
-      .col-first
-        padding-right: 10px
-        padding-left: 5px
-
-        .rocket-box
-
-          &:nth-child(1)
-            &::before
-              top: 80px
-              width: 70px
-              @media (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm)
-                top: 103px
-                width: 65px
-
-            h4
-              height: 312px
-              //line-height: 5
-              //font-size: 24px
-              @media (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm)
-                height: 292px
-                //line-height: 5
-                //font-size: 24px
-
-          &:nth-child(2)
-            &::before
-              top: 100px
-              width: 70px
-              @media (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm)
-                top: 120px
-                width: 65px
-
-            h4
-              height: 274px
-              //line-height: 5.5
-              //font-size: 22px
-              @media (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm)
-                height: 300px
-                //line-height: 5.5
-                //font-size: 22px
-
-          &:nth-child(3)
-            &::before
-              top: 144px
-              width: 72px
-              @media (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm)
-                top: 149px
-                width: 63px
-
-            h4
-              height: 222px
-              //line-height: 5.3
-              //font-size: 23px
-              @media (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm)
-                height: 272px
-                //line-height: 5.3
-                //font-size: 23px
-
-      .col-last
-        padding-right: 5px
-        padding-left: 10px
-
-        .rocket-box
-          &:nth-child(1)
-            &::before
-              top: -143px
-              width: 60px
-              @media (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm)
-                top: -116px
-                width: 51px
-
-            h4
-              height: 513px
-              //top: 0 !important
-              //line-height: 5.4
-              //font-size: 21px
-              @media (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm)
-                height: 500px
-                //top: 0 !important
-                //line-height: 5.4
-                //font-size: 21px
-
-          &:nth-child(2)
-            width: 120px
-            &::before
-              top: 71px
-              width: 95px
-              @media (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm)
-                top: 71px
-                width: 89px
-            h4
-              height: 242px
-              bottom: 0
-              top: 0
-              //font-size: 22px
-              //line-height: 5.6
-              @media (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm)
-                height: 272px
-                //bottom: 0
-                //top: 0
-                //font-size: 22px
-                //line-height: 5.6
-
-          &:nth-child(3)
-            //width: 120px
-            &::before
-              top: 58px
-              width: 56px
-              @media (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm)
-                top: 57px
-                width: 56px
-            h4
-              height: 320px
-              bottom: 0
-              //font-size: 22px
-              //line-height: 5.9
-              @media (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm)
-                height: 393px
-                bottom: 0
-                //font-size: 22px
-                //line-height: 5.6
-
-
-
-      .rocket-box
-        margin: auto
-        display: -ms-flexbox
-        display: flex
-        -ms-flex-direction: column-reverse
-        flex-direction: column
-        -ms-flex-align: center
-        justify-content: flex-end
-        margin-top: 120px
-        @media (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm)
-          margin-top: 100px
 
       .col-1 h4
         background-attachment: inherit !important
@@ -486,13 +204,6 @@ section.youtube
             left: -42px
             letter-spacing: 12px
 
-      &.rocket-section
-        //zoom: 0.65
-
-      .home-lead-box
-        //zoom: 0.9
-
-
 
 .home-sections section.abilities
   .site-pre
@@ -515,35 +226,17 @@ section.youtube
       left: 0
       z-index: 1000
 
-      // &::before
-      //   content: ''
-      //   width: 100%
-      //   max-width: 460px
-      //   top: -253px
-      //   margin: 0
-      //   height: 100%
-      //   position: absolute
-      //   z-index: 0
-      //   filter: drop-shadow(-8px 16px 30px rgba(39, 17, 62, 0.79)) drop-shadow(-8px -7px 12px rgba(39, 17, 62, 0.79)) brightness(110%) opacity(96%)
-      //   background:
-      //     image: url(../img/loragil-logo.svg)
-      //     position: 40px center
-      //     size: contain
-      //     repeat: no-repeat
-
-        @media (max-width: 640px)
-          height: 320px
+      @media (max-width: 640px)
+        height: 320px
 
       .logo-box
         +size(100%)
         position: absolute
-        //position: relative
         transform: translate(0px, 0%)
         img
           width: 100%
 
         &.logo-top
-          //position: relative
           z-index: 10
           img
             filter: $about-logo-shadow
@@ -552,12 +245,8 @@ section.youtube
             right: -7px
 
         &.logo-bottom
-          //filter: $about-logo-shadow
           img
             transform: translateY(1px)
-            //filter: $about-logo-shadow
-            //bottom: 10px
-            //position: relative
             z-index: 0
             top: 5px
             position: relative
@@ -587,18 +276,10 @@ section.youtube
     transform: rotateX(43deg)
     .site-pic-box, .slick-track>*
       +size(100%)
-      //overflow: hidden
       box-shadow: inset 0 -2px 2px rgba(251, 176, 59, 0.24), 0 16px 14px -4px #301831
       border-bottom: 5px solid rgba(50, 23, 78, 0.43)
-
-      //transform: rotateX(43deg) rotateZ(180deg)
-      //box-shadow: inset 0 5px 0px rgba(51, 51, 51, 0.5), 0 -17px 20px -4px #301831
       background:
-        //attachment: fixed
         position: center 0
-        //position-y: 0
-        //position-y: bottom
-        //size: 620px
         size: 100%
         repeat-x: no-repeat
         repeat-y: repeat
@@ -622,7 +303,6 @@ section.youtube
     color: $orange
     text-shadow: 0 3px 1px $dark-purple
   .slick-track
-    //display: flex
     height: calc(60vh + 11px)
     padding-bottom: 30px
 
@@ -632,7 +312,6 @@ section.youtube
 .home-sections section.abilities
 
   .cta
-    //If you use compass, instead of the line below you could use + transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
     transform: rotateX(49deg)
     height: 104px
     &.contact-cta
@@ -646,8 +325,6 @@ section.youtube
 
     &.gallery-cta
       flex: 2 2
-
-
       a
         padding: 10px 5px 10px 15px
 
@@ -686,7 +363,6 @@ section.youtube
 
 .home-sections section.abilities .col-1.push-right.cta-frame
   flex-wrap: wrap
-  //If you use compass, instead of the line below you could use + perspective($p)
   perspective: 41vh
   width: 200px
   position: relative

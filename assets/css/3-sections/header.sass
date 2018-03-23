@@ -29,9 +29,6 @@
           ul
             width: 135px
 
-          li
-            //transform: translateX(0px)
-
             a
               transition: all 0.6s cubic-bezier(0.4, -0.45, 0.07, 1.01)
               transform: translateX(100%)
@@ -47,15 +44,11 @@
         height: 66px
         max-width: 135px
 
-      .email-link
-        //font-size: 2em
-
     .header-position
       position: fixed
       top: 0
       bottom: 0
       left: 16px
-      //width: 135px
       width: 18px
       display: flex
       flex-direction: column
@@ -84,14 +77,10 @@
         .mobile-nav-toggle
           margin: 10px
           height: 50px
-          // margin-left: 4px
-          // margin: 10px
 
     &:hover .header-position
       @media (max-width: 640px)
         right: inherit
-
-
 
     .logo
       +hide-text
@@ -303,12 +292,6 @@
             &::after, &::before
               background: tint($purple, 95%)
 
-            // &::after
-            //   top: -3px
-            //
-            // &::before
-            //   top: 0px
-
     .mobile-nav
       min-height: 40px
       display: block
@@ -377,56 +360,3 @@
 
               &::before
                 top: 0px
-          //.mobile-nav-toggleposition: absolute
-          // top: -56px
-          // left: 15px
-          // @media (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm)
-          //   top: 6px
-        //a.email-link
-          position: fixed
-          bottom: 0px
-          right: 0px
-          width: 8px
-          background: #b07928
-          background-image: none
-          display: block
-
-
-
-
-
-  // .home-wrap header nav.site-nav
-  //   display: flex !important
-  //   flex-direction: column
-  //   height: calc(100vh - 60px)
-  //   position: fixed
-  //   z-index: 100
-  //   background: rgba(255, 255, 255, 0.39)
-  //   top: 60px
-  //   flex-wrap: wrap
-  //   justify-content: center
-  //   width: 8px
-  //   //If you use compass, instead of the line below you could use + box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-  //   box-shadow: inset 2px 0 7px 2px rgba(59, 28, 88, 0.36)
-  //   ul
-  //     flex-wrap: wrap
-  //     justify-content: center !important
-  //     align-items: center
-  //     width: 8px !important
-  //     height: 100%
-  //
-  //
-  //     li
-  //       //background: rgb(225, 41, 41)
-  //       //If you use compass, instead of the line below you could use + transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-  //       transform: translateX(0px) !important
-  //       margin-bottom: 0 !important
-  //       height: 14.28%
-  //       background: rgba(186, 186, 186, 0.29)
-  //       display: flex
-  //       flex-direction: column
-  //       &:nth-child(odd)
-  //         background: rgba(159, 159, 159, 0.57)
-  //       a
-  //         font-size: 0
-  //         height: 100%
