@@ -85,7 +85,8 @@ function WidthChange(mq) {
     if(wScroll > $('.site-pre').offset().top - ($(window).height() / 2.2)){
 
 
-      $('.site-pic-box').css({'background-position':'center '+ (wScroll) * (-2.3) +'px'});
+      // $('.site-pic-box').css({'background-position':'center '+ (wScroll) * (-2.3) +'px'});
+      $('.site-pic-box').css({'background-position':'center top'});
 
 
     };
