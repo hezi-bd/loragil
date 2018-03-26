@@ -2118,7 +2118,7 @@ body {
           top: -4px;
           left: 6px;
           max-width: 190px;
-          height: auto; }
+          height: 110px; }
           .home-sections section.abilities.intro .col-3.logo-big-box .logo-box {
             height: auto !important;
             display: none; }
@@ -2134,7 +2134,7 @@ body {
           width: 100% !important;
           padding: 0 50px;
           right: initial;
-          margin-top: -10px; }
+          margin-top: 0; }
           .home-sections section.abilities.intro .col-1.push-right.cta-frame .cta.sites-cta {
             -webkit-clip-path: none;
                     clip-path: none; }
@@ -2676,8 +2676,9 @@ section.my-sites-view {
         right: initial;
         -webkit-transform: translateX(0) !important;
                 transform: translateX(0) !important;
-        width: calc(100% - 40px);
-        text-align: center; }
+        width: 100%;
+        text-align: center;
+        margin: 20px auto 0; }
         section.my-sites-view .site-pre a.site-link.sites-box-info:hover {
           -webkit-transform: translateX(0) !important;
                   transform: translateX(0) !important; } }
@@ -2814,10 +2815,8 @@ section.my-sites-view {
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
       margin-top: 5px; }
-      section.my-sites-view .home-lead-title .small-lead-box .small-home-lead.orange-type, section.my-sites-view .home-lead-title .small-lead-box section.home-footer .home-lead-box p .orange-type.loragil, section.home-footer .home-lead-box p section.my-sites-view .home-lead-title .small-lead-box .orange-type.loragil {
-        font-weight: bold; }
       @media (max-width: 500px) {
-        section.my-sites-view .home-lead-title .small-lead-box .view-wide, section.my-sites-view .home-lead-title .small-lead-box .view-hr, section.my-sites-view .home-lead-title .small-lead-box .view-mobile {
+        section.my-sites-view .home-lead-title .small-lead-box .view-wide, section.my-sites-view .home-lead-title .small-lead-box .view-hr, section.my-sites-view .home-lead-title .small-lead-box .view-mobile, section.my-sites-view .home-lead-title .small-lead-box .small-home-lead.orange-type, section.my-sites-view .home-lead-title .small-lead-box section.home-footer .home-lead-box p .orange-type.loragil, section.home-footer .home-lead-box p section.my-sites-view .home-lead-title .small-lead-box .orange-type.loragil {
           display: none; } }
       section.my-sites-view .home-lead-title .small-lead-box .switch {
         -ms-flex: 1 1 100%;

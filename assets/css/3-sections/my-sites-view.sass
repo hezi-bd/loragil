@@ -274,8 +274,9 @@ section.my-sites-view
         left:  initial
         right: initial
         transform: translateX(0) !important
-        width: calc(100% - 40px)
+        width: 100%
         text-align: center
+        margin: 20px auto 0
         &:hover
           transform: translateX(0) !important
       &:hover i.fas.fa-link
@@ -416,10 +417,10 @@ section.my-sites-view
       flex-wrap: wrap
       margin-top: 5px
 
-      .small-home-lead.orange-type
-        font-weight: bold
+      // .small-home-lead.orange-type
+      //   font-weight: bold
       @media (max-width:500px)
-        .view-wide, .view-hr, .view-mobile
+        .view-wide, .view-hr, .view-mobile, .small-home-lead.orange-type
           display: none
 
       .switch
