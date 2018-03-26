@@ -3528,7 +3528,7 @@ ul.ul-banners {
         .home-sections section.graphics .home-lead-title::before {
           height: 100%;
           top: 0;
-          background-position: 16px 90px;
+          background-position: 16px 30px;
           background-size: 303%; } }
     .home-sections section.graphics .home-lead-title .home-lead-box {
       display: -ms-flexbox;
@@ -3585,15 +3585,6 @@ ul.ul-banners {
         z-index: -1;
         -webkit-filter: contrast(3) blur(3px);
                 filter: contrast(3) blur(3px); }
-      .home-sections section.graphics .home-lead-title .small-logo::after, .home-sections section.graphics .home-lead-title section.banners .small-logo-purple::after, .home-sections section.banners section.graphics .home-lead-title .small-logo-purple::after {
-        content: '&';
-        color: #fbb03b;
-        text-shadow: 0 2px 8px #000000;
-        font-family: 'Bungee Inline', cursive;
-        font-weight: 100;
-        mix-blend-mode: hard-light;
-        position: relative;
-        left: 2px; }
       @media (max-width: 640px) {
         .home-sections section.graphics .home-lead-title .small-logo, .home-sections section.graphics .home-lead-title section.banners .small-logo-purple, .home-sections section.banners section.graphics .home-lead-title .small-logo-purple {
           margin-top: -35px;
