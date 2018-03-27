@@ -2100,12 +2100,13 @@ body {
         margin: 0;
         height: 38.3vh;
         padding: 0;
-        background-color: #4c246f;
-        mix-blend-mode: multiply;
+        background-color: rgba(76, 36, 111, 0.81);
         -ms-flex-pack: start;
             justify-content: flex-start;
         -ms-flex-align: center;
-            align-items: center; }
+            align-items: center;
+        -webkit-backdrop-filter: blur(8px);
+        z-index: 33; }
         .home-sections section.abilities.intro::before {
           position: absolute;
           background: #6d339e;
@@ -2113,7 +2114,8 @@ body {
           width: 100%;
           height: 100%;
           content: '';
-          z-index: 0; }
+          z-index: 0;
+          display: none; }
         .home-sections section.abilities.intro .col-3.logo-big-box {
           top: -4px;
           left: 6px;

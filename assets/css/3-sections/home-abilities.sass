@@ -28,10 +28,12 @@
       margin: 0
       height: 38.3vh
       padding: 0
-      background-color: shade($purple, 30%)
-      mix-blend-mode: multiply
+      background-color: rgba(76, 36, 111, 0.81)
+      //mix-blend-mode: multiply
       justify-content: flex-start
       align-items: center
+      -webkit-backdrop-filter: blur(8px)
+      z-index: 33
 
 
       &::before
@@ -42,6 +44,7 @@
         height: 100%
         content: ''
         z-index: 0
+        display: none
 
       .col-3.logo-big-box
         top: -4px
