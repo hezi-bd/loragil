@@ -126,7 +126,7 @@ function WidthChange(mq) {
     //console.log(realWScroll /2.7 );
 
 
-    $('.logo-graphics-bg').css({'filter' : 'blur(calc(250px - (' + Math.abs(realWScrollGraphics /8.3) +'px))) '});
+    $('.logo-graphics-bg').css({'filter' : 'blur(calc(300px - (' + Math.abs(realWScrollGraphics /7) +'px))) '});
     $('.logo-graphics-bg-effects').css({'filter' : 'opacity(calc(-900% + (' + Math.abs(realWScrollGraphics / 2) +'%)))'});
 
 
