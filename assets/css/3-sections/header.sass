@@ -10,6 +10,8 @@
       .site-nav
         ul
           li
+            &.mobile
+              display: none
             a
               transition: all 0.6s ease-in-out
               transform: translateX(-120%)
@@ -146,23 +148,23 @@
           transition: all 0.6s ease-in-out
           transform: translateX(135px)
           opacity: 1
-        &:nth-child(1)::before
+        &:nth-child(2)::before
           background:
             image: url(../img/02sites-logo.svg)
 
-        &:nth-child(2)::before
+        &:nth-child(3)::before
           background:
             image: url(../img/03banners-logo.svg)
 
-        &:nth-child(3)::before
+        &:nth-child(4)::before
           background:
             image: url(../img/05graphics-logo.svg)
 
-        &:nth-child(4)::before
+        &:nth-child(5)::before
           background:
             image: url(../img/06clients-logo.svg)
 
-        &:nth-child(5)::before
+        &:nth-child(6)::before
           background:
             image: url(../img/07in-short-logo.svg)
 
@@ -301,6 +303,8 @@
         li
           a
             color: $orange
+            font-family: 'Quantico'
+            text-transform: uppercase
 
 @media (max-width: 768px) and (min-width: 641px)
   .home-wrap header

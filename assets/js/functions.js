@@ -83,12 +83,15 @@ function WidthChange(mq) {
       'transform' : 'translate(0px, '+ realWScroll /-1.7 +'px)'
     });
 
+
   } else {
     if(wScroll > $('.site-pre').offset().top - ($(window).height() / 2.2)){
 
       $('.logo-title-box').css({
         'transform' : 'translate(0px, 0px)','top' : '0px','filter' : 'blur(0px) opacity(100%))) brightness(calc(100% + ('+ realWScroll /0.4 +'%)))'
       });
+      $('.logo-graphics-bg').css({'filter' : 'blur(0) !important'});
+
 
 
       // $('.site-pic-box').css({'background-position':'center '+ (wScroll) * (-2.3) +'px'});
@@ -123,7 +126,7 @@ function WidthChange(mq) {
     //console.log(realWScroll /2.7 );
 
 
-    $('.logo-graphics-bg').css({'filter' : 'blur(calc(250px - (' + Math.abs(realWScrollGraphics /9) +'px))) '});
+    $('.logo-graphics-bg').css({'filter' : 'blur(calc(250px - (' + Math.abs(realWScrollGraphics /8.5) +'px))) '});
     $('.logo-graphics-bg-effects').css({'filter' : 'opacity(calc(-900% + (' + Math.abs(realWScrollGraphics / 2) +'%)))'});
 
 
