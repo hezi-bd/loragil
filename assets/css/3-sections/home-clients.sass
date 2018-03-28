@@ -94,6 +94,12 @@ section.clients .clients-hr
       flex-direction: column
       align-items: center
 
+      @media (max-width: 640px)
+        margin: 15px 10px
+        flex: 1 2 70px
+        justify-content: center
+
+
       img
         position: relative
         top: 0
@@ -125,7 +131,6 @@ section.clients .clients-hr
 
     @media (max-width: 640px)
       margin-bottom: 0
-      padding-top: 80px
 
     &::before
       position: absolute
@@ -142,7 +147,14 @@ section.clients .clients-hr
 
       @media (max-width: 640px)
         margin-right: 0
-        margin-top: 100px
+        margin-top: 0px
+        background-image: none
+        background-color: #f1f1f1
+        width: calc(100% + 10px)
+        top: 0
+        height: 200px
+        box-shadow: inset 0 0 20px -10px #000
+        left: -5px
 
     .client-exc
       font-size: 22px
@@ -152,12 +164,18 @@ section.clients .clients-hr
       margin-bottom: 10px
       padding-right: 28px
       line-height: 25px
+      @media (max-width: 640px)
+        padding-right: 0
+        color: $orange
 
 
     .client-res-about
       color: #b57f2a
       direction: rtl
       padding-right: 28px
+      @media (max-width: 640px)
+        padding-right: 0
+        color: $orange
 
     .one-time.slider.slick-initialized.slick-slider.slick-dotted
       margin-right: -16px
@@ -165,6 +183,9 @@ section.clients .clients-hr
       width: 100%
       //padding-right: 40px
       box-sizing: border-box
+
+      @media (max-width: 640px)
+        margin: 0 auto !important
 
       .slick-list.draggable
         @media (max-width: 640px)
@@ -182,12 +203,16 @@ section.clients .clients-hr
 
         &::before
           color: #c3892d
+          @media (max-width: 640px)
+            color: #c1c0c0
 
       .slick-next
         right: 45px
         z-index: 100
         &::before
           color: #c3892d
+          @media (max-width: 640px)
+            color: #c1c0c0
 
       .slick-dots
           display: none !important
@@ -210,7 +235,9 @@ section.clients .clients-hr
 
         @media (max-width: 640px)
           height: 340px
-          padding-left: 50px
+          padding-left: 0
+          text-align: center
+          padding: 20px 10px
 
 
 
@@ -218,9 +245,18 @@ section.clients .clients-hr
           display: flex
           flex-direction: row-reverse
           align-items: center
+          i.fas.fa-sort-down
+            display: none
           //margin-top: 134px
           @media (max-width: 640px)
-            //margin-top: 154px
+            flex-direction: column-reverse
+            i.fas.fa-sort-down
+              display: block
+              font-size: 30px
+              margin-top: -20px
+              top: -8px
+              position: relative
+              color: #dfdede
 
           p
             direction: rtl
@@ -228,6 +264,8 @@ section.clients .clients-hr
             margin-right: 15px
             margin-top: 12px
             margin-bottom: unset
+            @media (max-width: 640px)
+              margin: 32px auto
             strong
               display: block
               font-size: 16px

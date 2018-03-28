@@ -1950,7 +1950,8 @@ body {
       .home-sections section.about .logo-type {
         font-size: 35px;
         text-align: center;
-        letter-spacing: 1px; } }
+        letter-spacing: 1px;
+        margin-bottom: 10px; } }
     .home-sections section.about .logo-type:first-letter {
       background-image: url(../img/loragil-logo.svg);
       background-position: 4px 0px;
@@ -2006,9 +2007,9 @@ body {
 
 @media (max-width: 640px) {
   .home-sections section.about {
-    height: calc(61.6vh - 68px);
+    height: calc(66.6vh - 68px);
     padding: 0;
-    padding-top: calc(28.3vh - 68px);
+    padding-top: calc(33.3vh - 68px);
     margin-bottom: 0;
     margin-top: 68px; }
     .home-sections section.about::after {
@@ -2018,7 +2019,9 @@ body {
       margin: 0;
       -webkit-transform: none !important;
               transform: none !important;
-      height: 33.3vh; }
+      height: 33.3vh;
+      -ms-flex-pack: end;
+          justify-content: flex-end; }
       .home-sections section.about .flex--center .col-1.push-right.logo-title > * {
         z-index: 10; }
       .home-sections section.about .flex--center .col-1.push-right.logo-title::before {
@@ -2032,7 +2035,7 @@ body {
         box-sizing: border-box; }
       .home-sections section.about .flex--center .col-1.push-right.logo-title .my-name {
         background: #fec463;
-        max-width: 300px;
+        max-width: 100%;
         margin: 0 auto !important;
         padding: 5px 5px;
         box-shadow: 0 2px 3px #333;
@@ -2098,11 +2101,11 @@ body {
     @media (max-width: 640px) {
       .home-sections section.abilities.intro {
         margin: 0;
-        height: 38.3vh;
+        height: 33.3vh;
         padding: 0;
-        background-color: rgba(76, 36, 111, 0.81);
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+        background-color: rgba(76, 36, 111, 0.9);
+        -ms-flex-pack: center;
+            justify-content: center;
         -ms-flex-align: center;
             align-items: center;
         -webkit-backdrop-filter: blur(8px);
@@ -2135,9 +2138,15 @@ body {
         .home-sections section.abilities.intro .col-1.push-right.cta-frame {
           top: 0 !important;
           width: 100% !important;
-          padding: 0 50px;
+          padding: 0;
           right: initial;
-          margin-top: 3px; }
+          margin-bottom: 40px;
+          -webkit-perspective: none;
+                  perspective: none; }
+          .home-sections section.abilities.intro .col-1.push-right.cta-frame .cta {
+            -webkit-transform: rotateX(0);
+                    transform: rotateX(0);
+            height: 80px; }
           .home-sections section.abilities.intro .col-1.push-right.cta-frame .cta.sites-cta {
             -webkit-clip-path: none;
                     clip-path: none; }
@@ -2233,6 +2242,8 @@ body {
         align-items: center;
     overflow: hidden;
     margin-bottom: 10px; }
+    .home-sections section.abilities.preview {
+      display: none; }
     .home-sections section.abilities .flex--center {
       display: -ms-flexbox;
       display: flex;
@@ -2377,11 +2388,11 @@ body {
         flex: 2 1;
     -webkit-clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
             clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%); }
+    .home-sections section.abilities .cta.sites-cta a {
+      padding: 10px 5px 10px 10px !important; }
   .home-sections section.abilities .cta.gallery-cta {
     -ms-flex: 2 2;
         flex: 2 2; }
-    .home-sections section.abilities .cta.gallery-cta a {
-      padding: 10px 5px 10px 15px; }
   .home-sections section.abilities .cta a {
     display: -ms-flexbox;
     display: flex;
@@ -2456,7 +2467,7 @@ section.my-sites-view {
     @media (max-width: 800px) {
       section.my-sites-view .col-1 {
         margin-top: 0;
-        padding: 0 0 0 0;
+        padding: 10px 0;
         max-width: 100% !important;
         width: 100%;
         border-radius: 0;
@@ -4633,6 +4644,13 @@ section.clients .clients-hr {
           flex-direction: column;
       -ms-flex-align: center;
           align-items: center; }
+      @media (max-width: 640px) {
+        .home-sections section.clients ul.clients-logos-box li {
+          margin: 15px 10px;
+          -ms-flex: 1 2 70px;
+              flex: 1 2 70px;
+          -ms-flex-pack: center;
+              justify-content: center; } }
       .home-sections section.clients ul.clients-logos-box li img {
         position: relative;
         top: 0;
@@ -4660,8 +4678,7 @@ section.clients .clients-hr {
     position: relative; }
     @media (max-width: 640px) {
       .home-sections section.clients .col-comments {
-        margin-bottom: 0;
-        padding-top: 80px; } }
+        margin-bottom: 0; } }
     .home-sections section.clients .col-comments::before {
       position: absolute;
       content: '';
@@ -4676,7 +4693,14 @@ section.clients .clients-hr {
       @media (max-width: 640px) {
         .home-sections section.clients .col-comments::before {
           margin-right: 0;
-          margin-top: 100px; } }
+          margin-top: 0px;
+          background-image: none;
+          background-color: #f1f1f1;
+          width: calc(100% + 10px);
+          top: 0;
+          height: 200px;
+          box-shadow: inset 0 0 20px -10px #000;
+          left: -5px; } }
     .home-sections section.clients .col-comments .client-exc {
       font-size: 22px;
       color: #f5f5f5;
@@ -4685,15 +4709,26 @@ section.clients .clients-hr {
       margin-bottom: 10px;
       padding-right: 28px;
       line-height: 25px; }
+      @media (max-width: 640px) {
+        .home-sections section.clients .col-comments .client-exc {
+          padding-right: 0;
+          color: #f7921e; } }
     .home-sections section.clients .col-comments .client-res-about {
       color: #b57f2a;
       direction: rtl;
       padding-right: 28px; }
+      @media (max-width: 640px) {
+        .home-sections section.clients .col-comments .client-res-about {
+          padding-right: 0;
+          color: #f7921e; } }
     .home-sections section.clients .col-comments .one-time.slider.slick-initialized.slick-slider.slick-dotted {
       margin-right: -16px;
       margin-top: 20px;
       width: 100%;
       box-sizing: border-box; }
+      @media (max-width: 640px) {
+        .home-sections section.clients .col-comments .one-time.slider.slick-initialized.slick-slider.slick-dotted {
+          margin: 0 auto !important; } }
       @media (max-width: 640px) {
         .home-sections section.clients .col-comments .one-time.slider.slick-initialized.slick-slider.slick-dotted .slick-list.draggable {
           height: 100% !important; } }
@@ -4707,11 +4742,17 @@ section.clients .clients-hr {
         z-index: 100; }
         .home-sections section.clients .col-comments .one-time.slider.slick-initialized.slick-slider.slick-dotted .slick-prev::before {
           color: #c3892d; }
+          @media (max-width: 640px) {
+            .home-sections section.clients .col-comments .one-time.slider.slick-initialized.slick-slider.slick-dotted .slick-prev::before {
+              color: #c1c0c0; } }
       .home-sections section.clients .col-comments .one-time.slider.slick-initialized.slick-slider.slick-dotted .slick-next {
         right: 45px;
         z-index: 100; }
         .home-sections section.clients .col-comments .one-time.slider.slick-initialized.slick-slider.slick-dotted .slick-next::before {
           color: #c3892d; }
+          @media (max-width: 640px) {
+            .home-sections section.clients .col-comments .one-time.slider.slick-initialized.slick-slider.slick-dotted .slick-next::before {
+              color: #c1c0c0; } }
       .home-sections section.clients .col-comments .one-time.slider.slick-initialized.slick-slider.slick-dotted .slick-dots {
         display: none !important; }
       .home-sections section.clients .col-comments .one-time.slider.slick-initialized.slick-slider.slick-dotted .slick-slide {
@@ -4737,7 +4778,9 @@ section.clients .clients-hr {
         @media (max-width: 640px) {
           .home-sections section.clients .col-comments .one-time.slider.slick-initialized.slick-slider.slick-dotted .slick-slide {
             height: 340px;
-            padding-left: 50px; } }
+            padding-left: 0;
+            text-align: center;
+            padding: 20px 10px; } }
         .home-sections section.clients .col-comments .one-time.slider.slick-initialized.slick-slider.slick-dotted .slick-slide .client-pic-info {
           display: -ms-flexbox;
           display: flex;
@@ -4745,12 +4788,28 @@ section.clients .clients-hr {
               flex-direction: row-reverse;
           -ms-flex-align: center;
               align-items: center; }
+          .home-sections section.clients .col-comments .one-time.slider.slick-initialized.slick-slider.slick-dotted .slick-slide .client-pic-info i.fas.fa-sort-down {
+            display: none; }
+          @media (max-width: 640px) {
+            .home-sections section.clients .col-comments .one-time.slider.slick-initialized.slick-slider.slick-dotted .slick-slide .client-pic-info {
+              -ms-flex-direction: column-reverse;
+                  flex-direction: column-reverse; }
+              .home-sections section.clients .col-comments .one-time.slider.slick-initialized.slick-slider.slick-dotted .slick-slide .client-pic-info i.fas.fa-sort-down {
+                display: block;
+                font-size: 30px;
+                margin-top: -20px;
+                top: -8px;
+                position: relative;
+                color: #dfdede; } }
           .home-sections section.clients .col-comments .one-time.slider.slick-initialized.slick-slider.slick-dotted .slick-slide .client-pic-info p {
             direction: rtl;
             color: #a3a2a5;
             margin-right: 15px;
             margin-top: 12px;
             margin-bottom: unset; }
+            @media (max-width: 640px) {
+              .home-sections section.clients .col-comments .one-time.slider.slick-initialized.slick-slider.slick-dotted .slick-slide .client-pic-info p {
+                margin: 32px auto; } }
             .home-sections section.clients .col-comments .one-time.slider.slick-initialized.slick-slider.slick-dotted .slick-slide .client-pic-info p strong {
               display: block;
               font-size: 16px; }
