@@ -35,6 +35,11 @@ $(window).scroll(function(){
     });
 
 
+
+
+
+
+
     // $('.logo-top.logo-mobile').css({
     //   'top' : '-'+ wScroll /0.5 +'%', 'transform' : 'translateY( -'+ wScroll /3 +'%)', 'filter' : 'blur('+ realWScroll /40 +'px ) opacity(calc(100% - ('+ wScroll /2.5 +'%)))', 'width' : 'calc(100% + '+ wScroll /5 +'%)'
     // });
@@ -65,43 +70,7 @@ var offset = (Math.min(0, wScroll - $('.about').offset().top +$(window).height()
 //$('.logo-title-box').css({'blur': 'translate('+ offset +'px, '+ Math.abs(offset * 0.2) +'px)'});
 
 };
-if (matchMedia) {
-  const mq = window.matchMedia("(min-width: 640px)");
-  mq.addListener(WidthChange);
-  WidthChange(mq);
-}
 
-// media query change
-function WidthChange(mq) {
-  if (mq.matches) {
-    $('.site-pic-box').css({'background-position':'center '+ (wScroll) * (-1) +'px'});
-    $('.logo-title-box').css({
-      'transform' : 'translate(0px, '+ realWScroll /-1 +'px)','top' : '-'+ realWScroll /2.7 +'px','filter' : 'blur('+ realWScroll /3.3 +'px ) opacity(calc(100% - ('+ wScroll /3.3 +'%))) brightness(calc(100% + ('+ realWScroll /0.4 +'%)))'
-    });
-
-    $('.logo-type-etc').css({
-      'transform' : 'translate(0px, '+ realWScroll /-1.7 +'px)'
-    });
-
-
-  } else {
-    if(wScroll > $('.site-pre').offset().top - ($(window).height() / 2.2)){
-
-      $('.logo-title-box').css({
-        'transform' : 'translate(0px, 0px)','top' : '0px','filter' : 'blur(0px) opacity(100%))) brightness(calc(100% + ('+ realWScroll /0.4 +'%)))'
-      });
-      $('.logo-graphics-bg').css({'filter' : 'blur(0) !important'});
-
-
-
-      // $('.site-pic-box').css({'background-position':'center '+ (wScroll) * (-2.3) +'px'});
-      $('.site-pic-box').css({'background-position':'center top'});
-
-
-    };
-  }
-
-}
 // if (mq.matches) {
 //   $('.site-pic-box').css({'background-position':'center '+ (wScroll) * (-1) +'px'});
 // } else {
@@ -126,8 +95,7 @@ function WidthChange(mq) {
     //console.log(realWScroll /2.7 );
 
 
-    $('.logo-graphics-bg').css({'filter' : 'blur(calc(300px - (' + Math.abs(realWScrollGraphics /7) +'px))) '});
-    $('.logo-graphics-bg-effects').css({'filter' : 'opacity(calc(-900% + (' + Math.abs(realWScrollGraphics / 2) +'%)))'});
+
 
 
   };
@@ -162,6 +130,58 @@ function WidthChange(mq) {
 
 
   };
+
+
+  // ==================================================
+
+
+  if (matchMedia) {
+    const mq = window.matchMedia("(min-width: 640px)");
+    mq.addListener(WidthChange);
+    WidthChange(mq);
+  }
+
+  // media query change
+  function WidthChange(mq) {
+    if (mq.matches) {
+      $('.site-pic-box').css({'background-position':'center '+ (wScroll) * (-1) +'px'});
+      $('.logo-title-box').css({
+        'transform' : 'translate(0px, '+ realWScroll /-1 +'px)','top' : '-'+ realWScroll /2.7 +'px','filter' : 'blur('+ realWScroll /3.3 +'px ) opacity(calc(100% - ('+ wScroll /3.3 +'%))) brightness(calc(100% + ('+ realWScroll /0.4 +'%)))'
+      });
+
+      $('.logo-type-etc').css({
+        'transform' : 'translate(0px, '+ realWScroll /-1.7 +'px)'
+      });
+
+
+      $('.logo-graphics-bg').css({'filter' : 'blur(calc(300px - (' + Math.abs(realWScrollGraphics /8) +'px))) '});
+      $('.logo-graphics-bg-effects').css({'filter' : 'opacity(calc(-900% + (' + Math.abs(realWScrollGraphics / 2) +'%)))'});
+
+
+    } else {
+      if(wScroll > $('.site-pre').offset().top - ($(window).height() / 2.2)){
+
+        $('.logo-title-box').css({
+          'transform' : 'translate(0px, 0px)','top' : '0px','filter' : 'blur(0px) opacity(100%))) brightness(calc(100% + ('+ realWScroll /0.4 +'%)))'
+        });
+        $('.logo-graphics-bg').css({'filter' : 'blur(0) !important'});
+
+
+
+        // $('.site-pic-box').css({'background-position':'center '+ (wScroll) * (-2.3) +'px'});
+        $('.site-pic-box').css({'background-position':'center top'});
+
+        $('.logo-graphics-bg').css({'filter' : 'blur(calc(400px - (' + Math.abs(realWScrollGraphics /5) +'px))) '});
+        $('.logo-graphics-bg-effects').css({'filter' : 'opacity(calc(-900% + (' + Math.abs(realWScrollGraphics / 2) +'%)))'});
+
+
+      };
+    }
+
+  }
+
+
+  // ==================================================
 
 
 

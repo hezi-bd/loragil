@@ -11,7 +11,7 @@ section.home-footer
   overflow: hidden
   @extend .footer-bg-gra
   background:
-    image: url(../img/me-footer.png), url("../img/loragil-bg-pattern.svg"), $grad-footer
+    image: url(../img/me-footer.png), $grad-footer
     repeat: no-repeat, repeat
     attachment: fixed
     size: auto
@@ -23,9 +23,9 @@ section.home-footer
 
   @media (max-width: 640px)
     //background-position: 140px -48px, right top, center 545px
-    background-position: 0 top, right top, center 1189px
-    @media (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm)
-      background-position: 0 top, right top, center 1189px
+    background:
+      image: none
+      color: $light-orange
 
   .me-footer2
     position: absolute
@@ -75,6 +75,8 @@ section.home-footer
       background: rgba(255, 255, 255, 0.58)
       -webkit-backdrop-filter: blur(10px)
       //width: calc(100% - 30px)
+      @media (max-width: 640px)
+        background: rgba(255, 255, 255, 0)
 
     p
       text-align: justify

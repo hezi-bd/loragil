@@ -2011,7 +2011,7 @@ body {
 
 @media (max-width: 640px) {
   .home-sections section.about {
-    height: calc(66.6vh - 68px);
+    height: calc(66.6vh - 38px);
     padding: 0;
     padding-top: calc(33.3vh - 68px);
     margin-bottom: 0;
@@ -2107,7 +2107,7 @@ body {
     @media (max-width: 640px) {
       .home-sections section.abilities.intro {
         margin: 0;
-        height: 33.3vh;
+        height: calc(33.3vh - 29px);
         padding: 0;
         background-color: rgba(76, 36, 111, 0.9);
         -ms-flex-pack: start;
@@ -2147,13 +2147,14 @@ body {
           width: 100% !important;
           padding: 0;
           right: initial;
-          margin-bottom: 40px;
+          margin-bottom: 0;
           -webkit-perspective: none;
-                  perspective: none; }
+                  perspective: none;
+          height: 100%; }
           .home-sections section.abilities.intro .col-1.push-right.cta-frame .cta {
             -webkit-transform: rotateX(0);
                     transform: rotateX(0);
-            height: 80px; }
+            height: 100%; }
           .home-sections section.abilities.intro .col-1.push-right.cta-frame .cta.sites-cta {
             -webkit-clip-path: none;
                     clip-path: none; }
@@ -4939,7 +4940,7 @@ section.home-footer {
   z-index: -1;
   background: #faaf3a;
   overflow: hidden;
-  background-image: url(../img/me-footer.png), url("../img/loragil-bg-pattern.svg"), linear-gradient(to bottom, #e79418 0%, #ef9c10 63%, #f4ab33 63%, #bc7928 100%);
+  background-image: url(../img/me-footer.png), linear-gradient(to bottom, #e79418 0%, #ef9c10 63%, #f4ab33 63%, #bc7928 100%);
   background-repeat: no-repeat, repeat;
   background-attachment: fixed;
   background-size: auto;
@@ -4949,10 +4950,8 @@ section.home-footer {
       background-image: url(../img/me-footer.png), url("../img/loragil-bg-pattern.svg"), linear-gradient(to bottom, #e79418 0%, #ef9c10 62%, #f4ab33 62%, #bc7928 100%); } }
   @media (max-width: 640px) {
     section.home-footer {
-      background-position: 0 top, right top, center 1189px; } }
-  @media (max-width: 640px) and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
-    section.home-footer {
-      background-position: 0 top, right top, center 1189px; } }
+      background-image: none;
+      background-color: #fbb03b; } }
   section.home-footer .me-footer2 {
     position: absolute;
     height: 66vh;
@@ -4993,6 +4992,9 @@ section.home-footer {
       padding: 30px 30px;
       background: rgba(255, 255, 255, 0.58);
       -webkit-backdrop-filter: blur(10px); }
+      @media (max-width: 640px) {
+        section.home-footer .home-lead-box .footer-about {
+          background: rgba(255, 255, 255, 0); } }
     section.home-footer .home-lead-box p {
       text-align: justify;
       color: #77531c;
