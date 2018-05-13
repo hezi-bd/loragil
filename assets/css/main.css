@@ -4687,6 +4687,9 @@ ul.ul-banners {
       top: 0;
       content: '';
       z-index: 10; }
+      @media (max-width: 640px) {
+        .home-sections section.clients .clients-logos-strip::after {
+          background: linear-gradient(to right, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.6) 10%, rgba(255, 255, 255, 0.1) 20%, rgba(255, 255, 255, 0) calc(30% - 65px), rgba(255, 255, 255, 0) calc(70% + 65px), rgba(255, 255, 255, 0.3) 90%, rgba(255, 255, 255, 0.5) 95%, rgba(255, 255, 255, 0.9) 100%); } }
     .home-sections section.clients .clients-logos-strip::before {
       position: absolute;
       height: 80px;
@@ -4695,6 +4698,9 @@ ul.ul-banners {
       width: 100%;
       top: 0;
       content: ''; }
+      @media (max-width: 640px) {
+        .home-sections section.clients .clients-logos-strip::before {
+          background: linear-gradient(to right, #979797 0%, #979797 15%, rgba(151, 151, 151, 0.8) 30%, rgba(151, 151, 151, 0) calc(50% - 20px), rgba(151, 151, 151, 0) calc(50% + 20px), rgba(151, 151, 151, 0.8) 70%, #979797 85%, #979797 100%); } }
   .home-sections section.clients ul.clients-logos-box {
     list-style-type: none;
     margin: 0;
