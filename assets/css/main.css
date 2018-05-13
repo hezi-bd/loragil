@@ -4645,6 +4645,9 @@ ul.ul-banners {
     margin-top: -18px;
     padding: 15px 0;
     background: #f1f1f1; }
+    @media (max-width: 640px) {
+      .home-sections section.clients .home-lead-box {
+        margin-top: -5px; } }
     .home-sections section.clients .home-lead-box .home-lead {
       letter-spacing: 15px;
       position: relative;
