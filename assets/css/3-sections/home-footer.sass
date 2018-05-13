@@ -19,7 +19,8 @@ section.home-footer
 
   @media (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm)
     background:
-      image: url(../img/me-footer.png), url("../img/loragil-bg-pattern.svg"), $grad-footer-goog
+      image: url(../img/me-footer.png), $grad-footer-goog
+      //image: url(../img/me-footer.png), url("../img/loragil-bg-pattern.svg"), $grad-footer-goog
 
   @media (max-width: 640px)
     //background-position: 140px -48px, right top, center 545px
@@ -72,8 +73,8 @@ section.home-footer
 
     .footer-about
       padding: 30px 30px
-      background: rgba(255, 255, 255, 0.58)
-      -webkit-backdrop-filter: blur(10px)
+      //background: rgba(255, 255, 255, 0.58)
+      //-webkit-backdrop-filter: blur(10px)
       //width: calc(100% - 30px)
       @media (max-width: 640px)
         background: rgba(255, 255, 255, 0)
@@ -161,13 +162,16 @@ section.home-footer
 .inner-shadow
   position: relative
   -webkit-backdrop-filter: blur(4px)
-  background: rgba(251, 176, 59, 0.4)
-  background: radial-gradient(ellipse at center, rgba(234, 213, 178, 0.82), rgba(251, 176, 59, 0.44) 75.63%)
-  border-top: 3px solid rgb(229, 155, 29)
-  box-shadow: inset 0px 20px 20px 0px rgb(243, 170, 54), 1px 10px 20px 16px rgba(204, 135, 39, 0.61)
+  //background: rgba(251, 176, 59, 0.4)
+  background: radial-gradient(ellipse at center, rgba(234, 213, 178, 0.54), rgba(251, 176, 59, 0) 58.4%)
+  //border-top: 3px solid rgb(229, 155, 29)
+  //box-shadow: inset 0px 20px 20px 0px rgb(243, 170, 54), 1px 10px 20px 16px rgba(204, 135, 39, 0.61)
 
   @media (max-width: 640px)
     margin-top: 20px
+    background: radial-gradient(ellipse at center, rgba(234, 213, 178, 0.82), rgba(251, 176, 59, 0.44) 75.63%)
+    border-top: 3px solid rgb(229, 155, 29)
+    box-shadow: inset 0px 20px 20px 0px rgb(243, 170, 54), 1px 10px 20px 16px rgba(204, 135, 39, 0.61)
 
   .cta
     margin: 0

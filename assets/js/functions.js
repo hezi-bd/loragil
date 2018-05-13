@@ -127,6 +127,7 @@ var offset = (Math.min(0, wScroll - $('.about').offset().top +$(window).height()
 
     $('.big-logo-right-top').css({'background-position-x':(wScroll - $('.big-logo-right-top').offset().top + 0) * (1.4) +'px'});
     $('.big-logo-right-bottom').css({'background-position-x':(wScroll - $('.big-logo-right-bottom').offset().top + 0) * (1.1) +'px'});
+    $('.clients-logos-strip').css({'background-position-x':(wScroll - $('.clients-logos-strip').offset().top + 0) * (-2) +'px'});
 
 
   };

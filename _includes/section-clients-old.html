@@ -3,6 +3,54 @@
 
   <div class="flex flex--center home-lead-title">
     <div class="col-1">
+      <div class="home-lead-box">
+        <div class="home-lead">Clients</div>
+        <div class="small-lead-box">
+          <div class="small-home-lead orange-type">& Comments...</div>
+        </div>
+      </div>
+      <div class="clients-logos-box">
+        <div class="client-logo-butt">
+
+        </div>
+      </div>
+      <ul class="clients-logos-box">
+        {% for post in site.categories.best-clients %}
+          <li class="client-logo-butt" style='width: {{post.width}}; '>
+            <a href="{{post.site-link}}" class="client-logo-link" target="_blank">
+              <img class="client-logo" src="{{site.baseurl}}/assets/img/clients/{{post.logo-off}}" alt="{{post.title}}" />
+              <img class="client-logo" src="{{site.baseurl}}/assets/img/clients/{{post.logo-on}}" alt="{{post.title}}" />
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+    <!-- <div class="clients-hr"></div> -->
+    <div class="col-1 col-comments">
+      <div class="one-time slider">
+
+        {% for post in site.categories.comments %}
+        <a href="{{post.site-link}}" class="client-logo-link" target="_blank">
+        <div class="client-comment">
+
+              <div class="client-jeneral-info">
+
+                  <div class="client-exc">{{post.excerpt}}</div>
+                  <div class="client-res-about">{{post.response-about}}</div>
+
+              </div>
+
+            <div class="client-pic-info">
+              <img src="{{ site.baseurl }}/assets/img/clients/comments/{{post.pic-name}}" alt="{{post.title}}">
+              <i class="fas fa-sort-down"></i>
+              {{post.content}}
+
+            </div>
+        </div>
+        </a>
+        {% endfor %}
+
+      </div>
 
       <div class="cta">
         <h4>
@@ -34,56 +82,12 @@ Me too! so Let's get out of the <span>bubble</span> box and find out together..
         <img src="{{ site.baseurl }}/assets/img/wolking-man.png" alt="wolking man">
       </div>
 
-      <!-- <ul class="clients-logos-box">
-        {% for post in site.categories.best-clients %}
-          <li class="client-logo-butt" style='width: {{post.width}}; '>
-            <a href="{{post.site-link}}" class="client-logo-link" target="_blank">
-              <img class="client-logo" src="{{site.baseurl}}/assets/img/clients/{{post.logo-off}}" alt="{{post.title}}" />
-              <img class="client-logo" src="{{site.baseurl}}/assets/img/clients/{{post.logo-on}}" alt="{{post.title}}" />
-            </a>
-          </li>
-        {% endfor %}
-      </ul> -->
-    </div>
-    <!-- <div class="clients-hr"></div> -->
-    <div class="col-1 col-comments">
-      <div class="one-time slider">
 
-        {% for post in site.categories.comments %}
-        <a href="{{post.site-link}}" class="client-logo-link" target="_blank">
-        <div class="client-comment">
-
-              <div class="client-jeneral-info">
-
-                  <div class="client-exc">{{post.excerpt}}</div>
-                  <div class="client-res-about">{{post.response-about}}</div>
-
-              </div>
-
-            <div class="client-pic-info">
-              <img src="{{ site.baseurl }}/assets/img/clients/comments/{{post.pic-name}}" alt="{{post.title}}">
-              <i class="fas fa-sort-down"></i>
-              {{post.content}}
-
-            </div>
-        </div>
-        </a>
-        {% endfor %}
-
-      </div>
 
     </div>
-
   </div>
-  <div class="home-lead-box">
-    <div class="home-lead">Clients</div>
-    <!-- <div class="home-lead">Clients</div>
-    <div class="small-lead-box">
-      <div class="small-home-lead orange-type">& Comments...</div>
-    </div> -->
-  </div>
-  <div class="clients-logos-strip"></div>
 
+  <div class="clients-bottom"></div>
 
 
 

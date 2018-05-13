@@ -1,19 +1,19 @@
-section.clients .clients-hr
-    border-left: solid 2px #ffffff
-    border-right: solid 2px #e2e0e4
-    height: inherit
-    width: 0px
-    content: ''
-    position: relative
-    right: -4px
-    position: relative
-    z-index: -1
-
-    @media (max-width: 640px)
-      display: none
+// section.clients .clients-hr
+//     border-left: solid 2px #ffffff
+//     border-right: solid 2px #e2e0e4
+//     height: inherit
+//     width: 0px
+//     content: ''
+//     position: relative
+//     right: -4px
+//     position: relative
+//     z-index: -1
+//
+//     @media (max-width: 640px)
+//       display: none
 
 .home-sections section.clients
-  background: rgba(249, 249, 249, 0.8)
+  //background: rgba(249, 249, 249, 0.8)
   padding-top: 0
   padding-bottom: 0
   margin-top: 105px
@@ -23,28 +23,31 @@ section.clients .clients-hr
   //mix-blend-mode: multiply
 
   &::before
-    height: 100%
-    position: absolute
-    width: 1px
-    background: #e2e0e4
-    border-left: solid 2px #ffffff
-    border-right: solid 2px #e2e0e4
-    left: 50%
-    content: ''
-    z-index: 0
+    // height: 100%
+    // position: absolute
+    // width: 1px
+    // background: #e2e0e4
+    // border-left: solid 2px #ffffff
+    // border-right: solid 2px #e2e0e4
+    // left: 50%
+    // content: ''
+    // z-index: 0
+    display: none
 
     @media (max-width: 640px)
       display: none
 
   @media (max-width: 640px)
-    margin-top: 0
+    margin-top: -130px
+    z-index: 20
 
   .home-lead-title
     position: relative
     z-index: 1
 
   .col-1
-    padding-top: 130px
+    //padding-top: 130px
+
     padding-bottom: 0
     @media (max-width: 640px)
       margin-bottom: 0
@@ -52,19 +55,23 @@ section.clients .clients-hr
       padding-top: 120px
 
   .home-lead-box
-    margin-bottom: 50px
+    margin-bottom: 0
+    margin-top: -18px
+    padding: 15px 0
+    background: #f1f1f1
+
     .home-lead
-      letter-spacing: 18.5px
-      left: -2px
+      letter-spacing: 15px
       position: relative
-      text-align: left
-      color: $purple
-      text-shadow: 0 1px 0 $light-orange
+      text-align: center
+      color: #a3a2a5
+      text-shadow: 0 1px 0 #fff
       @media (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm)
         //left: 2px
       @media (max-width: 640px)
         width: 100%
         text-align: center
+        font-size: 25px
 
     .small-home-lead.orange-type
       letter-spacing: 3.5px
@@ -73,6 +80,38 @@ section.clients .clients-hr
       @media (max-width: 640px)
         width: 100%
         text-align: center
+  .clients-logos-strip
+    width: 100%
+    height: 60px
+    background-image: url(../img/clients/clients-strip.jpg)
+    background-repeat: repeat no-repeat
+    background-size: auto
+    background-position-y: center
+    position: relative
+    z-index: 0
+    padding: 35px 0
+    background-color: #fff
+    box-shadow: 0 0 3px 0px rgb(224, 217, 217), 0 0 20px 8px rgba(0, 0, 0, 0.08)
+
+    &::after
+      position: absolute
+      height: 70px
+      background: linear-gradient(to right, rgba(255,255,255,0.9) 0%,rgba(255,255,255,0.7) 20%,rgba(255,255,255,0.6) 30%,rgba(255,255,255,0) calc(50% - 5px),rgba(255,255,255,0) calc(50% + 5px),rgba(255,255,255,0.6) 70%,rgba(255,255,255,0.7) 80%,rgba(255,255,255,0.9) 100%)
+      width: 100%
+      top: 0
+      content: ''
+      z-index: 10
+      //opacity: 0.7
+      //mix-blend-mode: hard-light
+      //-webkit-backdrop-filter: blur(4px)
+    &::before
+      position: absolute
+      height: 70px
+      background: linear-gradient(to right, rgba(151, 151, 151,1) 0%,rgba(151, 151, 151,1) 36%,rgba(151, 151, 151,0.7) 40%,rgba(151, 151, 151,0) calc(50% - 5px),rgba(151, 151, 151,0) calc(50% + 5px),rgba(151, 151, 151,0.7) 60%,rgba(151, 151, 151,1) 64%,rgba(151, 151, 151,1) 100%)
+      mix-blend-mode: color
+      width: 100%
+      top: 0
+      content: ''
 
   ul.clients-logos-box
     list-style-type: none
@@ -131,14 +170,17 @@ section.clients .clients-hr
 
     @media (max-width: 640px)
       margin-bottom: 0
+      box-shadow: 0 -14px 0 3px #f1f1f1
+      z-index: -1
 
     &::before
       position: absolute
       content: ''
-      top: -70px
+      top: -83px
       margin-right: -30px
       width: 330px
       height: 300px
+      transform: rotate(8deg)
       background:
         image: url(../img/bubble.svg)
         position: center top
@@ -146,6 +188,7 @@ section.clients .clients-hr
         repeat: no-repeat
 
       @media (max-width: 640px)
+        transform: rotate(0deg)
         margin-right: 0
         margin-top: 0px
         background-image: none
@@ -283,9 +326,11 @@ section.clients .clients-hr
       +size(100px)
       border: solid 3px #cdcdcd
       box-sizing: border-box
+      border-radius: 50%
 
   .cta
-    margin-top: 93px
+    margin-top: -55px
+    margin-left: -28px
     width: 100%
     height: 292px
     padding: 20px 0px 0
@@ -298,11 +343,13 @@ section.clients .clients-hr
     position: relative
     @media (max-width: 640px)
       height: 362px
+      margin-left: 0
+      filter: drop-shadow(1px -3px 0px $dark-purple)
 
     .one-time-faster
       margin: 0 auto
       letter-spacing: -1px
-      font-size: 32px
+      font-size: 27px
       font-weight: 900
       text-shadow: 0 2px 2px $dark-purple
       width: 100%
@@ -361,7 +408,7 @@ section.clients .clients-hr
   .wolking-man
     position: relative
     margin-top: -86px
-    padding-right: 20px
+    padding-right: 50px
     display: flex
     justify-content: flex-end
 
