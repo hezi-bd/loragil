@@ -1206,7 +1206,8 @@ body {
           flex-direction: column;
       -ms-flex-pack: center;
           justify-content: center;
-      padding: 20px 50px; }
+      padding: 20px 50px;
+      background-color: transparent !important; }
     body .landscape-only {
       display: block;
       text-align: center; } }
