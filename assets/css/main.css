@@ -1025,7 +1025,7 @@ textarea {
 .footer-bg-gra, section.home-footer {
   background: #faaf3a;
   /* Old browsers */
-  background: linear-gradient(to bottom, #e79418 0%, #ef9c10 63%, #f4ab33 63%, #bc7928 100%); }
+  background: linear-gradient(#e79418, #f4ab33 51.26%, #ef9c10 51.26%, #bc7928); }
 
 .test-body::before {
   height: 100vh;
@@ -2602,7 +2602,8 @@ section.my-sites-view {
     width: 960px;
     max-width: 960px;
     width: 100% !important;
-    margin: -10px auto 0 !important; }
+    margin: -10px auto 0 !important;
+    height: calc(100vh - 140px); }
     section.my-sites-view .site-pre .hand-point-box {
       display: none;
       position: absolute;
@@ -2701,7 +2702,9 @@ section.my-sites-view {
       top: auto;
       padding-left: 150px;
       margin-top: 15px;
-      background: rgba(247, 247, 247, 0.46); }
+      background: rgba(247, 247, 247, 0.46);
+      bottom: 0% !important;
+      background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.6) 30%, rgba(255, 255, 255, 0.6) 70%, rgba(255, 255, 255, 0) 100%); }
       @media (max-width: 640px) {
         section.my-sites-view .site-pre .sites-box-info {
           top: 87px;
@@ -2789,6 +2792,7 @@ section.my-sites-view {
     margin: auto; }
   section.my-sites-view .slider-sites-for.box-rotate .site-pre-box {
     width: 255px;
+    height: 460px !important;
     border-radius: 28px;
     transition: all 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95); }
     section.my-sites-view .slider-sites-for.box-rotate .site-pre-box .view-wide {
@@ -2801,6 +2805,7 @@ section.my-sites-view {
               filter: blur(10px);
       transition: all 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95); }
     section.my-sites-view .slider-sites-for.box-rotate .site-pre-box .view-mobile {
+      height: 460px !important;
       display: block;
       border-radius: 28px;
       opacity: 1;
@@ -2808,8 +2813,8 @@ section.my-sites-view {
       -webkit-filter: blur(0px);
               filter: blur(0px);
       transition: all 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95); }
-    section.my-sites-view .slider-sites-for.box-rotate .site-pre-box .sites-box-info {
-      opacity: 0; }
+  section.my-sites-view .slider-sites-for.box-rotate .sites-box-info {
+    position: absolute; }
   @media (min-width: 641px) and (max-width: 1000px) {
     section.my-sites-view .slider-sites-for.box-rotate .site-pre, section.my-sites-view .slider-sites-for.box-rotate .sites-box-info {
       max-width: 100% !important; } }
@@ -5022,14 +5027,14 @@ section.home-footer {
   z-index: -1;
   background: #faaf3a;
   overflow: hidden;
-  background-image: url(../img/me-footer.png), linear-gradient(to bottom, #e79418 0%, #ef9c10 63%, #f4ab33 63%, #bc7928 100%);
+  background-image: url(../img/me-footer.png), linear-gradient(#e79418, #f4ab33 51.26%, #ef9c10 51.26%, #bc7928);
   background-repeat: no-repeat, repeat;
   background-attachment: fixed;
   background-size: auto;
-  background-position: 120% top, right top, center top; }
+  background-position: 110% top, right top, center top; }
   @media (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
     section.home-footer {
-      background-image: url(../img/me-footer.png), linear-gradient(to bottom, #e79418 0%, #ef9c10 62%, #f4ab33 62%, #bc7928 100%); } }
+      background-image: url(../img/me-footer.png), linear-gradient(#e79418, #f4ab33 51.26%, #ef9c10 51.26%, #bc7928); } }
   @media (max-width: 640px) {
     section.home-footer {
       background-image: none;
@@ -5071,15 +5076,20 @@ section.home-footer {
             section.home-footer .home-lead-box .big-and-small-title .home-lead .title-move {
               letter-spacing: 8px; } }
     section.home-footer .home-lead-box .footer-about {
-      padding: 30px 30px; }
+      padding: 30px 0; }
       @media (max-width: 640px) {
         section.home-footer .home-lead-box .footer-about {
-          background: rgba(255, 255, 255, 0); } }
+          background: rgba(255, 255, 255, 0);
+          padding: 30px 30px; } }
     section.home-footer .home-lead-box p {
-      text-align: justify;
+      text-align: center;
       color: #77531c;
-      font-size: 16px;
+      font-size: 22px;
       text-shadow: 0 1px 1px #f8d297; }
+      @media (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
+        section.home-footer .home-lead-box p {
+          text-align: justify;
+          text-align-last: center; } }
       section.home-footer .home-lead-box p:last-child {
         margin-bottom: 0; }
       section.home-footer .home-lead-box p .loragil, section.home-footer .home-lead-box p .big-and-small-title .small-home-lead, section.home-footer .home-lead-box .big-and-small-title p .small-home-lead, section.home-footer .home-lead-box .big-and-small-title p .loragil, section.home-footer .home-lead-box p .big-and-small-title .loragil {

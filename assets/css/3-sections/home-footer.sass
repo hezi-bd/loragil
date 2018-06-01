@@ -15,7 +15,7 @@ section.home-footer
     repeat: no-repeat, repeat
     attachment: fixed
     size: auto
-    position: 120% top, right top, center top
+    position: 110% top, right top, center top
 
   @media (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm)
     background:
@@ -72,18 +72,22 @@ section.home-footer
         @extend .loragil
 
     .footer-about
-      padding: 30px 30px
+      padding: 30px 0
       //background: rgba(255, 255, 255, 0.58)
       //-webkit-backdrop-filter: blur(10px)
       //width: calc(100% - 30px)
       @media (max-width: 640px)
         background: rgba(255, 255, 255, 0)
+        padding: 30px 30px
 
     p
-      text-align: justify
+      text-align: center
       color: $darker-yellow
-      font-size: 16px
+      font-size: 22px
       text-shadow: 0 1px 1px #f8d297
+      @media (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm)
+        text-align: justify
+        text-align-last: center
 
       &:last-child
         margin-bottom: 0
