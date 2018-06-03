@@ -1489,13 +1489,19 @@ body {
   .home-wrap header:hover {
     mix-blend-mode: normal; }
     .home-wrap header:hover .header-position {
-      width: 135px;
+      width: 155px;
       left: 0px;
       transition: all 0.3s ease-in-out;
       transition-delay: 0.3s;
       background: #200f2f; }
       .home-wrap header:hover .header-position .site-nav ul {
-        width: 135px; }
+        width: 155px;
+        overflow: hidden;
+        transition-delay: 0.38s; }
+        .home-wrap header:hover .header-position .site-nav ul li {
+          -webkit-transform: translateX(-86%);
+                  transform: translateX(-86%);
+          transition-delay: 0.35s; }
         .home-wrap header:hover .header-position .site-nav ul a {
           transition: all 0.6s cubic-bezier(0.4, -0.45, 0.07, 1.01);
           -webkit-transform: translateX(100%);
@@ -1595,7 +1601,11 @@ body {
       color: #f7921e;
       font-weight: 500;
       padding: 0;
-      line-height: 3; }
+      line-height: 3;
+      text-align: left;
+      padding-left: 48px;
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px; }
     .home-wrap header .site-nav li::before {
       position: absolute;
       top: 0;
@@ -1603,6 +1613,7 @@ body {
       height: 40px;
       width: 40px;
       display: block;
+      z-index: 10;
       background-repeat: no-repeat;
       background-position: center;
       background-size: contain;
@@ -1613,7 +1624,11 @@ body {
     .home-wrap header .site-nav li:nth-child(2)::before {
       background-image: url(../img/02sites-logo.svg); }
     .home-wrap header .site-nav li:nth-child(3)::before {
-      background-image: url(../img/03banners-logo.svg); }
+      border-radius: 50%;
+      background-size: 30px;
+      background-image: url(../img/svg/svg-logo-anim-nav.svg);
+      background-color: rgba(255, 255, 255, 0.65);
+      background-image-size: 10px; }
     .home-wrap header .site-nav li:nth-child(4)::before {
       background-image: url(../img/05graphics-logo.svg); }
     .home-wrap header .site-nav li:nth-child(5)::before {

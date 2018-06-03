@@ -1,0 +1,80 @@
+<svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="100%" height="100%" viewBox="0 0 480 480" style="enable-background:new 0 0 480 480;" xml:space="preserve">
+	 <defs>
+		<style>
+	 .st1 {
+	stroke-dasharray: 250;
+	stroke-dashoffset: 250;
+	animation: logo-frame 3.5s linear forwards infinite;
+	}
+	 .st01 {
+	 stroke-dasharray: 25;
+	 stroke-dashoffset: 25;
+	 animation: logo-frame 3.5s linear forwards infinite;
+	}
+
+	 .st2 {
+	stroke-dasharray: 400;
+	stroke-dashoffset: 400;
+	animation: logo-inline 5.5s linear forwards infinite;
+	}
+
+ @keyframes logo-frame2 {
+  from {
+    stroke-dasharray: 0 1000; /* zero-length stroke,
+                                 1000-length gap */
+  }
+  to {
+    stroke-dasharray: 1000 0;/* 1000-length stroke,
+                                 zero-length gap */
+  }
+}
+
+	 @keyframes logo-frame {
+	 from {
+	 stroke-dashoffset: 1000;
+	 }
+	 to {
+	 stroke-dashoffset: 0;
+	 }
+	 }
+
+	 @keyframes logo-frame-back {
+	 from {
+	 stroke-dashoffset: 0;
+	 }
+	 to {
+	 stroke-dashoffset: 500;
+	 }
+	 }
+
+	 @keyframes logo-inline {
+	 from {
+	 stroke-dashoffset: 0;
+	 }
+	 to {
+	 stroke-dashoffset: 3000;
+	 }
+	 }
+
+	 @keyframes logo-in {
+	 from {
+	 stroke-dashoffset: 1000;
+	 }
+	 to {
+	 stroke-dashoffset: 0;
+	 }
+	 }
+	 </style>
+
+	 </defs>
+
+	 <path id="logo-frame" class="st1" fill="none" stroke="#fbb03b" stroke-width="30" stroke-miterlimit="30" d="M314.351,38.894H163.965L12.119,338.932l51.174,102.175h352.819l51.769-102.17l-51.767-100.833
+	 	H315.047l50.829-99.723L314.351,38.894L314.351,38.894z"/>
+	 <path id="logo-frame2" class="st01" fill="none" stroke="rgba(109, 51, 158, 0.5)" stroke-width="4" stroke-miterlimit="10" d="M314.351,38.894H163.965L12.119,338.932l51.174,102.175h352.819l51.769-102.17l-51.767-100.833
+	 	H315.047l50.829-99.723L314.351,38.894L314.351,38.894z"/>
+
+
+<path id="logo-inline" class="st2" fill="none" stroke="#6d339e" stroke-width="45" stroke-miterlimit="10" d="M405.676,420.801H72.78l-38.764-82.285L174.523,60.262l128.218-1.116l39.906,77.204
+	l-46.133,91.281l-17.24,34.672h126.58l40.224,77.851L405.676,420.801z"/>
+</svg>
